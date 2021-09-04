@@ -152,7 +152,7 @@ REM IF "%DOTNET_TARGET%" NEQ "" (
 	COPY "%OUTPUT%\DotNet\Opc.Ua.Endpoints.wsdl" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Endpoints.wsdl"
 	COPY "%OUTPUT%\DotNet\Opc.Ua.Services.wsdl" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Services.wsdl"
 	COPY "%OUTPUT%\DotNet\Opc.Ua.Channels.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Channels.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Client.cs" "%DOTNET_TARGETOpcUaCore%\Stack\dGenerated\Opc.Ua.Client.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Client.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Client.cs"
 	COPY "%OUTPUT%\DotNet\Opc.Ua.Endpoints.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Endpoints.cs"
 	COPY "%OUTPUT%\DotNet\Opc.Ua.Interfaces.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Interfaces.cs"
 	COPY "%OUTPUT%\DotNet\Opc.Ua.Messages.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Messages.cs"
