@@ -1,4 +1,4 @@
-@ECHO off
+Stack\Opc.Ua.Core@ECHO off
 REM ****************************************************************************************************************
 REM ** --
 REM ** This script demonstrates how to use the model compiler to generate source code from a variety
@@ -38,7 +38,8 @@ REM
 REM Leaving these fields empty will skip the operation
 
 set ANSIC_TARGET=
-set DOTNET_TARGET=.\Stack\Stack\Opc.Ua.Core\
+set DOTNET_TARGET=.\Stack\Stack
+set DOTNET_TARGETOpcUaCore=%DOTNET_TARGET%\Opc.Ua.Core
 set GDS_TARGET=
 set DI_TARGET=
 set ADI_TARGET=
@@ -50,7 +51,7 @@ REM set USEALLOWSUBTYPES=-useAllowSubtypes
 
 REM Make sure that all of our output locations exist.
 
-IF NOT "%1"=="v104" (set DOTNET_TARGET=)
+REM IF NOT "%1"=="v104" (set DOTNET_TARGET=)
 
 IF NOT EXIST %MODELCOMPILER% GOTO noModelCompiler
 IF NOT EXIST %OUTPUT% MKDIR %OUTPUT%
@@ -97,7 +98,7 @@ REM IF %ERRORLEVEL% NEQ 0 ( ECHO Failed %PARTNAME% & EXIT /B 5 )
 
 REM STEP 2) Copy the generated files to the OUTPUT directory which is how our nodeset files are created...
 
-ECHO Copying CSV files to %OUTPUT%\Schema\
+ECHO Copying CSV files to %OUTPUT%\Schema
 ECHO ON
 TYPE "%CSVINPUT%\StandardTypes.csv" | FINDSTR /V /E Unspecified > "%OUTPUT%\Schema\NodeIds.csv"
 COPY "%CSVINPUT%\UA Attributes.csv" "%OUTPUT%\Schema\AttributeIds.csv"
@@ -108,15 +109,15 @@ COPY ".\Schemas\SecuredApplication.xsd" "%OUTPUT%\Schema\SecuredApplication.xsd"
 COPY ".\Schemas\OPCBinarySchema.xsd" "%OUTPUT%\Schema\OPCBinarySchema.xsd"
 @ECHO OFF
 
-ECHO Copying CSV files to .\Stack\Stack\Opc.Ua.Core\Schema\
+ECHO Copying CSV files to %DOTNET_TARGETOpcUaCore%\Schema\
 ECHO ON
-COPY "%OUTPUT%\Schema\NodeIds.csv" ".\Stack\Stack\Opc.Ua.Core\Schema\NodeIds.csv"
-COPY "%OUTPUT%\Schema\AttributeIds.csv" ".\Stack\Stack\Opc.Ua.Core\Schema\AttributeIds.csv"
-COPY "%OUTPUT%\Schema\ServerCapabilities.csv" ".\Stack\Stack\Opc.Ua.Core\Schema\ServerCapabilities.csv"
-COPY "%OUTPUT%\Schema\StatusCode.csv" ".\Stack\Stack\Opc.Ua.Core\Schema\Opc.Ua.StatusCodes.csv"
-COPY ".\Schemas\UANodeSet.xsd" ".\Stack\Stack\Opc.Ua.Core\Schema\UANodeSet.xsd"
-COPY ".\Schemas\SecuredApplication.xsd" ".\Stack\Stack\Opc.Ua.Core\Schema\SecuredApplication.xsd"
-COPY ".\Schemas\OPCBinarySchema.xsd" ".\Stack\Stack\Opc.Ua.Core\Types\Schemas\OPCBinarySchema.xsd"
+COPY "%OUTPUT%\Schema\NodeIds.csv" "%DOTNET_TARGETOpcUaCore%\Schema\NodeIds.csv"
+COPY "%OUTPUT%\Schema\AttributeIds.csv" "%DOTNET_TARGETOpcUaCore%\Schema\AttributeIds.csv"
+COPY "%OUTPUT%\Schema\ServerCapabilities.csv" "%DOTNET_TARGETOpcUaCore%\Schema\ServerCapabilities.csv"
+COPY "%OUTPUT%\Schema\StatusCode.csv" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.StatusCodes.csv"
+COPY ".\Schemas\UANodeSet.xsd" "%DOTNET_TARGETOpcUaCore%\Schema\UANodeSet.xsd"
+COPY ".\Schemas\SecuredApplication.xsd" "%DOTNET_TARGETOpcUaCore%\Schema\SecuredApplication.xsd"
+COPY ".\Schemas\OPCBinarySchema.xsd" "%DOTNET_TARGETOpcUaCore%\Types\Schemas\OPCBinarySchema.xsd"
 @ECHO OFF
 
 REM STEP 2a) Copy code to ANSIC
@@ -138,40 +139,41 @@ IF "%ANSIC_TARGET%" NEQ "" (
 )
 
 REM STEP 2b) Copy code to .NET
-IF "%DOTNET_TARGET%" NEQ "" (
-	ECHO Copying .NET code to %DOTNET_TARGET%
-	COPY "%OUTPUT%\Schema\AttributeIds.csv" "%DOTNET_TARGET%\Schema\AttributeIds.csv"
-	COPY "%OUTPUT%\Schema\NodeIds.csv" "%DOTNET_TARGET%\Schema\NodeIds.csv"
-	COPY "%OUTPUT%\Schema\ServerCapabilities.csv" "%DOTNET_TARGET%\Schema\ServerCapabilities.csv"
-	COPY "%OUTPUT%\Schema\Opc.Ua.NodeSet.xml" "%DOTNET_TARGET%\Schema\Opc.Ua.NodeSet.xml"
-	COPY "%OUTPUT%\Schema\Opc.Ua.NodeSet2.xml" "%DOTNET_TARGET%\Schema\Opc.Ua.NodeSet2.xml"
-	COPY "%OUTPUT%\Schema\Opc.Ua.Types.bsd" "%DOTNET_TARGET%\Schema\Opc.Ua.Types.bsd"
-	COPY "%OUTPUT%\Schema\Opc.Ua.Types.xsd" "%DOTNET_TARGET%\Schema\Opc.Ua.Types.xsd"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Endpoints.wsdl" "%DOTNET_TARGET%\Schema\Opc.Ua.Endpoints.wsdl"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Services.wsdl" "%DOTNET_TARGET%\Schema\Opc.Ua.Services.wsdl"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Channels.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Channels.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Client.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Client.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Endpoints.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Endpoints.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Interfaces.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Interfaces.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Messages.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Messages.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.ServerBase.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.ServerBase.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.StatusCodes.cs" "%DOTNET_TARGET%\Types\Generated\Opc.Ua.StatusCodes.cs"
-	COPY "%OUTPUT%\DotNet\Opc.Ua.Attributes.cs" "%DOTNET_TARGET%\Types\Generated\Opc.Ua.Attributes.cs"
-	COPY "%OUTPUT%\Schema\Opc.Ua.Classes.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Classes.cs"
-	COPY "%OUTPUT%\Schema\Opc.Ua.Constants.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Constants.cs"
-	COPY "%OUTPUT%\Schema\Opc.Ua.DataTypes.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.DataTypes.cs"
-	COPY "%OUTPUT%\Schema\Opc.Ua.PredefinedNodes.uanodes" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.PredefinedNodes.uanodes"
-	COPY "%OUTPUT%\Schema\Opc.Ua.PredefinedNodes.xml" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.PredefinedNodes.xml"
-)
+ECHO ON
+REM IF "%DOTNET_TARGET%" NEQ "" (
+	ECHO Copying .NET code to %DOTNET_TARGET% and %DOTNET_TARGETOpcUaCore%
+	COPY "%OUTPUT%\Schema\AttributeIds.csv" "%DOTNET_TARGETOpcUaCore%\Schema\AttributeIds.csv"
+	COPY "%OUTPUT%\Schema\NodeIds.csv" "%DOTNET_TARGETOpcUaCore%\Schema\NodeIds.csv"
+	COPY "%OUTPUT%\Schema\ServerCapabilities.csv" "%DOTNET_TARGETOpcUaCore%\Schema\ServerCapabilities.csv"
+	COPY "%OUTPUT%\Schema\Opc.Ua.NodeSet.xml" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.NodeSet.xml"
+	COPY "%OUTPUT%\Schema\Opc.Ua.NodeSet2.xml" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.NodeSet2.xml"
+	COPY "%OUTPUT%\Schema\Opc.Ua.Types.bsd" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Types.bsd"
+	COPY "%OUTPUT%\Schema\Opc.Ua.Types.xsd" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Types.xsd"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Endpoints.wsdl" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Endpoints.wsdl"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Services.wsdl" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Services.wsdl"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Channels.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Channels.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Client.cs" "%DOTNET_TARGETOpcUaCore%\Stack\dGenerated\Opc.Ua.Client.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Endpoints.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Endpoints.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Interfaces.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Interfaces.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Messages.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Messages.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.ServerBase.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.ServerBase.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.StatusCodes.cs" "%DOTNET_TARGETOpcUaCore%\Types\Generated\Opc.Ua.StatusCodes.cs"
+	COPY "%OUTPUT%\DotNet\Opc.Ua.Attributes.cs" "%DOTNET_TARGETOpcUaCore%\Types\Generated\Opc.Ua.Attributes.cs"
+	COPY "%OUTPUT%\Schema\Opc.Ua.Classes.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Classes.cs"
+	COPY "%OUTPUT%\Schema\Opc.Ua.Constants.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Constants.cs"
+	COPY "%OUTPUT%\Schema\Opc.Ua.DataTypes.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.DataTypes.cs"
+	COPY "%OUTPUT%\Schema\Opc.Ua.PredefinedNodes.uanodes" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.PredefinedNodes.uanodes"
+	COPY "%OUTPUT%\Schema\Opc.Ua.PredefinedNodes.xml" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.PredefinedNodes.xml"
+REM )
 
 REM STEP 2b) Copy code to GDS 
 IF "%GDS_TARGET%" NEQ "" (
-	ECHO Copying GDS code to %GDS_TARGET% / %DOTNET_TARGET%
-	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Types.bsd" "%DOTNET_TARGET%\Schema\Opc.Ua.Gds.Types.bsd"
-	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Types.xsd" "%DOTNET_TARGET%\Schema\Opc.Ua.Gds.Types.xsd"
-	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.NodeSet2.xml" "%DOTNET_TARGET%\Schema\Opc.Ua.Gds.NodeSet2.xml"
-	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Constants.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Gds.Constants.cs"
-	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.DataTypes.cs" "%DOTNET_TARGET%\Stack\Generated\Opc.Ua.Gds.DataTypes.cs"
+	ECHO Copying %OUTPUT%\GDS code to %GDS_TARGET% and %DOTNET_TARGETOpcUaCore%
+	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Types.bsd" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Gds.Types.bsd"
+	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Types.xsd" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Gds.Types.xsd"
+	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.NodeSet2.xml" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.Gds.NodeSet2.xml"
+	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Constants.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Gds.Constants.cs"
+	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.DataTypes.cs" "%DOTNET_TARGETOpcUaCore%\Stack\Generated\Opc.Ua.Gds.DataTypes.cs"
 	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.Classes.cs" "%GDS_TARGET%\Model\Opc.Ua.Gds.Classes.cs"
 	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.PredefinedNodes.uanodes" "%GDS_TARGET%\Model\Opc.Ua.Gds.PredefinedNodes.uanodes"
 	COPY "%OUTPUT%\GDS\Opc.Ua.Gds.PredefinedNodes.xml" "%GDS_TARGET%\Model\Opc.Ua.Gds.PredefinedNodes.xml"
