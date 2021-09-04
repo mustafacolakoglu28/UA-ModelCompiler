@@ -6,6 +6,8 @@ REM ** of XML files that adhere to the 'Nodeset2.xml' format. Please refer to th
 REM ** for more information.
 REM ** --
 REM ****************************************************************************************************************
+REM BuildStandardTypes.bat must not refer to the OPC UA .NET Standard #11
+
 SETLOCAL
 
 set MODELCOMPILER=.\Bin\Release\Opc.Ua.ModelCompiler.exe
