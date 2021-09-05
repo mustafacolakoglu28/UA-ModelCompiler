@@ -1,4 +1,4 @@
-Stack\Opc.Ua.Core@ECHO off
+REM @ECHO off
 REM ****************************************************************************************************************
 REM ** --
 REM ** This script demonstrates how to use the model compiler to generate source code from a variety
@@ -11,7 +11,7 @@ REM BuildStandardTypes.bat must not refer to the OPC UA .NET Standard #11
 SETLOCAL
 
 set MODELCOMPILER=.\Bin\Release\Opc.Ua.ModelCompiler.exe
-set OUTPUT=..\nodesets
+set OUTPUT=.\Bin\nodesets
 set INPUT=.\ModelCompiler\Design
 set CSVINPUT=.\ModelCompiler\CSVs
 
@@ -88,7 +88,7 @@ ECHO ON
 %MODELCOMPILER% -input %OUTPUT% -pattern *.cs -license MIT -silent
 %MODELCOMPILER% -input %OUTPUT% -pattern *.h -license MIT -silent
 %MODELCOMPILER% -input %OUTPUT% -pattern *.c -license MIT -silent
-@ECHO OFF
+REM @ECHO OFF
 
 REM SET PARTNAME="DemoModel"
 REM ECHO Building %PARTNAME%
@@ -107,7 +107,7 @@ COPY "%OUTPUT%\DotNet\Opc.Ua.StatusCodes.csv" "%OUTPUT%\Schema\StatusCode.csv"
 COPY ".\Schemas\UANodeSet.xsd" "%OUTPUT%\Schema\UANodeSet.xsd"
 COPY ".\Schemas\SecuredApplication.xsd" "%OUTPUT%\Schema\SecuredApplication.xsd"
 COPY ".\Schemas\OPCBinarySchema.xsd" "%OUTPUT%\Schema\OPCBinarySchema.xsd"
-@ECHO OFF
+REM @ECHO OFF
 
 ECHO Copying CSV files to %DOTNET_TARGETOpcUaCore%\Schema\
 ECHO ON
@@ -118,7 +118,7 @@ COPY "%OUTPUT%\Schema\StatusCode.csv" "%DOTNET_TARGETOpcUaCore%\Schema\Opc.Ua.St
 COPY ".\Schemas\UANodeSet.xsd" "%DOTNET_TARGETOpcUaCore%\Schema\UANodeSet.xsd"
 COPY ".\Schemas\SecuredApplication.xsd" "%DOTNET_TARGETOpcUaCore%\Schema\SecuredApplication.xsd"
 COPY ".\Schemas\OPCBinarySchema.xsd" "%DOTNET_TARGETOpcUaCore%\Types\Schemas\OPCBinarySchema.xsd"
-@ECHO OFF
+REM @ECHO OFF
 
 REM STEP 2a) Copy code to ANSIC
 IF "%ANSIC_TARGET%" NEQ "" (
