@@ -38,8 +38,17 @@ REM
 REM Leaving these fields empty will skip the operation
 
 set ANSIC_TARGET=
-set DOTNET_TARGET=.\Stack\Stack
+set DOTNET_TARGET=.\Bin\Stack
+IF EXIST %DOTNET_TARGET% DEL %DOTNET_TARGET% /S
 set DOTNET_TARGETOpcUaCore=%DOTNET_TARGET%\Opc.Ua.Core
+MKDIR %DOTNET_TARGET%
+MKDIR %DOTNET_TARGETOpcUaCore%
+MKDIR %DOTNET_TARGETOpcUaCore%\Schema
+MKDIR %DOTNET_TARGETOpcUaCore%\Stack
+MKDIR %DOTNET_TARGETOpcUaCore%\Stack\Generated
+MKDIR %DOTNET_TARGETOpcUaCore%\Types
+MKDIR %DOTNET_TARGETOpcUaCore%\Types\Generated
+MKDIR %DOTNET_TARGETOpcUaCore%\Types\Schemas
 set GDS_TARGET=
 set DI_TARGET=
 set ADI_TARGET=
