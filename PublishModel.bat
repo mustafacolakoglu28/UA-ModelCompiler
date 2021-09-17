@@ -11,7 +11,7 @@ SETLOCAL
 set MODELCOMPILER=.\Bin\Release\Opc.Ua.ModelCompiler.exe
 set SOURCE=%1
 set TARGET=%2
-set OUTPUT=.\Bin\nodesets
+set OUTPUT=..\nodesets
 set INPUT=.\ModelCompiler\Design
 set CSVINPUT=.\ModelCompiler\CSVs
 
