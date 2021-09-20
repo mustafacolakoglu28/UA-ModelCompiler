@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ModelCompiler
 {
-    public class MeasurementUnits
+  public class MeasurementUnits
     {
         public static bool ProcessCommandLine()
         {
