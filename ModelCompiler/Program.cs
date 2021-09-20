@@ -34,7 +34,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Windows.Forms;
 
 namespace ModelCompiler
 {
@@ -47,12 +46,6 @@ namespace ModelCompiler
     {
       try
       {
-        if (!noGui)
-        {
-          Application.EnableVisualStyles();
-          Application.SetCompatibleTextRenderingDefault(false);
-        }
-
         if (MeasurementUnits.ProcessCommandLine())
         {
           return;
@@ -69,7 +62,7 @@ namespace ModelCompiler
           }
           else
           {
-            MessageBox.Show(reader.ReadToEnd(), "ModelCompiler");
+            guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
           }
           reader.Close();
           Environment.Exit(2);
@@ -164,7 +157,7 @@ namespace ModelCompiler
       if (commandLine.IndexOf("-?") != -1)
       {
         StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
-        MessageBox.Show(reader.ReadToEnd(), "ModelCompiler");
+        guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
         reader.Close();
         return true;
       }
@@ -464,7 +457,7 @@ namespace ModelCompiler
       }
       catch (Exception e)
       {
-        if (! noGui)
+        if (!noGui)
         {
           System.Console.Error.WriteLine(e.Message);
           System.Console.Error.WriteLine(e.StackTrace);

@@ -1,9 +1,9 @@
-﻿//___________________________________________________________________________________
+﻿//__________________________________________________________________________________________________
 //
-//  Copyright (C) 2020, Mariusz Postol LODZ POLAND.
+//  Copyright (C) 2021, Mariusz Postol LODZ POLAND.
 //
-//  To be in touch join the community at GITTER: https://gitter.im/mpostol/OPC-UA-OOI
-//___________________________________________________________________________________
+//  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
+//__________________________________________________________________________________________________
 
 using ModelCompiler.ToForms;
 using System;
@@ -16,6 +16,11 @@ namespace OOI.ModelCompilerUI.ToForms
     public void Show(string message)
     {
       MessageBox.Show(message);
+    }
+
+    public void Show(string message, string caption)
+    {
+      MessageBox.Show(message, caption);
     }
 
     public DialogResultCompiler Show(string text, string caption, MessageBoxButtonsCompiler buttons, MessageBoxIconCompiler icon)

@@ -1,8 +1,9 @@
-﻿//___________________________________________________________________________________
+﻿//__________________________________________________________________________________________________
 //
-//  Copyright (C) 2019, Mariusz Postol LODZ POLAND.
+//  Copyright (C) 2021, Mariusz Postol LODZ POLAND.
 //
-//___________________________________________________________________________________
+//  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
+//__________________________________________________________________________________________________
 
 using System;
 
@@ -10,7 +11,8 @@ namespace ModelCompiler.ToForms
 {
   public interface IGUIHandling
   {
-    void Show(string wrapperTreeNode_menu_paste_cannot_be_done);
+    void Show(string message);
+    void Show(string message, string caption);
 
     DialogResultCompiler Show(string text, string caption, MessageBoxButtonsCompiler buttons, MessageBoxIconCompiler icon);
 
