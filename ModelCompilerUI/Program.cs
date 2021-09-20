@@ -1,4 +1,5 @@
 ﻿using ModelCompiler;
+using OOI.ModelCompilerUI.ToForms;
 using System;
 
 namespace OOI.ModelCompilerUI
@@ -8,7 +9,7 @@ namespace OOI.ModelCompilerUI
     private static void Main(string[] args)
     {
       bool noGui = Environment.CommandLine.Contains(consoleOutputCommandLineArgument);
-      Program.Main(noGui);
+      Program.Main(noGui, new GUIHandling());
     }
 
     private const string consoleOutputCommandLineArgument = "-console";

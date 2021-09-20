@@ -179,12 +179,6 @@
     <EmbeddedResource Include="Templates\Version2\InitializeOptionalChild.cs" />
     <EmbeddedResource Include="StackGenerator\DotNet\Templates\Interfaces\OperationAsyncEndpoint.cs" />
     <EmbeddedResource Include="Templates\Version2\DataTypes\DerivedClass.cs" />
-    <Compile Include="ExceptionDlg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExceptionDlg.Designer.cs">
-      <DependentUpon>ExceptionDlg.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModelDesign.cs" />
     <Compile Include="ModelDesignerValidator.cs" />
     <EmbeddedResource Include="Templates\Version2\File.cs" />
@@ -261,6 +255,7 @@
       <DependentUpon>UA Type Dictionary.xsd</DependentUpon>
     </Compile>
     <Compile Include="StackGenerator\Wireshark\Wireshark.cs" />
+    <Compile Include="ToForms\IGUIHandling.cs" />
     <Compile Include="UA Model Design.cs">
       <DependentUpon>UA Model Design.xsd</DependentUpon>
     </Compile>
@@ -427,12 +422,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExceptionDlg.resx">
-      <DependentUpon>ExceptionDlg.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Templates\BinarySchema\BuiltInTypes.bsd" />

@@ -31,7 +31,7 @@ using System;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ModelCompiler
+namespace OOI.ModelCompilerUI
 {
   public partial class ExceptionDlg : Form
     {

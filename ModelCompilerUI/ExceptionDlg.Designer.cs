@@ -27,7 +27,7 @@
  * http://opcfoundation.org/License/MIT/1.00/
  * ======================================================================*/
 
-namespace ModelCompiler
+namespace OOI.ModelCompilerUI
 {
     partial class ExceptionDlg
     {

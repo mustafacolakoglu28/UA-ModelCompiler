@@ -27,6 +27,7 @@
  * http://opcfoundation.org/License/MIT/1.00/
  * ======================================================================*/
 
+using ModelCompiler.ToForms;
 using Opc.Ua;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace ModelCompiler
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
-    public static void Main(bool noGui)
+    public static void Main(bool noGui, IGUIHandling guiHandling)
     {
       try
       {
@@ -59,7 +60,7 @@ namespace ModelCompiler
 
         ServiceMessageContext context = ServiceMessageContext.GlobalContext;
 
-        if (!ProcessCommandLine(noGui))
+        if (!ProcessCommandLine(noGui, guiHandling))
         {
           StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
           if (noGui)
@@ -84,7 +85,7 @@ namespace ModelCompiler
         }
         else
         {
-          Application.Run(new ExceptionDlg(e));
+          guiHandling.ShowDialog(e);
         }
       }
     }
@@ -156,7 +157,7 @@ namespace ModelCompiler
     /// <summary>
     /// Processes the command line arguments.
     /// </summary>
-    private static bool ProcessCommandLine(bool noGui)
+    private static bool ProcessCommandLine(bool noGui, IGUIHandling guiHandling)
     {
       string commandLine = Environment.CommandLine;
 
@@ -176,13 +177,13 @@ namespace ModelCompiler
         return false;
       }
 
-      return ProcessCommandLine2(tokens, noGui);
+      return ProcessCommandLine2(tokens, noGui, guiHandling);
     }
 
     /// <summary>
     /// Processes the command line arguments.
     /// </summary>
-    private static bool ProcessCommandLine2(List<string> tokens, bool noGui)
+    private static bool ProcessCommandLine2(List<string> tokens, bool noGui, IGUIHandling guiHandling)
     {
       try
       {
@@ -471,7 +472,7 @@ namespace ModelCompiler
         }
         else
         {
-          new ExceptionDlg(e).ShowDialog();
+          guiHandling.ShowDialog(e);
         }
 
         return true;
