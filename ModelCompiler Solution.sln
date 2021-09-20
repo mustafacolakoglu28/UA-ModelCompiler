@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B2CE7166
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoModel", "Tests\DemoModel\DemoModel.csproj", "{169BF3BA-22D9-497D-A64D-6651A6128E7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCompilerUI", "ModelCompilerUI\ModelCompilerUI.csproj", "{54581E77-A130-407C-B775-7008DCF93888}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,18 @@ Global
 		{169BF3BA-22D9-497D-A64D-6651A6128E7F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{169BF3BA-22D9-497D-A64D-6651A6128E7F}.Release|Win32.ActiveCfg = Release|Any CPU
 		{169BF3BA-22D9-497D-A64D-6651A6128E7F}.Release|Win32.Build.0 = Release|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Debug|Win32.Build.0 = Debug|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Release|Win32.ActiveCfg = Release|Any CPU
+		{54581E77-A130-407C-B775-7008DCF93888}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
