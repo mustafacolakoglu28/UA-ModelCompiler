@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ModelCompilerUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Model Compiler User Interface")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MPostol")]
 [assembly: AssemblyProduct("ModelCompilerUI")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]

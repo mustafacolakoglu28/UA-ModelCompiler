@@ -7,7 +7,7 @@
     <ProjectGuid>{54581E77-A130-407C-B775-7008DCF93888}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>OOI.ModelCompilerUI</RootNamespace>
-    <AssemblyName>ModelCompilerUI</AssemblyName>
+    <AssemblyName>OOI.ModelCompilerUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,13 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="ExceptionDlg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExceptionDlg.Designer.cs">
       <DependentUpon>ExceptionDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToForms\GUIHandling.cs" />
     <Compile Include="ToForms\ToFormsConverters.cs" />
