@@ -7,9 +7,8 @@ namespace ModelCompiler
 {
   public class MeasurementUnits
     {
-        public static bool ProcessCommandLine()
+        public static bool ProcessCommandLine(IList<string> args)
         {
-            IList<string> args = Environment.GetCommandLineArgs();
 
             if (args == null || !args.Contains("-units"))
             {

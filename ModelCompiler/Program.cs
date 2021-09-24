@@ -42,45 +42,45 @@ namespace ModelCompiler
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
-    public static void Main(bool noGui, IGUIHandling guiHandling)
+    public static int Main(bool noGui, IList<string> args, string commandLine, IGUIHandling guiHandling)
     {
       try
       {
-        if (MeasurementUnits.ProcessCommandLine())
+        if (MeasurementUnits.ProcessCommandLine(args))
         {
-          return;
+          return 0;
         }
 
         ServiceMessageContext context = ServiceMessageContext.GlobalContext;
-
-        if (!ProcessCommandLine(noGui, guiHandling))
+        if (!ProcessCommandLine(noGui, commandLine, guiHandling))
         {
           StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
           if (noGui)
           {
-            System.Console.Error.WriteLine(reader.ReadToEnd());
+            Console.Error.WriteLine(reader.ReadToEnd());
           }
           else
           {
             guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
           }
           reader.Close();
-          Environment.Exit(2);
+          return 2;
         }
       }
       catch (Exception e)
       {
         if (noGui)
         {
-          System.Console.Error.WriteLine(e.Message);
-          System.Console.Error.WriteLine(e.StackTrace);
-          Environment.Exit(3);
+          Console.Error.WriteLine(e.Message);
+          Console.Error.WriteLine(e.StackTrace);
+          return 3;
         }
         else
         {
           guiHandling.ShowDialog(e);
         }
       }
+      return 0;
     }
 
     /// <summary>
@@ -150,9 +150,8 @@ namespace ModelCompiler
     /// <summary>
     /// Processes the command line arguments.
     /// </summary>
-    private static bool ProcessCommandLine(bool noGui, IGUIHandling guiHandling)
+    private static bool ProcessCommandLine(bool noGui, string commandLine, IGUIHandling guiHandling)
     {
-      string commandLine = Environment.CommandLine;
 
       if (commandLine.IndexOf("-?") != -1)
       {
@@ -459,8 +458,8 @@ namespace ModelCompiler
       {
         if (!noGui)
         {
-          System.Console.Error.WriteLine(e.Message);
-          System.Console.Error.WriteLine(e.StackTrace);
+          Console.Error.WriteLine(e.Message);
+          Console.Error.WriteLine(e.StackTrace);
           Environment.Exit(4);
         }
         else

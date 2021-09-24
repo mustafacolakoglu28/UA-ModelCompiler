@@ -16,13 +16,16 @@ namespace OOI.ModelCompilerUI
   {
     private static void Main(string[] args)
     {
-      bool noGui = Environment.CommandLine.Contains(consoleOutputCommandLineArgument);
+      string commandLine = Environment.CommandLine;
+      bool noGui = commandLine.Contains(consoleOutputCommandLineArgument);
       if (!noGui)
       {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
       }
-      Program.Main(noGui, new GUIHandling());
+      //IList<string> args = Environment.GetCommandLineArgs();
+      int exitCode = Program.Main(noGui, args, commandLine, new GUIHandling());
+      Environment.Exit(exitCode);
     }
 
     private const string consoleOutputCommandLineArgument = "-console";
