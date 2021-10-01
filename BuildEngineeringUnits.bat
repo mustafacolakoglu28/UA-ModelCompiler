@@ -6,7 +6,7 @@ REM ** --
 REM ****************************************************************************************************************
 SETLOCAL
 
-set MODELCOMPILER=.\Bin\Release\Opc.Ua.ModelCompiler.exe
+set MODELCOMPILER=.\Bin\Release\OOI.ModelCompilerUI.exe
 set OUTPUT=..\nodesets
 set INPUT=.\ModelCompiler\CSVs
 set EXCLUDE=-exclude nothing

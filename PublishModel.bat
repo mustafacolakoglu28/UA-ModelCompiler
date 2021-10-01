@@ -8,7 +8,7 @@ REM ** --
 REM ****************************************************************************************************************
 SETLOCAL
 
-set MODELCOMPILER=.\Bin\Release\Opc.Ua.ModelCompiler.exe
+set MODELCOMPILER=.\Bin\Release\OOI.ModelCompilerUI.exe
 set SOURCE=%1
 set TARGET=%2
 set OUTPUT=.\Bin\nodesets
