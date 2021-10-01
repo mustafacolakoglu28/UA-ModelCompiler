@@ -7,9 +7,9 @@
 
 using System;
 
-namespace ModelCompiler.ToForms
+namespace OOI.ModelCompilerUI.ToForms
 {
-  public interface IGUIHandling
+  internal interface IGUIHandling
   {
     void Show(string message);
     void Show(string message, string caption);

@@ -166,7 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HeaderUpdateTool.cs" />
-    <Compile Include="MeasurementUnits.cs" />
     <Compile Include="Properties\AssemblyVersionInfo.cs" />
     <Compile Include="Schemas\XmlSchemaValidator.cs" />
     <Compile Include="StackGenerator.cs" />
@@ -255,7 +254,6 @@
       <DependentUpon>UA Type Dictionary.xsd</DependentUpon>
     </Compile>
     <Compile Include="StackGenerator\Wireshark\Wireshark.cs" />
-    <Compile Include="ToForms\IGUIHandling.cs" />
     <Compile Include="UA Model Design.cs">
       <DependentUpon>UA Model Design.xsd</DependentUpon>
     </Compile>

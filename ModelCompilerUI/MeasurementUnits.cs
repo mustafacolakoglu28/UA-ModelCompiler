@@ -1,16 +1,22 @@
-﻿using System;
+﻿//__________________________________________________________________________________________________
+//
+//  Copyright (C) 2021, Mariusz Postol LODZ POLAND.
+//
+//  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
+//__________________________________________________________________________________________________
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace ModelCompiler
+namespace OOI.ModelCompilerUI
 {
-  public class MeasurementUnits
+  internal class MeasurementUnits
   {
     //Process undocumented switch -units
     //Not relevant for model design - can be moved to UI
-    //TODO Move UI to separate project #18
-    public static bool ProcessCommandLine(IList<string> args)
+    internal static bool ProcessCommandLine(IList<string> args)
     {
       if (args == null || !args.Contains("-units"))
       {
