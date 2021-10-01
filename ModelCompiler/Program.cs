@@ -28,7 +28,6 @@
  * ======================================================================*/
 
 using ModelCompiler.ToForms;
-using Opc.Ua;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,16 +41,11 @@ namespace ModelCompiler
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
-    public static int Main(bool noGui, IList<string> args, string commandLine, IGUIHandling guiHandling)
+    public static int Main(bool noGui, string commandLine, IGUIHandling guiHandling)
     {
       try
       {
-        if (MeasurementUnits.ProcessCommandLine(args))
-        {
-          return 0;
-        }
-
-        ServiceMessageContext context = ServiceMessageContext.GlobalContext;
+        //ServiceMessageContext context = ServiceMessageContext.GlobalContext;
         if (!ProcessCommandLine(noGui, commandLine, guiHandling))
         {
           StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
@@ -152,7 +146,6 @@ namespace ModelCompiler
     /// </summary>
     private static bool ProcessCommandLine(bool noGui, string commandLine, IGUIHandling guiHandling)
     {
-
       if (commandLine.IndexOf("-?") != -1)
       {
         StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));

@@ -24,7 +24,11 @@ namespace OOI.ModelCompilerUI
         Application.SetCompatibleTextRenderingDefault(false);
       }
       //IList<string> args = Environment.GetCommandLineArgs();
-      int exitCode = Program.Main(noGui, args, commandLine, new GUIHandling());
+      int exitCode = 0;
+      if (MeasurementUnits.ProcessCommandLine(args))
+        exitCode = 0;
+      else
+        exitCode = Program.Main(noGui, commandLine, new GUIHandling());
       Environment.Exit(exitCode);
     }
 
