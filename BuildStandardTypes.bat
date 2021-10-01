@@ -10,7 +10,7 @@ REM BuildStandardTypes.bat must not refer to the OPC UA .NET Standard #11
 
 SETLOCAL
 
-set MODELCOMPILER=.\Bin\Release\Opc.Ua.ModelCompiler.exe
+set MODELCOMPILER=.\Bin\Release\OOI.ModelCompilerUI.exe
 set OUTPUT=.\Bin\nodesets
 set INPUT=.\ModelCompiler\Design
 set CSVINPUT=.\ModelCompiler\CSVs
