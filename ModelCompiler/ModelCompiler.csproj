@@ -1,0 +1,166 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>UA Model Designer</Description>
+    <Company>OPC Foundation</Company>
+    <Product>OPC UA SDK</Product>
+    <Copyright>Copyright © 2004-2014 OPC Foundation, Inc</Copyright>
+    <RepositoryType>GitHub</RepositoryType>
+    <Version>1.01.335.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="StackGenerator\DataTypes\NodeDictionaryGenerator.cs" />
+    <Compile Remove="StackGenerator\DataTypes\Templates\Constants\Constant.cs" />
+    <Compile Remove="StackGenerator\DataTypes\Templates\Constants\DataTypes.cs" />
+    <Compile Remove="StackGenerator\DataTypes\Templates\Constants\Encodings.cs" />
+    <Compile Remove="StackGenerator\DataTypes\Templates\Constants\File.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Channels\BinaryMethodAsync.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Channels\File.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Channels\ServiceSet.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Channels\XmlMethodAsync.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\Class.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\ClassCollection.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\Enumeration.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\EnumerationCollection.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\EnumerationValue.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\EventType.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\FieldValue.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\File.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\Property.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\PropertyArray.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Classes\Service.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\ClientApi\Method.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\ClientApi\ServiceSet.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Endpoints\File.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Endpoints\Method.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Endpoints\ServiceSet.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Interfaces\File.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Interfaces\Operation.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Interfaces\OperationAsync.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Interfaces\OperationAsyncEndpoint.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\Interfaces\ServiceSet.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\ServerApi\InterfaceMethod.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\ServerApi\Method.cs" />
+    <Compile Remove="StackGenerator\DotNet\Templates\ServerApi\ServiceSet.cs" />
+    <Compile Remove="Templates\Types\Identifiers.cs" />
+    <Compile Remove="Templates\Types\Name.cs" />
+    <Compile Remove="Templates\Types\Names.cs" />
+    <Compile Remove="Templates\Types\Namespaces.cs" />
+    <Compile Remove="Templates\Types\NamespaceUri.cs" />
+    <Compile Remove="Templates\Version2\BrowseName.cs" />
+    <Compile Remove="Templates\Version2\ConstantsFile.cs" />
+    <Compile Remove="Templates\Version2\CreateObjectChild.cs" />
+    <Compile Remove="Templates\Version2\CreateVariableChild.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\ArrayProperty.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\Class.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\CollectionClass.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\DerivedClass.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\Enumeration.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\EnumerationValue.cs" />
+    <Compile Remove="Templates\Version2\DataTypes\Property.cs" />
+    <Compile Remove="Templates\Version2\File.cs" />
+    <Compile Remove="Templates\Version2\FindChildCase.cs" />
+    <Compile Remove="Templates\Version2\FindChildMethods.cs" />
+    <Compile Remove="Templates\Version2\FindChildren.cs" />
+    <Compile Remove="Templates\Version2\IdClass.cs" />
+    <Compile Remove="Templates\Version2\IdDeclaration.cs" />
+    <Compile Remove="Templates\Version2\InitializeOptionalChild.cs" />
+    <Compile Remove="Templates\Version2\MandatoryChild.cs" />
+    <Compile Remove="Templates\Version2\MethodType.cs" />
+    <Compile Remove="Templates\Version2\NamespaceUri.cs" />
+    <Compile Remove="Templates\Version2\NodeIdClass.cs" />
+    <Compile Remove="Templates\Version2\NodeIdDeclaration.cs" />
+    <Compile Remove="Templates\Version2\NodeIdDeclarationAbsolute.cs" />
+    <Compile Remove="Templates\Version2\ObjectType.cs" />
+    <Compile Remove="Templates\Version2\Property.cs" />
+    <Compile Remove="Templates\Version2\PropertyOverride.cs" />
+    <Compile Remove="Templates\Version2\TypedVariableType.cs" />
+    <Compile Remove="Templates\Version2\VariableType.cs" />
+    <Compile Remove="Templates\Version2\VariableTypeValue.cs" />
+    <Compile Remove="Templates\Version2\VariableTypeValueField.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Templates\Types\Identifiers.h" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="StackGenerator\DataTypes\Templates\Constants\Constant.cs" />
+    <EmbeddedResource Include="StackGenerator\DataTypes\Templates\Constants\DataTypes.cs" />
+    <EmbeddedResource Include="StackGenerator\DataTypes\Templates\Constants\Encodings.cs" />
+    <EmbeddedResource Include="StackGenerator\DataTypes\Templates\Constants\File.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Channels\BinaryMethodAsync.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Channels\File.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Channels\ServiceSet.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Channels\XmlMethodAsync.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\Class.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\ClassCollection.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\Enumeration.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\EnumerationCollection.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\EnumerationValue.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\EventType.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\FieldValue.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\File.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\Property.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\PropertyArray.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Classes\Service.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\ClientApi\Method.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\ClientApi\ServiceSet.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Endpoints\File.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Endpoints\Method.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Endpoints\ServiceSet.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Interfaces\File.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Interfaces\Operation.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Interfaces\OperationAsync.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Interfaces\OperationAsyncEndpoint.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\Interfaces\ServiceSet.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\ServerApi\InterfaceMethod.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\ServerApi\Method.cs" />
+    <EmbeddedResource Include="StackGenerator\DotNet\Templates\ServerApi\ServiceSet.cs" />
+    <EmbeddedResource Include="Templates\Types\Identifiers.cs" />
+    <EmbeddedResource Include="Templates\Types\Identifiers.h" />
+    <EmbeddedResource Include="Templates\Types\Name.cs" />
+    <EmbeddedResource Include="Templates\Types\Names.cs" />
+    <EmbeddedResource Include="Templates\Types\Namespaces.cs" />
+    <EmbeddedResource Include="Templates\Types\NamespaceUri.cs" />
+    <EmbeddedResource Include="Templates\Version2\BrowseName.cs" />
+    <EmbeddedResource Include="Templates\Version2\ConstantsFile.cs" />
+    <EmbeddedResource Include="Templates\Version2\CreateObjectChild.cs" />
+    <EmbeddedResource Include="Templates\Version2\CreateVariableChild.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\ArrayProperty.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\Class.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\CollectionClass.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\DerivedClass.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\Enumeration.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\EnumerationValue.cs" />
+    <EmbeddedResource Include="Templates\Version2\DataTypes\Property.cs" />
+    <EmbeddedResource Include="Templates\Version2\File.cs" />
+    <EmbeddedResource Include="Templates\Version2\FindChildCase.cs" />
+    <EmbeddedResource Include="Templates\Version2\FindChildMethods.cs" />
+    <EmbeddedResource Include="Templates\Version2\FindChildren.cs" />
+    <EmbeddedResource Include="Templates\Version2\IdClass.cs" />
+    <EmbeddedResource Include="Templates\Version2\IdDeclaration.cs" />
+    <EmbeddedResource Include="Templates\Version2\InitializeOptionalChild.cs" />
+    <EmbeddedResource Include="Templates\Version2\MandatoryChild.cs" />
+    <EmbeddedResource Include="Templates\Version2\MethodType.cs" />
+    <EmbeddedResource Include="Templates\Version2\NamespaceUri.cs" />
+    <EmbeddedResource Include="Templates\Version2\NodeIdClass.cs" />
+    <EmbeddedResource Include="Templates\Version2\NodeIdDeclaration.cs" />
+    <EmbeddedResource Include="Templates\Version2\NodeIdDeclarationAbsolute.cs" />
+    <EmbeddedResource Include="Templates\Version2\ObjectType.cs" />
+    <EmbeddedResource Include="Templates\Version2\Property.cs" />
+    <EmbeddedResource Include="Templates\Version2\PropertyOverride.cs" />
+    <EmbeddedResource Include="Templates\Version2\TypedVariableType.cs" />
+    <EmbeddedResource Include="Templates\Version2\VariableType.cs" />
+    <EmbeddedResource Include="Templates\Version2\VariableTypeValue.cs" />
+    <EmbeddedResource Include="Templates\Version2\VariableTypeValueField.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Core" Version="1.4.367.39" />
+    <PackageReference Include="System.Management" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
