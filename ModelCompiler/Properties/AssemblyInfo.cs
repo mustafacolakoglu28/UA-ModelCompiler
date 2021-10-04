@@ -34,14 +34,14 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ModelCompiler")]
-[assembly: AssemblyDescription("UA Model Designer")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("OPC Foundation")]
-[assembly: AssemblyProduct("OPC UA SDK")]
-[assembly: AssemblyCopyright(AssemblyVersionInfo.Copyright)]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+//[assembly: AssemblyTitle("ModelCompiler")]
+//[assembly: AssemblyDescription("UA Model Designer")]
+//[assembly: AssemblyConfiguration("")]
+//[assembly: AssemblyCompany("OPC Foundation")]
+//[assembly: AssemblyProduct("OPC UA SDK")]
+//[assembly: AssemblyCopyright(AssemblyVersionInfo.Copyright)]
+//[assembly: AssemblyTrademark("")]
+//[assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -58,5 +58,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion(AssemblyVersionInfo.CurrentVersion)]
-[assembly: AssemblyFileVersion(AssemblyVersionInfo.CurrentFileVersion)]
+//[assembly: AssemblyVersion(AssemblyVersionInfo.CurrentVersion)]
+//[assembly: AssemblyFileVersion(AssemblyVersionInfo.CurrentFileVersion)]

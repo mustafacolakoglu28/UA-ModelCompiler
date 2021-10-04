@@ -40,7 +40,7 @@ using Opc.Ua;
 using Export = Opc.Ua.Export;
 using System.Runtime.CompilerServices;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
+//using System.Runtime.Remoting.Messaging;
 using System.Diagnostics;
 
 namespace ModelCompiler
