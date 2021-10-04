@@ -70,15 +70,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModelCompiler\UA Model Compiler.csproj">
-      <Project>{98e685dc-8961-4f46-8261-91d8685edb6e}</Project>
-      <Name>UA Model Compiler</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ExceptionDlg.resx">
       <DependentUpon>ExceptionDlg.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelCompiler\ModelCompiler.csproj">
+      <Project>{8b23adcb-6812-4a9d-ae2d-4cee1c9883d0}</Project>
+      <Name>ModelCompiler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
