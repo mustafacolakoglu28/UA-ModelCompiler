@@ -83,6 +83,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="HelpFile.txt" />
     <None Remove="Templates\Types\Identifiers.h" />
   </ItemGroup>
 

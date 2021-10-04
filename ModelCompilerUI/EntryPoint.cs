@@ -18,6 +18,7 @@ namespace OOI.ModelCompilerUI
 {
   internal class EntryPoint
   {
+    [STAThread]
     private static void Main(string[] args)
     {
       string commandLine = Environment.CommandLine;
@@ -46,7 +47,7 @@ namespace OOI.ModelCompilerUI
         //ServiceMessageContext context = ServiceMessageContext.GlobalContext;
         if (!ProcessCommandLine(commandLine, noGui, guiHandling))
         {
-          StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
+          StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
           if (noGui)
             Console.Error.WriteLine(reader.ReadToEnd());
           else
