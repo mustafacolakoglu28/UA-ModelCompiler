@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace OOI.ModelCompilerUI
 {
-  public class ModelCompilerAPIInternal : ModelCompilerAPI
+  internal class ModelCompilerAPIInternal : ModelCompilerAPI
   {
     public void ProcessCommandLine(List<string> tokens)
     {
