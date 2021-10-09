@@ -75,7 +75,9 @@ REM STEP 1) Generate all of our files first...
 SET PARTNAME="StandardTypes"
 ECHO Building Model %PARTNAME%
 ECHO %MODELCOMPILER% -d2 "%INPUT%\StandardTypes.xml" %VERSION% %EXCLUDE% -d2 "%INPUT%\UA Core Services.xml" -c "%CSVINPUT%\StandardTypes.csv" -o2 "%OUTPUT%\Schema\" -stack "%OUTPUT%\DotNet\" -ansic "%OUTPUT%\AnsiC\" %USEALLOWSUBTYPES%
+
 %MODELCOMPILER% -d2 "%INPUT%\StandardTypes.xml" %VERSION% %EXCLUDE% -d2 "%INPUT%\UA Core Services.xml" -c "%CSVINPUT%\StandardTypes.csv" -o2 "%OUTPUT%\Schema\" -stack "%OUTPUT%\DotNet\" -ansic "%OUTPUT%\AnsiC\" %USEALLOWSUBTYPES%
+
 IF %ERRORLEVEL% NEQ 0 ( ECHO Failed %PARTNAME% & EXIT /B 1 )
 
 IF EXIST %INPUT%\DemoModel.xml CALL PublishModel DemoModel DemoModel %1 %2

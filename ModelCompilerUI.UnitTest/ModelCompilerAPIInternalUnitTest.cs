@@ -21,8 +21,9 @@ namespace OOI.ModelCompilerUI
       ModelCompilerAPIInternal instance = new ModelCompilerAPIInternal();
       instance.ProcessCommandLine(null);
     }
+
     [TestMethod]
-    public void StackGenerationTest()
+    public void StandardTypesTest()
     {
       ModelCompilerAPIInternal instance = new ModelCompilerAPIInternal();
       List<string> commandLine = new List<string>()
@@ -34,6 +35,34 @@ namespace OOI.ModelCompilerUI
         "-o2",  @".\Bin\nodesets\master\Schema\",
         "-stack",  @".\Bin\nodesets\master\DotNet\",
         "-ansic", @".\Bin\nodesets\master\AnsiC\"
+      };
+      instance.ProcessCommandLine(commandLine);
+    }
+
+    [TestMethod]
+    public void BuildingModelDemoTest()
+    {
+      ModelCompilerAPIInternal instance = new ModelCompilerAPIInternal();
+      List<string> commandLine = new List<string>()
+      {
+        "-version", "v104",
+        "-d2", @".\ModelCompiler\Design.v104\DemoModel.xml",
+        "-cg", @".\ModelCompiler\CSVs\DemoModel.csv",
+        "-o2", @".\Bin\nodesets\master\DemoModel\"
+      };
+      instance.ProcessCommandLine(commandLine);
+    }
+
+    [TestMethod]
+    public void UpdatingLicenseTest()
+    {
+      ModelCompilerAPIInternal instance = new ModelCompilerAPIInternal();
+      List<string> commandLine = new List<string>()
+      {
+        "-input", @".\Bin\nodesets\master",
+        "-pattern", "*.xml",
+        "-license", "MITXML",
+        "-silent"
       };
       instance.ProcessCommandLine(commandLine);
     }
