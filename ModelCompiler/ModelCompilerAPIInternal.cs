@@ -22,28 +22,23 @@ namespace OOI.ModelCompiler
           {
             throw new ArgumentException("Incorrect number of parameters specified with the -input option.");
           }
-
           inputDirectory = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-pattern")
         {
           if (ii >= tokens.Count - 1)
           {
             throw new ArgumentException("Incorrect number of parameters specified with the -pattern option.");
           }
-
           filePattern = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-silent")
         {
           silent = true;
           continue;
         }
-
         if (tokens[ii] == "-license")
         {
           if (ii >= tokens.Count - 1)
@@ -55,7 +50,6 @@ namespace OOI.ModelCompiler
           licenseType = (LicenseType)Enum.Parse(typeof(LicenseType), tokens[++ii]);
           continue;
         }
-
         if (tokens[ii] == "-d2")
         {
           if (ii >= tokens.Count - 1)
@@ -66,7 +60,6 @@ namespace OOI.ModelCompiler
           designFiles.Add(tokens[++ii]);
           continue;
         }
-
         if (tokens[ii] == "-d2")
         {
           if (ii >= tokens.Count - 1)
@@ -77,7 +70,6 @@ namespace OOI.ModelCompiler
           designFiles.Add(tokens[++ii]);
           continue;
         }
-
         if (tokens[ii] == "-d2")
         {
           if (ii >= tokens.Count - 1)
@@ -88,7 +80,6 @@ namespace OOI.ModelCompiler
           designFiles.Add(tokens[++ii]);
           continue;
         }
-
         if (tokens[ii] == "-c" || tokens[ii] == "-cg")
         {
           if (ii >= tokens.Count - 1)
@@ -100,7 +91,6 @@ namespace OOI.ModelCompiler
           identifierFile = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-o")
         {
           if (ii >= tokens.Count - 1)
@@ -111,7 +101,6 @@ namespace OOI.ModelCompiler
           outputDir = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-o2")
         {
           if (ii >= tokens.Count - 1)
@@ -123,13 +112,11 @@ namespace OOI.ModelCompiler
           generateMultiFile = true;
           continue;
         }
-
         if (tokens[ii] == "-id")
         {
           startId = Convert.ToUInt32(tokens[++ii]);
           continue;
         }
-
         if (tokens[ii] == "-version")
         {
           if (ii >= tokens.Count - 1)
@@ -140,7 +127,6 @@ namespace OOI.ModelCompiler
           specificationVersion = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-ansic")
         {
           if (ii >= tokens.Count - 1)
@@ -151,30 +137,25 @@ namespace OOI.ModelCompiler
           ansicRootDir = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-useXmlInitializers")
         {
           useXmlInitializers = true;
           continue;
         }
-
         if (tokens[ii] == "-includeDisplayNames")
         {
           includeDisplayNames = true;
           continue;
         }
-
         if (tokens[ii] == "-stack")
         {
           if (ii >= tokens.Count - 1)
           {
             throw new ArgumentException("Incorrect number of parameters specified with the -stack option.");
           }
-
           stackRootDir = tokens[++ii];
           continue;
         }
-
         if (tokens[ii] == "-exclude")
         {
           if (ii >= tokens.Count - 1)
@@ -185,7 +166,6 @@ namespace OOI.ModelCompiler
           excludeCategories = tokens[++ii].Split(',', '+');
           continue;
         }
-
         if (tokens[ii] == "-useAllowSubtypes")
         {
           useAllowSubtypes = true;
