@@ -16,6 +16,8 @@
     <PackageTags>OOI, OPC-UA, opcua, ModelDesign, UANodeSet, Information Model, IoT</PackageTags>
     <RepositoryUrl>https://github.com/mpostol/UA-ModelCompiler</RepositoryUrl>
     <RootNamespace>OOI.ModelCompiler</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>OOIModelDesign.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
