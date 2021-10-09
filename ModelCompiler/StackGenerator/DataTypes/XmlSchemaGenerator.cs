@@ -54,7 +54,7 @@ namespace CodeGenerator
         #endregion
 
         #region Public Properties
-        const string TemplatePath = "ModelCompiler.StackGenerator.DataTypes.Templates.XmlSchema.";
+        const string TemplatePath = "OOI.ModelCompiler.StackGenerator.DataTypes.Templates.XmlSchema.";
         public string TypesNamespace = "http://opcfoundation.org/UA/2008/02/Types.xsd";
         public string ServicesNamespace = "http://opcfoundation.org/UA/2008/02/Services.xsd";
         public string EndpointsNamespace = "http://opcfoundation.org/UA/2008/02/Endpoints.xsd";

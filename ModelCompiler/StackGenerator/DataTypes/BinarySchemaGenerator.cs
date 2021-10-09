@@ -58,7 +58,7 @@ namespace CodeGenerator
         #endregion
 
         #region Public Properties
-        const string TemplatePath = "ModelCompiler.StackGenerator.DataTypes.Templates.BinarySchema.";
+        const string TemplatePath = "OOI.ModelCompiler.StackGenerator.DataTypes.Templates.BinarySchema.";
         #endregion
 
         #region Public Methods

@@ -55,11 +55,11 @@ namespace OOI.ModelCompiler
 
         static void ProcessDictionary(string name, string input, string output, Files files, string specificationVersion)
         {
-            var resourcePath = "ModelCompiler.Design";
+            var resourcePath = "OOI.ModelCompiler.Design";
 
             if (!String.IsNullOrEmpty(specificationVersion))
             {
-                resourcePath = $"ModelCompiler.Design.{specificationVersion}";
+                resourcePath = $"OOI.ModelCompiler.Design.{specificationVersion}";
             }
 
             TypeDictionaryValidator validator = new TypeDictionaryValidator(resourcePath);

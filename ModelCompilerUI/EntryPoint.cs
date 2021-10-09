@@ -80,7 +80,7 @@ namespace OOI.ModelCompilerUI
     {
       if (commandLine.IndexOf("-?") != -1)
       {
-        StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
+        StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
         guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
         reader.Close();
         return true;

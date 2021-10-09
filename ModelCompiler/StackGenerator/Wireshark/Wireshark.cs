@@ -128,7 +128,7 @@ namespace CodeGenerator
         private Hashtable m_hashSimpleTypes;
         private TypeDictionaryValidator m_validator;
         private string m_sHeader;
-        const string WiresharkTemplatePath = "ModelCompiler.StackGenerator.Wireshark.Template.";
+        const string WiresharkTemplatePath = "OOI.ModelCompiler.StackGenerator.Wireshark.Template.";
         #endregion
 
         #region Public Methods
