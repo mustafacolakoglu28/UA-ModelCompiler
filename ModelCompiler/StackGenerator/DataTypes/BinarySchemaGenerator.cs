@@ -27,22 +27,20 @@
  * http://opcfoundation.org/License/MIT/1.00/
  * ======================================================================*/
 
+using Opc.Ua;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 using System.IO;
 using System.Reflection;
-using Opc.Ua;
+using System.Text;
+using System.Xml;
 
 namespace CodeGenerator
 {
-    /// <summary>
-    /// Generates files used to describe data types.
-    /// </summary>
-    public class BinarySchemaGenerator : SchemaGenerator
+  /// <summary>
+  /// Generates files used to describe data types.
+  /// </summary>
+  internal class BinarySchemaGenerator : SchemaGenerator
     {
         #region Constructors
         /// <summary>

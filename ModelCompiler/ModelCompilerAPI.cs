@@ -5,7 +5,6 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
-using ModelCompiler;
 using System;
 using System.Collections.Generic;
 using System.IO;

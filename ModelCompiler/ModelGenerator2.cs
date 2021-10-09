@@ -36,10 +36,12 @@ using System.Xml;
 using Opc.Ua;
 using Export = Opc.Ua.Export;
 using CodeGenerator;
+using ModelCompiler;
+using LocalizedText = ModelCompiler.LocalizedText;
 
-namespace ModelCompiler
+namespace OOI.ModelCompiler
 {
-    public partial class ModelGenerator2 : CodeGenerator.CodeGenerator
+    internal partial class ModelGenerator2 : CodeGenerator.CodeGenerator
     {
         #region Constructors
         /// <summary>

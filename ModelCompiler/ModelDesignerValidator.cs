@@ -27,28 +27,25 @@
  * http://opcfoundation.org/License/MIT/1.00/
  * ======================================================================*/
 
+using ModelCompiler;
+using Opc.Ua;
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
-using System.Reflection;
-using System.Globalization;
-using Opc.Ua;
 using Export = Opc.Ua.Export;
-using System.Runtime.CompilerServices;
-using System.Linq;
-//using System.Runtime.Remoting.Messaging;
-using System.Diagnostics;
+using LocalizedText = ModelCompiler.LocalizedText;
 
-namespace ModelCompiler
+namespace OOI.ModelCompiler
 {
-    /// <summary>
-    /// Generates files used to describe data types.
-    /// </summary>
-    public class ModelCompilerValidator : Opc.Ua.Schema.SchemaValidator
+  /// <summary>
+  /// Generates files used to describe data types.
+  /// </summary>
+  internal class ModelCompilerValidator : Opc.Ua.Schema.SchemaValidator
     {
         #region Constructors
         /// <summary>
