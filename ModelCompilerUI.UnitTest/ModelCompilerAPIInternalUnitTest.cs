@@ -37,6 +37,8 @@ namespace OOI.ModelCompilerUI
         "-ansic", @".\Bin\nodesets\master\AnsiC\"
       };
       instance.ProcessCommandLine(commandLine);
+      Assert.AreEqual<string>(@".\Bin\nodesets\master\AnsiC\", instance.ansicRootDir);
+      Assert.AreEqual<string>("*.xml", instance.filePattern);
     }
 
     [TestMethod]

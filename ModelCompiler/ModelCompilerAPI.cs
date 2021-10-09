@@ -13,25 +13,24 @@ namespace OOI.ModelCompiler
 {
   public abstract class ModelCompilerAPI
   {
-    protected List<string> designFiles = new List<string>();
-    protected string identifierFile = null;
-    protected string outputDir = null;
-    protected bool generateIds = false;
-    protected uint startId = 1;
-    protected string stackRootDir = null;
-    protected string ansicRootDir = null;
-    protected bool generateMultiFile = false;
-    protected bool useXmlInitializers = false;
-    protected string[] excludeCategories = null;
-    protected bool includeDisplayNames = false;
-    protected bool useAllowSubtypes = false;
-
-    protected bool updateHeaders = false;
-    protected string inputDirectory = ".";
-    protected string filePattern = "*.xml";
-    protected string specificationVersion = "";
-    protected LicenseType licenseType = LicenseType.MITXML;
-    protected bool silent = false;
+    protected internal List<string> designFiles = new List<string>();
+    protected internal string identifierFile = null;
+    protected internal string outputDir = null;
+    protected internal bool generateIds = false;
+    protected internal uint startId = 1;
+    protected internal string stackRootDir = null;
+    protected internal string ansicRootDir = null;
+    protected internal bool generateMultiFile = false;
+    protected internal bool useXmlInitializers = false;
+    protected internal string[] excludeCategories = null;
+    protected internal bool includeDisplayNames = false;
+    protected internal bool useAllowSubtypes = false;
+    protected internal bool updateHeaders = false;
+    protected internal string inputDirectory = ".";
+    protected internal string filePattern = "*.xml";
+    protected internal string specificationVersion = "";
+    protected internal LicenseType licenseType = LicenseType.MITXML;
+    protected internal bool silent = false;
 
     public void Execute()
     {
