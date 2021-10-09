@@ -1,62 +1,19 @@
-/* ========================================================================
- * Copyright (c) 2005-2021 The OPC Foundation, Inc. All rights reserved.
- *
- * OPC Foundation MIT License 1.00
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- *
- * The complete license agreement can be found here:
- * http://opcfoundation.org/License/MIT/1.00/
- * ======================================================================*/
+//__________________________________________________________________________________________________
+//
+//  Copyright (C) 2021, Mariusz Postol LODZ POLAND.
+//
+//  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
+//__________________________________________________________________________________________________
 
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//[assembly: AssemblyTitle("ModelCompiler")]
-//[assembly: AssemblyDescription("UA Model Designer")]
-//[assembly: AssemblyConfiguration("")]
-//[assembly: AssemblyCompany("OPC Foundation")]
-//[assembly: AssemblyProduct("OPC UA SDK")]
-//[assembly: AssemblyCopyright(AssemblyVersionInfo.Copyright)]
-//[assembly: AssemblyTrademark("")]
-//[assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible
-// to COM components.  If you need to access a type in this assembly from
-// COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("93a1f6d8-7b6e-44b6-8e0b-461cded2cb73")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version
-//      Build Number
-//      Revision
-//
-//[assembly: AssemblyVersion(AssemblyVersionInfo.CurrentVersion)]
-//[assembly: AssemblyFileVersion(AssemblyVersionInfo.CurrentFileVersion)]
+[assembly: InternalsVisibleTo(
+  "OOI.ModelCompilerUI.UnitTest, PublicKey=" +
+    "00240000048000009400000006020000002400005253413100040000010001005b97a0972ff6b13a" +
+    "8a9ff9c09503aea0e5e2fe29cb2275a0c0942182f4c3431814b6bc9a556d9fe0d7e7823439c1ba28" +
+    "521f6318e4c936c4461604ef668e9686c2021571b093e1bfba071b373bc56a07a3afdc120c5313d3" +
+    "9a935cda64b759f857ebb3db483641444a5347e1564f8ba6d4fad2f968d3caf9991a4fa6aa019ebe"
+)]
