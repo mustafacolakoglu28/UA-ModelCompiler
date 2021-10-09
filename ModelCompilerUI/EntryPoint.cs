@@ -91,7 +91,8 @@ namespace OOI.ModelCompilerUI
         return false;
       try
       {
-        ModelCompilerAPI mc = ModelCompilerAPI.Factory(tokens);
+        ModelCompilerAPIInternal mc = new ModelCompilerAPIInternal();
+        mc.ProcessCommandLine(tokens);
         mc.Execute();
       }
       catch (Exception e)

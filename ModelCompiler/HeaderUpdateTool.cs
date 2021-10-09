@@ -12,14 +12,14 @@ using System.Text;
 
 namespace OOI.ModelCompiler
 {
+  public enum LicenseType
+  {
+    MIT,
+    MITXML
+  }
+
   internal class HeaderUpdateTool
     {
-        public enum LicenseType
-        {
-            MIT,
-            MITXML
-        }
-
         static string RemoveXmlHeader(string fileText)
         {
             bool inComment = false;
