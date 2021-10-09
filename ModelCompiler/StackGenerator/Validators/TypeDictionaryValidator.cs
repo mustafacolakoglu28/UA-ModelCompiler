@@ -52,7 +52,7 @@ namespace CodeGenerator
         {
             var WellKnownDictionaries = new string[][]
             {
-                new string[] { Namespaces.OpcUaBuiltInTypes, $"ModelCompiler.StackGenerator.Validators.BuiltInTypes.xml" }
+                new string[] { Namespaces.OpcUaBuiltInTypes, $"OOI.ModelCompiler.StackGenerator.Validators.BuiltInTypes.xml" }
             };
 
             SetResourcePaths(WellKnownDictionaries);
@@ -65,7 +65,7 @@ namespace CodeGenerator
         {
             var WellKnownDictionaries = new string[][]
             {
-                new string[] { Namespaces.OpcUaBuiltInTypes, $"ModelCompiler.StackGenerator.Validators.BuiltInTypes.xml" }
+                new string[] { Namespaces.OpcUaBuiltInTypes, $"OOI.ModelCompiler.StackGenerator.Validators.BuiltInTypes.xml" }
             };
 
             SetResourcePaths(WellKnownDictionaries);

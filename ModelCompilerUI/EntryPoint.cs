@@ -80,7 +80,7 @@ namespace OOI.ModelCompilerUI
     {
       if (commandLine.IndexOf("-?") != -1)
       {
-        StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("ModelCompiler.HelpFile.txt"));
+        StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
         guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
         reader.Close();
         return true;
@@ -91,7 +91,8 @@ namespace OOI.ModelCompilerUI
         return false;
       try
       {
-        ModelCompilerAPI mc = ModelCompilerAPI.Factory(tokens);
+        ModelCompilerAPIInternal mc = new ModelCompilerAPIInternal();
+        mc.ProcessCommandLine(tokens);
         mc.Execute();
       }
       catch (Exception e)

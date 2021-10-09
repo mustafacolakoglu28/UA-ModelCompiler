@@ -53,7 +53,7 @@ namespace OOI.ModelCompiler
         #endregion
 
         #region Public Properties
-        const string TemplatePath = "ModelCompiler.Templates.";
+        const string TemplatePath = "OOI.ModelCompiler.Templates.";
         const string DefaultNamespace = "http://opcfoundation.org/UA/";
         #endregion
 
@@ -760,7 +760,7 @@ namespace OOI.ModelCompiler
                 AddTemplate(
                     template,
                     "<!-- BuiltInTypes -->",
-                    "ModelCompiler.StackGenerator.DataTypes.Templates.XmlSchema.BuiltInTypes.xsd",
+                    "OOI.ModelCompiler.StackGenerator.DataTypes.Templates.XmlSchema.BuiltInTypes.xsd",
                     new ModelDesign[] { m_model },
                     new LoadTemplateEventHandler(LoadTemplate_XmlType),
                     new WriteTemplateEventHandler(WriteTemplate_XmlType));

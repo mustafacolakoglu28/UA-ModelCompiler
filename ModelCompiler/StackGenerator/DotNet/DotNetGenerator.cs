@@ -60,7 +60,7 @@ namespace CodeGenerator
         #endregion
 
         #region Public Properties
-        const string TemplatePath = "ModelCompiler.StackGenerator.DotNet.Templates.";
+        const string TemplatePath = "OOI.ModelCompiler.StackGenerator.DotNet.Templates.";
         #endregion
 
         #region Public Methods

@@ -57,7 +57,7 @@ namespace CodeGenerator
         #endregion
 
         #region Public Properties
-        const string TemplatePath = "ModelCompiler.StackGenerator.AnsiC.Templates.";
+        const string TemplatePath = "OOI.ModelCompiler.StackGenerator.AnsiC.Templates.";
         #endregion
 
         #region Public Methods

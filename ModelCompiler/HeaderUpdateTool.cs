@@ -12,14 +12,14 @@ using System.Text;
 
 namespace OOI.ModelCompiler
 {
+  public enum LicenseType
+  {
+    MIT,
+    MITXML
+  }
+
   internal class HeaderUpdateTool
     {
-        public enum LicenseType
-        {
-            MIT,
-            MITXML
-        }
-
         static string RemoveXmlHeader(string fileText)
         {
             bool inComment = false;
@@ -162,8 +162,8 @@ namespace OOI.ModelCompiler
 
                 switch (licenseType)
                 {
-                    case LicenseType.MIT: { resourcePath = "ModelCompiler.License.UA_MIT.txt"; break; }
-                    case LicenseType.MITXML: { resourcePath = "ModelCompiler.License.UA_MIT_XML.txt"; break; }
+                    case LicenseType.MIT: { resourcePath = "OOI.ModelCompiler.License.UA_MIT.txt"; break; }
+                    case LicenseType.MITXML: { resourcePath = "OOI.ModelCompiler.License.UA_MIT_XML.txt"; break; }
                 }
 
                 Stream istrm = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcePath);

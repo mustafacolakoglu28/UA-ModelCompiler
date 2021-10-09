@@ -55,8 +55,8 @@ namespace OOI.ModelCompiler
         {
             m_context = ServiceMessageContext.GlobalContext;
             m_startId = startId;
-            EmbeddedModelDesignPath = "ModelCompiler.Design";
-            EmbeddedCsvPath = "ModelCompiler.CSVs";
+            EmbeddedModelDesignPath = "OOI.ModelCompiler.Design";
+            EmbeddedCsvPath = "OOI.ModelCompiler.CSVs";
         }
         #endregion
 
@@ -316,7 +316,7 @@ namespace OOI.ModelCompiler
 
                     if (!File.Exists(designFilePath))
                     {
-                        designFilePath = Utils.Format("ModelCompiler.Design.{0}", designFileName);
+                        designFilePath = Utils.Format("OOI.ModelCompiler.Design.{0}", designFileName);
                         isResource = true;
                         Console.WriteLine("Trying resource: " + designFilePath);
                     }
