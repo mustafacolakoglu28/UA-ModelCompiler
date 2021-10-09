@@ -27,17 +27,15 @@
  * http://opcfoundation.org/License/MIT/1.00/
  * ======================================================================*/
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
+using CodeGenerator;
 using Opc.Ua.Schema.Binary;
 using Opc.Ua.Schema.Xml;
-using CodeGenerator;
+using System;
+using System.Collections.Generic;
 
-namespace ModelCompiler
+namespace OOI.ModelCompiler
 {
-    class StackGenerator
+  internal class StackGenerator
     {
         public class Files
         {

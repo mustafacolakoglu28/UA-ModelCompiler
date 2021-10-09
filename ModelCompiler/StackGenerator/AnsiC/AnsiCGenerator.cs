@@ -28,20 +28,17 @@
  * ======================================================================*/
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 using System.IO;
 using System.Reflection;
+using System.Xml;
 
 namespace CodeGenerator
 {
-    /// <summary>
-    /// Generates code based on a UA Type Dictionary.
-    /// </summary>
-    public class AnsiCGenerator : CodeGenerator
+  /// <summary>
+  /// Generates code based on a UA Type Dictionary.
+  /// </summary>
+  internal class AnsiCGenerator : CodeGenerator
     {
         #region Constructors
         /// <summary>

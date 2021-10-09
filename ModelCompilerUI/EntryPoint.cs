@@ -6,6 +6,7 @@
 //__________________________________________________________________________________________________
 
 using ModelCompiler;
+using OOI.ModelCompiler;
 using OOI.ModelCompilerUI.ToForms;
 using System;
 using System.Collections.Generic;
@@ -90,7 +91,8 @@ namespace OOI.ModelCompilerUI
         return false;
       try
       {
-        Program.ProcessCommandLine(tokens);
+        ModelCompilerAPI mc = ModelCompilerAPI.Factory(tokens);
+        mc.Execute();
       }
       catch (Exception e)
       {

@@ -15,6 +15,7 @@
     <PackageReleaseNotes>The library has been forked from OPCFoundation/UA-ModelCompiler and will be synchronized with the origin occasionally.</PackageReleaseNotes>
     <PackageTags>OOI, OPC-UA, opcua, ModelDesign, UANodeSet, Information Model, IoT</PackageTags>
     <RepositoryUrl>https://github.com/mpostol/UA-ModelCompiler</RepositoryUrl>
+    <RootNamespace>OOI.ModelCompiler</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
