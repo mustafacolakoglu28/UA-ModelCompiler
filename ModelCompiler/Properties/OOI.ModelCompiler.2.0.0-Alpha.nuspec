@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>OOI.ModelCompiler</id>
+    <version>2.0.0-Alpha</version>
+    <title>Object Oriented Internet ModelCompiler</title>
+    <authors>Mariusz Postol</authors>
+    <owners>Mariusz Postol</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/mpostol/UA-ModelCompiler</projectUrl>
+    <icon>Logo64.PNG</icon>
+    <description>ModelCompiler converts ModelDesign XML files into UANodeSet XML, C# and ANSI C, files</description>
+    <releaseNotes>The library has been forked from OPCFoundation/UA-ModelCompiler and will be synchronized with the origin occasionally.</releaseNotes>
+    <copyright>Copyright (C) 2021 Mariusz Postol LODZ POLAND</copyright>
+    <tags>OOI, OPC-UA, opcua, ModelDesign, UANodeSet, Information Model, IoT</tags>
+    <repository type="GitHub" url="https://github.com/mpostol/UA-ModelCompiler" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="OPCFoundation.NetStandard.Opc.Ua.Core" version="1.4.367.41" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Logo64.PNG" target=""/>
+    <file src="..\bin\Release\netstandard2.0\ModelCompiler.dll" target="lib\netstandard2.0\ModelCompiler.dll" />
+  </files>
+</package>

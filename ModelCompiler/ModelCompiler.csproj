@@ -2,12 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>UA Model Designer</Description>
+    <Description>ModelCompiler converts ModelDesign XML files into UANodeSet XML, C# and ANSI C, files</Description>
     <Company>OPC Foundation</Company>
-    <Product>OPC UA SDK</Product>
-    <Copyright>Copyright © 2004-2014 OPC Foundation, Inc</Copyright>
+    <Product>Object-Oriented Internet</Product>
+    <Copyright>Copyright (C) 2021 Mariusz Postol LODZ POLAND</Copyright>
     <RepositoryType>GitHub</RepositoryType>
-    <Version>1.01.335.1</Version>
+    <Version>2.0.0-Alpha</Version>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>OOI.ModelCompiler</PackageId>
+    <Authors>Mariusz Postol</Authors>
+    <PackageReleaseNotes>The library has been forked from OPCFoundation/UA-ModelCompiler and will be synchronized with the origin occasionally.</PackageReleaseNotes>
+    <PackageTags>OOI, OPC-UA, opcua, ModelDesign, UANodeSet, Information Model, IoT</PackageTags>
+    <RepositoryUrl>https://github.com/mpostol/UA-ModelCompiler</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
