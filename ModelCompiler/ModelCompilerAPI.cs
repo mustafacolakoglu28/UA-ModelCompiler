@@ -34,7 +34,6 @@ namespace OOI.ModelCompiler
     private HeaderUpdateTool.LicenseType licenseType = HeaderUpdateTool.LicenseType.MITXML;
     private bool silent = false;
 
-
     public abstract void Execute();
 
     public static ModelCompilerAPI Factory(List<string> tokens)
@@ -240,7 +239,7 @@ namespace OOI.ModelCompiler
 
         for (int ii = 0; ii < designFiles.Count; ii++)
         {
-        if (String.IsNullOrEmpty(designFiles[ii]))
+          if (string.IsNullOrEmpty(designFiles[ii]))
           {
             throw new ArgumentException("No design file specified.");
           }
@@ -251,7 +250,7 @@ namespace OOI.ModelCompiler
           }
         }
 
-      if (String.IsNullOrEmpty(identifierFile))
+        if (string.IsNullOrEmpty(identifierFile))
         {
           throw new ArgumentException("No identifier file specified.");
         }
@@ -273,7 +272,7 @@ namespace OOI.ModelCompiler
             specificationVersion,
             useAllowSubtypes);
 
-      if (!String.IsNullOrEmpty(stackRootDir))
+        if (!string.IsNullOrEmpty(stackRootDir))
         {
           if (!new DirectoryInfo(stackRootDir).Exists)
           {
@@ -283,7 +282,7 @@ namespace OOI.ModelCompiler
           StackGenerator.GenerateDotNet(stackRootDir, specificationVersion);
         }
 
-      if (!String.IsNullOrEmpty(ansicRootDir))
+        if (!string.IsNullOrEmpty(ansicRootDir))
         {
           if (!new DirectoryInfo(ansicRootDir).Exists)
           {
@@ -294,7 +293,7 @@ namespace OOI.ModelCompiler
           generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
         }
 
-      if (!String.IsNullOrEmpty(outputDir))
+        if (!string.IsNullOrEmpty(outputDir))
         {
           if (generateMultiFile)
             generator.GenerateMultipleFiles(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
@@ -302,7 +301,6 @@ namespace OOI.ModelCompiler
             generator.GenerateInternalSingleFile(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
         }
       }
-
     }
   }
 }
