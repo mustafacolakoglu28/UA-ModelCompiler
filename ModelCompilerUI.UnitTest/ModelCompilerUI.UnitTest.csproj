@@ -71,8 +71,8 @@
       <Project>{54581e77-a130-407c-b775-7008dcf93888}</Project>
       <Name>ModelCompilerUI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ModelCompiler\ModelCompiler.csproj">
-      <Project>{8B23ADCB-6812-4A9D-AE2D-4CEE1C9883D0}</Project>
+    <ProjectReference Include="..\Opc.Ua.ModelCompiler\ModelCompiler.csproj">
+      <Project>{688f8d7b-a51c-4e64-aba9-680ef25ede90}</Project>
       <Name>ModelCompiler</Name>
     </ProjectReference>
   </ItemGroup>

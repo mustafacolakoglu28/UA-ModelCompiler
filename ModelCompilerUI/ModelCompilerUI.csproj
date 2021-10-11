@@ -125,13 +125,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModelCompiler\ModelCompiler.csproj">
-      <Project>{8b23adcb-6812-4a9d-ae2d-4cee1c9883d0}</Project>
-      <Name>ModelCompiler</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="HelpFile.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HelpFile.txt" />
+    <ProjectReference Include="..\Opc.Ua.ModelCompiler\ModelCompiler.csproj">
+      <Project>{688f8d7b-a51c-4e64-aba9-680ef25ede90}</Project>
+      <Name>ModelCompiler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

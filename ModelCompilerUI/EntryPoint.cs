@@ -5,8 +5,6 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
-using ModelCompiler;
-using OOI.ModelCompiler;
 using OOI.ModelCompilerUI.ToForms;
 using System;
 using System.Collections.Generic;
@@ -150,7 +148,7 @@ namespace OOI.ModelCompilerUI
             }
           }
 
-          if (Char.IsWhiteSpace(ch))
+          if (char.IsWhiteSpace(ch))
           {
             if (token.Length > 0)
             {
