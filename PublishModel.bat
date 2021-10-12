@@ -5,10 +5,10 @@ set MODELCOMPILER=.\Bin\Release\OOI.ModelCompilerUI.exe
 set SOURCE=%1
 set TARGET=%2
 set OUTPUT=.\Bin\nodesets
-set INPUT=.\ModelCompiler\Design
-set CSVINPUT=.\ModelCompiler\CSVs
+set INPUT=.\Opc.Ua.ModelCompiler\Design
+set CSVINPUT=.\Opc.Ua.ModelCompiler\CSVs
 
-IF NOT "%3"=="" (set INPUT=%INPUT%.%3) else (set INPUT=%INPUT%.v105)
+IF NOT "%3"=="" (set INPUT=%INPUT%.%3) else (set INPUT=%INPUT%.v104)
 IF NOT "%3"=="" (set OUTPUT=%OUTPUT%\%3) else (set OUTPUT=%OUTPUT%\master)
 IF NOT "%3"=="" set VERSION=-version %3
 IF NOT "%4"=="" set EXCLUDE=-exclude %4

@@ -12,8 +12,8 @@ SETLOCAL
 
 set MODELCOMPILER=.\Bin\Release\OOI.ModelCompilerUI.exe
 set OUTPUT=.\Bin\nodesets
-set INPUT=.\ModelCompiler\Design
-set CSVINPUT=.\ModelCompiler\CSVs
+set INPUT=.\Opc.Ua.ModelCompiler\Design
+set CSVINPUT=.\Opc.Ua.ModelCompiler\CSVs
 
 IF NOT "%1"=="" (set OUTPUT=%OUTPUT%\%1) else (set OUTPUT=%OUTPUT%\master)
 IF NOT "%1"=="" (set INPUT=%INPUT%.%1) else (set INPUT=%INPUT%.v104)

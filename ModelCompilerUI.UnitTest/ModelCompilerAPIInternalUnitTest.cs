@@ -28,7 +28,7 @@ namespace OOI.ModelCompilerUI
       ModelCompilerAPIInternal instance = new ModelCompilerAPIInternal();
       List<string> commandLine = new List<string>()
       {
-        "-d2", @".\ModelCompiler\Design.v104\StandardTypes.xml",
+        "-d2", @".\Opc.Ua.ModelCompiler\Design.v104\StandardTypes.xml",
         "-version",  "v104",
         "-d2",  @".\ModelCompiler\Design.v104\UA Core Services.xml",
         "-c", @".\ModelCompiler\CSVs\StandardTypes.csv",
@@ -48,7 +48,7 @@ namespace OOI.ModelCompilerUI
       List<string> commandLine = new List<string>()
       {
         "-version", "v104",
-        "-d2", @".\ModelCompiler\Design.v104\DemoModel.xml",
+        "-d2", @".\Opc.Ua.ModelCompiler\Design.v104\DemoModel.xml",
         "-cg", @".\ModelCompiler\CSVs\DemoModel.csv",
         "-o2", @".\Bin\nodesets\master\DemoModel\"
       };
