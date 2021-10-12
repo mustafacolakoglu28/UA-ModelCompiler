@@ -84,7 +84,7 @@ namespace OOI.ModelCompiler
           throw new ArgumentException("The directory does not exist: " + stackRootDir);
         }
 
-        StackGenerator.GenerateDotNet(stackRootDir, specificationVersion);
+        StackGenerator.GenerateDotNet(designFiles, identifierFile, stackRootDir, specificationVersion);
       }
 
       if (!string.IsNullOrEmpty(ansicRootDir))
@@ -94,7 +94,7 @@ namespace OOI.ModelCompiler
           throw new ArgumentException("The directory does not exist: " + ansicRootDir);
         }
 
-        StackGenerator.GenerateAnsiC(ansicRootDir, specificationVersion);
+        StackGenerator.GenerateAnsiC(designFiles, identifierFile, ansicRootDir, specificationVersion);
         generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
       }
 
