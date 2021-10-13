@@ -6,6 +6,7 @@
 //__________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OOI.ModelCompiler;
 using System;
 using System.Collections.Generic;
 
@@ -42,13 +43,22 @@ namespace OOI.ModelCompilerUI
       Assert.AreEqual<int>(2, instance.designFiles.Count);
       Assert.AreEqual<string>(@".\Opc.Ua.ModelCompiler\Design.v104\StandardTypes.xml", instance.designFiles[0]);
       Assert.AreEqual<string>(@".\ModelCompiler\Design.v104\UA Core Services.xml", instance.designFiles[1]);
+      Assert.IsNull(instance.excludeCategories);
       Assert.AreEqual<string>("*.xml", instance.filePattern);
-      Assert.AreEqual<string>(@".\ModelCompiler\CSVs\StandardTypes.csv", instance.identifierFile);
       Assert.IsFalse(instance.generateIds);
+      Assert.IsTrue(instance.generateMultiFile);
+      Assert.AreEqual<string>(@".\ModelCompiler\CSVs\StandardTypes.csv", instance.identifierFile);
+      Assert.IsFalse(instance.includeDisplayNames);
+      Assert.AreEqual<string>(@".", instance.inputDirectory);
+      Assert.AreEqual<LicenseType>(LicenseType.MITXML, instance.licenseType);
       Assert.AreEqual<string>(@".\Bin\nodesets\master\Schema\", instance.outputDir);
-      Assert.AreEqual<string>(@".\Bin\nodesets\master\DotNet\", instance.stackRootDir);
+      Assert.IsFalse(instance.silent);
       Assert.AreEqual<string>("v104", instance.specificationVersion);
+      Assert.AreEqual<string>(@".\Bin\nodesets\master\DotNet\", instance.stackRootDir);
+      Assert.AreEqual<uint>(1, instance.startId);
       Assert.IsFalse(instance.updateHeaders);
+      Assert.IsFalse(instance.useAllowSubtypes);
+      Assert.IsFalse(instance.useXmlInitializers);
     }
 
     [TestMethod]
@@ -64,6 +74,9 @@ namespace OOI.ModelCompilerUI
         "-o2", @".\Bin\nodesets\master\DemoModel\"
       };
       instance.ProcessCommandLine(commandLine);
+      Assert.IsNull(instance.ansicRootDir);
+      Assert.AreEqual<int>(1, instance.designFiles.Count);
+      Assert.AreEqual<string>(@".\Opc.Ua.ModelCompiler\Design.v104\DemoModel.xml", instance.designFiles[0]);
       Assert.IsTrue(instance.generateIds);
       Assert.AreEqual<string>(@".\ModelCompiler\CSVs\DemoModel.csv", instance.identifierFile);
       Assert.AreEqual<string>("v104", instance.specificationVersion);
