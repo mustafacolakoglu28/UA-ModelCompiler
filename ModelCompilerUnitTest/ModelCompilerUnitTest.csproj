@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82857734-65E7-4D3C-BE6E-2EE06DF1834D}</ProjectGuid>
+    <ProjectGuid>{E105F463-03AD-4318-9B85-3043D44A7B8C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OOI.ModelCompilerUI</RootNamespace>
-    <AssemblyName>OOI.ModelCompilerUI.UnitTest</AssemblyName>
+    <RootNamespace>OOI.ModelCompiler</RootNamespace>
+    <AssemblyName>OOI.ModelCompiler.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -29,7 +29,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <NoWarn>IDE0001</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,10 +37,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -61,17 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ModelCompilerAPIInternalUnitTest.cs" />
+    <Compile Include="IntegrationUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="OOIModelDesign.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ModelCompilerUI\ModelCompilerUI.csproj">
-      <Project>{54581e77-a130-407c-b775-7008dcf93888}</Project>
-      <Name>ModelCompilerUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Opc.Ua.ModelCompiler\ModelCompiler.csproj">
       <Project>{688f8d7b-a51c-4e64-aba9-680ef25ede90}</Project>
       <Name>ModelCompiler</Name>
