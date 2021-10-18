@@ -22,7 +22,9 @@ namespace OOI.ModelCompiler
       Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Core Services.xml")));
       //Hard coded files names that must be in the DesignPath folder to pass
       Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Attributes.xml")));
+      Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Attributes.csv")));
       Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Status Codes.xml")));
+      Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Status Codes.csv")));
     }
 
     private const string DesignPath = @".\Design.v104\";
@@ -32,14 +34,14 @@ namespace OOI.ModelCompiler
     {
       StackBuildModelCompilerAPI stackBuild = new StackBuildModelCompilerAPI();
       stackBuild.Execute();
-      Assert.Fail();  //Uncomment to preserve the generated code
+      //Assert.Fail();  //Uncomment to preserve the generated code
     }
 
     private class StackBuildModelCompilerAPI : ModelCompilerAPI
     {
       public StackBuildModelCompilerAPI()
       {
-        DirectoryInfo stack = Directory.CreateDirectory("Stack");
+        DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
         ansicRootDir = Path.Combine(stack.FullName, "AnsiC");
         Directory.CreateDirectory(ansicRootDir);
         designFiles.Add(@".\Design.v104\StandardTypes.xml");

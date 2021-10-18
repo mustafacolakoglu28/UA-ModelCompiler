@@ -94,6 +94,12 @@
     <None Include="Design.v104\StandardTypes.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Design.v104\UA Attributes.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Design.v104\UA Status Codes.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="OOIModelDesign.snk" />
     <None Include="packages.config" />
   </ItemGroup>
