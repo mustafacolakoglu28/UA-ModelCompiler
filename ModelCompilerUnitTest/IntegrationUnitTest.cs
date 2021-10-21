@@ -11,7 +11,7 @@ using System.IO;
 namespace OOI.ModelCompiler
 {
   [TestClass]
-  [DeploymentItem(@".\Design.v104", "Design.v104")]
+  [DeploymentItem(@".\TestingData", "TestingData")]
   public class IntegrationUnitTest
   {
     [ClassInitialize()]
@@ -25,9 +25,9 @@ namespace OOI.ModelCompiler
       Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Attributes.csv")));
       Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Status Codes.xml")));
       Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Status Codes.csv")));
+      Assert.IsTrue(File.Exists(Path.Combine(SourcePath, "DemoModel.xml")));
+      Assert.IsTrue(File.Exists(Path.Combine(SourcePath, "DemoModel.csv")));
     }
-
-    private const string DesignPath = @".\Design.v104\";
 
     [TestMethod]
     public void StackBuild()
@@ -74,6 +74,15 @@ namespace OOI.ModelCompiler
       //Assert.Fail();  //Uncomment to preserve the generated code
     }
 
+    [TestMethod]
+    public void BuildingModelDemoTest()
+    {
+      BuildingModelDemoAPI stackBuild = new BuildingModelDemoAPI();
+      stackBuild.Execute();
+      //Assert.Fail();  //Uncomment to preserve the generated code
+    }
+    private const string DesignPath = @".\TestingData\Design.v104\";
+    private const string SourcePath = @".\TestingData\ModelDesign\";
     private class StackBuildModelCompilerAPI : ModelCompilerAPI
     {
       public StackBuildModelCompilerAPI()
@@ -81,13 +90,13 @@ namespace OOI.ModelCompiler
         DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
         ansicRootDir = Path.Combine(stack.FullName, "AnsiC");
         Directory.CreateDirectory(ansicRootDir);
-        designFiles.Add(@".\Design.v104\StandardTypes.xml");
-        designFiles.Add(@".\Design.v104\UA Core Services.xml");
+        designFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
+        designFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
         excludeCategories = null;
         filePattern = "*.xml";
         generateIds = false;
         generateMultiFile = true;
-        identifierFile = @".\Design.v104\StandardTypes.csv";
+        identifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
         includeDisplayNames = false;
         inputDirectory = @".";
         licenseType = LicenseType.MITXML;
@@ -97,6 +106,32 @@ namespace OOI.ModelCompiler
         specificationVersion = "v104";
         stackRootDir = Path.Combine(stack.FullName, "DotNet");
         Directory.CreateDirectory(stackRootDir);
+        startId = 1;
+        updateHeaders = false;
+        useAllowSubtypes = false;
+        useXmlInitializers = false;
+      }
+    }
+    private class BuildingModelDemoAPI : ModelCompilerAPI
+    {
+      public BuildingModelDemoAPI()
+      {
+        DirectoryInfo output = Directory.CreateDirectory("outputDir");
+        ansicRootDir = null;
+        designFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
+        excludeCategories = null;
+        filePattern = "*.xml";
+        generateIds = true;
+        generateMultiFile = true;
+        identifierFile = Path.Combine(SourcePath, "DemoModel.csv");
+        includeDisplayNames = false;
+        //inputDirectory = @".";
+        //licenseType = LicenseType.MITXML;
+        outputDir = Path.Combine(output.FullName, "DemoModel");
+        Directory.CreateDirectory(outputDir);
+        silent = false;
+        specificationVersion = "v104";
+        stackRootDir = null;
         startId = 1;
         updateHeaders = false;
         useAllowSubtypes = false;
