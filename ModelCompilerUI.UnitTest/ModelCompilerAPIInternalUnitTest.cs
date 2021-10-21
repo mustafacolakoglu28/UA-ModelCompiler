@@ -77,8 +77,12 @@ namespace OOI.ModelCompilerUI
       Assert.IsNull(instance.ansicRootDir);
       Assert.AreEqual<int>(1, instance.designFiles.Count);
       Assert.AreEqual<string>(@".\Opc.Ua.ModelCompiler\Design.v104\DemoModel.xml", instance.designFiles[0]);
+      Assert.AreEqual<string>("*.xml", instance.filePattern);
       Assert.IsTrue(instance.generateIds);
+      Assert.IsTrue(instance.generateMultiFile);
       Assert.AreEqual<string>(@".\ModelCompiler\CSVs\DemoModel.csv", instance.identifierFile);
+      Assert.IsFalse(instance.includeDisplayNames);
+      Assert.AreEqual<string>(@".\Bin\nodesets\master\DemoModel\", instance.outputDir);
       Assert.AreEqual<string>("v104", instance.specificationVersion);
       Assert.AreEqual<string>(null, instance.stackRootDir);
       Assert.IsFalse(instance.updateHeaders);
