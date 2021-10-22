@@ -32,65 +32,39 @@ namespace OOI.ModelCompiler
 
     protected virtual void Execute()
     {
-
       ModelGenerator2 generator = new ModelGenerator2();
-
       for (int ii = 0; ii < designFiles.Count; ii++)
       {
         if (string.IsNullOrEmpty(designFiles[ii]))
-        {
           throw new ArgumentException("No design file specified.");
-        }
-
-        if (!new FileInfo(designFiles[ii]).Exists)
-        {
-          throw new ArgumentException("The design file does not exist: " + designFiles[ii]);
-        }
+        if (!File.Exists(designFiles[ii]))
+          throw new ArgumentException($"The design file does not exist: {designFiles[ii]}");
       }
-
       if (string.IsNullOrEmpty(identifierFile))
-      {
         throw new ArgumentException("No identifier file specified.");
-      }
-
-      if (!new FileInfo(identifierFile).Exists)
+      if (!File.Exists(identifierFile))
       {
         if (!generateIds)
-        {
-          throw new ArgumentException("The identifier file does not exist: " + identifierFile);
-        }
-
+          throw new ArgumentException($"The identifier file does not exist: {identifierFile}");
         File.Create(identifierFile).Close();
       }
-
-      generator.ValidateAndUpdateIds(
-          designFiles,
-          identifierFile,
-          startId,
-          specificationVersion,
-          useAllowSubtypes);
-
+      generator.ValidateAndUpdateIds(designFiles, identifierFile, startId, specificationVersion, useAllowSubtypes);
+      //.NET stack generator
       if (!string.IsNullOrEmpty(stackRootDir))
       {
-        if (!new DirectoryInfo(stackRootDir).Exists)
-        {
-          throw new ArgumentException("The directory does not exist: " + stackRootDir);
-        }
-
+        if (!Directory.Exists(stackRootDir))
+          throw new ArgumentException($"The directory does not exist: {stackRootDir}");
         StackGenerator.GenerateDotNet(designFiles, identifierFile, stackRootDir, specificationVersion);
       }
-
+      //Build ANSI C stack
       if (!string.IsNullOrEmpty(ansicRootDir))
       {
-        if (!new DirectoryInfo(ansicRootDir).Exists)
-        {
-          throw new ArgumentException("The directory does not exist: " + ansicRootDir);
-        }
-
+        if (!Directory.Exists(ansicRootDir))
+          throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
         StackGenerator.GenerateAnsiC(designFiles, identifierFile, ansicRootDir, specificationVersion);
         generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
       }
-
+      //Build model
       if (!string.IsNullOrEmpty(outputDir))
       {
         if (generateMultiFile)
