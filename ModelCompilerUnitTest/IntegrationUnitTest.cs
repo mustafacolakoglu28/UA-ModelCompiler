@@ -79,10 +79,23 @@ namespace OOI.ModelCompiler
     {
       BuildingModelDemoAPI stackBuild = new BuildingModelDemoAPI();
       stackBuild.Execute();
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Classes.cs")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Constants.cs")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.DataTypes.cs")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.NodeIds.csv")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.NodeSet.xml")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.NodeSet2.xml")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.PredefinedNodes.uanodes")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.PredefinedNodes.xml")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Types.bsd")));
+      Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Types.xsd")));
       //Assert.Fail();  //Uncomment to preserve the generated code
     }
+
     private const string DesignPath = @".\TestingData\Design.v104\";
     private const string SourcePath = @".\TestingData\ModelDesign\";
+    private const string DemoModelDir = "outputDir";
+
     private class StackBuildModelCompilerAPI : ModelCompilerAPI
     {
       public StackBuildModelCompilerAPI()
@@ -112,11 +125,11 @@ namespace OOI.ModelCompiler
         useXmlInitializers = false;
       }
     }
+
     private class BuildingModelDemoAPI : ModelCompilerAPI
     {
       public BuildingModelDemoAPI()
       {
-        DirectoryInfo output = Directory.CreateDirectory("outputDir");
         ansicRootDir = null;
         designFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
         excludeCategories = null;
@@ -127,7 +140,7 @@ namespace OOI.ModelCompiler
         includeDisplayNames = false;
         //inputDirectory = @".";
         //licenseType = LicenseType.MITXML;
-        outputDir = Path.Combine(output.FullName, "DemoModel");
+        outputDir = DemoModelDir;
         Directory.CreateDirectory(outputDir);
         silent = false;
         specificationVersion = "v104";
