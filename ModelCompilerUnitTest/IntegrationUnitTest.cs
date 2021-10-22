@@ -33,7 +33,7 @@ namespace OOI.ModelCompiler
     public void StackBuild()
     {
       StackBuildModelCompilerAPI stackBuild = new StackBuildModelCompilerAPI();
-      stackBuild.Execute();
+      stackBuild.Build();
       Assert.IsTrue(File.Exists(@"nodesetsMaster\DotNet\Opc.Ua.Attributes.cs"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\DotNet\Opc.Ua.Channels.cs"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\DotNet\Opc.Ua.Client.cs"));
@@ -78,7 +78,7 @@ namespace OOI.ModelCompiler
     public void BuildingModelDemoTest()
     {
       BuildingModelDemoAPI stackBuild = new BuildingModelDemoAPI();
-      stackBuild.Execute();
+      stackBuild.Build();
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Classes.cs")));
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Constants.cs")));
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.DataTypes.cs")));
@@ -92,12 +92,19 @@ namespace OOI.ModelCompiler
       //Assert.Fail();  //Uncomment to preserve the generated code
     }
 
+    #region private stuff
+
     private const string DesignPath = @".\TestingData\Design.v104\";
     private const string SourcePath = @".\TestingData\ModelDesign\";
     private const string DemoModelDir = "outputDir";
 
     private class StackBuildModelCompilerAPI : ModelCompilerAPI
     {
+      internal void Build()
+      {
+        Execute();
+      }
+
       public StackBuildModelCompilerAPI()
       {
         DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
@@ -112,7 +119,6 @@ namespace OOI.ModelCompiler
         identifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
         includeDisplayNames = false;
         inputDirectory = @".";
-        licenseType = LicenseType.MITXML;
         outputDir = Path.Combine(stack.FullName, "Schema");
         Directory.CreateDirectory(outputDir);
         silent = false;
@@ -120,7 +126,6 @@ namespace OOI.ModelCompiler
         stackRootDir = Path.Combine(stack.FullName, "DotNet");
         Directory.CreateDirectory(stackRootDir);
         startId = 1;
-        updateHeaders = false;
         useAllowSubtypes = false;
         useXmlInitializers = false;
       }
@@ -128,6 +133,11 @@ namespace OOI.ModelCompiler
 
     private class BuildingModelDemoAPI : ModelCompilerAPI
     {
+      internal void Build()
+      {
+        Execute();
+      }
+
       public BuildingModelDemoAPI()
       {
         ansicRootDir = null;
@@ -146,10 +156,11 @@ namespace OOI.ModelCompiler
         specificationVersion = "v104";
         stackRootDir = null;
         startId = 1;
-        updateHeaders = false;
         useAllowSubtypes = false;
         useXmlInitializers = false;
       }
     }
+
+    #endregion private stuff
   }
 }

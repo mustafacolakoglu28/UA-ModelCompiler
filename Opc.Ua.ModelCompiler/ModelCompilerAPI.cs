@@ -25,20 +25,13 @@ namespace OOI.ModelCompiler
     protected internal string[] excludeCategories = null;
     protected internal bool includeDisplayNames = false;
     protected internal bool useAllowSubtypes = false;
-    protected internal bool updateHeaders = false;
     protected internal string inputDirectory = ".";
     protected internal string filePattern = "*.xml";
     protected internal string specificationVersion = "";
-    protected internal LicenseType licenseType = LicenseType.MITXML;
     protected internal bool silent = false;
 
-    public void Execute()
+    protected virtual void Execute()
     {
-      if (updateHeaders)
-      {
-        HeaderUpdateTool.ProcessDirectory(inputDirectory, filePattern, licenseType, silent);
-        return;
-      }
 
       ModelGenerator2 generator = new ModelGenerator2();
 

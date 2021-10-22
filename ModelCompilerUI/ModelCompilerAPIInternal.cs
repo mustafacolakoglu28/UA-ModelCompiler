@@ -13,7 +13,7 @@ namespace OOI.ModelCompilerUI
 {
   internal class ModelCompilerAPIInternal : ModelCompilerAPI
   {
-    public void ProcessCommandLine(List<string> tokens)
+    internal void ProcessCommandLine(List<string> tokens)
     {
       for (int ii = 1; ii < tokens.Count; ii++)
       {
@@ -143,6 +143,24 @@ namespace OOI.ModelCompilerUI
           continue;
         }
       }
+    }
+
+    internal void Build()
+    {
+      Execute();
+    }
+
+    internal LicenseType licenseType = LicenseType.MITXML;
+    internal bool updateHeaders = false;
+
+    protected override void Execute()
+    {
+      if (updateHeaders)
+      {
+        HeaderUpdateTool.ProcessDirectory(inputDirectory, filePattern, licenseType, silent);
+        return;
+      }
+      base.Execute();
     }
   }
 }

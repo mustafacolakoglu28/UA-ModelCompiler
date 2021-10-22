@@ -10,7 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace OOI.ModelCompiler
+namespace OOI.ModelCompilerUI
 {
   public enum LicenseType
   {
