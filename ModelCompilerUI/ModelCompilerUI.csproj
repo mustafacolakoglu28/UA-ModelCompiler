@@ -107,6 +107,7 @@
     <Compile Include="ExceptionDlg.Designer.cs">
       <DependentUpon>ExceptionDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeaderUpdateTool.cs" />
     <Compile Include="MeasurementUnits.cs" />
     <Compile Include="ModelCompilerAPIInternal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
