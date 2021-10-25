@@ -32,7 +32,6 @@ namespace OOI.ModelCompiler
 
     protected virtual void Execute()
     {
-      ModelGenerator2 generator = new ModelGenerator2();
       for (int ii = 0; ii < designFiles.Count; ii++)
       {
         if (string.IsNullOrEmpty(designFiles[ii]))
@@ -48,7 +47,8 @@ namespace OOI.ModelCompiler
           throw new ArgumentException($"The identifier file does not exist: {identifierFile}");
         File.Create(identifierFile).Close();
       }
-      generator.ValidateAndUpdateIds(designFiles, identifierFile, startId, specificationVersion, useAllowSubtypes);
+      ModelGenerator2 Generator = new ModelGenerator2();
+      Generator.ValidateAndUpdateIds(designFiles, identifierFile, startId, specificationVersion, useAllowSubtypes);
       //.NET stack generator
       if (!string.IsNullOrEmpty(stackRootDir))
       {
@@ -62,15 +62,15 @@ namespace OOI.ModelCompiler
         if (!Directory.Exists(ansicRootDir))
           throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
         StackGenerator.GenerateAnsiC(designFiles, identifierFile, ansicRootDir, specificationVersion);
-        generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
+        Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
       }
       //Build model
       if (!string.IsNullOrEmpty(outputDir))
       {
         if (generateMultiFile)
-          generator.GenerateMultipleFiles(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
+          Generator.GenerateMultipleFiles(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
         else
-          generator.GenerateInternalSingleFile(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
+          Generator.GenerateInternalSingleFile(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
       }
     }
   }
