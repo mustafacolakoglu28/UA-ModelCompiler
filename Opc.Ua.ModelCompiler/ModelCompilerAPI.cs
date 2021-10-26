@@ -11,24 +11,32 @@ using System.IO;
 
 namespace OOI.ModelCompiler
 {
-  public abstract class ModelCompilerAPI
+  public abstract class ModelCompilerAPI : IModelGeneratorGenerate
   {
     protected internal List<string> designFiles = new List<string>();
     protected internal string identifierFile = null;
-    protected internal string outputDir = null;
     protected internal bool generateIds = false;
     protected internal uint startId = 1;
     protected internal string stackRootDir = null;
     protected internal string ansicRootDir = null;
     protected internal bool generateMultiFile = false;
-    protected internal bool useXmlInitializers = false;
-    protected internal string[] excludeCategories = null;
-    protected internal bool includeDisplayNames = false;
     protected internal bool useAllowSubtypes = false;
     protected internal string inputDirectory = ".";
     protected internal string filePattern = "*.xml";
     protected internal string specificationVersion = "";
     protected internal bool silent = false;
+
+    #region IModelGeneratorGenerate
+
+    public string[] ExcludeCategories { get; protected set; } = null;
+
+    public string OutputDir { get; protected set; } = null;
+
+    public bool UseXmlInitializers { get; protected set; } = false;
+
+    public bool IncludeDisplayNames { get; protected set; } = false;
+
+    #endregion IModelGeneratorGenerate
 
     protected virtual void Execute()
     {
@@ -62,16 +70,24 @@ namespace OOI.ModelCompiler
         if (!Directory.Exists(ansicRootDir))
           throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
         StackGenerator.GenerateAnsiC(designFiles, identifierFile, ansicRootDir, specificationVersion);
-        Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
+        Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, ExcludeCategories);
       }
       //Build model
-      if (!string.IsNullOrEmpty(outputDir))
+      if (!string.IsNullOrEmpty(OutputDir))
       {
         if (generateMultiFile)
-          Generator.GenerateMultipleFiles(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
+          Generator.GenerateMultipleFiles(this);
         else
-          Generator.GenerateInternalSingleFile(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
+          Generator.GenerateInternalSingleFile(this);
       }
     }
+  }
+
+  internal interface IModelGeneratorGenerate
+  {
+    bool UseXmlInitializers { get; }
+    string[] ExcludeCategories { get; }
+    bool IncludeDisplayNames { get; }
+    string OutputDir { get; }
   }
 }

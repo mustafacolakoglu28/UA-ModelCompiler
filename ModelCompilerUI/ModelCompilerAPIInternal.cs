@@ -81,14 +81,14 @@ namespace OOI.ModelCompilerUI
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -o option.");
-          outputDir = tokens[++ii];
+          OutputDir = tokens[++ii];
           continue;
         }
         if (tokens[ii] == "-o2")
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -o option.");
-          outputDir = tokens[++ii];
+          OutputDir = tokens[++ii];
           generateMultiFile = true;
           continue;
         }
@@ -113,12 +113,12 @@ namespace OOI.ModelCompilerUI
         }
         if (tokens[ii] == "-useXmlInitializers")
         {
-          useXmlInitializers = true;
+          UseXmlInitializers = true;
           continue;
         }
         if (tokens[ii] == "-includeDisplayNames")
         {
-          includeDisplayNames = true;
+          IncludeDisplayNames = true;
           continue;
         }
         if (tokens[ii] == "-stack")
@@ -134,7 +134,7 @@ namespace OOI.ModelCompilerUI
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -exclude option.");
-          excludeCategories = tokens[++ii].Split(',', '+');
+          ExcludeCategories = tokens[++ii].Split(',', '+');
           continue;
         }
         if (tokens[ii] == "-useAllowSubtypes")
