@@ -152,6 +152,8 @@ namespace OOI.ModelCompilerUI
 
     internal LicenseType licenseType = LicenseType.MITXML;
     internal bool updateHeaders = false;
+    private string inputDirectory { get; set; } = ".";
+
 
     protected override void Execute()
     {

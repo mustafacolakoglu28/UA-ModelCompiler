@@ -84,20 +84,15 @@ namespace OOI.ModelCompiler
         /// <summary>
         /// Generates the source code files.
         /// </summary>
-        public virtual void ValidateAndUpdateIds(
-            IList<string> designFilePaths, 
-            string identifierFilePath, 
-            uint startId, 
-            string specificationVersion,
-            bool useAllowSubtypes)
+        public virtual void ValidateAndUpdateIds(IModelGeneratorValidate model)
         {
-            m_validator = new ModelCompilerValidator(startId);
+            m_validator = new ModelCompilerValidator(model.startId);
 
-            if (!String.IsNullOrEmpty(specificationVersion))
+            if (!String.IsNullOrEmpty(model.specificationVersion))
             {
-                m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.{specificationVersion}";
+                m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.{model.specificationVersion}";
 
-                if (specificationVersion == "v103")
+                if (model.specificationVersion == "v103")
                 {
                     m_validator.EmbeddedCsvPath = m_validator.EmbeddedModelDesignPath;
                 }
@@ -107,8 +102,8 @@ namespace OOI.ModelCompiler
                 m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.v104";
             }
 
-            m_validator.UseAllowSubtypes = useAllowSubtypes;
-            m_validator.Validate2(designFilePaths, identifierFilePath, false);
+            m_validator.UseAllowSubtypes = model.useAllowSubtypes;
+            m_validator.Validate2(model.designFiles, model.identifierFile, false);
             m_model = m_validator.Dictionary;
         }
 

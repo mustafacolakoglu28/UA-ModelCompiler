@@ -118,7 +118,6 @@ namespace OOI.ModelCompiler
         generateMultiFile = true;
         identifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
         IncludeDisplayNames = false;
-        inputDirectory = @".";
         OutputDir = Path.Combine(stack.FullName, "Schema");
         Directory.CreateDirectory(OutputDir);
         silent = false;

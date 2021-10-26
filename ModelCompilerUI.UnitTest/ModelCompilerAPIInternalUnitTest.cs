@@ -6,7 +6,6 @@
 //__________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OOI.ModelCompiler;
 using System;
 using System.Collections.Generic;
 
@@ -49,7 +48,6 @@ namespace OOI.ModelCompilerUI
       Assert.IsTrue(instance.generateMultiFile);
       Assert.AreEqual<string>(@".\Opc.Ua.ModelCompiler\CSVs\StandardTypes.csv", instance.identifierFile);
       Assert.IsFalse(instance.IncludeDisplayNames);
-      Assert.AreEqual<string>(@".", instance.inputDirectory);
       Assert.AreEqual<LicenseType>(LicenseType.MITXML, instance.licenseType);
       Assert.AreEqual<string>(@".\Bin\nodesets\master\Schema\", instance.OutputDir);
       Assert.IsFalse(instance.silent);
