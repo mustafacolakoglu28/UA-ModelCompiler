@@ -11,19 +11,14 @@ using System.IO;
 
 namespace OOI.ModelCompiler
 {
-  public abstract class ModelCompilerAPI : IModelGeneratorGenerate
+  public abstract class ModelCompilerAPI : IModelGeneratorGenerate, IModelGeneratorValidate
   {
-    protected internal List<string> designFiles = new List<string>();
-    protected internal string identifierFile = null;
     protected internal bool generateIds = false;
-    protected internal uint startId = 1;
     protected internal string stackRootDir = null;
     protected internal string ansicRootDir = null;
     protected internal bool generateMultiFile = false;
-    protected internal bool useAllowSubtypes = false;
-    protected internal string inputDirectory = ".";
     protected internal string filePattern = "*.xml";
-    protected internal string specificationVersion = "";
+
     protected internal bool silent = false;
 
     #region IModelGeneratorGenerate
@@ -37,6 +32,20 @@ namespace OOI.ModelCompiler
     public bool IncludeDisplayNames { get; protected set; } = false;
 
     #endregion IModelGeneratorGenerate
+
+    #region IModelGeneratorValidate
+
+    public List<string> designFiles { get; protected set; } = new List<string>();
+
+    public string identifierFile { get; protected set; } = null;
+
+    public uint startId { get; protected set; } = 1;
+
+    public string specificationVersion { get; protected set; } = string.Empty;
+
+    public bool useAllowSubtypes { get; protected set; } = false;
+
+    #endregion IModelGeneratorValidate
 
     protected virtual void Execute()
     {
@@ -56,7 +65,7 @@ namespace OOI.ModelCompiler
         File.Create(identifierFile).Close();
       }
       ModelGenerator2 Generator = new ModelGenerator2();
-      Generator.ValidateAndUpdateIds(designFiles, identifierFile, startId, specificationVersion, useAllowSubtypes);
+      Generator.ValidateAndUpdateIds(this);
       //.NET stack generator
       if (!string.IsNullOrEmpty(stackRootDir))
       {
@@ -81,6 +90,15 @@ namespace OOI.ModelCompiler
           Generator.GenerateInternalSingleFile(this);
       }
     }
+  }
+
+  internal interface IModelGeneratorValidate
+  {
+    List<string> designFiles { get; }
+    string identifierFile { get; }
+    uint startId { get; }
+    string specificationVersion { get; }
+    bool useAllowSubtypes { get; }
   }
 
   internal interface IModelGeneratorGenerate
