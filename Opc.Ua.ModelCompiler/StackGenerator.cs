@@ -37,7 +37,7 @@ namespace OOI.ModelCompiler
 {
   internal class StackGenerator
   {
-    public class Files
+    private class Files
     {
       public Dictionary<string, string> XmlSchemas;
       public Dictionary<string, string> BinarySchemas;

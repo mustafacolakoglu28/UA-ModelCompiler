@@ -11,93 +11,83 @@ using System.IO;
 
 namespace OOI.ModelCompiler
 {
-  public abstract class ModelCompilerAPI
+  public abstract class ModelCompilerAPI : IModelGeneratorGenerate
   {
     protected internal List<string> designFiles = new List<string>();
     protected internal string identifierFile = null;
-    protected internal string outputDir = null;
     protected internal bool generateIds = false;
     protected internal uint startId = 1;
     protected internal string stackRootDir = null;
     protected internal string ansicRootDir = null;
     protected internal bool generateMultiFile = false;
-    protected internal bool useXmlInitializers = false;
-    protected internal string[] excludeCategories = null;
-    protected internal bool includeDisplayNames = false;
     protected internal bool useAllowSubtypes = false;
     protected internal string inputDirectory = ".";
     protected internal string filePattern = "*.xml";
     protected internal string specificationVersion = "";
     protected internal bool silent = false;
 
+    #region IModelGeneratorGenerate
+
+    public string[] ExcludeCategories { get; protected set; } = null;
+
+    public string OutputDir { get; protected set; } = null;
+
+    public bool UseXmlInitializers { get; protected set; } = false;
+
+    public bool IncludeDisplayNames { get; protected set; } = false;
+
+    #endregion IModelGeneratorGenerate
+
     protected virtual void Execute()
     {
-
-      ModelGenerator2 generator = new ModelGenerator2();
-
       for (int ii = 0; ii < designFiles.Count; ii++)
       {
         if (string.IsNullOrEmpty(designFiles[ii]))
-        {
           throw new ArgumentException("No design file specified.");
-        }
-
-        if (!new FileInfo(designFiles[ii]).Exists)
-        {
-          throw new ArgumentException("The design file does not exist: " + designFiles[ii]);
-        }
+        if (!File.Exists(designFiles[ii]))
+          throw new ArgumentException($"The design file does not exist: {designFiles[ii]}");
       }
-
       if (string.IsNullOrEmpty(identifierFile))
-      {
         throw new ArgumentException("No identifier file specified.");
-      }
-
-      if (!new FileInfo(identifierFile).Exists)
+      if (!File.Exists(identifierFile))
       {
         if (!generateIds)
-        {
-          throw new ArgumentException("The identifier file does not exist: " + identifierFile);
-        }
-
+          throw new ArgumentException($"The identifier file does not exist: {identifierFile}");
         File.Create(identifierFile).Close();
       }
-
-      generator.ValidateAndUpdateIds(
-          designFiles,
-          identifierFile,
-          startId,
-          specificationVersion,
-          useAllowSubtypes);
-
+      ModelGenerator2 Generator = new ModelGenerator2();
+      Generator.ValidateAndUpdateIds(designFiles, identifierFile, startId, specificationVersion, useAllowSubtypes);
+      //.NET stack generator
       if (!string.IsNullOrEmpty(stackRootDir))
       {
-        if (!new DirectoryInfo(stackRootDir).Exists)
-        {
-          throw new ArgumentException("The directory does not exist: " + stackRootDir);
-        }
-
+        if (!Directory.Exists(stackRootDir))
+          throw new ArgumentException($"The directory does not exist: {stackRootDir}");
         StackGenerator.GenerateDotNet(designFiles, identifierFile, stackRootDir, specificationVersion);
       }
-
+      //Build ANSI C stack
       if (!string.IsNullOrEmpty(ansicRootDir))
       {
-        if (!new DirectoryInfo(ansicRootDir).Exists)
-        {
-          throw new ArgumentException("The directory does not exist: " + ansicRootDir);
-        }
-
+        if (!Directory.Exists(ansicRootDir))
+          throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
         StackGenerator.GenerateAnsiC(designFiles, identifierFile, ansicRootDir, specificationVersion);
-        generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, excludeCategories);
+        Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, ExcludeCategories);
       }
-
-      if (!string.IsNullOrEmpty(outputDir))
+      //Build model
+      if (!string.IsNullOrEmpty(OutputDir))
       {
         if (generateMultiFile)
-          generator.GenerateMultipleFiles(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
+          Generator.GenerateMultipleFiles(this);
         else
-          generator.GenerateInternalSingleFile(outputDir, useXmlInitializers, excludeCategories, includeDisplayNames);
+          Generator.GenerateInternalSingleFile(this);
       }
     }
+  }
+
+  internal interface IModelGeneratorGenerate
+  {
+    bool UseXmlInitializers { get; }
+    string[] ExcludeCategories { get; }
+    bool IncludeDisplayNames { get; }
+    string OutputDir { get; }
   }
 }

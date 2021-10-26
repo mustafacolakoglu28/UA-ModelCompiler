@@ -115,39 +115,39 @@ namespace OOI.ModelCompiler
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        public virtual void GenerateInternalSingleFile(string filePath, bool useXmlInitializers, string[] excludedCategories, bool includeDisplayNames)
+        internal virtual void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters)
         {
-            m_useXmlInitializers = useXmlInitializers;
-            m_excludedCategories = excludedCategories;
-            m_includeDisplayNames = includeDisplayNames;
+            m_useXmlInitializers = generatorParameters.UseXmlInitializers;
+            m_excludedCategories = generatorParameters.ExcludeCategories;
+            m_includeDisplayNames = generatorParameters.IncludeDisplayNames;
 
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
 
-            WriteTemplate_InternalSingleFile(filePath, nodes);
-            WriteTemplate_XmlExport(filePath);
-            WriteTemplate_XmlSchema(filePath, nodes);
-            WriteTemplate_BinarySchema(filePath, nodes);
+            WriteTemplate_InternalSingleFile(generatorParameters.OutputDir, nodes);
+            WriteTemplate_XmlExport(generatorParameters.OutputDir);
+            WriteTemplate_XmlSchema(generatorParameters.OutputDir, nodes);
+            WriteTemplate_BinarySchema(generatorParameters.OutputDir, nodes);
         }
 
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        public virtual void GenerateMultipleFiles(string filePath, bool useXmlInitializers, string[] excludedCategories, bool includeDisplayNames)
+        public virtual void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters)
         {
-            m_useXmlInitializers = useXmlInitializers;
-            m_excludedCategories = excludedCategories;
-            m_includeDisplayNames = includeDisplayNames;
+            m_useXmlInitializers = generatorParameters.UseXmlInitializers;
+            m_excludedCategories = generatorParameters.ExcludeCategories;
+            m_includeDisplayNames = generatorParameters.IncludeDisplayNames;
 
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
 
-            WriteTemplate_ConstantsSingleFile(filePath, nodes);
-            WriteTemplate_DataTypesSingleFile(filePath, nodes);
-            WriteTemplate_NonDataTypesSingleFile(filePath, nodes);
-            WriteTemplate_XmlSchema(filePath, nodes);
-            WriteTemplate_BinarySchema(filePath, nodes);
-            WriteTemplate_XmlExport(filePath);
+            WriteTemplate_ConstantsSingleFile(generatorParameters.OutputDir, nodes);
+            WriteTemplate_DataTypesSingleFile(generatorParameters.OutputDir, nodes);
+            WriteTemplate_NonDataTypesSingleFile(generatorParameters.OutputDir, nodes);
+            WriteTemplate_XmlSchema(generatorParameters.OutputDir, nodes);
+            WriteTemplate_BinarySchema(generatorParameters.OutputDir, nodes);
+            WriteTemplate_XmlExport(generatorParameters.OutputDir);
         }
 
         /// <summary>

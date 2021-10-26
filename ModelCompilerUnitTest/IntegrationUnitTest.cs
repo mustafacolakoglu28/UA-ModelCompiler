@@ -112,22 +112,22 @@ namespace OOI.ModelCompiler
         Directory.CreateDirectory(ansicRootDir);
         designFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
         designFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
-        excludeCategories = null;
+        ExcludeCategories = null;
         filePattern = "*.xml";
         generateIds = false;
         generateMultiFile = true;
         identifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
-        includeDisplayNames = false;
+        IncludeDisplayNames = false;
         inputDirectory = @".";
-        outputDir = Path.Combine(stack.FullName, "Schema");
-        Directory.CreateDirectory(outputDir);
+        OutputDir = Path.Combine(stack.FullName, "Schema");
+        Directory.CreateDirectory(OutputDir);
         silent = false;
         specificationVersion = "v104";
         stackRootDir = Path.Combine(stack.FullName, "DotNet");
         Directory.CreateDirectory(stackRootDir);
         startId = 1;
         useAllowSubtypes = false;
-        useXmlInitializers = false;
+        UseXmlInitializers = false;
       }
     }
 
@@ -142,22 +142,22 @@ namespace OOI.ModelCompiler
       {
         ansicRootDir = null;
         designFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
-        excludeCategories = null;
+        ExcludeCategories = null;
         filePattern = "*.xml";
         generateIds = true;
         generateMultiFile = true;
         identifierFile = Path.Combine(SourcePath, "DemoModel.csv");
-        includeDisplayNames = false;
+        IncludeDisplayNames = false;
         //inputDirectory = @".";
         //licenseType = LicenseType.MITXML;
-        outputDir = DemoModelDir;
-        Directory.CreateDirectory(outputDir);
+        OutputDir = DemoModelDir;
+        Directory.CreateDirectory(OutputDir);
         silent = false;
         specificationVersion = "v104";
         stackRootDir = null;
         startId = 1;
         useAllowSubtypes = false;
-        useXmlInitializers = false;
+        UseXmlInitializers = false;
       }
     }
 
