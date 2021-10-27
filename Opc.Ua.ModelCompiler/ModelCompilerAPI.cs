@@ -69,21 +69,4 @@ namespace OOI.ModelCompiler
     }
   }
 
-  internal interface IModelGeneratorValidate
-  {
-    List<string> DesignFiles { get; }
-    string IdentifierFile { get; }
-    uint StartId { get; }
-    string specificationVersion { get; }
-    bool UseAllowSubtypes { get; }
-  }
-
-  internal interface IModelGeneratorGenerate
-  {
-    bool generateMultiFile { get; }
-    bool UseXmlInitializers { get; }
-    string[] ExcludeCategories { get; }
-    bool IncludeDisplayNames { get; }
-    string OutputDir { get; }
-  }
 }

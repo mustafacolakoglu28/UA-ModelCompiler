@@ -108,7 +108,9 @@ namespace OOI.ModelCompiler
         }
         internal virtual void Generate(IModelGeneratorGenerate generatorParameters)
         {
-          if (generatorParameters.generateMultiFile)
+         if (string.IsNullOrEmpty(generatorParameters.OutputDir))
+           throw new ArgumentException("The output directory must not be empty", nameof(generatorParameters.OutputDir);
+         if (generatorParameters.generateMultiFile)
             GenerateMultipleFiles(generatorParameters);
           else
            GenerateInternalSingleFile(generatorParameters);
