@@ -110,22 +110,19 @@ namespace OOI.ModelCompiler
         DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
         ansicRootDir = Path.Combine(stack.FullName, "AnsiC");
         Directory.CreateDirectory(ansicRootDir);
-        designFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
-        designFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
+        DesignFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
+        DesignFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
         ExcludeCategories = null;
-        filePattern = "*.xml";
-        generateIds = false;
         generateMultiFile = true;
-        identifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
+        IdentifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
         IncludeDisplayNames = false;
         OutputDir = Path.Combine(stack.FullName, "Schema");
         Directory.CreateDirectory(OutputDir);
-        silent = false;
         specificationVersion = "v104";
         stackRootDir = Path.Combine(stack.FullName, "DotNet");
         Directory.CreateDirectory(stackRootDir);
-        startId = 1;
-        useAllowSubtypes = false;
+        StartId = 1;
+        UseAllowSubtypes = false;
         UseXmlInitializers = false;
       }
     }
@@ -140,22 +137,17 @@ namespace OOI.ModelCompiler
       public BuildingModelDemoAPI()
       {
         ansicRootDir = null;
-        designFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
+        DesignFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
         ExcludeCategories = null;
-        filePattern = "*.xml";
-        generateIds = true;
         generateMultiFile = true;
-        identifierFile = Path.Combine(SourcePath, "DemoModel.csv");
+        IdentifierFile = Path.Combine(SourcePath, "DemoModel.csv");
         IncludeDisplayNames = false;
-        //inputDirectory = @".";
-        //licenseType = LicenseType.MITXML;
         OutputDir = DemoModelDir;
         Directory.CreateDirectory(OutputDir);
-        silent = false;
         specificationVersion = "v104";
         stackRootDir = null;
-        startId = 1;
-        useAllowSubtypes = false;
+        StartId = 1;
+        UseAllowSubtypes = false;
         UseXmlInitializers = false;
       }
     }
