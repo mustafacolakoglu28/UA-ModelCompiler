@@ -68,5 +68,4 @@ namespace OOI.ModelCompiler
         Generator.Generate(this);
     }
   }
-
 }
