@@ -86,7 +86,7 @@ namespace OOI.ModelCompiler
         /// </summary>
         public virtual void ValidateAndUpdateIds(IModelGeneratorValidate model)
         {
-            m_validator = new ModelCompilerValidator(model.startId);
+            m_validator = new ModelCompilerValidator(model.StartId);
 
             if (!String.IsNullOrEmpty(model.specificationVersion))
             {
@@ -102,15 +102,21 @@ namespace OOI.ModelCompiler
                 m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.v104";
             }
 
-            m_validator.UseAllowSubtypes = model.useAllowSubtypes;
-            m_validator.Validate2(model.designFiles, model.identifierFile, false);
+            m_validator.UseAllowSubtypes = model.UseAllowSubtypes;
+            m_validator.Validate2(model.DesignFiles, model.IdentifierFile, false);
             m_model = m_validator.Dictionary;
         }
-
+        internal virtual void Generate(IModelGeneratorGenerate generatorParameters)
+        {
+          if (generatorParameters.generateMultiFile)
+            GenerateMultipleFiles(generatorParameters);
+          else
+           GenerateInternalSingleFile(generatorParameters);
+        }
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        internal virtual void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters)
+        private void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters)
         {
             m_useXmlInitializers = generatorParameters.UseXmlInitializers;
             m_excludedCategories = generatorParameters.ExcludeCategories;
@@ -128,7 +134,7 @@ namespace OOI.ModelCompiler
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        public virtual void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters)
+        private void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters)
         {
             m_useXmlInitializers = generatorParameters.UseXmlInitializers;
             m_excludedCategories = generatorParameters.ExcludeCategories;
