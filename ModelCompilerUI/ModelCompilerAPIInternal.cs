@@ -8,6 +8,7 @@
 using OOI.ModelCompiler;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace OOI.ModelCompilerUI
 {
@@ -50,21 +51,21 @@ namespace OOI.ModelCompilerUI
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -d2 option.");
-          designFiles.Add(tokens[++ii]);
+          DesignFiles.Add(tokens[++ii]);
           continue;
         }
         if (tokens[ii] == "-d2")
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -d2 option.");
-          designFiles.Add(tokens[++ii]);
+          DesignFiles.Add(tokens[++ii]);
           continue;
         }
         if (tokens[ii] == "-d2")
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -d2 option.");
-          designFiles.Add(tokens[++ii]);
+          DesignFiles.Add(tokens[++ii]);
           continue;
         }
         if (tokens[ii] == "-c" || tokens[ii] == "-cg")
@@ -74,7 +75,7 @@ namespace OOI.ModelCompilerUI
             throw new ArgumentException("Incorrect number of parameters specified with the -c or -cg option.");
           }
           generateIds = tokens[ii] == "-cg";
-          identifierFile = tokens[++ii];
+          IdentifierFile = tokens[++ii];
           continue;
         }
         if (tokens[ii] == "-o")
@@ -94,7 +95,7 @@ namespace OOI.ModelCompilerUI
         }
         if (tokens[ii] == "-id")
         {
-          startId = Convert.ToUInt32(tokens[++ii]);
+          StartId = Convert.ToUInt32(tokens[++ii]);
           continue;
         }
         if (tokens[ii] == "-version")
@@ -139,7 +140,7 @@ namespace OOI.ModelCompilerUI
         }
         if (tokens[ii] == "-useAllowSubtypes")
         {
-          useAllowSubtypes = true;
+          UseAllowSubtypes = true;
           continue;
         }
       }
@@ -153,7 +154,9 @@ namespace OOI.ModelCompilerUI
     internal LicenseType licenseType = LicenseType.MITXML;
     internal bool updateHeaders = false;
     private string inputDirectory { get; set; } = ".";
-
+    private bool generateIds = false;
+    private string filePattern = "*.xml";
+    protected internal bool silent = false;
 
     protected override void Execute()
     {
@@ -161,6 +164,21 @@ namespace OOI.ModelCompilerUI
       {
         HeaderUpdateTool.ProcessDirectory(inputDirectory, filePattern, licenseType, silent);
         return;
+      }
+      for (int ii = 0; ii < DesignFiles.Count; ii++)
+      {
+        if (string.IsNullOrEmpty(DesignFiles[ii]))
+          throw new ArgumentException("No design file specified.");
+        if (!File.Exists(DesignFiles[ii]))
+          throw new ArgumentException($"The design file does not exist: {DesignFiles[ii]}");
+      }
+      if (string.IsNullOrEmpty(IdentifierFile))
+        throw new ArgumentException("No identifier file specified.");
+      if (!File.Exists(IdentifierFile))
+      {
+        if (!generateIds)
+          throw new ArgumentException($"The identifier file does not exist: {IdentifierFile}");
+        File.Create(IdentifierFile).Close();
       }
       base.Execute();
     }
