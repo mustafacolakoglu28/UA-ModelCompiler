@@ -13,6 +13,6 @@ namespace OOI.ModelCompiler
     bool UseXmlInitializers { get; }
     string[] ExcludeCategories { get; }
     bool IncludeDisplayNames { get; }
-    string OutputDir { get; }
+    //string OutputDir { get; }
   }
 }

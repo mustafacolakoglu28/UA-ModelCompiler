@@ -49,7 +49,7 @@ namespace OOI.ModelCompilerUI
       Assert.AreEqual<LicenseType>(LicenseType.MITXML, instance.licenseType);
       Assert.AreEqual<string>(@".\Bin\nodesets\master\Schema\", instance.OutputDir);
       Assert.IsFalse(instance.silent);
-      Assert.AreEqual<string>("v104", instance.specificationVersion);
+      Assert.AreEqual<string>("v104", instance.SpecificationVersion);
       Assert.AreEqual<string>(@".\Bin\nodesets\master\DotNet\", instance.stackRootDir);
       Assert.AreEqual<uint>(1, instance.StartId);
       Assert.IsFalse(instance.updateHeaders);
@@ -77,7 +77,7 @@ namespace OOI.ModelCompilerUI
       Assert.AreEqual<string>(@".\ModelCompiler\CSVs\DemoModel.csv", instance.IdentifierFile);
       Assert.IsFalse(instance.IncludeDisplayNames);
       Assert.AreEqual<string>(@".\Bin\nodesets\master\DemoModel\", instance.OutputDir);
-      Assert.AreEqual<string>("v104", instance.specificationVersion);
+      Assert.AreEqual<string>("v104", instance.SpecificationVersion);
       Assert.AreEqual<string>(null, instance.stackRootDir);
       Assert.IsFalse(instance.updateHeaders);
     }

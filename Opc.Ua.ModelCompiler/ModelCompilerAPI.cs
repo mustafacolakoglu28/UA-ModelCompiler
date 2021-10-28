@@ -15,12 +15,11 @@ namespace OOI.ModelCompiler
   {
     protected internal string stackRootDir = null;
     protected internal string ansicRootDir = null;
+    protected internal string OutputDir = null;
 
     #region IModelGeneratorGenerate
 
     public string[] ExcludeCategories { get; protected set; } = null;
-
-    public string OutputDir { get; protected set; } = null;
 
     public bool UseXmlInitializers { get; protected set; } = false;
 
@@ -28,18 +27,18 @@ namespace OOI.ModelCompiler
 
     #endregion IModelGeneratorGenerate
 
-    #region IModelGeneratorValidate
+    #region IStackGeneratorGenerate
 
     public List<string> DesignFiles { get; protected set; } = new List<string>();
-
     public string IdentifierFile { get; protected set; } = null;
+    public string SpecificationVersion { get; protected set; } = string.Empty;
+
+    #endregion IStackGeneratorGenerate
+
+    #region IModelGeneratorValidate
 
     public uint StartId { get; protected set; } = 1;
-
-    public string specificationVersion { get; protected set; } = string.Empty;
-
     public bool UseAllowSubtypes { get; protected set; } = false;
-
     public bool generateMultiFile { get; protected set; } = false;
 
     #endregion IModelGeneratorValidate
@@ -47,25 +46,28 @@ namespace OOI.ModelCompiler
     protected virtual void Execute()
     {
       ModelGenerator2 Generator = new ModelGenerator2();
-      Generator.ValidateAndUpdateIds(this);
-      //.NET stack generator
-      if (!string.IsNullOrEmpty(stackRootDir))
-      {
-        if (!Directory.Exists(stackRootDir))
-          throw new ArgumentException($"The directory does not exist: {stackRootDir}");
-        StackGenerator.GenerateDotNet(DesignFiles, IdentifierFile, stackRootDir, specificationVersion);
-      }
-      //Build ANSI C stack
-      if (!string.IsNullOrEmpty(ansicRootDir))
-      {
-        if (!Directory.Exists(ansicRootDir))
-          throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
-        StackGenerator.GenerateAnsiC(DesignFiles, IdentifierFile, ansicRootDir, specificationVersion);
-        Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, ExcludeCategories);
-      }
       //Build model
+      Generator.ValidateAndUpdateIds(this);
       if (!string.IsNullOrEmpty(OutputDir))
-        Generator.Generate(this);
+        Generator.Generate(this, OutputDir);
+      //else
+      {
+        //.NET stack generator
+        if (!string.IsNullOrEmpty(stackRootDir))
+        {
+          if (!Directory.Exists(stackRootDir))
+            throw new ArgumentException($"The directory does not exist: {stackRootDir}");
+          StackGenerator.GenerateDotNet(this, stackRootDir);
+        }
+        //Build ANSI C stack
+        if (!string.IsNullOrEmpty(ansicRootDir))
+        {
+          if (!Directory.Exists(ansicRootDir))
+            throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
+          StackGenerator.GenerateAnsiC(this, ansicRootDir);
+          Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, ExcludeCategories);
+        }
+      }
     }
   }
 }

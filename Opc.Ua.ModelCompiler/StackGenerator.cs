@@ -181,13 +181,11 @@ namespace OOI.ModelCompiler
     }
 
     public static void GenerateDotNet(
-        IList<string> designFilePaths,
-        string identifierFilePath,
-        string rootDir,
-        string specificationVersion)
+        IStackGeneratorGenerate parameters,
+        string rootDir)
     {
-      string modelDir = Path.GetDirectoryName(designFilePaths[0]) + "\\";
-      string csvDir = Path.GetDirectoryName(identifierFilePath) + "\\";
+      string modelDir = Path.GetDirectoryName(parameters.DesignFiles[0]) + "\\";
+      string csvDir = Path.GetDirectoryName(parameters.IdentifierFile) + "\\";
 
       Files files = new Files();
 
@@ -196,19 +194,17 @@ namespace OOI.ModelCompiler
           $"{modelDir}UA Core Services.xml",
           rootDir,
           files,
-          specificationVersion);
+          parameters.SpecificationVersion);
 
-      GenerateDotNet(files, modelDir, csvDir, rootDir, specificationVersion);
+      GenerateDotNet(files, modelDir, csvDir, rootDir, parameters.SpecificationVersion);
     }
 
     public static void GenerateAnsiC(
-        IList<string> designFilePaths,
-        string identifierFilePath,
-        string rootDir,
-        string specificationVersion)
+        IStackGeneratorGenerate parameters,
+        string rootDir)
     {
-      string modelDir = Path.GetDirectoryName(designFilePaths[0]) + "\\";
-      string csvDir = Path.GetDirectoryName(identifierFilePath) + "\\";
+      string modelDir = Path.GetDirectoryName(parameters.DesignFiles[0]) + "\\";
+      string csvDir = Path.GetDirectoryName(parameters.IdentifierFile) + "\\";
 
       Files files = new Files();
 
@@ -217,9 +213,9 @@ namespace OOI.ModelCompiler
           $"{modelDir}UA Core Services.xml",
           rootDir,
           files,
-          specificationVersion);
+          parameters.SpecificationVersion);
 
-      GenerateAnsiC(files, modelDir, csvDir, rootDir, specificationVersion);
+      GenerateAnsiC(files, modelDir, csvDir, rootDir, parameters.SpecificationVersion);
     }
   }
 }

@@ -118,7 +118,7 @@ namespace OOI.ModelCompiler
         IncludeDisplayNames = false;
         OutputDir = Path.Combine(stack.FullName, "Schema");
         Directory.CreateDirectory(OutputDir);
-        specificationVersion = "v104";
+        SpecificationVersion = "v104";
         stackRootDir = Path.Combine(stack.FullName, "DotNet");
         Directory.CreateDirectory(stackRootDir);
         StartId = 1;
@@ -144,7 +144,7 @@ namespace OOI.ModelCompiler
         IncludeDisplayNames = false;
         OutputDir = DemoModelDir;
         Directory.CreateDirectory(OutputDir);
-        specificationVersion = "v104";
+        SpecificationVersion = "v104";
         stackRootDir = null;
         StartId = 1;
         UseAllowSubtypes = false;

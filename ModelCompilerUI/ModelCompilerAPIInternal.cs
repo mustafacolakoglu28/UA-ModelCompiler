@@ -102,7 +102,7 @@ namespace OOI.ModelCompilerUI
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -version option.");
-          specificationVersion = tokens[++ii];
+          SpecificationVersion = tokens[++ii];
           continue;
         }
         if (tokens[ii] == "-ansic")
