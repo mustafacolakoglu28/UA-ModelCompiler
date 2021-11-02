@@ -7,12 +7,11 @@
 
 namespace OOI.ModelCompiler
 {
-  internal interface IModelGeneratorGenerate
+  public interface IModelGeneratorGenerate
   {
     string[] ExcludeCategories { get; }
     bool GenerateMultiFile { get; }
     bool IncludeDisplayNames { get; }
     bool UseXmlInitializers { get; }
-    //string OutputDir { get; }
   }
 }

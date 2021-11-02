@@ -12,8 +12,32 @@ using System.IO;
 
 namespace OOI.ModelCompilerUI
 {
-  internal class ModelCompilerAPIInternal : ModelCompilerAPI
+  internal class ModelCompilerAPIInternal : ModelCompilerAPI, IModelGeneratorGenerate, IModelGeneratorValidate
   {
+    #region IModelGeneratorGenerate
+
+    public bool GenerateMultiFile { get; protected set; } = false;
+    public bool UseXmlInitializers { get; protected set; } = false;
+    public string[] ExcludeCategories { get; protected set; } = null;
+    public bool IncludeDisplayNames { get; protected set; } = false;
+
+    #endregion IModelGeneratorGenerate
+
+    #region IStackGeneratorGenerate
+
+    public List<string> DesignFiles { get; protected set; } = new List<string>();
+    public string IdentifierFile { get; protected set; } = null;
+    public string SpecificationVersion { get; protected set; } = string.Empty;
+
+    #endregion IStackGeneratorGenerate
+
+    #region IModelGeneratorValidate
+
+    public uint StartId { get; protected set; } = 1;
+    public bool UseAllowSubtypes { get; protected set; } = false;
+
+    #endregion IModelGeneratorValidate
+
     internal void ProcessCommandLine(List<string> tokens)
     {
       for (int ii = 1; ii < tokens.Count; ii++)
@@ -148,7 +172,7 @@ namespace OOI.ModelCompilerUI
 
     internal void Build()
     {
-      Execute();
+      Execute(this, this);
     }
 
     private LicenseType licenseType = LicenseType.MITXML;
@@ -158,7 +182,7 @@ namespace OOI.ModelCompilerUI
     private string filePattern = "*.xml";
     private bool silent = false;
 
-    protected override void Execute()
+    protected override void Execute(IModelGeneratorGenerate generateParameters, IModelGeneratorValidate validateParameters)
     {
       if (updateHeaders)
       {
@@ -180,7 +204,7 @@ namespace OOI.ModelCompilerUI
           throw new ArgumentException($"The identifier file does not exist: {IdentifierFile}");
         File.Create(IdentifierFile).Close();
       }
-      base.Execute();
+      base.Execute(generateParameters, validateParameters);
     }
   }
 }

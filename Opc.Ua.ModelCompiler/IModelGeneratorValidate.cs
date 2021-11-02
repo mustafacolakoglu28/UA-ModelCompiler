@@ -9,13 +9,14 @@ using System.Collections.Generic;
 
 namespace OOI.ModelCompiler
 {
-  interface IStackGeneratorGenerate
+  public interface IStackGeneratorGenerate
   {
     List<string> DesignFiles { get; }
     string IdentifierFile { get; }
     string SpecificationVersion { get; }
   }
-  internal interface IModelGeneratorValidate: IStackGeneratorGenerate
+
+  public interface IModelGeneratorValidate : IStackGeneratorGenerate
   {
     uint StartId { get; }
     bool UseAllowSubtypes { get; }

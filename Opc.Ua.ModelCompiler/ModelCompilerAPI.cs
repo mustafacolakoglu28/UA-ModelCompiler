@@ -6,66 +6,50 @@
 //__________________________________________________________________________________________________
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 
 namespace OOI.ModelCompiler
 {
-  public abstract class ModelCompilerAPI : IModelGeneratorGenerate, IModelGeneratorValidate
+  public abstract class ModelCompilerAPI
   {
     protected internal string stackRootDir = null;
     protected internal string ansicRootDir = null;
     protected internal string OutputDir = null;
 
-    #region IModelGeneratorGenerate
-
-    public bool GenerateMultiFile { get; protected set; } = false;
-    public bool UseXmlInitializers { get; protected set; } = false;
-    public string[] ExcludeCategories { get; protected set; } = null;
-    public bool IncludeDisplayNames { get; protected set; } = false;
-
-    #endregion IModelGeneratorGenerate
-
-    #region IStackGeneratorGenerate
-
-    public List<string> DesignFiles { get; protected set; } = new List<string>();
-    public string IdentifierFile { get; protected set; } = null;
-    public string SpecificationVersion { get; protected set; } = string.Empty;
-
-    #endregion IStackGeneratorGenerate
-
-    #region IModelGeneratorValidate
-
-    public uint StartId { get; protected set; } = 1;
-    public bool UseAllowSubtypes { get; protected set; } = false;
-
-    #endregion IModelGeneratorValidate
-
-    protected virtual void Execute()
+    protected virtual void Execute(IModelGeneratorGenerate generateParameters, IModelGeneratorValidate validateParameters)
     {
       ModelGenerator2 Generator = new ModelGenerator2();
       //Build model
-      Generator.ValidateAndUpdateIds(this);
+      Generator.ValidateAndUpdateIds(validateParameters);
       if (!string.IsNullOrEmpty(OutputDir))
-        Generator.Generate(this, OutputDir);
-      //else
+        Generator.Generate(generateParameters, OutputDir);
+      //.NET stack generator
+      if (!string.IsNullOrEmpty(stackRootDir))
       {
-        //.NET stack generator
-        if (!string.IsNullOrEmpty(stackRootDir))
-        {
-          if (!Directory.Exists(stackRootDir))
-            throw new ArgumentException($"The directory does not exist: {stackRootDir}");
-          StackGenerator.GenerateDotNet(this, stackRootDir);
-        }
-        //Build ANSI C stack
-        if (!string.IsNullOrEmpty(ansicRootDir))
-        {
-          if (!Directory.Exists(ansicRootDir))
-            throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
-          StackGenerator.GenerateAnsiC(this, ansicRootDir);
-          Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, ExcludeCategories);
-        }
+        if (!Directory.Exists(stackRootDir))
+          throw new ArgumentException($"The directory does not exist: {stackRootDir}");
+        StackGenerator.GenerateDotNet(validateParameters, stackRootDir);
       }
+      //Build ANSI C stack
+      if (!string.IsNullOrEmpty(ansicRootDir))
+      {
+        if (!Directory.Exists(ansicRootDir))
+          throw new ArgumentException($"The directory does not exist: {ansicRootDir}");
+        StackGenerator.GenerateAnsiC(validateParameters, ansicRootDir);
+        Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, generateParameters.ExcludeCategories);
+      }
+    }
+  }
+
+  public static class ModelCompiler
+  {
+    public static void BuildModel(string outputDir, IModelGeneratorGenerate generateParameters, IModelGeneratorValidate validateParameters)
+    {
+      if (string.IsNullOrEmpty(outputDir))
+        throw new ArgumentOutOfRangeException("OutputDir", "Parameters cannot be null or empty");
+      ModelGenerator2 Generator = new ModelGenerator2();
+      Generator.ValidateAndUpdateIds(validateParameters);
+      Generator.Generate(generateParameters, outputDir);
     }
   }
 }

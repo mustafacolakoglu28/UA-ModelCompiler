@@ -6,6 +6,7 @@
 //__________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using System.IO;
 
 namespace OOI.ModelCompiler
@@ -98,11 +99,35 @@ namespace OOI.ModelCompiler
     private const string SourcePath = @".\TestingData\ModelDesign\";
     private const string DemoModelDir = "outputDir";
 
-    private class StackBuildModelCompilerAPI : ModelCompilerAPI
+    private class StackBuildModelCompilerAPI : ModelCompilerAPI, IModelGeneratorGenerate, IModelGeneratorValidate
     {
+      #region IModelGeneratorGenerate
+
+      public bool GenerateMultiFile { get; protected set; } = false;
+      public bool UseXmlInitializers { get; protected set; } = false;
+      public string[] ExcludeCategories { get; protected set; } = null;
+      public bool IncludeDisplayNames { get; protected set; } = false;
+
+      #endregion IModelGeneratorGenerate
+
+      #region IStackGeneratorGenerate
+
+      public List<string> DesignFiles { get; protected set; } = new List<string>();
+      public string IdentifierFile { get; protected set; } = null;
+      public string SpecificationVersion { get; protected set; } = string.Empty;
+
+      #endregion IStackGeneratorGenerate
+
+      #region IModelGeneratorValidate
+
+      public uint StartId { get; protected set; } = 1;
+      public bool UseAllowSubtypes { get; protected set; } = false;
+
+      #endregion IModelGeneratorValidate
+
       internal void Build()
       {
-        Execute();
+        Execute(this, this);
       }
 
       public StackBuildModelCompilerAPI()
@@ -127,16 +152,39 @@ namespace OOI.ModelCompiler
       }
     }
 
-    private class BuildingModelDemoAPI : ModelCompilerAPI
+    private class BuildingModelDemoAPI : IModelGeneratorGenerate, IModelGeneratorValidate
     {
+      #region IModelGeneratorGenerate
+
+      public bool GenerateMultiFile { get; protected set; } = false;
+      public bool UseXmlInitializers { get; protected set; } = false;
+      public string[] ExcludeCategories { get; protected set; } = null;
+      public bool IncludeDisplayNames { get; protected set; } = false;
+
+      #endregion IModelGeneratorGenerate
+
+      #region IStackGeneratorGenerate
+
+      public List<string> DesignFiles { get; protected set; } = new List<string>();
+      public string IdentifierFile { get; protected set; } = null;
+      public string SpecificationVersion { get; protected set; } = string.Empty;
+
+      #endregion IStackGeneratorGenerate
+
+      #region IModelGeneratorValidate
+
+      public uint StartId { get; protected set; } = 1;
+      public bool UseAllowSubtypes { get; protected set; } = false;
+
+      #endregion IModelGeneratorValidate
+
       internal void Build()
       {
-        Execute();
+        ModelCompiler.BuildModel(OutputDir, this, this);
       }
 
       public BuildingModelDemoAPI()
       {
-        ansicRootDir = null;
         DesignFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
         ExcludeCategories = null;
         GenerateMultiFile = true;
@@ -145,11 +193,12 @@ namespace OOI.ModelCompiler
         OutputDir = DemoModelDir;
         Directory.CreateDirectory(OutputDir);
         SpecificationVersion = "v104";
-        stackRootDir = null;
         StartId = 1;
         UseAllowSubtypes = false;
         UseXmlInitializers = false;
       }
+
+      private readonly string OutputDir = null;
     }
 
     #endregion private stuff
