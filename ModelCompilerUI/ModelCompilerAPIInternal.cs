@@ -90,7 +90,7 @@ namespace OOI.ModelCompilerUI
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -o option.");
           OutputDir = tokens[++ii];
-          generateMultiFile = true;
+          GenerateMultiFile = true;
           continue;
         }
         if (tokens[ii] == "-id")
@@ -151,12 +151,12 @@ namespace OOI.ModelCompilerUI
       Execute();
     }
 
-    internal LicenseType licenseType = LicenseType.MITXML;
-    internal bool updateHeaders = false;
+    private LicenseType licenseType = LicenseType.MITXML;
+    private bool updateHeaders = false;
     private string inputDirectory { get; set; } = ".";
     private bool generateIds = false;
     private string filePattern = "*.xml";
-    protected internal bool silent = false;
+    private bool silent = false;
 
     protected override void Execute()
     {

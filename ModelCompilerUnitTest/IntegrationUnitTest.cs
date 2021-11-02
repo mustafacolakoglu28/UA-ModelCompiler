@@ -113,7 +113,7 @@ namespace OOI.ModelCompiler
         DesignFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
         DesignFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
         ExcludeCategories = null;
-        generateMultiFile = true;
+        GenerateMultiFile = true;
         IdentifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
         IncludeDisplayNames = false;
         OutputDir = Path.Combine(stack.FullName, "Schema");
@@ -139,7 +139,7 @@ namespace OOI.ModelCompiler
         ansicRootDir = null;
         DesignFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
         ExcludeCategories = null;
-        generateMultiFile = true;
+        GenerateMultiFile = true;
         IdentifierFile = Path.Combine(SourcePath, "DemoModel.csv");
         IncludeDisplayNames = false;
         OutputDir = DemoModelDir;

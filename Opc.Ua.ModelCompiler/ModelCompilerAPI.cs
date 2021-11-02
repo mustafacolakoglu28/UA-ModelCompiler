@@ -19,10 +19,9 @@ namespace OOI.ModelCompiler
 
     #region IModelGeneratorGenerate
 
-    public string[] ExcludeCategories { get; protected set; } = null;
-
+    public bool GenerateMultiFile { get; protected set; } = false;
     public bool UseXmlInitializers { get; protected set; } = false;
-
+    public string[] ExcludeCategories { get; protected set; } = null;
     public bool IncludeDisplayNames { get; protected set; } = false;
 
     #endregion IModelGeneratorGenerate
@@ -39,7 +38,6 @@ namespace OOI.ModelCompiler
 
     public uint StartId { get; protected set; } = 1;
     public bool UseAllowSubtypes { get; protected set; } = false;
-    public bool generateMultiFile { get; protected set; } = false;
 
     #endregion IModelGeneratorValidate
 

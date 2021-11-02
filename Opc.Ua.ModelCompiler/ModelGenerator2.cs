@@ -110,7 +110,7 @@ namespace OOI.ModelCompiler
         {
          if (string.IsNullOrEmpty(outputDir))
            throw new ArgumentException("The output directory must not be empty", nameof(outputDir));
-         if (generatorParameters.generateMultiFile)
+         if (generatorParameters.GenerateMultiFile)
             GenerateMultipleFiles(generatorParameters, outputDir);
           else
            GenerateInternalSingleFile(generatorParameters, outputDir);

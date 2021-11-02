@@ -9,10 +9,10 @@ namespace OOI.ModelCompiler
 {
   internal interface IModelGeneratorGenerate
   {
-    bool generateMultiFile { get; }
-    bool UseXmlInitializers { get; }
     string[] ExcludeCategories { get; }
+    bool GenerateMultiFile { get; }
     bool IncludeDisplayNames { get; }
+    bool UseXmlInitializers { get; }
     //string OutputDir { get; }
   }
 }
