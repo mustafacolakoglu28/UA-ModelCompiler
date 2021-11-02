@@ -88,11 +88,11 @@ namespace OOI.ModelCompiler
         {
             m_validator = new ModelCompilerValidator(model.StartId);
 
-            if (!String.IsNullOrEmpty(model.specificationVersion))
+            if (!String.IsNullOrEmpty(model.SpecificationVersion))
             {
-                m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.{model.specificationVersion}";
+                m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.{model.SpecificationVersion}";
 
-                if (model.specificationVersion == "v103")
+                if (model.SpecificationVersion == "v103")
                 {
                     m_validator.EmbeddedCsvPath = m_validator.EmbeddedModelDesignPath;
                 }
@@ -106,17 +106,19 @@ namespace OOI.ModelCompiler
             m_validator.Validate2(model.DesignFiles, model.IdentifierFile, false);
             m_model = m_validator.Dictionary;
         }
-        internal virtual void Generate(IModelGeneratorGenerate generatorParameters)
+        internal virtual void Generate(IModelGeneratorGenerate generatorParameters, string outputDir)
         {
-          if (generatorParameters.generateMultiFile)
-            GenerateMultipleFiles(generatorParameters);
+         if (string.IsNullOrEmpty(outputDir))
+           throw new ArgumentException("The output directory must not be empty", nameof(outputDir));
+         if (generatorParameters.GenerateMultiFile)
+            GenerateMultipleFiles(generatorParameters, outputDir);
           else
-           GenerateInternalSingleFile(generatorParameters);
+           GenerateInternalSingleFile(generatorParameters, outputDir);
         }
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        private void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters)
+        private void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters, string outputDir)
         {
             m_useXmlInitializers = generatorParameters.UseXmlInitializers;
             m_excludedCategories = generatorParameters.ExcludeCategories;
@@ -125,16 +127,16 @@ namespace OOI.ModelCompiler
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
 
-            WriteTemplate_InternalSingleFile(generatorParameters.OutputDir, nodes);
-            WriteTemplate_XmlExport(generatorParameters.OutputDir);
-            WriteTemplate_XmlSchema(generatorParameters.OutputDir, nodes);
-            WriteTemplate_BinarySchema(generatorParameters.OutputDir, nodes);
+            WriteTemplate_InternalSingleFile(outputDir, nodes);
+            WriteTemplate_XmlExport(outputDir);
+            WriteTemplate_XmlSchema(outputDir, nodes);
+            WriteTemplate_BinarySchema(outputDir, nodes);
         }
 
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        private void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters)
+        private void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters, string outputDir)
         {
             m_useXmlInitializers = generatorParameters.UseXmlInitializers;
             m_excludedCategories = generatorParameters.ExcludeCategories;
@@ -143,12 +145,12 @@ namespace OOI.ModelCompiler
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
 
-            WriteTemplate_ConstantsSingleFile(generatorParameters.OutputDir, nodes);
-            WriteTemplate_DataTypesSingleFile(generatorParameters.OutputDir, nodes);
-            WriteTemplate_NonDataTypesSingleFile(generatorParameters.OutputDir, nodes);
-            WriteTemplate_XmlSchema(generatorParameters.OutputDir, nodes);
-            WriteTemplate_BinarySchema(generatorParameters.OutputDir, nodes);
-            WriteTemplate_XmlExport(generatorParameters.OutputDir);
+            WriteTemplate_ConstantsSingleFile(outputDir, nodes);
+            WriteTemplate_DataTypesSingleFile(outputDir, nodes);
+            WriteTemplate_NonDataTypesSingleFile(outputDir, nodes);
+            WriteTemplate_XmlSchema(outputDir, nodes);
+            WriteTemplate_BinarySchema(outputDir, nodes);
+            WriteTemplate_XmlExport(outputDir);
         }
 
         /// <summary>

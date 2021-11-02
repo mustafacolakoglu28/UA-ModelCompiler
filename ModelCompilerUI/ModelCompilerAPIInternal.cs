@@ -12,8 +12,32 @@ using System.IO;
 
 namespace OOI.ModelCompilerUI
 {
-  internal class ModelCompilerAPIInternal : ModelCompilerAPI
+  internal class ModelCompilerAPIInternal : ModelCompilerAPI, IModelGeneratorGenerate, IModelGeneratorValidate
   {
+    #region IModelGeneratorGenerate
+
+    public bool GenerateMultiFile { get; protected set; } = false;
+    public bool UseXmlInitializers { get; protected set; } = false;
+    public string[] ExcludeCategories { get; protected set; } = null;
+    public bool IncludeDisplayNames { get; protected set; } = false;
+
+    #endregion IModelGeneratorGenerate
+
+    #region IStackGeneratorGenerate
+
+    public List<string> DesignFiles { get; protected set; } = new List<string>();
+    public string IdentifierFile { get; protected set; } = null;
+    public string SpecificationVersion { get; protected set; } = string.Empty;
+
+    #endregion IStackGeneratorGenerate
+
+    #region IModelGeneratorValidate
+
+    public uint StartId { get; protected set; } = 1;
+    public bool UseAllowSubtypes { get; protected set; } = false;
+
+    #endregion IModelGeneratorValidate
+
     internal void ProcessCommandLine(List<string> tokens)
     {
       for (int ii = 1; ii < tokens.Count; ii++)
@@ -90,7 +114,7 @@ namespace OOI.ModelCompilerUI
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -o option.");
           OutputDir = tokens[++ii];
-          generateMultiFile = true;
+          GenerateMultiFile = true;
           continue;
         }
         if (tokens[ii] == "-id")
@@ -102,7 +126,7 @@ namespace OOI.ModelCompilerUI
         {
           if (ii >= tokens.Count - 1)
             throw new ArgumentException("Incorrect number of parameters specified with the -version option.");
-          specificationVersion = tokens[++ii];
+          SpecificationVersion = tokens[++ii];
           continue;
         }
         if (tokens[ii] == "-ansic")
@@ -148,17 +172,17 @@ namespace OOI.ModelCompilerUI
 
     internal void Build()
     {
-      Execute();
+      Execute(this, this);
     }
 
-    internal LicenseType licenseType = LicenseType.MITXML;
-    internal bool updateHeaders = false;
+    private LicenseType licenseType = LicenseType.MITXML;
+    private bool updateHeaders = false;
     private string inputDirectory { get; set; } = ".";
     private bool generateIds = false;
     private string filePattern = "*.xml";
-    protected internal bool silent = false;
+    private bool silent = false;
 
-    protected override void Execute()
+    protected override void Execute(IModelGeneratorGenerate generateParameters, IModelGeneratorValidate validateParameters)
     {
       if (updateHeaders)
       {
@@ -180,7 +204,7 @@ namespace OOI.ModelCompilerUI
           throw new ArgumentException($"The identifier file does not exist: {IdentifierFile}");
         File.Create(IdentifierFile).Close();
       }
-      base.Execute();
+      base.Execute(generateParameters, validateParameters);
     }
   }
 }
