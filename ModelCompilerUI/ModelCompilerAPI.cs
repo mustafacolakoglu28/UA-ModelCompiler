@@ -5,10 +5,11 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
+using OOI.ModelCompiler;
 using System;
 using System.IO;
 
-namespace OOI.ModelCompiler
+namespace OOI.ModelCompilerUI
 {
   public abstract class ModelCompilerAPI
   {
