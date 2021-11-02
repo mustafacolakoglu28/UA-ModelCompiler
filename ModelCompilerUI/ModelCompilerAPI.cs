@@ -5,10 +5,11 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
+using OOI.ModelCompiler;
 using System;
 using System.IO;
 
-namespace OOI.ModelCompiler
+namespace OOI.ModelCompilerUI
 {
   public abstract class ModelCompilerAPI
   {
@@ -38,18 +39,6 @@ namespace OOI.ModelCompiler
         StackGenerator.GenerateAnsiC(validateParameters, ansicRootDir);
         Generator.GenerateIdentifiersAndNamesForAnsiC(ansicRootDir, generateParameters.ExcludeCategories);
       }
-    }
-  }
-
-  public static class ModelCompiler
-  {
-    public static void BuildModel(string outputDir, IModelGeneratorGenerate generateParameters, IModelGeneratorValidate validateParameters)
-    {
-      if (string.IsNullOrEmpty(outputDir))
-        throw new ArgumentOutOfRangeException("OutputDir", "Parameters cannot be null or empty");
-      ModelGenerator2 Generator = new ModelGenerator2();
-      Generator.ValidateAndUpdateIds(validateParameters);
-      Generator.Generate(generateParameters, outputDir);
     }
   }
 }
