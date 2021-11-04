@@ -1,0 +1,1781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title=" to () conversion">
+    <HelpKINode Title="Explicit Conversion (_BrowseName_Collection to )" Url="html/M-global._BrowseName_Collection.op_Explicit.htm" />
+    <HelpKINode Title="Explicit Conversion (_NAME_Collection to )" Url="html/M-global._NAME_Collection.op_Explicit_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title=" to [] conversion">
+    <HelpKINode Title="Explicit Conversion (_BrowseName_Collection to )" Url="html/M-global._BrowseName_Collection.op_Explicit.htm" />
+    <HelpKINode Title="Explicit Conversion (_NAME_Collection to )" Url="html/M-global._NAME_Collection.op_Explicit_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="() to  conversion">
+    <HelpKINode Title="Implicit Conversion ( to _BrowseName_Collection)" Url="html/M-global._BrowseName_Collection.op_Implicit.htm" />
+    <HelpKINode Title="Implicit Conversion ( to _NAME_Collection)" Url="html/M-global._NAME_Collection.op_Implicit_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title=". constructor">
+    <HelpKINode Title="_ClassName_ Constructor " Url="html/M-global._ClassName_.-ctor.htm" />
+    <HelpKINode Title="_ClassName_State Constructor " Url="html/M-global._ClassName_State-1.-ctor.htm" />
+    <HelpKINode Title="_ClassName_Value Constructor " Url="html/M-global._ClassName_Value.-ctor.htm" />
+    <HelpKINode Title="_ServiceSet_Client Constructor " Url="html/M-_Prefix_._ServiceSet_Client.-ctor.htm" />
+    <HelpKINode Title="_TypeName_State Constructor " Url="html/M-global._TypeName_State-1.-ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title=".BinaryEncodingId property">
+    <HelpKINode Title="BinaryEncodingId Property " Url="html/P-X._BrowseName_.BinaryEncodingId.htm" />
+    <HelpKINode Title="BinaryEncodingId Property " Url="html/P-global._NAME_.BinaryEncodingId.htm" />
+  </HelpKINode>
+  <HelpKINode Title=".Clone method">
+    <HelpKINode Title="Clone Method " Url="html/M-global._NAME_.Clone.htm" />
+    <HelpKINode Title="Clone Method " Url="html/M-global._BrowseName_Collection.Clone.htm" />
+  </HelpKINode>
+  <HelpKINode Title=".Construct method" Url="html/M-global._ClassName_.Construct.htm" />
+  <HelpKINode Title=".CreateInstance method" Url="html/M-global._TypeName_State-1.CreateInstance.htm" />
+  <HelpKINode Title=".CreateResponse method" Url="html/M-global._NAME_Message.CreateResponse.htm" />
+  <HelpKINode Title=".Decode method" Url="html/M-global._NAME_.Decode.htm" />
+  <HelpKINode Title=".Encode method" Url="html/M-global._NAME_.Encode.htm" />
+  <HelpKINode Title=".GetRequest method" Url="html/M-global._NAME_Message.GetRequest.htm" />
+  <HelpKINode Title=".InnerChannel property" Url="html/P-_Prefix_._ServiceSet_Client.InnerChannel.htm" />
+  <HelpKINode Title=".IsEqual method" Url="html/M-global._NAME_.IsEqual.htm" />
+  <HelpKINode Title=".MemberwiseClone method" Url="html/M-global._BrowseName_Collection.MemberwiseClone.htm" />
+  <HelpKINode Title=".Names class">
+    <HelpKINode Title="_NAME_.Names Class" Url="html/T-global._NAME_.Names.htm" />
+    <HelpKINode Title="_NAME_.Names Members" Url="html/AllMembers.T-global._NAME_.Names.htm" />
+    <HelpKINode Title="about .Names class" Url="html/T-global._NAME_.Names.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global._NAME_.Names.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global._NAME_.Names.htm" />
+  </HelpKINode>
+  <HelpKINode Title=".OnCall field" Url="html/F-global._ClassName_.OnCall.htm" />
+  <HelpKINode Title=".TypeId property">
+    <HelpKINode Title="TypeId Property " Url="html/P-X._BrowseName_.TypeId.htm" />
+    <HelpKINode Title="TypeId Property " Url="html/P-global._NAME_.TypeId.htm" />
+  </HelpKINode>
+  <HelpKINode Title=".Value property">
+    <HelpKINode Title="Value Property " Url="html/P-global._ClassName_Value.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-global._TypeName_State-1.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-global._ClassName_State-1.Value.htm" />
+  </HelpKINode>
+  <HelpKINode Title=".Variable property" Url="html/P-global._ClassName_Value.Variable.htm" />
+  <HelpKINode Title=".XmlEncodingId property">
+    <HelpKINode Title="XmlEncodingId Property " Url="html/P-X._BrowseName_.XmlEncodingId.htm" />
+    <HelpKINode Title="XmlEncodingId Property " Url="html/P-global._NAME_.XmlEncodingId.htm" />
+  </HelpKINode>
+  <HelpKINode Title="._NAME_Request field" Url="html/F-global._NAME_Message._NAME_Request.htm" />
+  <HelpKINode Title="._NAME_Response field" Url="html/F-global._NAME_ResponseMessage._NAME_Response.htm" />
+  <HelpKINode Title="AccessLevel enumeration" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="AccessLevel property">
+    <HelpKINode Title="AccessLevel Property " Url="html/P-ModelCompiler.VariableTypeDesign.AccessLevel.htm" />
+    <HelpKINode Title="AccessLevel Property " Url="html/P-ModelCompiler.VariableDesign.AccessLevel.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccessLevel.HistoryRead field" Url="html/F-ModelCompiler.AccessLevel.HistoryRead.htm" />
+  <HelpKINode Title="AccessLevel.HistoryReadWrite field" Url="html/F-ModelCompiler.AccessLevel.HistoryReadWrite.htm" />
+  <HelpKINode Title="AccessLevel.HistoryWrite field" Url="html/F-ModelCompiler.AccessLevel.HistoryWrite.htm" />
+  <HelpKINode Title="AccessLevel.None field" Url="html/F-ModelCompiler.AccessLevel.None.htm" />
+  <HelpKINode Title="AccessLevel.Read field" Url="html/F-ModelCompiler.AccessLevel.Read.htm" />
+  <HelpKINode Title="AccessLevel.ReadWrite field" Url="html/F-ModelCompiler.AccessLevel.ReadWrite.htm" />
+  <HelpKINode Title="AccessLevel.Write field" Url="html/F-ModelCompiler.AccessLevel.Write.htm" />
+  <HelpKINode Title="AccessLevelSpecified property">
+    <HelpKINode Title="AccessLevelSpecified Property " Url="html/P-ModelCompiler.VariableDesign.AccessLevelSpecified.htm" />
+    <HelpKINode Title="AccessLevelSpecified Property " Url="html/P-ModelCompiler.VariableTypeDesign.AccessLevelSpecified.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddReplacement method" Url="html/M-CodeGenerator.Template.AddReplacement.htm" />
+  <HelpKINode Title="AdHocInstance field" Url="html/F-ModelCompiler.HierarchyNode.AdHocInstance.htm" />
+  <HelpKINode Title="AllowArrays property" Url="html/P-CodeGenerator.DataType.AllowArrays.htm" />
+  <HelpKINode Title="AllowSubtypes property">
+    <HelpKINode Title="AllowSubtypes Property " Url="html/P-ModelCompiler.Parameter.AllowSubtypes.htm" />
+    <HelpKINode Title="AllowSubtypes Property " Url="html/P-CodeGenerator.FieldType.AllowSubtypes.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnsiC enumeration member" Url="html/T-CodeGenerator.Language.htm" />
+  <HelpKINode Title="AnsiC field" Url="html/F-CodeGenerator.Language.AnsiC.htm" />
+  <HelpKINode Title="AnyAttr property">
+    <HelpKINode Title="AnyAttr Property " Url="html/P-CodeGenerator.Documentation.AnyAttr.htm" />
+    <HelpKINode Title="AnyAttr Property " Url="html/P-ModelCompiler.ModelDesign.AnyAttr.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Array enumeration member" Url="html/T-ModelCompiler.ValueRank.htm" />
+  <HelpKINode Title="Array field" Url="html/F-ModelCompiler.ValueRank.Array.htm" />
+  <HelpKINode Title="ArrayDimensions property">
+    <HelpKINode Title="ArrayDimensions Property " Url="html/P-ModelCompiler.VariableDesign.ArrayDimensions.htm" />
+    <HelpKINode Title="ArrayDimensions Property " Url="html/P-ModelCompiler.Parameter.ArrayDimensions.htm" />
+    <HelpKINode Title="ArrayDimensions Property " Url="html/P-ModelCompiler.VariableTypeDesign.ArrayDimensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bad enumeration member" Url="html/T-CodeGenerator.Severity.htm" />
+  <HelpKINode Title="Bad field" Url="html/F-CodeGenerator.Severity.Bad.htm" />
+  <HelpKINode Title="BaseDataType enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="BaseDataType field" Url="html/F-ModelCompiler.BasicDataType.BaseDataType.htm" />
+  <HelpKINode Title="BaseType property">
+    <HelpKINode Title="BaseType Property " Url="html/P-CodeGenerator.ComplexType.BaseType.htm" />
+    <HelpKINode Title="BaseType Property " Url="html/P-CodeGenerator.EnumeratedType.BaseType.htm" />
+    <HelpKINode Title="BaseType Property " Url="html/P-ModelCompiler.TypeDesign.BaseType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseTypeNode field" Url="html/F-ModelCompiler.TypeDesign.BaseTypeNode.htm" />
+  <HelpKINode Title="BasicDataType enumeration" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="BasicDataType field" Url="html/F-ModelCompiler.DataTypeDesign.BasicDataType.htm" />
+  <HelpKINode Title="BasicDataType.BaseDataType field" Url="html/F-ModelCompiler.BasicDataType.BaseDataType.htm" />
+  <HelpKINode Title="BasicDataType.Boolean field" Url="html/F-ModelCompiler.BasicDataType.Boolean.htm" />
+  <HelpKINode Title="BasicDataType.Byte field" Url="html/F-ModelCompiler.BasicDataType.Byte.htm" />
+  <HelpKINode Title="BasicDataType.ByteString field" Url="html/F-ModelCompiler.BasicDataType.ByteString.htm" />
+  <HelpKINode Title="BasicDataType.DataValue field" Url="html/F-ModelCompiler.BasicDataType.DataValue.htm" />
+  <HelpKINode Title="BasicDataType.DateTime field" Url="html/F-ModelCompiler.BasicDataType.DateTime.htm" />
+  <HelpKINode Title="BasicDataType.DiagnosticInfo field" Url="html/F-ModelCompiler.BasicDataType.DiagnosticInfo.htm" />
+  <HelpKINode Title="BasicDataType.Double field" Url="html/F-ModelCompiler.BasicDataType.Double.htm" />
+  <HelpKINode Title="BasicDataType.Enumeration field" Url="html/F-ModelCompiler.BasicDataType.Enumeration.htm" />
+  <HelpKINode Title="BasicDataType.ExpandedNodeId field" Url="html/F-ModelCompiler.BasicDataType.ExpandedNodeId.htm" />
+  <HelpKINode Title="BasicDataType.Float field" Url="html/F-ModelCompiler.BasicDataType.Float.htm" />
+  <HelpKINode Title="BasicDataType.Guid field" Url="html/F-ModelCompiler.BasicDataType.Guid.htm" />
+  <HelpKINode Title="BasicDataType.Int16 field" Url="html/F-ModelCompiler.BasicDataType.Int16.htm" />
+  <HelpKINode Title="BasicDataType.Int32 field" Url="html/F-ModelCompiler.BasicDataType.Int32.htm" />
+  <HelpKINode Title="BasicDataType.Int64 field" Url="html/F-ModelCompiler.BasicDataType.Int64.htm" />
+  <HelpKINode Title="BasicDataType.Integer field" Url="html/F-ModelCompiler.BasicDataType.Integer.htm" />
+  <HelpKINode Title="BasicDataType.LocalizedText field" Url="html/F-ModelCompiler.BasicDataType.LocalizedText.htm" />
+  <HelpKINode Title="BasicDataType.NodeId field" Url="html/F-ModelCompiler.BasicDataType.NodeId.htm" />
+  <HelpKINode Title="BasicDataType.Number field" Url="html/F-ModelCompiler.BasicDataType.Number.htm" />
+  <HelpKINode Title="BasicDataType.QualifiedName field" Url="html/F-ModelCompiler.BasicDataType.QualifiedName.htm" />
+  <HelpKINode Title="BasicDataType.SByte field" Url="html/F-ModelCompiler.BasicDataType.SByte.htm" />
+  <HelpKINode Title="BasicDataType.StatusCode field" Url="html/F-ModelCompiler.BasicDataType.StatusCode.htm" />
+  <HelpKINode Title="BasicDataType.String field" Url="html/F-ModelCompiler.BasicDataType.String.htm" />
+  <HelpKINode Title="BasicDataType.Structure field" Url="html/F-ModelCompiler.BasicDataType.Structure.htm" />
+  <HelpKINode Title="BasicDataType.UInt16 field" Url="html/F-ModelCompiler.BasicDataType.UInt16.htm" />
+  <HelpKINode Title="BasicDataType.UInt32 field" Url="html/F-ModelCompiler.BasicDataType.UInt32.htm" />
+  <HelpKINode Title="BasicDataType.UInt64 field" Url="html/F-ModelCompiler.BasicDataType.UInt64.htm" />
+  <HelpKINode Title="BasicDataType.UInteger field" Url="html/F-ModelCompiler.BasicDataType.UInteger.htm" />
+  <HelpKINode Title="BasicDataType.UserDefined field" Url="html/F-ModelCompiler.BasicDataType.UserDefined.htm" />
+  <HelpKINode Title="BasicDataType.XmlElement field" Url="html/F-ModelCompiler.BasicDataType.XmlElement.htm" />
+  <HelpKINode Title="BinaryEncodingId property">
+    <HelpKINode Title="BinaryEncodingId Property " Url="html/P-global._NAME_.BinaryEncodingId.htm" />
+    <HelpKINode Title="BinaryEncodingId Property " Url="html/P-CodeGenerator.ComplexType.BinaryEncodingId.htm" />
+    <HelpKINode Title="BinaryEncodingId Property " Url="html/P-X._BrowseName_.BinaryEncodingId.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BitMask property">
+    <HelpKINode Title="BitMask Property " Url="html/P-CodeGenerator.EnumeratedValue.BitMask.htm" />
+    <HelpKINode Title="BitMask Property " Url="html/P-ModelCompiler.Parameter.BitMask.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BlankLine property" Url="html/P-CodeGenerator.Context.BlankLine.htm" />
+  <HelpKINode Title="Boolean enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Boolean field" Url="html/F-ModelCompiler.BasicDataType.Boolean.htm" />
+  <HelpKINode Title="BrowseName property" Url="html/P-ModelCompiler.NodeDesign.BrowseName.htm" />
+  <HelpKINode Title="BrowseNames class">
+    <HelpKINode Title="BrowseNames Class" Url="html/T-_Namespace_.BrowseNames.htm" />
+    <HelpKINode Title="BrowseNames Members" Url="html/AllMembers.T-_Namespace_.BrowseNames.htm" />
+    <HelpKINode Title="about BrowseNames class" Url="html/T-_Namespace_.BrowseNames.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-_Namespace_.BrowseNames.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-_Namespace_.BrowseNames.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BuildModel method" Url="html/M-OOI.ModelCompiler.ModelCompiler.BuildModel.htm" />
+  <HelpKINode Title="Byte enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Byte field" Url="html/F-ModelCompiler.BasicDataType.Byte.htm" />
+  <HelpKINode Title="ByteString enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="ByteString field" Url="html/F-ModelCompiler.BasicDataType.ByteString.htm" />
+  <HelpKINode Title="CardinalityRestriction enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="CardinalityRestriction field" Url="html/F-ModelCompiler.ModellingRule.CardinalityRestriction.htm" />
+  <HelpKINode Title="Category property">
+    <HelpKINode Title="Category Property " Url="html/P-ModelCompiler.NodeDesign.Category.htm" />
+    <HelpKINode Title="Category Property " Url="html/P-CodeGenerator.DataType.Category.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Children property" Url="html/P-ModelCompiler.NodeDesign.Children.htm" />
+  <HelpKINode Title="ClassName property" Url="html/P-ModelCompiler.TypeDesign.ClassName.htm" />
+  <HelpKINode Title="Clone method">
+    <HelpKINode Title="Clone Method " Url="html/M-global._NAME_.Clone.htm" />
+    <HelpKINode Title="Clone Method " Url="html/M-global._BrowseName_Collection.Clone.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator class">
+    <HelpKINode Title="CodeGenerator Class" Url="html/T-CodeGenerator.CodeGenerator.htm" />
+    <HelpKINode Title="CodeGenerator Members" Url="html/AllMembers.T-CodeGenerator.CodeGenerator.htm" />
+    <HelpKINode Title="about CodeGenerator class" Url="html/T-CodeGenerator.CodeGenerator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.CodeGenerator.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-CodeGenerator.CodeGenerator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.CodeGenerator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.CodeGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator enumeration member">
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-ModelCompiler.DataTypePurpose.htm" />
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-CodeGenerator.DataTypePurpose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator field">
+    <HelpKINode Title="CodeGenerator Field" Url="html/F-CodeGenerator.DataTypePurpose.CodeGenerator.htm" />
+    <HelpKINode Title="CodeGenerator Field" Url="html/F-ModelCompiler.DataTypePurpose.CodeGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator namespace" Url="html/N-CodeGenerator.htm" />
+  <HelpKINode Title="CodeGenerator.CodeGenerator class">
+    <HelpKINode Title="CodeGenerator Class" Url="html/T-CodeGenerator.CodeGenerator.htm" />
+    <HelpKINode Title="CodeGenerator Members" Url="html/AllMembers.T-CodeGenerator.CodeGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.CodeGenerator constructor" Url="html/Overload-CodeGenerator.CodeGenerator.-ctor.htm" />
+  <HelpKINode Title="CodeGenerator.ComplexType class">
+    <HelpKINode Title="ComplexType Class" Url="html/T-CodeGenerator.ComplexType.htm" />
+    <HelpKINode Title="ComplexType Members" Url="html/AllMembers.T-CodeGenerator.ComplexType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.Constant class">
+    <HelpKINode Title="Constant Class" Url="html/T-CodeGenerator.Constant.htm" />
+    <HelpKINode Title="Constant Members" Url="html/AllMembers.T-CodeGenerator.Constant.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.ConstantsGenerator class">
+    <HelpKINode Title="ConstantsGenerator Class" Url="html/T-CodeGenerator.ConstantsGenerator.htm" />
+    <HelpKINode Title="ConstantsGenerator Members" Url="html/AllMembers.T-CodeGenerator.ConstantsGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.Context class">
+    <HelpKINode Title="Context Class" Url="html/T-CodeGenerator.Context.htm" />
+    <HelpKINode Title="Context Members" Url="html/AllMembers.T-CodeGenerator.Context.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.DataType class">
+    <HelpKINode Title="DataType Class" Url="html/T-CodeGenerator.DataType.htm" />
+    <HelpKINode Title="DataType Members" Url="html/AllMembers.T-CodeGenerator.DataType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.DataTypePurpose enumeration" Url="html/T-CodeGenerator.DataTypePurpose.htm" />
+  <HelpKINode Title="CodeGenerator.DictionariesToExport property" Url="html/P-CodeGenerator.CodeGenerator.DictionariesToExport.htm" />
+  <HelpKINode Title="CodeGenerator.Documentation class">
+    <HelpKINode Title="Documentation Class" Url="html/T-CodeGenerator.Documentation.htm" />
+    <HelpKINode Title="Documentation Members" Url="html/AllMembers.T-CodeGenerator.Documentation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.DotNetGenerator class">
+    <HelpKINode Title="DotNetGenerator Class" Url="html/T-CodeGenerator.DotNetGenerator.htm" />
+    <HelpKINode Title="DotNetGenerator Members" Url="html/AllMembers.T-CodeGenerator.DotNetGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.EnumeratedType class">
+    <HelpKINode Title="EnumeratedType Class" Url="html/T-CodeGenerator.EnumeratedType.htm" />
+    <HelpKINode Title="EnumeratedType Members" Url="html/AllMembers.T-CodeGenerator.EnumeratedType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.EnumeratedValue class">
+    <HelpKINode Title="EnumeratedValue Class" Url="html/T-CodeGenerator.EnumeratedValue.htm" />
+    <HelpKINode Title="EnumeratedValue Members" Url="html/AllMembers.T-CodeGenerator.EnumeratedValue.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.FieldType class">
+    <HelpKINode Title="FieldType Class" Url="html/T-CodeGenerator.FieldType.htm" />
+    <HelpKINode Title="FieldType Members" Url="html/AllMembers.T-CodeGenerator.FieldType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.ImportDirective class">
+    <HelpKINode Title="ImportDirective Class" Url="html/T-CodeGenerator.ImportDirective.htm" />
+    <HelpKINode Title="ImportDirective Members" Url="html/AllMembers.T-CodeGenerator.ImportDirective.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.InterfaceType enumeration" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="CodeGenerator.Language enumeration" Url="html/T-CodeGenerator.Language.htm" />
+  <HelpKINode Title="CodeGenerator.LoadTemplateEventHandler delegate" Url="html/T-CodeGenerator.LoadTemplateEventHandler.htm" />
+  <HelpKINode Title="CodeGenerator.Namespaces class">
+    <HelpKINode Title="Namespaces Class" Url="html/T-CodeGenerator.Namespaces.htm" />
+    <HelpKINode Title="Namespaces Members" Url="html/AllMembers.T-CodeGenerator.Namespaces.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.ReleaseStatus enumeration" Url="html/T-CodeGenerator.ReleaseStatus.htm" />
+  <HelpKINode Title="CodeGenerator.SchemaGenerator class">
+    <HelpKINode Title="SchemaGenerator Class" Url="html/T-CodeGenerator.SchemaGenerator.htm" />
+    <HelpKINode Title="SchemaGenerator Members" Url="html/AllMembers.T-CodeGenerator.SchemaGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.ServiceType class">
+    <HelpKINode Title="ServiceType Class" Url="html/T-CodeGenerator.ServiceType.htm" />
+    <HelpKINode Title="ServiceType Members" Url="html/AllMembers.T-CodeGenerator.ServiceType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.Severity enumeration" Url="html/T-CodeGenerator.Severity.htm" />
+  <HelpKINode Title="CodeGenerator.Template class">
+    <HelpKINode Title="Template Class" Url="html/T-CodeGenerator.Template.htm" />
+    <HelpKINode Title="Template Members" Url="html/AllMembers.T-CodeGenerator.Template.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.TemplateDefinition class">
+    <HelpKINode Title="TemplateDefinition Class" Url="html/T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="TemplateDefinition Members" Url="html/AllMembers.T-CodeGenerator.TemplateDefinition.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.TypeDeclaration class">
+    <HelpKINode Title="TypeDeclaration Class" Url="html/T-CodeGenerator.TypeDeclaration.htm" />
+    <HelpKINode Title="TypeDeclaration Members" Url="html/AllMembers.T-CodeGenerator.TypeDeclaration.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.TypeDictionary class">
+    <HelpKINode Title="TypeDictionary Class" Url="html/T-CodeGenerator.TypeDictionary.htm" />
+    <HelpKINode Title="TypeDictionary Members" Url="html/AllMembers.T-CodeGenerator.TypeDictionary.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.TypeDictionaryValidator class">
+    <HelpKINode Title="TypeDictionaryValidator Class" Url="html/T-CodeGenerator.TypeDictionaryValidator.htm" />
+    <HelpKINode Title="TypeDictionaryValidator Members" Url="html/AllMembers.T-CodeGenerator.TypeDictionaryValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.WiresharkGenerator class">
+    <HelpKINode Title="WiresharkGenerator Class" Url="html/T-CodeGenerator.WiresharkGenerator.htm" />
+    <HelpKINode Title="WiresharkGenerator Members" Url="html/AllMembers.T-CodeGenerator.WiresharkGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CodeGenerator.WriteTemplateEventHandler delegate" Url="html/T-CodeGenerator.WriteTemplateEventHandler.htm" />
+  <HelpKINode Title="CodeGenerator.XmlSchemaGenerator class">
+    <HelpKINode Title="XmlSchemaGenerator Class" Url="html/T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="XmlSchemaGenerator Members" Url="html/AllMembers.T-CodeGenerator.XmlSchemaGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ComplexType class">
+    <HelpKINode Title="ComplexType Class" Url="html/T-CodeGenerator.ComplexType.htm" />
+    <HelpKINode Title="ComplexType Members" Url="html/AllMembers.T-CodeGenerator.ComplexType.htm" />
+    <HelpKINode Title="about ComplexType class" Url="html/T-CodeGenerator.ComplexType.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.ComplexType.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.ComplexType.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.ComplexType.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.ComplexType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ComplexType property" Url="html/P-CodeGenerator.FieldType.ComplexType.htm" />
+  <HelpKINode Title="ComplexType.BaseType property" Url="html/P-CodeGenerator.ComplexType.BaseType.htm" />
+  <HelpKINode Title="ComplexType.BinaryEncodingId property" Url="html/P-CodeGenerator.ComplexType.BinaryEncodingId.htm" />
+  <HelpKINode Title="ComplexType.ComplexType constructor" Url="html/M-CodeGenerator.ComplexType.-ctor.htm" />
+  <HelpKINode Title="ComplexType.Field property" Url="html/P-CodeGenerator.ComplexType.Field.htm" />
+  <HelpKINode Title="ComplexType.IsAbstract property" Url="html/P-CodeGenerator.ComplexType.IsAbstract.htm" />
+  <HelpKINode Title="ComplexType.IsUnion property" Url="html/P-CodeGenerator.ComplexType.IsUnion.htm" />
+  <HelpKINode Title="ComplexType.XmlEncodingId property" Url="html/P-CodeGenerator.ComplexType.XmlEncodingId.htm" />
+  <HelpKINode Title="Constant class">
+    <HelpKINode Title="Constant Class" Url="html/T-CodeGenerator.Constant.htm" />
+    <HelpKINode Title="Constant Members" Url="html/AllMembers.T-CodeGenerator.Constant.htm" />
+    <HelpKINode Title="about Constant class" Url="html/T-CodeGenerator.Constant.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.Constant.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.Constant.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.Constant.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.Constant.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Constant.Constant constructor" Url="html/M-CodeGenerator.Constant.-ctor.htm" />
+  <HelpKINode Title="Constant.Severity property" Url="html/P-CodeGenerator.Constant.Severity.htm" />
+  <HelpKINode Title="Constant.Value property" Url="html/P-CodeGenerator.Constant.Value.htm" />
+  <HelpKINode Title="ConstantsGenerator class">
+    <HelpKINode Title="ConstantsGenerator Class" Url="html/T-CodeGenerator.ConstantsGenerator.htm" />
+    <HelpKINode Title="ConstantsGenerator Members" Url="html/AllMembers.T-CodeGenerator.ConstantsGenerator.htm" />
+    <HelpKINode Title="about ConstantsGenerator class" Url="html/T-CodeGenerator.ConstantsGenerator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.ConstantsGenerator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.ConstantsGenerator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.ConstantsGenerator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.ConstantsGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConstantsGenerator.ConstantsGenerator constructor" Url="html/M-CodeGenerator.ConstantsGenerator.-ctor.htm" />
+  <HelpKINode Title="ConstantsGenerator.Generate method" Url="html/M-CodeGenerator.ConstantsGenerator.Generate.htm" />
+  <HelpKINode Title="Construct method" Url="html/M-global._ClassName_.Construct.htm" />
+  <HelpKINode Title="Container property" Url="html/P-CodeGenerator.Context.Container.htm" />
+  <HelpKINode Title="ContainsNoLoops property" Url="html/P-ModelCompiler.ViewDesign.ContainsNoLoops.htm" />
+  <HelpKINode Title="Context class">
+    <HelpKINode Title="Context Class" Url="html/T-CodeGenerator.Context.htm" />
+    <HelpKINode Title="Context Members" Url="html/AllMembers.T-CodeGenerator.Context.htm" />
+    <HelpKINode Title="about Context class" Url="html/T-CodeGenerator.Context.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.Context.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.Context.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.Context.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.Context.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Context.BlankLine property" Url="html/P-CodeGenerator.Context.BlankLine.htm" />
+  <HelpKINode Title="Context.Container property" Url="html/P-CodeGenerator.Context.Container.htm" />
+  <HelpKINode Title="Context.Context constructor" Url="html/M-CodeGenerator.Context.-ctor.htm" />
+  <HelpKINode Title="Context.FirstInList property" Url="html/P-CodeGenerator.Context.FirstInList.htm" />
+  <HelpKINode Title="Context.Index property" Url="html/P-CodeGenerator.Context.Index.htm" />
+  <HelpKINode Title="Context.Prefix property" Url="html/P-CodeGenerator.Context.Prefix.htm" />
+  <HelpKINode Title="Context.Target property" Url="html/P-CodeGenerator.Context.Target.htm" />
+  <HelpKINode Title="Context.TemplatePath property" Url="html/P-CodeGenerator.Context.TemplatePath.htm" />
+  <HelpKINode Title="Context.Token property" Url="html/P-CodeGenerator.Context.Token.htm" />
+  <HelpKINode Title="Copy method">
+    <HelpKINode Title="Copy Method " Url="html/M-ModelCompiler.TypeDesign.Copy.htm" />
+    <HelpKINode Title="Copy Method " Url="html/M-ModelCompiler.InstanceDesign.Copy.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreateInstance method" Url="html/M-global._TypeName_State-1.CreateInstance.htm" />
+  <HelpKINode Title="CreateResponse method" Url="html/M-global._NAME_Message.CreateResponse.htm" />
+  <HelpKINode Title="CreateSymbolicId method" Url="html/Overload-ModelCompiler.NodeDesign.CreateSymbolicId.htm" />
+  <HelpKINode Title="CSV enumeration member" Url="html/T-CodeGenerator.Language.htm" />
+  <HelpKINode Title="CSV field" Url="html/F-CodeGenerator.Language.CSV.htm" />
+  <HelpKINode Title="DataType class">
+    <HelpKINode Title="DataType Class" Url="html/T-CodeGenerator.DataType.htm" />
+    <HelpKINode Title="DataType Members" Url="html/AllMembers.T-CodeGenerator.DataType.htm" />
+    <HelpKINode Title="about DataType class" Url="html/T-CodeGenerator.DataType.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.DataType.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.DataType.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.DataType.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.DataType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataType property">
+    <HelpKINode Title="DataType Property " Url="html/P-CodeGenerator.FieldType.DataType.htm" />
+    <HelpKINode Title="DataType Property " Url="html/P-ModelCompiler.VariableDesign.DataType.htm" />
+    <HelpKINode Title="DataType Property " Url="html/P-ModelCompiler.VariableTypeDesign.DataType.htm" />
+    <HelpKINode Title="DataType Property " Url="html/P-ModelCompiler.Parameter.DataType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataType.AllowArrays property" Url="html/P-CodeGenerator.DataType.AllowArrays.htm" />
+  <HelpKINode Title="DataType.Category property" Url="html/P-CodeGenerator.DataType.Category.htm" />
+  <HelpKINode Title="DataType.DataType constructor" Url="html/M-CodeGenerator.DataType.-ctor.htm" />
+  <HelpKINode Title="DataType.Documentation property" Url="html/P-CodeGenerator.DataType.Documentation.htm" />
+  <HelpKINode Title="DataType.Identifier property" Url="html/P-CodeGenerator.DataType.Identifier.htm" />
+  <HelpKINode Title="DataType.IdentifierSpecified property" Url="html/P-CodeGenerator.DataType.IdentifierSpecified.htm" />
+  <HelpKINode Title="DataType.Name property" Url="html/P-CodeGenerator.DataType.Name.htm" />
+  <HelpKINode Title="DataType.NotInAddressSpace property" Url="html/P-CodeGenerator.DataType.NotInAddressSpace.htm" />
+  <HelpKINode Title="DataType.PartNo property" Url="html/P-CodeGenerator.DataType.PartNo.htm" />
+  <HelpKINode Title="DataType.Purpose property" Url="html/P-CodeGenerator.DataType.Purpose.htm" />
+  <HelpKINode Title="DataType.QName property" Url="html/P-CodeGenerator.DataType.QName.htm" />
+  <HelpKINode Title="DataType.ReleaseStatus property" Url="html/P-CodeGenerator.DataType.ReleaseStatus.htm" />
+  <HelpKINode Title="DataType.ToString method" Url="html/M-CodeGenerator.DataType.ToString.htm" />
+  <HelpKINode Title="DataTypeDesign class">
+    <HelpKINode Title="DataTypeDesign Class" Url="html/T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="DataTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="about DataTypeDesign class" Url="html/T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.DataTypeDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.DataTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataTypeDesign.BasicDataType field" Url="html/F-ModelCompiler.DataTypeDesign.BasicDataType.htm" />
+  <HelpKINode Title="DataTypeDesign.DataTypeDesign constructor" Url="html/M-ModelCompiler.DataTypeDesign.-ctor.htm" />
+  <HelpKINode Title="DataTypeDesign.Encodings property" Url="html/P-ModelCompiler.DataTypeDesign.Encodings.htm" />
+  <HelpKINode Title="DataTypeDesign.Fields property" Url="html/P-ModelCompiler.DataTypeDesign.Fields.htm" />
+  <HelpKINode Title="DataTypeDesign.ForceEnumValues property" Url="html/P-ModelCompiler.DataTypeDesign.ForceEnumValues.htm" />
+  <HelpKINode Title="DataTypeDesign.HasEncodings field" Url="html/F-ModelCompiler.DataTypeDesign.HasEncodings.htm" />
+  <HelpKINode Title="DataTypeDesign.HasFields field" Url="html/F-ModelCompiler.DataTypeDesign.HasFields.htm" />
+  <HelpKINode Title="DataTypeDesign.IsEnumeration field" Url="html/F-ModelCompiler.DataTypeDesign.IsEnumeration.htm" />
+  <HelpKINode Title="DataTypeDesign.IsOptionSet property" Url="html/P-ModelCompiler.DataTypeDesign.IsOptionSet.htm" />
+  <HelpKINode Title="DataTypeDesign.IsStructure field" Url="html/F-ModelCompiler.DataTypeDesign.IsStructure.htm" />
+  <HelpKINode Title="DataTypeDesign.IsUnion property" Url="html/P-ModelCompiler.DataTypeDesign.IsUnion.htm" />
+  <HelpKINode Title="DataTypeDesign.NoArraysAllowed property" Url="html/P-ModelCompiler.DataTypeDesign.NoArraysAllowed.htm" />
+  <HelpKINode Title="DataTypeNode field">
+    <HelpKINode Title="DataTypeNode Field" Url="html/F-ModelCompiler.Parameter.DataTypeNode.htm" />
+    <HelpKINode Title="DataTypeNode Field" Url="html/F-ModelCompiler.VariableTypeDesign.DataTypeNode.htm" />
+    <HelpKINode Title="DataTypeNode Field" Url="html/F-ModelCompiler.VariableDesign.DataTypeNode.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataTypePurpose enumeration">
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-CodeGenerator.DataTypePurpose.htm" />
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-ModelCompiler.DataTypePurpose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataTypePurpose.CodeGenerator field">
+    <HelpKINode Title="CodeGenerator Field" Url="html/F-ModelCompiler.DataTypePurpose.CodeGenerator.htm" />
+    <HelpKINode Title="CodeGenerator Field" Url="html/F-CodeGenerator.DataTypePurpose.CodeGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataTypePurpose.Normal field">
+    <HelpKINode Title="Normal Field" Url="html/F-ModelCompiler.DataTypePurpose.Normal.htm" />
+    <HelpKINode Title="Normal Field" Url="html/F-CodeGenerator.DataTypePurpose.Normal.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataTypePurpose.ServicesOnly field">
+    <HelpKINode Title="ServicesOnly Field" Url="html/F-ModelCompiler.DataTypePurpose.ServicesOnly.htm" />
+    <HelpKINode Title="ServicesOnly Field" Url="html/F-CodeGenerator.DataTypePurpose.ServicesOnly.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataValue enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="DataValue field" Url="html/F-ModelCompiler.BasicDataType.DataValue.htm" />
+  <HelpKINode Title="DateTime enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="DateTime field" Url="html/F-ModelCompiler.BasicDataType.DateTime.htm" />
+  <HelpKINode Title="Declaration property" Url="html/P-ModelCompiler.InstanceDesign.Declaration.htm" />
+  <HelpKINode Title="Decode method" Url="html/M-global._NAME_.Decode.htm" />
+  <HelpKINode Title="DecodedValue field">
+    <HelpKINode Title="DecodedValue Field" Url="html/F-ModelCompiler.VariableDesign.DecodedValue.htm" />
+    <HelpKINode Title="DecodedValue Field" Url="html/F-ModelCompiler.VariableTypeDesign.DecodedValue.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DefaultLocale property" Url="html/P-ModelCompiler.ModelDesign.DefaultLocale.htm" />
+  <HelpKINode Title="DefaultValue property">
+    <HelpKINode Title="DefaultValue Property " Url="html/P-CodeGenerator.FieldType.DefaultValue.htm" />
+    <HelpKINode Title="DefaultValue Property " Url="html/P-ModelCompiler.VariableDesign.DefaultValue.htm" />
+    <HelpKINode Title="DefaultValue Property " Url="html/P-ModelCompiler.VariableTypeDesign.DefaultValue.htm" />
+    <HelpKINode Title="DefaultValue Property " Url="html/P-ModelCompiler.Parameter.DefaultValue.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DefinedOnType field" Url="html/F-ModelCompiler.HierarchyReference.DefinedOnType.htm" />
+  <HelpKINode Title="Dependencies field" Url="html/F-ModelCompiler.ModelDesign.Dependencies.htm" />
+  <HelpKINode Title="Deprecated enumeration member">
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-ModelCompiler.ReleaseStatus.htm" />
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-CodeGenerator.ReleaseStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Deprecated field">
+    <HelpKINode Title="Deprecated Field" Url="html/F-ModelCompiler.ReleaseStatus.Deprecated.htm" />
+    <HelpKINode Title="Deprecated Field" Url="html/F-CodeGenerator.ReleaseStatus.Deprecated.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Description property">
+    <HelpKINode Title="Description Property " Url="html/P-ModelCompiler.NodeDesign.Description.htm" />
+    <HelpKINode Title="Description Property " Url="html/P-ModelCompiler.Parameter.Description.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DesignFiles property" Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.DesignFiles.htm" />
+  <HelpKINode Title="DiagnosticInfo enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="DiagnosticInfo field" Url="html/F-ModelCompiler.BasicDataType.DiagnosticInfo.htm" />
+  <HelpKINode Title="DictionariesToExport property" Url="html/P-CodeGenerator.CodeGenerator.DictionariesToExport.htm" />
+  <HelpKINode Title="Dictionary property" Url="html/P-CodeGenerator.TypeDictionaryValidator.Dictionary.htm" />
+  <HelpKINode Title="DictionaryDesign class">
+    <HelpKINode Title="DictionaryDesign Class" Url="html/T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="DictionaryDesign Members" Url="html/AllMembers.T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="about DictionaryDesign class" Url="html/T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.DictionaryDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DictionaryDesign.EncodingName property" Url="html/P-ModelCompiler.DictionaryDesign.EncodingName.htm" />
+  <HelpKINode Title="Discovery enumeration member" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="Discovery field" Url="html/F-CodeGenerator.InterfaceType.Discovery.htm" />
+  <HelpKINode Title="DisplayName property" Url="html/P-ModelCompiler.NodeDesign.DisplayName.htm" />
+  <HelpKINode Title="Documentation class">
+    <HelpKINode Title="Documentation Class" Url="html/T-CodeGenerator.Documentation.htm" />
+    <HelpKINode Title="Documentation Members" Url="html/AllMembers.T-CodeGenerator.Documentation.htm" />
+    <HelpKINode Title="about Documentation class" Url="html/T-CodeGenerator.Documentation.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.Documentation.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.Documentation.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.Documentation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Documentation property">
+    <HelpKINode Title="Documentation Property " Url="html/P-CodeGenerator.TypeDictionary.Documentation.htm" />
+    <HelpKINode Title="Documentation Property " Url="html/P-CodeGenerator.DataType.Documentation.htm" />
+    <HelpKINode Title="Documentation Property " Url="html/P-CodeGenerator.EnumeratedValue.Documentation.htm" />
+    <HelpKINode Title="Documentation Property " Url="html/P-CodeGenerator.FieldType.Documentation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Documentation.AnyAttr property" Url="html/P-CodeGenerator.Documentation.AnyAttr.htm" />
+  <HelpKINode Title="Documentation.Items property" Url="html/P-CodeGenerator.Documentation.Items.htm" />
+  <HelpKINode Title="Documentation.Text property" Url="html/P-CodeGenerator.Documentation.Text.htm" />
+  <HelpKINode Title="DotNet enumeration member" Url="html/T-CodeGenerator.Language.htm" />
+  <HelpKINode Title="DotNet field" Url="html/F-CodeGenerator.Language.DotNet.htm" />
+  <HelpKINode Title="DotNetGenerator class">
+    <HelpKINode Title="DotNetGenerator Class" Url="html/T-CodeGenerator.DotNetGenerator.htm" />
+    <HelpKINode Title="DotNetGenerator Members" Url="html/AllMembers.T-CodeGenerator.DotNetGenerator.htm" />
+    <HelpKINode Title="about DotNetGenerator class" Url="html/T-CodeGenerator.DotNetGenerator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.DotNetGenerator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.DotNetGenerator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.DotNetGenerator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.DotNetGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DotNetGenerator.DotNetGenerator constructor" Url="html/M-CodeGenerator.DotNetGenerator.-ctor.htm" />
+  <HelpKINode Title="DotNetGenerator.Generate method" Url="html/M-CodeGenerator.DotNetGenerator.Generate.htm" />
+  <HelpKINode Title="Double enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Double field" Url="html/F-ModelCompiler.BasicDataType.Double.htm" />
+  <HelpKINode Title="Draft enumeration member">
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-CodeGenerator.ReleaseStatus.htm" />
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-ModelCompiler.ReleaseStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Draft field">
+    <HelpKINode Title="Draft Field" Url="html/F-ModelCompiler.ReleaseStatus.Draft.htm" />
+    <HelpKINode Title="Draft Field" Url="html/F-CodeGenerator.ReleaseStatus.Draft.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EmbeddedResourcePath property" Url="html/P-CodeGenerator.TypeDictionaryValidator.EmbeddedResourcePath.htm" />
+  <HelpKINode Title="Encode method" Url="html/M-global._NAME_.Encode.htm" />
+  <HelpKINode Title="EncodingDesign class">
+    <HelpKINode Title="EncodingDesign Class" Url="html/T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="EncodingDesign Members" Url="html/AllMembers.T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="about EncodingDesign class" Url="html/T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.EncodingDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EncodingName property" Url="html/P-ModelCompiler.DictionaryDesign.EncodingName.htm" />
+  <HelpKINode Title="Encodings property" Url="html/P-ModelCompiler.DataTypeDesign.Encodings.htm" />
+  <HelpKINode Title="EndpointsNamespace field" Url="html/F-CodeGenerator.XmlSchemaGenerator.EndpointsNamespace.htm" />
+  <HelpKINode Title="EnumeratedType class">
+    <HelpKINode Title="EnumeratedType Class" Url="html/T-CodeGenerator.EnumeratedType.htm" />
+    <HelpKINode Title="EnumeratedType Members" Url="html/AllMembers.T-CodeGenerator.EnumeratedType.htm" />
+    <HelpKINode Title="about EnumeratedType class" Url="html/T-CodeGenerator.EnumeratedType.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.EnumeratedType.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.EnumeratedType.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.EnumeratedType.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.EnumeratedType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EnumeratedType.BaseType property" Url="html/P-CodeGenerator.EnumeratedType.BaseType.htm" />
+  <HelpKINode Title="EnumeratedType.EnumeratedType constructor" Url="html/M-CodeGenerator.EnumeratedType.-ctor.htm" />
+  <HelpKINode Title="EnumeratedType.IsOptionSet property" Url="html/P-CodeGenerator.EnumeratedType.IsOptionSet.htm" />
+  <HelpKINode Title="EnumeratedType.Value property" Url="html/P-CodeGenerator.EnumeratedType.Value.htm" />
+  <HelpKINode Title="EnumeratedValue class">
+    <HelpKINode Title="EnumeratedValue Class" Url="html/T-CodeGenerator.EnumeratedValue.htm" />
+    <HelpKINode Title="EnumeratedValue Members" Url="html/AllMembers.T-CodeGenerator.EnumeratedValue.htm" />
+    <HelpKINode Title="about EnumeratedValue class" Url="html/T-CodeGenerator.EnumeratedValue.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.EnumeratedValue.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.EnumeratedValue.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.EnumeratedValue.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EnumeratedValue.BitMask property" Url="html/P-CodeGenerator.EnumeratedValue.BitMask.htm" />
+  <HelpKINode Title="EnumeratedValue.Documentation property" Url="html/P-CodeGenerator.EnumeratedValue.Documentation.htm" />
+  <HelpKINode Title="EnumeratedValue.Name property" Url="html/P-CodeGenerator.EnumeratedValue.Name.htm" />
+  <HelpKINode Title="EnumeratedValue.Value property" Url="html/P-CodeGenerator.EnumeratedValue.Value.htm" />
+  <HelpKINode Title="EnumeratedValue.ValueSpecified property" Url="html/P-CodeGenerator.EnumeratedValue.ValueSpecified.htm" />
+  <HelpKINode Title="Enumeration enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Enumeration field" Url="html/F-ModelCompiler.BasicDataType.Enumeration.htm" />
+  <HelpKINode Title="ExcludeCategories property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.ExcludeCategories.htm" />
+  <HelpKINode Title="ExpandedNodeId enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="ExpandedNodeId field" Url="html/F-ModelCompiler.BasicDataType.ExpandedNodeId.htm" />
+  <HelpKINode Title="ExplicitlyDefined field" Url="html/F-ModelCompiler.HierarchyNode.ExplicitlyDefined.htm" />
+  <HelpKINode Title="ExposesItsArray enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="ExposesItsArray field" Url="html/F-ModelCompiler.ModellingRule.ExposesItsArray.htm" />
+  <HelpKINode Title="ExposesItsChildren property" Url="html/P-ModelCompiler.VariableTypeDesign.ExposesItsChildren.htm" />
+  <HelpKINode Title="Field property" Url="html/P-CodeGenerator.ComplexType.Field.htm" />
+  <HelpKINode Title="Fields property" Url="html/P-ModelCompiler.DataTypeDesign.Fields.htm" />
+  <HelpKINode Title="FieldType class">
+    <HelpKINode Title="FieldType Class" Url="html/T-CodeGenerator.FieldType.htm" />
+    <HelpKINode Title="FieldType Members" Url="html/AllMembers.T-CodeGenerator.FieldType.htm" />
+    <HelpKINode Title="about FieldType class" Url="html/T-CodeGenerator.FieldType.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.FieldType.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.FieldType.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.FieldType.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.FieldType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FieldType.AllowSubtypes property" Url="html/P-CodeGenerator.FieldType.AllowSubtypes.htm" />
+  <HelpKINode Title="FieldType.ComplexType property" Url="html/P-CodeGenerator.FieldType.ComplexType.htm" />
+  <HelpKINode Title="FieldType.DataType property" Url="html/P-CodeGenerator.FieldType.DataType.htm" />
+  <HelpKINode Title="FieldType.DefaultValue property" Url="html/P-CodeGenerator.FieldType.DefaultValue.htm" />
+  <HelpKINode Title="FieldType.Documentation property" Url="html/P-CodeGenerator.FieldType.Documentation.htm" />
+  <HelpKINode Title="FieldType.FieldType constructor" Url="html/M-CodeGenerator.FieldType.-ctor.htm" />
+  <HelpKINode Title="FieldType.IsOptional property" Url="html/P-CodeGenerator.FieldType.IsOptional.htm" />
+  <HelpKINode Title="FieldType.Name property" Url="html/P-CodeGenerator.FieldType.Name.htm" />
+  <HelpKINode Title="FieldType.ValueRank property" Url="html/P-CodeGenerator.FieldType.ValueRank.htm" />
+  <HelpKINode Title="FilePath property" Url="html/P-ModelCompiler.Namespace.FilePath.htm" />
+  <HelpKINode Title="FindType method" Url="html/M-CodeGenerator.TypeDictionaryValidator.FindType.htm" />
+  <HelpKINode Title="FirstInList property" Url="html/P-CodeGenerator.Context.FirstInList.htm" />
+  <HelpKINode Title="Float enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Float field" Url="html/F-ModelCompiler.BasicDataType.Float.htm" />
+  <HelpKINode Title="ForceEnumValues property" Url="html/P-ModelCompiler.DataTypeDesign.ForceEnumValues.htm" />
+  <HelpKINode Title="Generate method">
+    <HelpKINode Title="Generate Method " Url="html/M-CodeGenerator.XmlSchemaGenerator.Generate.htm" />
+    <HelpKINode Title="Generate Method " Url="html/M-CodeGenerator.WiresharkGenerator.Generate.htm" />
+    <HelpKINode Title="Generate Method " Url="html/M-CodeGenerator.DotNetGenerator.Generate.htm" />
+    <HelpKINode Title="Generate Method " Url="html/M-CodeGenerator.ConstantsGenerator.Generate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GenerateMultiFile property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.GenerateMultiFile.htm" />
+  <HelpKINode Title="GetRequest method" Url="html/M-global._NAME_Message.GetRequest.htm" />
+  <HelpKINode Title="GetSchema method">
+    <HelpKINode Title="GetSchema Method " Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.GetSchema.htm" />
+    <HelpKINode Title="GetSchema Method " Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.GetSchema.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global namespace" Url="html/N-global.htm" />
+  <HelpKINode Title="global..Names class">
+    <HelpKINode Title="_NAME_.Names Class" Url="html/T-global._NAME_.Names.htm" />
+    <HelpKINode Title="_NAME_.Names Members" Url="html/AllMembers.T-global._NAME_.Names.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global._NAME_Request class">
+    <HelpKINode Title="_NAME_Request Class" Url="html/T-global._NAME_Request.htm" />
+    <HelpKINode Title="_NAME_Request Members" Url="html/AllMembers.T-global._NAME_Request.htm" />
+  </HelpKINode>
+  <HelpKINode Title="global._NAME_Response class">
+    <HelpKINode Title="_NAME_Response Class" Url="html/T-global._NAME_Response.htm" />
+    <HelpKINode Title="_NAME_Response Members" Url="html/AllMembers.T-global._NAME_Response.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Good enumeration member" Url="html/T-CodeGenerator.Severity.htm" />
+  <HelpKINode Title="Good field" Url="html/F-CodeGenerator.Severity.Good.htm" />
+  <HelpKINode Title="Guid enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Guid field" Url="html/F-ModelCompiler.BasicDataType.Guid.htm" />
+  <HelpKINode Title="Handle field" Url="html/F-ModelCompiler.NodeDesign.Handle.htm" />
+  <HelpKINode Title="HasArguments field" Url="html/F-ModelCompiler.MethodDesign.HasArguments.htm" />
+  <HelpKINode Title="HasChildren field" Url="html/F-ModelCompiler.NodeDesign.HasChildren.htm" />
+  <HelpKINode Title="HasEncodings field" Url="html/F-ModelCompiler.DataTypeDesign.HasEncodings.htm" />
+  <HelpKINode Title="HasFields field" Url="html/F-ModelCompiler.DataTypeDesign.HasFields.htm" />
+  <HelpKINode Title="HasReferences field" Url="html/F-ModelCompiler.NodeDesign.HasReferences.htm" />
+  <HelpKINode Title="Hierarchy class">
+    <HelpKINode Title="Hierarchy Class" Url="html/T-ModelCompiler.Hierarchy.htm" />
+    <HelpKINode Title="Hierarchy Members" Url="html/AllMembers.T-ModelCompiler.Hierarchy.htm" />
+    <HelpKINode Title="about Hierarchy class" Url="html/T-ModelCompiler.Hierarchy.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.Hierarchy.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.Hierarchy.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.Hierarchy.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Hierarchy field" Url="html/F-ModelCompiler.NodeDesign.Hierarchy.htm" />
+  <HelpKINode Title="Hierarchy.NodeList field" Url="html/F-ModelCompiler.Hierarchy.NodeList.htm" />
+  <HelpKINode Title="Hierarchy.Nodes field" Url="html/F-ModelCompiler.Hierarchy.Nodes.htm" />
+  <HelpKINode Title="Hierarchy.References field" Url="html/F-ModelCompiler.Hierarchy.References.htm" />
+  <HelpKINode Title="Hierarchy.Type field" Url="html/F-ModelCompiler.Hierarchy.Type.htm" />
+  <HelpKINode Title="HierarchyNode class">
+    <HelpKINode Title="HierarchyNode Class" Url="html/T-ModelCompiler.HierarchyNode.htm" />
+    <HelpKINode Title="HierarchyNode Members" Url="html/AllMembers.T-ModelCompiler.HierarchyNode.htm" />
+    <HelpKINode Title="about HierarchyNode class" Url="html/T-ModelCompiler.HierarchyNode.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.HierarchyNode.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.HierarchyNode.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.HierarchyNode.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HierarchyNode.AdHocInstance field" Url="html/F-ModelCompiler.HierarchyNode.AdHocInstance.htm" />
+  <HelpKINode Title="HierarchyNode.ExplicitlyDefined field" Url="html/F-ModelCompiler.HierarchyNode.ExplicitlyDefined.htm" />
+  <HelpKINode Title="HierarchyNode.Identifier field" Url="html/F-ModelCompiler.HierarchyNode.Identifier.htm" />
+  <HelpKINode Title="HierarchyNode.Inherited field" Url="html/F-ModelCompiler.HierarchyNode.Inherited.htm" />
+  <HelpKINode Title="HierarchyNode.Instance field" Url="html/F-ModelCompiler.HierarchyNode.Instance.htm" />
+  <HelpKINode Title="HierarchyNode.OverriddenNodes field" Url="html/F-ModelCompiler.HierarchyNode.OverriddenNodes.htm" />
+  <HelpKINode Title="HierarchyNode.RelativePath field" Url="html/F-ModelCompiler.HierarchyNode.RelativePath.htm" />
+  <HelpKINode Title="HierarchyNode.ToString method" Url="html/Overload-ModelCompiler.HierarchyNode.ToString.htm" />
+  <HelpKINode Title="HierarchyReference class">
+    <HelpKINode Title="HierarchyReference Class" Url="html/T-ModelCompiler.HierarchyReference.htm" />
+    <HelpKINode Title="HierarchyReference Members" Url="html/AllMembers.T-ModelCompiler.HierarchyReference.htm" />
+    <HelpKINode Title="about HierarchyReference class" Url="html/T-ModelCompiler.HierarchyReference.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.HierarchyReference.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.HierarchyReference.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.HierarchyReference.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HierarchyReference.DefinedOnType field" Url="html/F-ModelCompiler.HierarchyReference.DefinedOnType.htm" />
+  <HelpKINode Title="HierarchyReference.IsInverse field" Url="html/F-ModelCompiler.HierarchyReference.IsInverse.htm" />
+  <HelpKINode Title="HierarchyReference.ReferenceType field" Url="html/F-ModelCompiler.HierarchyReference.ReferenceType.htm" />
+  <HelpKINode Title="HierarchyReference.SourcePath field" Url="html/F-ModelCompiler.HierarchyReference.SourcePath.htm" />
+  <HelpKINode Title="HierarchyReference.TargetId field" Url="html/F-ModelCompiler.HierarchyReference.TargetId.htm" />
+  <HelpKINode Title="HierarchyReference.TargetPath field" Url="html/F-ModelCompiler.HierarchyReference.TargetPath.htm" />
+  <HelpKINode Title="HierarchyReference.ToString method" Url="html/Overload-ModelCompiler.HierarchyReference.ToString.htm" />
+  <HelpKINode Title="Historizing property">
+    <HelpKINode Title="Historizing Property " Url="html/P-ModelCompiler.VariableTypeDesign.Historizing.htm" />
+    <HelpKINode Title="Historizing Property " Url="html/P-ModelCompiler.VariableDesign.Historizing.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HistorizingSpecified property">
+    <HelpKINode Title="HistorizingSpecified Property " Url="html/P-ModelCompiler.VariableDesign.HistorizingSpecified.htm" />
+    <HelpKINode Title="HistorizingSpecified Property " Url="html/P-ModelCompiler.VariableTypeDesign.HistorizingSpecified.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HistoryRead enumeration member" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="HistoryRead field" Url="html/F-ModelCompiler.AccessLevel.HistoryRead.htm" />
+  <HelpKINode Title="HistoryReadWrite enumeration member" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="HistoryReadWrite field" Url="html/F-ModelCompiler.AccessLevel.HistoryReadWrite.htm" />
+  <HelpKINode Title="HistoryWrite enumeration member" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="HistoryWrite field" Url="html/F-ModelCompiler.AccessLevel.HistoryWrite.htm" />
+  <HelpKINode Title="Identifier field" Url="html/F-ModelCompiler.HierarchyNode.Identifier.htm" />
+  <HelpKINode Title="Identifier property">
+    <HelpKINode Title="Identifier Property " Url="html/P-CodeGenerator.DataType.Identifier.htm" />
+    <HelpKINode Title="Identifier Property " Url="html/P-ModelCompiler.Parameter.Identifier.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IdentifierFile property" Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.IdentifierFile.htm" />
+  <HelpKINode Title="IdentifierInName field" Url="html/F-ModelCompiler.Parameter.IdentifierInName.htm" />
+  <HelpKINode Title="IdentifierRequired field" Url="html/F-ModelCompiler.InstanceDesign.IdentifierRequired.htm" />
+  <HelpKINode Title="IdentifierSpecified property">
+    <HelpKINode Title="IdentifierSpecified Property " Url="html/P-ModelCompiler.Parameter.IdentifierSpecified.htm" />
+    <HelpKINode Title="IdentifierSpecified Property " Url="html/P-CodeGenerator.DataType.IdentifierSpecified.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IModelGeneratorGenerate interface">
+    <HelpKINode Title="IModelGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+    <HelpKINode Title="IModelGeneratorGenerate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+    <HelpKINode Title="about IModelGeneratorGenerate interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IModelGeneratorGenerate.ExcludeCategories property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.ExcludeCategories.htm" />
+  <HelpKINode Title="IModelGeneratorGenerate.GenerateMultiFile property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.GenerateMultiFile.htm" />
+  <HelpKINode Title="IModelGeneratorGenerate.IncludeDisplayNames property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.IncludeDisplayNames.htm" />
+  <HelpKINode Title="IModelGeneratorGenerate.UseXmlInitializers property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.UseXmlInitializers.htm" />
+  <HelpKINode Title="IModelGeneratorValidate interface">
+    <HelpKINode Title="IModelGeneratorValidate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+    <HelpKINode Title="IModelGeneratorValidate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+    <HelpKINode Title="about IModelGeneratorValidate interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IModelGeneratorValidate.StartId property" Url="html/P-OOI.ModelCompiler.IModelGeneratorValidate.StartId.htm" />
+  <HelpKINode Title="IModelGeneratorValidate.UseAllowSubtypes property" Url="html/P-OOI.ModelCompiler.IModelGeneratorValidate.UseAllowSubtypes.htm" />
+  <HelpKINode Title="Import property" Url="html/P-CodeGenerator.TypeDictionary.Import.htm" />
+  <HelpKINode Title="ImportDirective class">
+    <HelpKINode Title="ImportDirective Class" Url="html/T-CodeGenerator.ImportDirective.htm" />
+    <HelpKINode Title="ImportDirective Members" Url="html/AllMembers.T-CodeGenerator.ImportDirective.htm" />
+    <HelpKINode Title="about ImportDirective class" Url="html/T-CodeGenerator.ImportDirective.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.ImportDirective.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.ImportDirective.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.ImportDirective.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ImportDirective.Location property" Url="html/P-CodeGenerator.ImportDirective.Location.htm" />
+  <HelpKINode Title="ImportDirective.Namespace property" Url="html/P-CodeGenerator.ImportDirective.Namespace.htm" />
+  <HelpKINode Title="IncludeDisplayNames property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.IncludeDisplayNames.htm" />
+  <HelpKINode Title="Indent property" Url="html/P-CodeGenerator.Template.Indent.htm" />
+  <HelpKINode Title="Index property" Url="html/P-CodeGenerator.Context.Index.htm" />
+  <HelpKINode Title="Inherited field" Url="html/F-ModelCompiler.HierarchyNode.Inherited.htm" />
+  <HelpKINode Title="InnerChannel property" Url="html/P-_Prefix_._ServiceSet_Client.InnerChannel.htm" />
+  <HelpKINode Title="InputArguments property" Url="html/P-ModelCompiler.MethodDesign.InputArguments.htm" />
+  <HelpKINode Title="Instance field" Url="html/F-ModelCompiler.HierarchyNode.Instance.htm" />
+  <HelpKINode Title="InstanceDeclarationNode field" Url="html/F-ModelCompiler.InstanceDesign.InstanceDeclarationNode.htm" />
+  <HelpKINode Title="InstanceDesign class">
+    <HelpKINode Title="InstanceDesign Class" Url="html/T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="InstanceDesign Members" Url="html/AllMembers.T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="about InstanceDesign class" Url="html/T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.InstanceDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.InstanceDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InstanceDesign.Copy method" Url="html/M-ModelCompiler.InstanceDesign.Copy.htm" />
+  <HelpKINode Title="InstanceDesign.Declaration property" Url="html/P-ModelCompiler.InstanceDesign.Declaration.htm" />
+  <HelpKINode Title="InstanceDesign.IdentifierRequired field" Url="html/F-ModelCompiler.InstanceDesign.IdentifierRequired.htm" />
+  <HelpKINode Title="InstanceDesign.InstanceDeclarationNode field" Url="html/F-ModelCompiler.InstanceDesign.InstanceDeclarationNode.htm" />
+  <HelpKINode Title="InstanceDesign.InstanceDesign constructor" Url="html/M-ModelCompiler.InstanceDesign.-ctor.htm" />
+  <HelpKINode Title="InstanceDesign.MaxCardinality property" Url="html/P-ModelCompiler.InstanceDesign.MaxCardinality.htm" />
+  <HelpKINode Title="InstanceDesign.MinCardinality property" Url="html/P-ModelCompiler.InstanceDesign.MinCardinality.htm" />
+  <HelpKINode Title="InstanceDesign.ModellingRule property" Url="html/P-ModelCompiler.InstanceDesign.ModellingRule.htm" />
+  <HelpKINode Title="InstanceDesign.ModellingRuleSpecified property" Url="html/P-ModelCompiler.InstanceDesign.ModellingRuleSpecified.htm" />
+  <HelpKINode Title="InstanceDesign.OveriddenNode field" Url="html/F-ModelCompiler.InstanceDesign.OveriddenNode.htm" />
+  <HelpKINode Title="InstanceDesign.PreserveDefaultAttributes property" Url="html/P-ModelCompiler.InstanceDesign.PreserveDefaultAttributes.htm" />
+  <HelpKINode Title="InstanceDesign.ReferenceType property" Url="html/P-ModelCompiler.InstanceDesign.ReferenceType.htm" />
+  <HelpKINode Title="InstanceDesign.TypeDefinition property" Url="html/P-ModelCompiler.InstanceDesign.TypeDefinition.htm" />
+  <HelpKINode Title="InstanceDesign.TypeDefinitionNode field" Url="html/F-ModelCompiler.InstanceDesign.TypeDefinitionNode.htm" />
+  <HelpKINode Title="InstanceState field" Url="html/F-ModelCompiler.NodeDesign.InstanceState.htm" />
+  <HelpKINode Title="Int16 enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Int16 field" Url="html/F-ModelCompiler.BasicDataType.Int16.htm" />
+  <HelpKINode Title="Int32 enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Int32 field" Url="html/F-ModelCompiler.BasicDataType.Int32.htm" />
+  <HelpKINode Title="Int64 enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Int64 field" Url="html/F-ModelCompiler.BasicDataType.Int64.htm" />
+  <HelpKINode Title="Integer enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Integer field" Url="html/F-ModelCompiler.BasicDataType.Integer.htm" />
+  <HelpKINode Title="InterfaceType enumeration" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="InterfaceType property" Url="html/P-CodeGenerator.ServiceType.InterfaceType.htm" />
+  <HelpKINode Title="InterfaceType.Discovery field" Url="html/F-CodeGenerator.InterfaceType.Discovery.htm" />
+  <HelpKINode Title="InterfaceType.Registration field" Url="html/F-CodeGenerator.InterfaceType.Registration.htm" />
+  <HelpKINode Title="InterfaceType.SecureChannel field" Url="html/F-CodeGenerator.InterfaceType.SecureChannel.htm" />
+  <HelpKINode Title="InterfaceType.Session field" Url="html/F-CodeGenerator.InterfaceType.Session.htm" />
+  <HelpKINode Title="InterfaceType.Test field" Url="html/F-CodeGenerator.InterfaceType.Test.htm" />
+  <HelpKINode Title="InternalPrefix property" Url="html/P-ModelCompiler.Namespace.InternalPrefix.htm" />
+  <HelpKINode Title="InverseName property" Url="html/P-ModelCompiler.ReferenceTypeDesign.InverseName.htm" />
+  <HelpKINode Title="IsAbstract property">
+    <HelpKINode Title="IsAbstract Property " Url="html/P-CodeGenerator.ComplexType.IsAbstract.htm" />
+    <HelpKINode Title="IsAbstract Property " Url="html/P-ModelCompiler.TypeDesign.IsAbstract.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsAutogenerated field" Url="html/F-ModelCompiler.LocalizedText.IsAutogenerated.htm" />
+  <HelpKINode Title="IsDeclaration property" Url="html/P-ModelCompiler.NodeDesign.IsDeclaration.htm" />
+  <HelpKINode Title="IsDynamic property" Url="html/P-ModelCompiler.NodeDesign.IsDynamic.htm" />
+  <HelpKINode Title="IsEnumeration field" Url="html/F-ModelCompiler.DataTypeDesign.IsEnumeration.htm" />
+  <HelpKINode Title="IsEqual method" Url="html/M-global._NAME_.IsEqual.htm" />
+  <HelpKINode Title="IsInherited field" Url="html/F-ModelCompiler.Parameter.IsInherited.htm" />
+  <HelpKINode Title="IsInverse field" Url="html/F-ModelCompiler.HierarchyReference.IsInverse.htm" />
+  <HelpKINode Title="IsInverse property" Url="html/P-ModelCompiler.Reference.IsInverse.htm" />
+  <HelpKINode Title="IsOneWay property" Url="html/P-ModelCompiler.Reference.IsOneWay.htm" />
+  <HelpKINode Title="IsOptional property">
+    <HelpKINode Title="IsOptional Property " Url="html/P-CodeGenerator.FieldType.IsOptional.htm" />
+    <HelpKINode Title="IsOptional Property " Url="html/P-ModelCompiler.Parameter.IsOptional.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsOptionSet property">
+    <HelpKINode Title="IsOptionSet Property " Url="html/P-CodeGenerator.EnumeratedType.IsOptionSet.htm" />
+    <HelpKINode Title="IsOptionSet Property " Url="html/P-ModelCompiler.DataTypeDesign.IsOptionSet.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsStructure field" Url="html/F-ModelCompiler.DataTypeDesign.IsStructure.htm" />
+  <HelpKINode Title="IStackGeneratorGenerate interface">
+    <HelpKINode Title="IStackGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+    <HelpKINode Title="IStackGeneratorGenerate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+    <HelpKINode Title="about IStackGeneratorGenerate interface" Url="html/T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IStackGeneratorGenerate.DesignFiles property" Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.DesignFiles.htm" />
+  <HelpKINode Title="IStackGeneratorGenerate.IdentifierFile property" Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.IdentifierFile.htm" />
+  <HelpKINode Title="IStackGeneratorGenerate.SpecificationVersion property" Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.SpecificationVersion.htm" />
+  <HelpKINode Title="IsUnion property">
+    <HelpKINode Title="IsUnion Property " Url="html/P-CodeGenerator.ComplexType.IsUnion.htm" />
+    <HelpKINode Title="IsUnion Property " Url="html/P-ModelCompiler.DataTypeDesign.IsUnion.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Items property">
+    <HelpKINode Title="Items Property " Url="html/P-CodeGenerator.TypeDictionary.Items.htm" />
+    <HelpKINode Title="Items Property " Url="html/P-CodeGenerator.Documentation.Items.htm" />
+    <HelpKINode Title="Items Property " Url="html/P-ModelCompiler.ModelDesign.Items.htm" />
+    <HelpKINode Title="Items Property " Url="html/P-ModelCompiler.ListOfChildren.Items.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Key property" Url="html/P-ModelCompiler.LocalizedText.Key.htm" />
+  <HelpKINode Title="Language enumeration" Url="html/T-CodeGenerator.Language.htm" />
+  <HelpKINode Title="Language.AnsiC field" Url="html/F-CodeGenerator.Language.AnsiC.htm" />
+  <HelpKINode Title="Language.CSV field" Url="html/F-CodeGenerator.Language.CSV.htm" />
+  <HelpKINode Title="Language.DotNet field" Url="html/F-CodeGenerator.Language.DotNet.htm" />
+  <HelpKINode Title="Language.Wireshark field" Url="html/F-CodeGenerator.Language.Wireshark.htm" />
+  <HelpKINode Title="ListOfChildren class">
+    <HelpKINode Title="ListOfChildren Class" Url="html/T-ModelCompiler.ListOfChildren.htm" />
+    <HelpKINode Title="ListOfChildren Members" Url="html/AllMembers.T-ModelCompiler.ListOfChildren.htm" />
+    <HelpKINode Title="about ListOfChildren class" Url="html/T-ModelCompiler.ListOfChildren.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.ListOfChildren.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.ListOfChildren.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.ListOfChildren.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ListOfChildren.Items property" Url="html/P-ModelCompiler.ListOfChildren.Items.htm" />
+  <HelpKINode Title="Load method" Url="html/M-CodeGenerator.TemplateDefinition.Load.htm" />
+  <HelpKINode Title="LoadTemplate event" Url="html/E-CodeGenerator.TemplateDefinition.LoadTemplate.htm" />
+  <HelpKINode Title="LoadTemplateEventHandler delegate" Url="html/T-CodeGenerator.LoadTemplateEventHandler.htm" />
+  <HelpKINode Title="LocalizedText class">
+    <HelpKINode Title="LocalizedText Class" Url="html/T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="LocalizedText Members" Url="html/AllMembers.T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="about LocalizedText class" Url="html/T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.LocalizedText.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.LocalizedText.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LocalizedText enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="LocalizedText field" Url="html/F-ModelCompiler.BasicDataType.LocalizedText.htm" />
+  <HelpKINode Title="LocalizedText.IsAutogenerated field" Url="html/F-ModelCompiler.LocalizedText.IsAutogenerated.htm" />
+  <HelpKINode Title="LocalizedText.Key property" Url="html/P-ModelCompiler.LocalizedText.Key.htm" />
+  <HelpKINode Title="LocalizedText.LocalizedText constructor" Url="html/M-ModelCompiler.LocalizedText.-ctor.htm" />
+  <HelpKINode Title="LocalizedText.Value property" Url="html/P-ModelCompiler.LocalizedText.Value.htm" />
+  <HelpKINode Title="Location property" Url="html/P-CodeGenerator.ImportDirective.Location.htm" />
+  <HelpKINode Title="Mandatory enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="Mandatory field" Url="html/F-ModelCompiler.ModellingRule.Mandatory.htm" />
+  <HelpKINode Title="MandatoryPlaceholder enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="MandatoryPlaceholder field" Url="html/F-ModelCompiler.ModellingRule.MandatoryPlaceholder.htm" />
+  <HelpKINode Title="MandatoryShared enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="MandatoryShared field" Url="html/F-ModelCompiler.ModellingRule.MandatoryShared.htm" />
+  <HelpKINode Title="MaxCardinality property" Url="html/P-ModelCompiler.InstanceDesign.MaxCardinality.htm" />
+  <HelpKINode Title="MemberwiseClone method" Url="html/M-global._BrowseName_Collection.MemberwiseClone.htm" />
+  <HelpKINode Title="MethodDeclarationNode field" Url="html/F-ModelCompiler.MethodDesign.MethodDeclarationNode.htm" />
+  <HelpKINode Title="MethodDesign class">
+    <HelpKINode Title="MethodDesign Class" Url="html/T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="MethodDesign Members" Url="html/AllMembers.T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="about MethodDesign class" Url="html/T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.MethodDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MethodDesign.HasArguments field" Url="html/F-ModelCompiler.MethodDesign.HasArguments.htm" />
+  <HelpKINode Title="MethodDesign.InputArguments property" Url="html/P-ModelCompiler.MethodDesign.InputArguments.htm" />
+  <HelpKINode Title="MethodDesign.MethodDeclarationNode field" Url="html/F-ModelCompiler.MethodDesign.MethodDeclarationNode.htm" />
+  <HelpKINode Title="MethodDesign.MethodType field" Url="html/F-ModelCompiler.MethodDesign.MethodType.htm" />
+  <HelpKINode Title="MethodDesign.NonExecutable property" Url="html/P-ModelCompiler.MethodDesign.NonExecutable.htm" />
+  <HelpKINode Title="MethodDesign.NonExecutableSpecified property" Url="html/P-ModelCompiler.MethodDesign.NonExecutableSpecified.htm" />
+  <HelpKINode Title="MethodDesign.OutputArguments property" Url="html/P-ModelCompiler.MethodDesign.OutputArguments.htm" />
+  <HelpKINode Title="MethodType field" Url="html/F-ModelCompiler.MethodDesign.MethodType.htm" />
+  <HelpKINode Title="MinCardinality property" Url="html/P-ModelCompiler.InstanceDesign.MinCardinality.htm" />
+  <HelpKINode Title="MinimumSamplingInterval property">
+    <HelpKINode Title="MinimumSamplingInterval Property " Url="html/P-ModelCompiler.VariableDesign.MinimumSamplingInterval.htm" />
+    <HelpKINode Title="MinimumSamplingInterval Property " Url="html/P-ModelCompiler.VariableTypeDesign.MinimumSamplingInterval.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinimumSamplingIntervalSpecified property">
+    <HelpKINode Title="MinimumSamplingIntervalSpecified Property " Url="html/P-ModelCompiler.VariableDesign.MinimumSamplingIntervalSpecified.htm" />
+    <HelpKINode Title="MinimumSamplingIntervalSpecified Property " Url="html/P-ModelCompiler.VariableTypeDesign.MinimumSamplingIntervalSpecified.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler class">
+    <HelpKINode Title="ModelCompiler Class" Url="html/T-OOI.ModelCompiler.ModelCompiler.htm" />
+    <HelpKINode Title="ModelCompiler Members" Url="html/AllMembers.T-OOI.ModelCompiler.ModelCompiler.htm" />
+    <HelpKINode Title="about ModelCompiler class" Url="html/T-OOI.ModelCompiler.ModelCompiler.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-OOI.ModelCompiler.ModelCompiler.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-OOI.ModelCompiler.ModelCompiler.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler namespace" Url="html/N-ModelCompiler.htm" />
+  <HelpKINode Title="ModelCompiler.AccessLevel enumeration" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="ModelCompiler.BasicDataType enumeration" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="ModelCompiler.BuildModel method" Url="html/M-OOI.ModelCompiler.ModelCompiler.BuildModel.htm" />
+  <HelpKINode Title="ModelCompiler.DataTypeDesign class">
+    <HelpKINode Title="DataTypeDesign Class" Url="html/T-ModelCompiler.DataTypeDesign.htm" />
+    <HelpKINode Title="DataTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.DataTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.DataTypePurpose enumeration" Url="html/T-ModelCompiler.DataTypePurpose.htm" />
+  <HelpKINode Title="ModelCompiler.DictionaryDesign class">
+    <HelpKINode Title="DictionaryDesign Class" Url="html/T-ModelCompiler.DictionaryDesign.htm" />
+    <HelpKINode Title="DictionaryDesign Members" Url="html/AllMembers.T-ModelCompiler.DictionaryDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.EncodingDesign class">
+    <HelpKINode Title="EncodingDesign Class" Url="html/T-ModelCompiler.EncodingDesign.htm" />
+    <HelpKINode Title="EncodingDesign Members" Url="html/AllMembers.T-ModelCompiler.EncodingDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.Hierarchy class">
+    <HelpKINode Title="Hierarchy Class" Url="html/T-ModelCompiler.Hierarchy.htm" />
+    <HelpKINode Title="Hierarchy Members" Url="html/AllMembers.T-ModelCompiler.Hierarchy.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.HierarchyNode class">
+    <HelpKINode Title="HierarchyNode Class" Url="html/T-ModelCompiler.HierarchyNode.htm" />
+    <HelpKINode Title="HierarchyNode Members" Url="html/AllMembers.T-ModelCompiler.HierarchyNode.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.HierarchyReference class">
+    <HelpKINode Title="HierarchyReference Class" Url="html/T-ModelCompiler.HierarchyReference.htm" />
+    <HelpKINode Title="HierarchyReference Members" Url="html/AllMembers.T-ModelCompiler.HierarchyReference.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.InstanceDesign class">
+    <HelpKINode Title="InstanceDesign Class" Url="html/T-ModelCompiler.InstanceDesign.htm" />
+    <HelpKINode Title="InstanceDesign Members" Url="html/AllMembers.T-ModelCompiler.InstanceDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ListOfChildren class">
+    <HelpKINode Title="ListOfChildren Class" Url="html/T-ModelCompiler.ListOfChildren.htm" />
+    <HelpKINode Title="ListOfChildren Members" Url="html/AllMembers.T-ModelCompiler.ListOfChildren.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.LocalizedText class">
+    <HelpKINode Title="LocalizedText Class" Url="html/T-ModelCompiler.LocalizedText.htm" />
+    <HelpKINode Title="LocalizedText Members" Url="html/AllMembers.T-ModelCompiler.LocalizedText.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.MethodDesign class">
+    <HelpKINode Title="MethodDesign Class" Url="html/T-ModelCompiler.MethodDesign.htm" />
+    <HelpKINode Title="MethodDesign Members" Url="html/AllMembers.T-ModelCompiler.MethodDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ModelDesign class">
+    <HelpKINode Title="ModelDesign Class" Url="html/T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="ModelDesign Members" Url="html/AllMembers.T-ModelCompiler.ModelDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ModellingRule enumeration" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="ModelCompiler.Namespace class">
+    <HelpKINode Title="Namespace Class" Url="html/T-ModelCompiler.Namespace.htm" />
+    <HelpKINode Title="Namespace Members" Url="html/AllMembers.T-ModelCompiler.Namespace.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.NodeDesign class">
+    <HelpKINode Title="NodeDesign Class" Url="html/T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="NodeDesign Members" Url="html/AllMembers.T-ModelCompiler.NodeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ObjectDesign class">
+    <HelpKINode Title="ObjectDesign Class" Url="html/T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="ObjectDesign Members" Url="html/AllMembers.T-ModelCompiler.ObjectDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ObjectTypeDesign class">
+    <HelpKINode Title="ObjectTypeDesign Class" Url="html/T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="ObjectTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.ObjectTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.Parameter class">
+    <HelpKINode Title="Parameter Class" Url="html/T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="Parameter Members" Url="html/AllMembers.T-ModelCompiler.Parameter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.PropertyDesign class">
+    <HelpKINode Title="PropertyDesign Class" Url="html/T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="PropertyDesign Members" Url="html/AllMembers.T-ModelCompiler.PropertyDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.Reference class">
+    <HelpKINode Title="Reference Class" Url="html/T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="Reference Members" Url="html/AllMembers.T-ModelCompiler.Reference.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ReferenceTypeDesign class">
+    <HelpKINode Title="ReferenceTypeDesign Class" Url="html/T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="ReferenceTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.ReferenceTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ReleaseStatus enumeration" Url="html/T-ModelCompiler.ReleaseStatus.htm" />
+  <HelpKINode Title="ModelCompiler.TypeDesign class">
+    <HelpKINode Title="TypeDesign Class" Url="html/T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="TypeDesign Members" Url="html/AllMembers.T-ModelCompiler.TypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ValueRank enumeration" Url="html/T-ModelCompiler.ValueRank.htm" />
+  <HelpKINode Title="ModelCompiler.VariableDesign class">
+    <HelpKINode Title="VariableDesign Class" Url="html/T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="VariableDesign Members" Url="html/AllMembers.T-ModelCompiler.VariableDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.VariableTypeDesign class">
+    <HelpKINode Title="VariableTypeDesign Class" Url="html/T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="VariableTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.VariableTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelCompiler.ViewDesign class">
+    <HelpKINode Title="ViewDesign Class" Url="html/T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="ViewDesign Members" Url="html/AllMembers.T-ModelCompiler.ViewDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelDesign class">
+    <HelpKINode Title="ModelDesign Class" Url="html/T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="ModelDesign Members" Url="html/AllMembers.T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="about ModelDesign class" Url="html/T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.ModelDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.ModelDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.ModelDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ModelDesign.AnyAttr property" Url="html/P-ModelCompiler.ModelDesign.AnyAttr.htm" />
+  <HelpKINode Title="ModelDesign.DefaultLocale property" Url="html/P-ModelCompiler.ModelDesign.DefaultLocale.htm" />
+  <HelpKINode Title="ModelDesign.Dependencies field" Url="html/F-ModelCompiler.ModelDesign.Dependencies.htm" />
+  <HelpKINode Title="ModelDesign.Items property" Url="html/P-ModelCompiler.ModelDesign.Items.htm" />
+  <HelpKINode Title="ModelDesign.ModelDesign constructor" Url="html/M-ModelCompiler.ModelDesign.-ctor.htm" />
+  <HelpKINode Title="ModelDesign.Namespaces property" Url="html/P-ModelCompiler.ModelDesign.Namespaces.htm" />
+  <HelpKINode Title="ModelDesign.NamespaceUris field" Url="html/F-ModelCompiler.ModelDesign.NamespaceUris.htm" />
+  <HelpKINode Title="ModelDesign.TargetNamespace property" Url="html/P-ModelCompiler.ModelDesign.TargetNamespace.htm" />
+  <HelpKINode Title="ModelDesign.TargetNamespaceInfo field" Url="html/F-ModelCompiler.ModelDesign.TargetNamespaceInfo.htm" />
+  <HelpKINode Title="ModelDesign.TargetPublicationDate property" Url="html/P-ModelCompiler.ModelDesign.TargetPublicationDate.htm" />
+  <HelpKINode Title="ModelDesign.TargetPublicationDateSpecified property" Url="html/P-ModelCompiler.ModelDesign.TargetPublicationDateSpecified.htm" />
+  <HelpKINode Title="ModelDesign.TargetVersion property" Url="html/P-ModelCompiler.ModelDesign.TargetVersion.htm" />
+  <HelpKINode Title="ModelDesign.TargetXmlNamespace property" Url="html/P-ModelCompiler.ModelDesign.TargetXmlNamespace.htm" />
+  <HelpKINode Title="ModellingRule enumeration" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="ModellingRule property" Url="html/P-ModelCompiler.InstanceDesign.ModellingRule.htm" />
+  <HelpKINode Title="ModellingRule.CardinalityRestriction field" Url="html/F-ModelCompiler.ModellingRule.CardinalityRestriction.htm" />
+  <HelpKINode Title="ModellingRule.ExposesItsArray field" Url="html/F-ModelCompiler.ModellingRule.ExposesItsArray.htm" />
+  <HelpKINode Title="ModellingRule.Mandatory field" Url="html/F-ModelCompiler.ModellingRule.Mandatory.htm" />
+  <HelpKINode Title="ModellingRule.MandatoryPlaceholder field" Url="html/F-ModelCompiler.ModellingRule.MandatoryPlaceholder.htm" />
+  <HelpKINode Title="ModellingRule.MandatoryShared field" Url="html/F-ModelCompiler.ModellingRule.MandatoryShared.htm" />
+  <HelpKINode Title="ModellingRule.None field" Url="html/F-ModelCompiler.ModellingRule.None.htm" />
+  <HelpKINode Title="ModellingRule.Optional field" Url="html/F-ModelCompiler.ModellingRule.Optional.htm" />
+  <HelpKINode Title="ModellingRule.OptionalPlaceholder field" Url="html/F-ModelCompiler.ModellingRule.OptionalPlaceholder.htm" />
+  <HelpKINode Title="ModellingRuleSpecified property" Url="html/P-ModelCompiler.InstanceDesign.ModellingRuleSpecified.htm" />
+  <HelpKINode Title="Name property">
+    <HelpKINode Title="Name Property " Url="html/P-CodeGenerator.EnumeratedValue.Name.htm" />
+    <HelpKINode Title="Name Property " Url="html/P-CodeGenerator.FieldType.Name.htm" />
+    <HelpKINode Title="Name Property " Url="html/P-CodeGenerator.DataType.Name.htm" />
+    <HelpKINode Title="Name Property " Url="html/P-ModelCompiler.Namespace.Name.htm" />
+    <HelpKINode Title="Name Property " Url="html/P-ModelCompiler.Parameter.Name.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Namespace class">
+    <HelpKINode Title="Namespace Class" Url="html/T-ModelCompiler.Namespace.htm" />
+    <HelpKINode Title="Namespace Members" Url="html/AllMembers.T-ModelCompiler.Namespace.htm" />
+    <HelpKINode Title="about Namespace class" Url="html/T-ModelCompiler.Namespace.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.Namespace.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.Namespace.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.Namespace.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Namespace property" Url="html/P-CodeGenerator.ImportDirective.Namespace.htm" />
+  <HelpKINode Title="Namespace.FilePath property" Url="html/P-ModelCompiler.Namespace.FilePath.htm" />
+  <HelpKINode Title="Namespace.InternalPrefix property" Url="html/P-ModelCompiler.Namespace.InternalPrefix.htm" />
+  <HelpKINode Title="Namespace.Name property" Url="html/P-ModelCompiler.Namespace.Name.htm" />
+  <HelpKINode Title="Namespace.Prefix property" Url="html/P-ModelCompiler.Namespace.Prefix.htm" />
+  <HelpKINode Title="Namespace.PublicationDate property" Url="html/P-ModelCompiler.Namespace.PublicationDate.htm" />
+  <HelpKINode Title="Namespace.Value property" Url="html/P-ModelCompiler.Namespace.Value.htm" />
+  <HelpKINode Title="Namespace.Version property" Url="html/P-ModelCompiler.Namespace.Version.htm" />
+  <HelpKINode Title="Namespace.XmlNamespace property" Url="html/P-ModelCompiler.Namespace.XmlNamespace.htm" />
+  <HelpKINode Title="Namespace.XmlPrefix property" Url="html/P-ModelCompiler.Namespace.XmlPrefix.htm" />
+  <HelpKINode Title="Namespaces class">
+    <HelpKINode Title="Namespaces Class" Url="html/T-CodeGenerator.Namespaces.htm" />
+    <HelpKINode Title="Namespaces Class" Url="html/T-_Namespace_.Namespaces.htm" />
+    <HelpKINode Title="Namespaces Members" Url="html/AllMembers.T-CodeGenerator.Namespaces.htm" />
+    <HelpKINode Title="Namespaces Members" Url="html/AllMembers.T-_Namespace_.Namespaces.htm" />
+    <HelpKINode Title="about Namespaces class" Url="html/T-CodeGenerator.Namespaces.htm" />
+    <HelpKINode Title="about Namespaces class" Url="html/T-_Namespace_.Namespaces.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-_Namespace_.Namespaces.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.Namespaces.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-CodeGenerator.Namespaces.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-_Namespace_.Namespaces.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.Namespaces.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Namespaces property" Url="html/P-ModelCompiler.ModelDesign.Namespaces.htm" />
+  <HelpKINode Title="Namespaces.OpcBinarySchema field" Url="html/F-CodeGenerator.Namespaces.OpcBinarySchema.htm" />
+  <HelpKINode Title="Namespaces.OpcUa field" Url="html/F-CodeGenerator.Namespaces.OpcUa.htm" />
+  <HelpKINode Title="Namespaces.OpcUaBuiltInNodes field" Url="html/F-CodeGenerator.Namespaces.OpcUaBuiltInNodes.htm" />
+  <HelpKINode Title="Namespaces.OpcUaBuiltInTypes field" Url="html/F-CodeGenerator.Namespaces.OpcUaBuiltInTypes.htm" />
+  <HelpKINode Title="Namespaces.XmlSchema field" Url="html/F-CodeGenerator.Namespaces.XmlSchema.htm" />
+  <HelpKINode Title="Namespaces.XmlSchemaInstance field" Url="html/F-CodeGenerator.Namespaces.XmlSchemaInstance.htm" />
+  <HelpKINode Title="NamespaceUris field" Url="html/F-ModelCompiler.ModelDesign.NamespaceUris.htm" />
+  <HelpKINode Title="NewLine property" Url="html/P-CodeGenerator.Template.NewLine.htm" />
+  <HelpKINode Title="NoArraysAllowed property" Url="html/P-ModelCompiler.DataTypeDesign.NoArraysAllowed.htm" />
+  <HelpKINode Title="NoClassGeneration property" Url="html/P-ModelCompiler.TypeDesign.NoClassGeneration.htm" />
+  <HelpKINode Title="NodeDesign class">
+    <HelpKINode Title="NodeDesign Class" Url="html/T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="NodeDesign Members" Url="html/AllMembers.T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="about NodeDesign class" Url="html/T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.NodeDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.NodeDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.NodeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NodeDesign.BrowseName property" Url="html/P-ModelCompiler.NodeDesign.BrowseName.htm" />
+  <HelpKINode Title="NodeDesign.Category property" Url="html/P-ModelCompiler.NodeDesign.Category.htm" />
+  <HelpKINode Title="NodeDesign.Children property" Url="html/P-ModelCompiler.NodeDesign.Children.htm" />
+  <HelpKINode Title="NodeDesign.CreateSymbolicId method" Url="html/Overload-ModelCompiler.NodeDesign.CreateSymbolicId.htm" />
+  <HelpKINode Title="NodeDesign.Description property" Url="html/P-ModelCompiler.NodeDesign.Description.htm" />
+  <HelpKINode Title="NodeDesign.DisplayName property" Url="html/P-ModelCompiler.NodeDesign.DisplayName.htm" />
+  <HelpKINode Title="NodeDesign.Handle field" Url="html/F-ModelCompiler.NodeDesign.Handle.htm" />
+  <HelpKINode Title="NodeDesign.HasChildren field" Url="html/F-ModelCompiler.NodeDesign.HasChildren.htm" />
+  <HelpKINode Title="NodeDesign.HasReferences field" Url="html/F-ModelCompiler.NodeDesign.HasReferences.htm" />
+  <HelpKINode Title="NodeDesign.Hierarchy field" Url="html/F-ModelCompiler.NodeDesign.Hierarchy.htm" />
+  <HelpKINode Title="NodeDesign.InstanceState field" Url="html/F-ModelCompiler.NodeDesign.InstanceState.htm" />
+  <HelpKINode Title="NodeDesign.IsDeclaration property" Url="html/P-ModelCompiler.NodeDesign.IsDeclaration.htm" />
+  <HelpKINode Title="NodeDesign.IsDynamic property" Url="html/P-ModelCompiler.NodeDesign.IsDynamic.htm" />
+  <HelpKINode Title="NodeDesign.NodeDesign constructor" Url="html/M-ModelCompiler.NodeDesign.-ctor.htm" />
+  <HelpKINode Title="NodeDesign.NotInAddressSpace property" Url="html/P-ModelCompiler.NodeDesign.NotInAddressSpace.htm" />
+  <HelpKINode Title="NodeDesign.NumericId property" Url="html/P-ModelCompiler.NodeDesign.NumericId.htm" />
+  <HelpKINode Title="NodeDesign.NumericIdSpecified property" Url="html/P-ModelCompiler.NodeDesign.NumericIdSpecified.htm" />
+  <HelpKINode Title="NodeDesign.Parent field" Url="html/F-ModelCompiler.NodeDesign.Parent.htm" />
+  <HelpKINode Title="NodeDesign.PartNo property" Url="html/P-ModelCompiler.NodeDesign.PartNo.htm" />
+  <HelpKINode Title="NodeDesign.PathChar field" Url="html/F-ModelCompiler.NodeDesign.PathChar.htm" />
+  <HelpKINode Title="NodeDesign.Purpose property" Url="html/P-ModelCompiler.NodeDesign.Purpose.htm" />
+  <HelpKINode Title="NodeDesign.References property" Url="html/P-ModelCompiler.NodeDesign.References.htm" />
+  <HelpKINode Title="NodeDesign.ReleaseStatus property" Url="html/P-ModelCompiler.NodeDesign.ReleaseStatus.htm" />
+  <HelpKINode Title="NodeDesign.State field" Url="html/F-ModelCompiler.NodeDesign.State.htm" />
+  <HelpKINode Title="NodeDesign.StringId property" Url="html/P-ModelCompiler.NodeDesign.StringId.htm" />
+  <HelpKINode Title="NodeDesign.SymbolicId property" Url="html/P-ModelCompiler.NodeDesign.SymbolicId.htm" />
+  <HelpKINode Title="NodeDesign.SymbolicName property" Url="html/P-ModelCompiler.NodeDesign.SymbolicName.htm" />
+  <HelpKINode Title="NodeDesign.ToString method" Url="html/Overload-ModelCompiler.NodeDesign.ToString.htm" />
+  <HelpKINode Title="NodeDesign.WriteAccess property" Url="html/P-ModelCompiler.NodeDesign.WriteAccess.htm" />
+  <HelpKINode Title="NodeId enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="NodeId field" Url="html/F-ModelCompiler.BasicDataType.NodeId.htm" />
+  <HelpKINode Title="NodeList field" Url="html/F-ModelCompiler.Hierarchy.NodeList.htm" />
+  <HelpKINode Title="Nodes field" Url="html/F-ModelCompiler.Hierarchy.Nodes.htm" />
+  <HelpKINode Title="None enumeration member">
+    <HelpKINode Title="AccessLevel Enumeration" Url="html/T-ModelCompiler.AccessLevel.htm" />
+    <HelpKINode Title="ModellingRule Enumeration" Url="html/T-ModelCompiler.ModellingRule.htm" />
+    <HelpKINode Title="Severity Enumeration" Url="html/T-CodeGenerator.Severity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="None field">
+    <HelpKINode Title="None Field" Url="html/F-ModelCompiler.AccessLevel.None.htm" />
+    <HelpKINode Title="None Field" Url="html/F-ModelCompiler.ModellingRule.None.htm" />
+    <HelpKINode Title="None Field" Url="html/F-CodeGenerator.Severity.None.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NonExecutable property" Url="html/P-ModelCompiler.MethodDesign.NonExecutable.htm" />
+  <HelpKINode Title="NonExecutableSpecified property" Url="html/P-ModelCompiler.MethodDesign.NonExecutableSpecified.htm" />
+  <HelpKINode Title="Normal enumeration member">
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-CodeGenerator.DataTypePurpose.htm" />
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-ModelCompiler.DataTypePurpose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Normal field">
+    <HelpKINode Title="Normal Field" Url="html/F-CodeGenerator.DataTypePurpose.Normal.htm" />
+    <HelpKINode Title="Normal Field" Url="html/F-ModelCompiler.DataTypePurpose.Normal.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NotInAddressSpace property">
+    <HelpKINode Title="NotInAddressSpace Property " Url="html/P-CodeGenerator.DataType.NotInAddressSpace.htm" />
+    <HelpKINode Title="NotInAddressSpace Property " Url="html/P-ModelCompiler.NodeDesign.NotInAddressSpace.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Number enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Number field" Url="html/F-ModelCompiler.BasicDataType.Number.htm" />
+  <HelpKINode Title="NumericId property" Url="html/P-ModelCompiler.NodeDesign.NumericId.htm" />
+  <HelpKINode Title="NumericIdSpecified property" Url="html/P-ModelCompiler.NodeDesign.NumericIdSpecified.htm" />
+  <HelpKINode Title="ObjectDesign class">
+    <HelpKINode Title="ObjectDesign Class" Url="html/T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="ObjectDesign Members" Url="html/AllMembers.T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="about ObjectDesign class" Url="html/T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.ObjectDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.ObjectDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ObjectDesign.SupportsEvents property" Url="html/P-ModelCompiler.ObjectDesign.SupportsEvents.htm" />
+  <HelpKINode Title="ObjectDesign.SupportsEventsSpecified property" Url="html/P-ModelCompiler.ObjectDesign.SupportsEventsSpecified.htm" />
+  <HelpKINode Title="ObjectTypeDesign class">
+    <HelpKINode Title="ObjectTypeDesign Class" Url="html/T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="ObjectTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="about ObjectTypeDesign class" Url="html/T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.ObjectTypeDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.ObjectTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ObjectTypeDesign.SupportsEvents property" Url="html/P-ModelCompiler.ObjectTypeDesign.SupportsEvents.htm" />
+  <HelpKINode Title="ObjectTypeDesign.SupportsEventsSpecified property" Url="html/P-ModelCompiler.ObjectTypeDesign.SupportsEventsSpecified.htm" />
+  <HelpKINode Title="OnCall field" Url="html/F-global._ClassName_.OnCall.htm" />
+  <HelpKINode Title="OneOrMoreDimensions enumeration member" Url="html/T-ModelCompiler.ValueRank.htm" />
+  <HelpKINode Title="OneOrMoreDimensions field" Url="html/F-ModelCompiler.ValueRank.OneOrMoreDimensions.htm" />
+  <HelpKINode Title="OOI.ModelCompiler namespace" Url="html/N-OOI.ModelCompiler.htm" />
+  <HelpKINode Title="OOI.ModelCompiler.IModelGeneratorGenerate interface">
+    <HelpKINode Title="IModelGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+    <HelpKINode Title="IModelGeneratorGenerate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OOI.ModelCompiler.IModelGeneratorValidate interface">
+    <HelpKINode Title="IModelGeneratorValidate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+    <HelpKINode Title="IModelGeneratorValidate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OOI.ModelCompiler.IStackGeneratorGenerate interface">
+    <HelpKINode Title="IStackGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+    <HelpKINode Title="IStackGeneratorGenerate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OOI.ModelCompiler.ModelCompiler class">
+    <HelpKINode Title="ModelCompiler Class" Url="html/T-OOI.ModelCompiler.ModelCompiler.htm" />
+    <HelpKINode Title="ModelCompiler Members" Url="html/AllMembers.T-OOI.ModelCompiler.ModelCompiler.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Opc.Ua.Schema.Xml namespace" Url="html/N-Opc.Ua.Schema.Xml.htm" />
+  <HelpKINode Title="Opc.Ua.Schema.Xml.XmlSchemaValidator class">
+    <HelpKINode Title="XmlSchemaValidator Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+    <HelpKINode Title="XmlSchemaValidator Members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Opc.Ua.Schema.Xml.XmlSchemaValidator2 class">
+    <HelpKINode Title="XmlSchemaValidator2 Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+    <HelpKINode Title="XmlSchemaValidator2 Members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OpcBinarySchema field" Url="html/F-CodeGenerator.Namespaces.OpcBinarySchema.htm" />
+  <HelpKINode Title="OpcUa field" Url="html/F-CodeGenerator.Namespaces.OpcUa.htm" />
+  <HelpKINode Title="OpcUaBuiltInNodes field" Url="html/F-CodeGenerator.Namespaces.OpcUaBuiltInNodes.htm" />
+  <HelpKINode Title="OpcUaBuiltInTypes field" Url="html/F-CodeGenerator.Namespaces.OpcUaBuiltInTypes.htm" />
+  <HelpKINode Title="Optional enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="Optional field" Url="html/F-ModelCompiler.ModellingRule.Optional.htm" />
+  <HelpKINode Title="OptionalPlaceholder enumeration member" Url="html/T-ModelCompiler.ModellingRule.htm" />
+  <HelpKINode Title="OptionalPlaceholder field" Url="html/F-ModelCompiler.ModellingRule.OptionalPlaceholder.htm" />
+  <HelpKINode Title="OutputArguments property" Url="html/P-ModelCompiler.MethodDesign.OutputArguments.htm" />
+  <HelpKINode Title="OveriddenNode field" Url="html/F-ModelCompiler.InstanceDesign.OveriddenNode.htm" />
+  <HelpKINode Title="OverriddenNodes field" Url="html/F-ModelCompiler.HierarchyNode.OverriddenNodes.htm" />
+  <HelpKINode Title="Parameter class">
+    <HelpKINode Title="Parameter Class" Url="html/T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="Parameter Members" Url="html/AllMembers.T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="about Parameter class" Url="html/T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.Parameter.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.Parameter.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.Parameter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Parameter.AllowSubtypes property" Url="html/P-ModelCompiler.Parameter.AllowSubtypes.htm" />
+  <HelpKINode Title="Parameter.ArrayDimensions property" Url="html/P-ModelCompiler.Parameter.ArrayDimensions.htm" />
+  <HelpKINode Title="Parameter.BitMask property" Url="html/P-ModelCompiler.Parameter.BitMask.htm" />
+  <HelpKINode Title="Parameter.DataType property" Url="html/P-ModelCompiler.Parameter.DataType.htm" />
+  <HelpKINode Title="Parameter.DataTypeNode field" Url="html/F-ModelCompiler.Parameter.DataTypeNode.htm" />
+  <HelpKINode Title="Parameter.DefaultValue property" Url="html/P-ModelCompiler.Parameter.DefaultValue.htm" />
+  <HelpKINode Title="Parameter.Description property" Url="html/P-ModelCompiler.Parameter.Description.htm" />
+  <HelpKINode Title="Parameter.Identifier property" Url="html/P-ModelCompiler.Parameter.Identifier.htm" />
+  <HelpKINode Title="Parameter.IdentifierInName field" Url="html/F-ModelCompiler.Parameter.IdentifierInName.htm" />
+  <HelpKINode Title="Parameter.IdentifierSpecified property" Url="html/P-ModelCompiler.Parameter.IdentifierSpecified.htm" />
+  <HelpKINode Title="Parameter.IsInherited field" Url="html/F-ModelCompiler.Parameter.IsInherited.htm" />
+  <HelpKINode Title="Parameter.IsOptional property" Url="html/P-ModelCompiler.Parameter.IsOptional.htm" />
+  <HelpKINode Title="Parameter.Name property" Url="html/P-ModelCompiler.Parameter.Name.htm" />
+  <HelpKINode Title="Parameter.Parameter constructor" Url="html/M-ModelCompiler.Parameter.-ctor.htm" />
+  <HelpKINode Title="Parameter.Parent field" Url="html/F-ModelCompiler.Parameter.Parent.htm" />
+  <HelpKINode Title="Parameter.ValueRank property" Url="html/P-ModelCompiler.Parameter.ValueRank.htm" />
+  <HelpKINode Title="Parent field">
+    <HelpKINode Title="Parent Field" Url="html/F-ModelCompiler.NodeDesign.Parent.htm" />
+    <HelpKINode Title="Parent Field" Url="html/F-ModelCompiler.Parameter.Parent.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PartNo property">
+    <HelpKINode Title="PartNo Property " Url="html/P-CodeGenerator.DataType.PartNo.htm" />
+    <HelpKINode Title="PartNo Property " Url="html/P-ModelCompiler.NodeDesign.PartNo.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PathChar field" Url="html/F-ModelCompiler.NodeDesign.PathChar.htm" />
+  <HelpKINode Title="Prefix property">
+    <HelpKINode Title="Prefix Property " Url="html/P-ModelCompiler.Namespace.Prefix.htm" />
+    <HelpKINode Title="Prefix Property " Url="html/P-CodeGenerator.Context.Prefix.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PreserveDefaultAttributes property" Url="html/P-ModelCompiler.InstanceDesign.PreserveDefaultAttributes.htm" />
+  <HelpKINode Title="PropertyDesign class">
+    <HelpKINode Title="PropertyDesign Class" Url="html/T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="PropertyDesign Members" Url="html/AllMembers.T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="about PropertyDesign class" Url="html/T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.PropertyDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.PropertyDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PublicationDate property" Url="html/P-ModelCompiler.Namespace.PublicationDate.htm" />
+  <HelpKINode Title="Purpose property">
+    <HelpKINode Title="Purpose Property " Url="html/P-ModelCompiler.NodeDesign.Purpose.htm" />
+    <HelpKINode Title="Purpose Property " Url="html/P-CodeGenerator.DataType.Purpose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QName property" Url="html/P-CodeGenerator.DataType.QName.htm" />
+  <HelpKINode Title="QualifiedName enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="QualifiedName field" Url="html/F-ModelCompiler.BasicDataType.QualifiedName.htm" />
+  <HelpKINode Title="Read enumeration member" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="Read field" Url="html/F-ModelCompiler.AccessLevel.Read.htm" />
+  <HelpKINode Title="ReadWrite enumeration member" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="ReadWrite field" Url="html/F-ModelCompiler.AccessLevel.ReadWrite.htm" />
+  <HelpKINode Title="Reference class">
+    <HelpKINode Title="Reference Class" Url="html/T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="Reference Members" Url="html/AllMembers.T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="about Reference class" Url="html/T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.Reference.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.Reference.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.Reference.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reference.IsInverse property" Url="html/P-ModelCompiler.Reference.IsInverse.htm" />
+  <HelpKINode Title="Reference.IsOneWay property" Url="html/P-ModelCompiler.Reference.IsOneWay.htm" />
+  <HelpKINode Title="Reference.Reference constructor" Url="html/M-ModelCompiler.Reference.-ctor.htm" />
+  <HelpKINode Title="Reference.ReferenceType property" Url="html/P-ModelCompiler.Reference.ReferenceType.htm" />
+  <HelpKINode Title="Reference.SourceNode field" Url="html/F-ModelCompiler.Reference.SourceNode.htm" />
+  <HelpKINode Title="Reference.SourceRelativePath field" Url="html/F-ModelCompiler.Reference.SourceRelativePath.htm" />
+  <HelpKINode Title="Reference.TargetId property" Url="html/P-ModelCompiler.Reference.TargetId.htm" />
+  <HelpKINode Title="Reference.TargetNode field" Url="html/F-ModelCompiler.Reference.TargetNode.htm" />
+  <HelpKINode Title="Reference.TargetRelativePath field" Url="html/F-ModelCompiler.Reference.TargetRelativePath.htm" />
+  <HelpKINode Title="References field" Url="html/F-ModelCompiler.Hierarchy.References.htm" />
+  <HelpKINode Title="References property" Url="html/P-ModelCompiler.NodeDesign.References.htm" />
+  <HelpKINode Title="ReferenceType field" Url="html/F-ModelCompiler.HierarchyReference.ReferenceType.htm" />
+  <HelpKINode Title="ReferenceType property">
+    <HelpKINode Title="ReferenceType Property " Url="html/P-ModelCompiler.Reference.ReferenceType.htm" />
+    <HelpKINode Title="ReferenceType Property " Url="html/P-ModelCompiler.InstanceDesign.ReferenceType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReferenceTypeDesign class">
+    <HelpKINode Title="ReferenceTypeDesign Class" Url="html/T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="ReferenceTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="about ReferenceTypeDesign class" Url="html/T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.ReferenceTypeDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.ReferenceTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReferenceTypeDesign.InverseName property" Url="html/P-ModelCompiler.ReferenceTypeDesign.InverseName.htm" />
+  <HelpKINode Title="ReferenceTypeDesign.Symmetric property" Url="html/P-ModelCompiler.ReferenceTypeDesign.Symmetric.htm" />
+  <HelpKINode Title="ReferenceTypeDesign.SymmetricSpecified property" Url="html/P-ModelCompiler.ReferenceTypeDesign.SymmetricSpecified.htm" />
+  <HelpKINode Title="Registration enumeration member" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="Registration field" Url="html/F-CodeGenerator.InterfaceType.Registration.htm" />
+  <HelpKINode Title="RelativePath field" Url="html/F-ModelCompiler.HierarchyNode.RelativePath.htm" />
+  <HelpKINode Title="Released enumeration member">
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-CodeGenerator.ReleaseStatus.htm" />
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-ModelCompiler.ReleaseStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Released field">
+    <HelpKINode Title="Released Field" Url="html/F-ModelCompiler.ReleaseStatus.Released.htm" />
+    <HelpKINode Title="Released Field" Url="html/F-CodeGenerator.ReleaseStatus.Released.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReleaseStatus enumeration">
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-CodeGenerator.ReleaseStatus.htm" />
+    <HelpKINode Title="ReleaseStatus Enumeration" Url="html/T-ModelCompiler.ReleaseStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReleaseStatus property">
+    <HelpKINode Title="ReleaseStatus Property " Url="html/P-CodeGenerator.DataType.ReleaseStatus.htm" />
+    <HelpKINode Title="ReleaseStatus Property " Url="html/P-ModelCompiler.NodeDesign.ReleaseStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReleaseStatus.Deprecated field">
+    <HelpKINode Title="Deprecated Field" Url="html/F-CodeGenerator.ReleaseStatus.Deprecated.htm" />
+    <HelpKINode Title="Deprecated Field" Url="html/F-ModelCompiler.ReleaseStatus.Deprecated.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReleaseStatus.Draft field">
+    <HelpKINode Title="Draft Field" Url="html/F-ModelCompiler.ReleaseStatus.Draft.htm" />
+    <HelpKINode Title="Draft Field" Url="html/F-CodeGenerator.ReleaseStatus.Draft.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReleaseStatus.Released field">
+    <HelpKINode Title="Released Field" Url="html/F-CodeGenerator.ReleaseStatus.Released.htm" />
+    <HelpKINode Title="Released Field" Url="html/F-ModelCompiler.ReleaseStatus.Released.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Replacements property" Url="html/P-CodeGenerator.Template.Replacements.htm" />
+  <HelpKINode Title="Request property" Url="html/P-CodeGenerator.ServiceType.Request.htm" />
+  <HelpKINode Title="ResolveType method" Url="html/M-CodeGenerator.TypeDictionaryValidator.ResolveType.htm" />
+  <HelpKINode Title="Response property" Url="html/P-CodeGenerator.ServiceType.Response.htm" />
+  <HelpKINode Title="SByte enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="SByte field" Url="html/F-ModelCompiler.BasicDataType.SByte.htm" />
+  <HelpKINode Title="Scalar enumeration member" Url="html/T-ModelCompiler.ValueRank.htm" />
+  <HelpKINode Title="Scalar field" Url="html/F-ModelCompiler.ValueRank.Scalar.htm" />
+  <HelpKINode Title="ScalarOrArray enumeration member" Url="html/T-ModelCompiler.ValueRank.htm" />
+  <HelpKINode Title="ScalarOrArray field" Url="html/F-ModelCompiler.ValueRank.ScalarOrArray.htm" />
+  <HelpKINode Title="SchemaGenerator class">
+    <HelpKINode Title="SchemaGenerator Class" Url="html/T-CodeGenerator.SchemaGenerator.htm" />
+    <HelpKINode Title="SchemaGenerator Members" Url="html/AllMembers.T-CodeGenerator.SchemaGenerator.htm" />
+    <HelpKINode Title="about SchemaGenerator class" Url="html/T-CodeGenerator.SchemaGenerator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.SchemaGenerator.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.SchemaGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SchemaSet property">
+    <HelpKINode Title="SchemaSet Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator2.SchemaSet.htm" />
+    <HelpKINode Title="SchemaSet Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator.SchemaSet.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SecureChannel enumeration member" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="SecureChannel field" Url="html/F-CodeGenerator.InterfaceType.SecureChannel.htm" />
+  <HelpKINode Title="ServicesNamespace field" Url="html/F-CodeGenerator.XmlSchemaGenerator.ServicesNamespace.htm" />
+  <HelpKINode Title="ServicesOnly enumeration member">
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-ModelCompiler.DataTypePurpose.htm" />
+    <HelpKINode Title="DataTypePurpose Enumeration" Url="html/T-CodeGenerator.DataTypePurpose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ServicesOnly field">
+    <HelpKINode Title="ServicesOnly Field" Url="html/F-ModelCompiler.DataTypePurpose.ServicesOnly.htm" />
+    <HelpKINode Title="ServicesOnly Field" Url="html/F-CodeGenerator.DataTypePurpose.ServicesOnly.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ServiceType class">
+    <HelpKINode Title="ServiceType Class" Url="html/T-CodeGenerator.ServiceType.htm" />
+    <HelpKINode Title="ServiceType Members" Url="html/AllMembers.T-CodeGenerator.ServiceType.htm" />
+    <HelpKINode Title="about ServiceType class" Url="html/T-CodeGenerator.ServiceType.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.ServiceType.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.ServiceType.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.ServiceType.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.ServiceType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ServiceType.InterfaceType property" Url="html/P-CodeGenerator.ServiceType.InterfaceType.htm" />
+  <HelpKINode Title="ServiceType.Request property" Url="html/P-CodeGenerator.ServiceType.Request.htm" />
+  <HelpKINode Title="ServiceType.Response property" Url="html/P-CodeGenerator.ServiceType.Response.htm" />
+  <HelpKINode Title="ServiceType.ServiceType constructor" Url="html/M-CodeGenerator.ServiceType.-ctor.htm" />
+  <HelpKINode Title="Session enumeration member" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="Session field" Url="html/F-CodeGenerator.InterfaceType.Session.htm" />
+  <HelpKINode Title="Severity enumeration" Url="html/T-CodeGenerator.Severity.htm" />
+  <HelpKINode Title="Severity property" Url="html/P-CodeGenerator.Constant.Severity.htm" />
+  <HelpKINode Title="Severity.Bad field" Url="html/F-CodeGenerator.Severity.Bad.htm" />
+  <HelpKINode Title="Severity.Good field" Url="html/F-CodeGenerator.Severity.Good.htm" />
+  <HelpKINode Title="Severity.None field" Url="html/F-CodeGenerator.Severity.None.htm" />
+  <HelpKINode Title="Severity.Uncertain field" Url="html/F-CodeGenerator.Severity.Uncertain.htm" />
+  <HelpKINode Title="SourceNode field" Url="html/F-ModelCompiler.Reference.SourceNode.htm" />
+  <HelpKINode Title="SourcePath field" Url="html/F-ModelCompiler.HierarchyReference.SourcePath.htm" />
+  <HelpKINode Title="SourceRelativePath field" Url="html/F-ModelCompiler.Reference.SourceRelativePath.htm" />
+  <HelpKINode Title="SourceType property" Url="html/P-CodeGenerator.TypeDeclaration.SourceType.htm" />
+  <HelpKINode Title="SpecificationVersion property" Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.SpecificationVersion.htm" />
+  <HelpKINode Title="StartId property" Url="html/P-OOI.ModelCompiler.IModelGeneratorValidate.StartId.htm" />
+  <HelpKINode Title="State field" Url="html/F-ModelCompiler.NodeDesign.State.htm" />
+  <HelpKINode Title="StatusCode enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="StatusCode field" Url="html/F-ModelCompiler.BasicDataType.StatusCode.htm" />
+  <HelpKINode Title="String enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="String field" Url="html/F-ModelCompiler.BasicDataType.String.htm" />
+  <HelpKINode Title="StringId property" Url="html/P-ModelCompiler.NodeDesign.StringId.htm" />
+  <HelpKINode Title="Structure enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="Structure field" Url="html/F-ModelCompiler.BasicDataType.Structure.htm" />
+  <HelpKINode Title="SupportsEvents property">
+    <HelpKINode Title="SupportsEvents Property " Url="html/P-ModelCompiler.ObjectDesign.SupportsEvents.htm" />
+    <HelpKINode Title="SupportsEvents Property " Url="html/P-ModelCompiler.ViewDesign.SupportsEvents.htm" />
+    <HelpKINode Title="SupportsEvents Property " Url="html/P-ModelCompiler.ObjectTypeDesign.SupportsEvents.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SupportsEventsSpecified property">
+    <HelpKINode Title="SupportsEventsSpecified Property " Url="html/P-ModelCompiler.ObjectTypeDesign.SupportsEventsSpecified.htm" />
+    <HelpKINode Title="SupportsEventsSpecified Property " Url="html/P-ModelCompiler.ObjectDesign.SupportsEventsSpecified.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SymbolicId property" Url="html/P-ModelCompiler.NodeDesign.SymbolicId.htm" />
+  <HelpKINode Title="SymbolicName property" Url="html/P-ModelCompiler.NodeDesign.SymbolicName.htm" />
+  <HelpKINode Title="Symmetric property" Url="html/P-ModelCompiler.ReferenceTypeDesign.Symmetric.htm" />
+  <HelpKINode Title="SymmetricSpecified property" Url="html/P-ModelCompiler.ReferenceTypeDesign.SymmetricSpecified.htm" />
+  <HelpKINode Title="Target property" Url="html/P-CodeGenerator.Context.Target.htm" />
+  <HelpKINode Title="TargetId field" Url="html/F-ModelCompiler.HierarchyReference.TargetId.htm" />
+  <HelpKINode Title="TargetId property" Url="html/P-ModelCompiler.Reference.TargetId.htm" />
+  <HelpKINode Title="TargetNamespace property">
+    <HelpKINode Title="TargetNamespace Property " Url="html/P-ModelCompiler.ModelDesign.TargetNamespace.htm" />
+    <HelpKINode Title="TargetNamespace Property " Url="html/P-CodeGenerator.TypeDictionary.TargetNamespace.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TargetNamespaceInfo field" Url="html/F-ModelCompiler.ModelDesign.TargetNamespaceInfo.htm" />
+  <HelpKINode Title="TargetNode field" Url="html/F-ModelCompiler.Reference.TargetNode.htm" />
+  <HelpKINode Title="TargetPath field" Url="html/F-ModelCompiler.HierarchyReference.TargetPath.htm" />
+  <HelpKINode Title="TargetPublicationDate property">
+    <HelpKINode Title="TargetPublicationDate Property " Url="html/P-ModelCompiler.ModelDesign.TargetPublicationDate.htm" />
+    <HelpKINode Title="TargetPublicationDate Property " Url="html/P-CodeGenerator.TypeDictionary.TargetPublicationDate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TargetPublicationDateSpecified property" Url="html/P-ModelCompiler.ModelDesign.TargetPublicationDateSpecified.htm" />
+  <HelpKINode Title="TargetRelativePath field" Url="html/F-ModelCompiler.Reference.TargetRelativePath.htm" />
+  <HelpKINode Title="Targets property" Url="html/P-CodeGenerator.TemplateDefinition.Targets.htm" />
+  <HelpKINode Title="TargetSchema property">
+    <HelpKINode Title="TargetSchema Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator.TargetSchema.htm" />
+    <HelpKINode Title="TargetSchema Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator2.TargetSchema.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TargetVersion property">
+    <HelpKINode Title="TargetVersion Property " Url="html/P-CodeGenerator.TypeDictionary.TargetVersion.htm" />
+    <HelpKINode Title="TargetVersion Property " Url="html/P-ModelCompiler.ModelDesign.TargetVersion.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TargetXmlNamespace property" Url="html/P-ModelCompiler.ModelDesign.TargetXmlNamespace.htm" />
+  <HelpKINode Title="Template class">
+    <HelpKINode Title="Template Class" Url="html/T-CodeGenerator.Template.htm" />
+    <HelpKINode Title="Template Members" Url="html/AllMembers.T-CodeGenerator.Template.htm" />
+    <HelpKINode Title="about Template class" Url="html/T-CodeGenerator.Template.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.Template.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.Template.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.Template.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Template.AddReplacement method" Url="html/M-CodeGenerator.Template.AddReplacement.htm" />
+  <HelpKINode Title="Template.Indent property" Url="html/P-CodeGenerator.Template.Indent.htm" />
+  <HelpKINode Title="Template.NewLine property" Url="html/P-CodeGenerator.Template.NewLine.htm" />
+  <HelpKINode Title="Template.Replacements property" Url="html/P-CodeGenerator.Template.Replacements.htm" />
+  <HelpKINode Title="Template.Templates property" Url="html/P-CodeGenerator.Template.Templates.htm" />
+  <HelpKINode Title="Template.Write method" Url="html/Overload-CodeGenerator.Template.Write.htm" />
+  <HelpKINode Title="Template.WriteLine method" Url="html/Overload-CodeGenerator.Template.WriteLine.htm" />
+  <HelpKINode Title="Template.WriteNextLine method" Url="html/M-CodeGenerator.Template.WriteNextLine.htm" />
+  <HelpKINode Title="TemplateDefinition class">
+    <HelpKINode Title="TemplateDefinition Class" Url="html/T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="TemplateDefinition Members" Url="html/AllMembers.T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="about TemplateDefinition class" Url="html/T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.TemplateDefinition.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.TemplateDefinition.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TemplateDefinition.Load method" Url="html/M-CodeGenerator.TemplateDefinition.Load.htm" />
+  <HelpKINode Title="TemplateDefinition.LoadTemplate event" Url="html/E-CodeGenerator.TemplateDefinition.LoadTemplate.htm" />
+  <HelpKINode Title="TemplateDefinition.Targets property" Url="html/P-CodeGenerator.TemplateDefinition.Targets.htm" />
+  <HelpKINode Title="TemplateDefinition.TemplatePath property" Url="html/P-CodeGenerator.TemplateDefinition.TemplatePath.htm" />
+  <HelpKINode Title="TemplateDefinition.Write method" Url="html/M-CodeGenerator.TemplateDefinition.Write.htm" />
+  <HelpKINode Title="TemplateDefinition.WriteTemplate event" Url="html/E-CodeGenerator.TemplateDefinition.WriteTemplate.htm" />
+  <HelpKINode Title="TemplatePath property">
+    <HelpKINode Title="TemplatePath Property " Url="html/P-CodeGenerator.TemplateDefinition.TemplatePath.htm" />
+    <HelpKINode Title="TemplatePath Property " Url="html/P-CodeGenerator.Context.TemplatePath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Templates property" Url="html/P-CodeGenerator.Template.Templates.htm" />
+  <HelpKINode Title="Test enumeration member" Url="html/T-CodeGenerator.InterfaceType.htm" />
+  <HelpKINode Title="Test field" Url="html/F-CodeGenerator.InterfaceType.Test.htm" />
+  <HelpKINode Title="Text property" Url="html/P-CodeGenerator.Documentation.Text.htm" />
+  <HelpKINode Title="Token property" Url="html/P-CodeGenerator.Context.Token.htm" />
+  <HelpKINode Title="ToString method">
+    <HelpKINode Title="ToString Method " Url="html/Overload-ModelCompiler.HierarchyNode.ToString.htm" />
+    <HelpKINode Title="ToString Method " Url="html/Overload-ModelCompiler.HierarchyReference.ToString.htm" />
+    <HelpKINode Title="ToString Method " Url="html/Overload-ModelCompiler.NodeDesign.ToString.htm" />
+    <HelpKINode Title="ToString Method " Url="html/M-CodeGenerator.DataType.ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Type field" Url="html/F-ModelCompiler.Hierarchy.Type.htm" />
+  <HelpKINode Title="TypeDeclaration class">
+    <HelpKINode Title="TypeDeclaration Class" Url="html/T-CodeGenerator.TypeDeclaration.htm" />
+    <HelpKINode Title="TypeDeclaration Members" Url="html/AllMembers.T-CodeGenerator.TypeDeclaration.htm" />
+    <HelpKINode Title="about TypeDeclaration class" Url="html/T-CodeGenerator.TypeDeclaration.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.TypeDeclaration.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.TypeDeclaration.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.TypeDeclaration.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypeDeclaration.SourceType property" Url="html/P-CodeGenerator.TypeDeclaration.SourceType.htm" />
+  <HelpKINode Title="TypeDefinition property" Url="html/P-ModelCompiler.InstanceDesign.TypeDefinition.htm" />
+  <HelpKINode Title="TypeDefinitionNode field" Url="html/F-ModelCompiler.InstanceDesign.TypeDefinitionNode.htm" />
+  <HelpKINode Title="TypeDesign class">
+    <HelpKINode Title="TypeDesign Class" Url="html/T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="TypeDesign Members" Url="html/AllMembers.T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="about TypeDesign class" Url="html/T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.TypeDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.TypeDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.TypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypeDesign.BaseType property" Url="html/P-ModelCompiler.TypeDesign.BaseType.htm" />
+  <HelpKINode Title="TypeDesign.BaseTypeNode field" Url="html/F-ModelCompiler.TypeDesign.BaseTypeNode.htm" />
+  <HelpKINode Title="TypeDesign.ClassName property" Url="html/P-ModelCompiler.TypeDesign.ClassName.htm" />
+  <HelpKINode Title="TypeDesign.Copy method" Url="html/M-ModelCompiler.TypeDesign.Copy.htm" />
+  <HelpKINode Title="TypeDesign.IsAbstract property" Url="html/P-ModelCompiler.TypeDesign.IsAbstract.htm" />
+  <HelpKINode Title="TypeDesign.NoClassGeneration property" Url="html/P-ModelCompiler.TypeDesign.NoClassGeneration.htm" />
+  <HelpKINode Title="TypeDesign.TypeDesign constructor" Url="html/M-ModelCompiler.TypeDesign.-ctor.htm" />
+  <HelpKINode Title="TypeDictionary class">
+    <HelpKINode Title="TypeDictionary Class" Url="html/T-CodeGenerator.TypeDictionary.htm" />
+    <HelpKINode Title="TypeDictionary Members" Url="html/AllMembers.T-CodeGenerator.TypeDictionary.htm" />
+    <HelpKINode Title="about TypeDictionary class" Url="html/T-CodeGenerator.TypeDictionary.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.TypeDictionary.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.TypeDictionary.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.TypeDictionary.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypeDictionary.Documentation property" Url="html/P-CodeGenerator.TypeDictionary.Documentation.htm" />
+  <HelpKINode Title="TypeDictionary.Import property" Url="html/P-CodeGenerator.TypeDictionary.Import.htm" />
+  <HelpKINode Title="TypeDictionary.Items property" Url="html/P-CodeGenerator.TypeDictionary.Items.htm" />
+  <HelpKINode Title="TypeDictionary.TargetNamespace property" Url="html/P-CodeGenerator.TypeDictionary.TargetNamespace.htm" />
+  <HelpKINode Title="TypeDictionary.TargetPublicationDate property" Url="html/P-CodeGenerator.TypeDictionary.TargetPublicationDate.htm" />
+  <HelpKINode Title="TypeDictionary.TargetVersion property" Url="html/P-CodeGenerator.TypeDictionary.TargetVersion.htm" />
+  <HelpKINode Title="TypeDictionaryValidator class">
+    <HelpKINode Title="TypeDictionaryValidator Class" Url="html/T-CodeGenerator.TypeDictionaryValidator.htm" />
+    <HelpKINode Title="TypeDictionaryValidator Members" Url="html/AllMembers.T-CodeGenerator.TypeDictionaryValidator.htm" />
+    <HelpKINode Title="about TypeDictionaryValidator class" Url="html/T-CodeGenerator.TypeDictionaryValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.TypeDictionaryValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-CodeGenerator.TypeDictionaryValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.TypeDictionaryValidator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.TypeDictionaryValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypeDictionaryValidator.Dictionary property" Url="html/P-CodeGenerator.TypeDictionaryValidator.Dictionary.htm" />
+  <HelpKINode Title="TypeDictionaryValidator.EmbeddedResourcePath property" Url="html/P-CodeGenerator.TypeDictionaryValidator.EmbeddedResourcePath.htm" />
+  <HelpKINode Title="TypeDictionaryValidator.FindType method" Url="html/M-CodeGenerator.TypeDictionaryValidator.FindType.htm" />
+  <HelpKINode Title="TypeDictionaryValidator.ResolveType method" Url="html/M-CodeGenerator.TypeDictionaryValidator.ResolveType.htm" />
+  <HelpKINode Title="TypeDictionaryValidator.TypeDictionaryValidator constructor" Url="html/Overload-CodeGenerator.TypeDictionaryValidator.-ctor.htm" />
+  <HelpKINode Title="TypeDictionaryValidator.Validate method" Url="html/Overload-CodeGenerator.TypeDictionaryValidator.Validate.htm" />
+  <HelpKINode Title="TypeId property">
+    <HelpKINode Title="TypeId Property " Url="html/P-global._NAME_.TypeId.htm" />
+    <HelpKINode Title="TypeId Property " Url="html/P-X._BrowseName_.TypeId.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypesNamespace field" Url="html/F-CodeGenerator.XmlSchemaGenerator.TypesNamespace.htm" />
+  <HelpKINode Title="UInt16 enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="UInt16 field" Url="html/F-ModelCompiler.BasicDataType.UInt16.htm" />
+  <HelpKINode Title="UInt32 enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="UInt32 field" Url="html/F-ModelCompiler.BasicDataType.UInt32.htm" />
+  <HelpKINode Title="UInt64 enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="UInt64 field" Url="html/F-ModelCompiler.BasicDataType.UInt64.htm" />
+  <HelpKINode Title="UInteger enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="UInteger field" Url="html/F-ModelCompiler.BasicDataType.UInteger.htm" />
+  <HelpKINode Title="Uncertain enumeration member" Url="html/T-CodeGenerator.Severity.htm" />
+  <HelpKINode Title="Uncertain field" Url="html/F-CodeGenerator.Severity.Uncertain.htm" />
+  <HelpKINode Title="UseAllowSubtypes property" Url="html/P-OOI.ModelCompiler.IModelGeneratorValidate.UseAllowSubtypes.htm" />
+  <HelpKINode Title="UserDefined enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="UserDefined field" Url="html/F-ModelCompiler.BasicDataType.UserDefined.htm" />
+  <HelpKINode Title="UseXmlInitializers property" Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.UseXmlInitializers.htm" />
+  <HelpKINode Title="Validate method">
+    <HelpKINode Title="Validate Method " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.Validate.htm" />
+    <HelpKINode Title="Validate Method " Url="html/Overload-CodeGenerator.TypeDictionaryValidator.Validate.htm" />
+    <HelpKINode Title="Validate Method " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator2.Validate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Value property">
+    <HelpKINode Title="Value Property " Url="html/P-global._TypeName_State-1.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-ModelCompiler.Namespace.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-CodeGenerator.EnumeratedValue.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-global._ClassName_State-1.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-CodeGenerator.EnumeratedType.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-global._ClassName_Value.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-CodeGenerator.Constant.Value.htm" />
+    <HelpKINode Title="Value Property " Url="html/P-ModelCompiler.LocalizedText.Value.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueRank enumeration" Url="html/T-ModelCompiler.ValueRank.htm" />
+  <HelpKINode Title="ValueRank property">
+    <HelpKINode Title="ValueRank Property " Url="html/P-ModelCompiler.VariableTypeDesign.ValueRank.htm" />
+    <HelpKINode Title="ValueRank Property " Url="html/P-CodeGenerator.FieldType.ValueRank.htm" />
+    <HelpKINode Title="ValueRank Property " Url="html/P-ModelCompiler.Parameter.ValueRank.htm" />
+    <HelpKINode Title="ValueRank Property " Url="html/P-ModelCompiler.VariableDesign.ValueRank.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueRank.Array field" Url="html/F-ModelCompiler.ValueRank.Array.htm" />
+  <HelpKINode Title="ValueRank.OneOrMoreDimensions field" Url="html/F-ModelCompiler.ValueRank.OneOrMoreDimensions.htm" />
+  <HelpKINode Title="ValueRank.Scalar field" Url="html/F-ModelCompiler.ValueRank.Scalar.htm" />
+  <HelpKINode Title="ValueRank.ScalarOrArray field" Url="html/F-ModelCompiler.ValueRank.ScalarOrArray.htm" />
+  <HelpKINode Title="ValueRankSpecified property">
+    <HelpKINode Title="ValueRankSpecified Property " Url="html/P-ModelCompiler.VariableDesign.ValueRankSpecified.htm" />
+    <HelpKINode Title="ValueRankSpecified Property " Url="html/P-ModelCompiler.VariableTypeDesign.ValueRankSpecified.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValueSpecified property" Url="html/P-CodeGenerator.EnumeratedValue.ValueSpecified.htm" />
+  <HelpKINode Title="Variable property" Url="html/P-global._ClassName_Value.Variable.htm" />
+  <HelpKINode Title="VariableDesign class">
+    <HelpKINode Title="VariableDesign Class" Url="html/T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="VariableDesign Members" Url="html/AllMembers.T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="about VariableDesign class" Url="html/T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.VariableDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.VariableDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="VariableDesign.AccessLevel property" Url="html/P-ModelCompiler.VariableDesign.AccessLevel.htm" />
+  <HelpKINode Title="VariableDesign.AccessLevelSpecified property" Url="html/P-ModelCompiler.VariableDesign.AccessLevelSpecified.htm" />
+  <HelpKINode Title="VariableDesign.ArrayDimensions property" Url="html/P-ModelCompiler.VariableDesign.ArrayDimensions.htm" />
+  <HelpKINode Title="VariableDesign.DataType property" Url="html/P-ModelCompiler.VariableDesign.DataType.htm" />
+  <HelpKINode Title="VariableDesign.DataTypeNode field" Url="html/F-ModelCompiler.VariableDesign.DataTypeNode.htm" />
+  <HelpKINode Title="VariableDesign.DecodedValue field" Url="html/F-ModelCompiler.VariableDesign.DecodedValue.htm" />
+  <HelpKINode Title="VariableDesign.DefaultValue property" Url="html/P-ModelCompiler.VariableDesign.DefaultValue.htm" />
+  <HelpKINode Title="VariableDesign.Historizing property" Url="html/P-ModelCompiler.VariableDesign.Historizing.htm" />
+  <HelpKINode Title="VariableDesign.HistorizingSpecified property" Url="html/P-ModelCompiler.VariableDesign.HistorizingSpecified.htm" />
+  <HelpKINode Title="VariableDesign.MinimumSamplingInterval property" Url="html/P-ModelCompiler.VariableDesign.MinimumSamplingInterval.htm" />
+  <HelpKINode Title="VariableDesign.MinimumSamplingIntervalSpecified property" Url="html/P-ModelCompiler.VariableDesign.MinimumSamplingIntervalSpecified.htm" />
+  <HelpKINode Title="VariableDesign.ValueRank property" Url="html/P-ModelCompiler.VariableDesign.ValueRank.htm" />
+  <HelpKINode Title="VariableDesign.ValueRankSpecified property" Url="html/P-ModelCompiler.VariableDesign.ValueRankSpecified.htm" />
+  <HelpKINode Title="VariableTypeDesign class">
+    <HelpKINode Title="VariableTypeDesign Class" Url="html/T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="VariableTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="about VariableTypeDesign class" Url="html/T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.VariableTypeDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.VariableTypeDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.VariableTypeDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="VariableTypeDesign.AccessLevel property" Url="html/P-ModelCompiler.VariableTypeDesign.AccessLevel.htm" />
+  <HelpKINode Title="VariableTypeDesign.AccessLevelSpecified property" Url="html/P-ModelCompiler.VariableTypeDesign.AccessLevelSpecified.htm" />
+  <HelpKINode Title="VariableTypeDesign.ArrayDimensions property" Url="html/P-ModelCompiler.VariableTypeDesign.ArrayDimensions.htm" />
+  <HelpKINode Title="VariableTypeDesign.DataType property" Url="html/P-ModelCompiler.VariableTypeDesign.DataType.htm" />
+  <HelpKINode Title="VariableTypeDesign.DataTypeNode field" Url="html/F-ModelCompiler.VariableTypeDesign.DataTypeNode.htm" />
+  <HelpKINode Title="VariableTypeDesign.DecodedValue field" Url="html/F-ModelCompiler.VariableTypeDesign.DecodedValue.htm" />
+  <HelpKINode Title="VariableTypeDesign.DefaultValue property" Url="html/P-ModelCompiler.VariableTypeDesign.DefaultValue.htm" />
+  <HelpKINode Title="VariableTypeDesign.ExposesItsChildren property" Url="html/P-ModelCompiler.VariableTypeDesign.ExposesItsChildren.htm" />
+  <HelpKINode Title="VariableTypeDesign.Historizing property" Url="html/P-ModelCompiler.VariableTypeDesign.Historizing.htm" />
+  <HelpKINode Title="VariableTypeDesign.HistorizingSpecified property" Url="html/P-ModelCompiler.VariableTypeDesign.HistorizingSpecified.htm" />
+  <HelpKINode Title="VariableTypeDesign.MinimumSamplingInterval property" Url="html/P-ModelCompiler.VariableTypeDesign.MinimumSamplingInterval.htm" />
+  <HelpKINode Title="VariableTypeDesign.MinimumSamplingIntervalSpecified property" Url="html/P-ModelCompiler.VariableTypeDesign.MinimumSamplingIntervalSpecified.htm" />
+  <HelpKINode Title="VariableTypeDesign.ValueRank property" Url="html/P-ModelCompiler.VariableTypeDesign.ValueRank.htm" />
+  <HelpKINode Title="VariableTypeDesign.ValueRankSpecified property" Url="html/P-ModelCompiler.VariableTypeDesign.ValueRankSpecified.htm" />
+  <HelpKINode Title="VariableTypeDesign.VariableTypeDesign constructor" Url="html/M-ModelCompiler.VariableTypeDesign.-ctor.htm" />
+  <HelpKINode Title="Version property" Url="html/P-ModelCompiler.Namespace.Version.htm" />
+  <HelpKINode Title="ViewDesign class">
+    <HelpKINode Title="ViewDesign Class" Url="html/T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="ViewDesign Members" Url="html/AllMembers.T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="about ViewDesign class" Url="html/T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="constructor" Url="html/M-ModelCompiler.ViewDesign.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-ModelCompiler.ViewDesign.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-ModelCompiler.ViewDesign.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewDesign.ContainsNoLoops property" Url="html/P-ModelCompiler.ViewDesign.ContainsNoLoops.htm" />
+  <HelpKINode Title="ViewDesign.SupportsEvents property" Url="html/P-ModelCompiler.ViewDesign.SupportsEvents.htm" />
+  <HelpKINode Title="ViewDesign.ViewDesign constructor" Url="html/M-ModelCompiler.ViewDesign.-ctor.htm" />
+  <HelpKINode Title="Wireshark enumeration member" Url="html/T-CodeGenerator.Language.htm" />
+  <HelpKINode Title="Wireshark field" Url="html/F-CodeGenerator.Language.Wireshark.htm" />
+  <HelpKINode Title="WiresharkGenerator class">
+    <HelpKINode Title="WiresharkGenerator Class" Url="html/T-CodeGenerator.WiresharkGenerator.htm" />
+    <HelpKINode Title="WiresharkGenerator Members" Url="html/AllMembers.T-CodeGenerator.WiresharkGenerator.htm" />
+    <HelpKINode Title="about WiresharkGenerator class" Url="html/T-CodeGenerator.WiresharkGenerator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.WiresharkGenerator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.WiresharkGenerator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.WiresharkGenerator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.WiresharkGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WiresharkGenerator.Generate method" Url="html/M-CodeGenerator.WiresharkGenerator.Generate.htm" />
+  <HelpKINode Title="WiresharkGenerator.WiresharkGenerator constructor" Url="html/M-CodeGenerator.WiresharkGenerator.-ctor.htm" />
+  <HelpKINode Title="Write enumeration member" Url="html/T-ModelCompiler.AccessLevel.htm" />
+  <HelpKINode Title="Write field" Url="html/F-ModelCompiler.AccessLevel.Write.htm" />
+  <HelpKINode Title="Write method">
+    <HelpKINode Title="Write Method " Url="html/Overload-CodeGenerator.Template.Write.htm" />
+    <HelpKINode Title="Write Method " Url="html/M-CodeGenerator.TemplateDefinition.Write.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WriteAccess property" Url="html/P-ModelCompiler.NodeDesign.WriteAccess.htm" />
+  <HelpKINode Title="WriteLine method" Url="html/Overload-CodeGenerator.Template.WriteLine.htm" />
+  <HelpKINode Title="WriteNextLine method" Url="html/M-CodeGenerator.Template.WriteNextLine.htm" />
+  <HelpKINode Title="WriteTemplate event" Url="html/E-CodeGenerator.TemplateDefinition.WriteTemplate.htm" />
+  <HelpKINode Title="WriteTemplateEventHandler delegate" Url="html/T-CodeGenerator.WriteTemplateEventHandler.htm" />
+  <HelpKINode Title="XmlElement enumeration member" Url="html/T-ModelCompiler.BasicDataType.htm" />
+  <HelpKINode Title="XmlElement field" Url="html/F-ModelCompiler.BasicDataType.XmlElement.htm" />
+  <HelpKINode Title="XmlEncodingId property">
+    <HelpKINode Title="XmlEncodingId Property " Url="html/P-global._NAME_.XmlEncodingId.htm" />
+    <HelpKINode Title="XmlEncodingId Property " Url="html/P-X._BrowseName_.XmlEncodingId.htm" />
+    <HelpKINode Title="XmlEncodingId Property " Url="html/P-CodeGenerator.ComplexType.XmlEncodingId.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XmlNamespace property" Url="html/P-ModelCompiler.Namespace.XmlNamespace.htm" />
+  <HelpKINode Title="XmlPrefix property" Url="html/P-ModelCompiler.Namespace.XmlPrefix.htm" />
+  <HelpKINode Title="XmlSchema field" Url="html/F-CodeGenerator.Namespaces.XmlSchema.htm" />
+  <HelpKINode Title="XmlSchemaGenerator class">
+    <HelpKINode Title="XmlSchemaGenerator Class" Url="html/T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="XmlSchemaGenerator Members" Url="html/AllMembers.T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="about XmlSchemaGenerator class" Url="html/T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="constructor" Url="html/M-CodeGenerator.XmlSchemaGenerator.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-CodeGenerator.XmlSchemaGenerator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-CodeGenerator.XmlSchemaGenerator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XmlSchemaGenerator.EndpointsNamespace field" Url="html/F-CodeGenerator.XmlSchemaGenerator.EndpointsNamespace.htm" />
+  <HelpKINode Title="XmlSchemaGenerator.Generate method" Url="html/M-CodeGenerator.XmlSchemaGenerator.Generate.htm" />
+  <HelpKINode Title="XmlSchemaGenerator.ServicesNamespace field" Url="html/F-CodeGenerator.XmlSchemaGenerator.ServicesNamespace.htm" />
+  <HelpKINode Title="XmlSchemaGenerator.TypesNamespace field" Url="html/F-CodeGenerator.XmlSchemaGenerator.TypesNamespace.htm" />
+  <HelpKINode Title="XmlSchemaGenerator.XmlSchemaGenerator constructor" Url="html/M-CodeGenerator.XmlSchemaGenerator.-ctor.htm" />
+  <HelpKINode Title="XmlSchemaInstance field" Url="html/F-CodeGenerator.Namespaces.XmlSchemaInstance.htm" />
+  <HelpKINode Title="XmlSchemaValidator class">
+    <HelpKINode Title="XmlSchemaValidator Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+    <HelpKINode Title="XmlSchemaValidator Members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+    <HelpKINode Title="about XmlSchemaValidator class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XmlSchemaValidator.GetSchema method" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.GetSchema.htm" />
+  <HelpKINode Title="XmlSchemaValidator.SchemaSet property" Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator.SchemaSet.htm" />
+  <HelpKINode Title="XmlSchemaValidator.TargetSchema property" Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator.TargetSchema.htm" />
+  <HelpKINode Title="XmlSchemaValidator.Validate method" Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.Validate.htm" />
+  <HelpKINode Title="XmlSchemaValidator.XmlSchemaValidator constructor" Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.-ctor.htm" />
+  <HelpKINode Title="XmlSchemaValidator2 class">
+    <HelpKINode Title="XmlSchemaValidator2 Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+    <HelpKINode Title="XmlSchemaValidator2 Members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+    <HelpKINode Title="about XmlSchemaValidator2 class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator2.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="XmlSchemaValidator2.GetSchema method" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.GetSchema.htm" />
+  <HelpKINode Title="XmlSchemaValidator2.SchemaSet property" Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator2.SchemaSet.htm" />
+  <HelpKINode Title="XmlSchemaValidator2.TargetSchema property" Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator2.TargetSchema.htm" />
+  <HelpKINode Title="XmlSchemaValidator2.Validate method" Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator2.Validate.htm" />
+  <HelpKINode Title="XmlSchemaValidator2.XmlSchemaValidator2 constructor" Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator2.-ctor.htm" />
+  <HelpKINode Title="[] to  conversion">
+    <HelpKINode Title="Implicit Conversion ( to _BrowseName_Collection)" Url="html/M-global._BrowseName_Collection.op_Implicit.htm" />
+    <HelpKINode Title="Implicit Conversion ( to _NAME_Collection)" Url="html/M-global._NAME_Collection.op_Implicit_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_Namespace_ namespace" Url="html/N-_Namespace_.htm" />
+  <HelpKINode Title="_Namespace_.BrowseNames class">
+    <HelpKINode Title="BrowseNames Class" Url="html/T-_Namespace_.BrowseNames.htm" />
+    <HelpKINode Title="BrowseNames Members" Url="html/AllMembers.T-_Namespace_.BrowseNames.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_Namespace_.Namespaces class">
+    <HelpKINode Title="Namespaces Class" Url="html/T-_Namespace_.Namespaces.htm" />
+    <HelpKINode Title="Namespaces Members" Url="html/AllMembers.T-_Namespace_.Namespaces.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_NAME_Request class">
+    <HelpKINode Title="_NAME_Request Class" Url="html/T-global._NAME_Request.htm" />
+    <HelpKINode Title="_NAME_Request Members" Url="html/AllMembers.T-global._NAME_Request.htm" />
+    <HelpKINode Title="about _NAME_Request class" Url="html/T-global._NAME_Request.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global._NAME_Request.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global._NAME_Request.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_NAME_Request field" Url="html/F-global._NAME_Message._NAME_Request.htm" />
+  <HelpKINode Title="_NAME_Response class">
+    <HelpKINode Title="_NAME_Response Class" Url="html/T-global._NAME_Response.htm" />
+    <HelpKINode Title="_NAME_Response Members" Url="html/AllMembers.T-global._NAME_Response.htm" />
+    <HelpKINode Title="about _NAME_Response class" Url="html/T-global._NAME_Response.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global._NAME_Response.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global._NAME_Response.htm" />
+  </HelpKINode>
+  <HelpKINode Title="_NAME_Response field" Url="html/F-global._NAME_ResponseMessage._NAME_Response.htm" />
+</HelpKI>
