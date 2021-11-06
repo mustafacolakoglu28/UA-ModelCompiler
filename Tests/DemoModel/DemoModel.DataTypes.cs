@@ -1060,7 +1060,7 @@ namespace DemoModel
 
         #if !NET_STANDARD
         /// <summary cref="ICloneable.Clone" />
-        public object Clone()
+        public override object Clone()
         {
             return (SampleUnion)this.MemberwiseClone();
         }
@@ -1571,7 +1571,7 @@ namespace DemoModel
 
         #if !NET_STANDARD
         /// <summary cref="ICloneable.Clone" />
-        public object Clone()
+        public override object Clone()
         {
             return (SampleUnionAllowSubtypes)this.MemberwiseClone();
         }
