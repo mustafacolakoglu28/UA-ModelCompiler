@@ -1,26 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="be7eb6cc-06f0-4027-adec-13951f603c39" Title="_Namespace_ Namespace" Url="html/N-_Namespace_.htm">
+  <HelpTOCNode Id="fdaaeb20-03b8-4304-901b-dcc9764f5cd3" Title="_Namespace_ Namespace" Url="html/N-_Namespace_.htm">
     <HelpTOCNode Title="BrowseNames Class" Url="html/T-_Namespace_.BrowseNames.htm" />
     <HelpTOCNode Title="Namespaces Class" Url="html/T-_Namespace_.Namespaces.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="2a400efe-43ad-47b1-8791-3e35ae3f17d2" Title="CodeGenerator Namespace" Url="html/N-CodeGenerator.htm">
-    <HelpTOCNode Id="3510e63c-3878-46c8-83f2-3cf4fe090a8c" Title="CodeGenerator Class" Url="html/T-CodeGenerator.CodeGenerator.htm">
+  <HelpTOCNode Id="ac4e22b9-1c4e-4883-b916-41f54543c88d" Title="CodeGenerator Namespace" Url="html/N-CodeGenerator.htm">
+    <HelpTOCNode Id="7ba3c52f-b522-4687-96e6-68bb64798ed2" Title="CodeGenerator Class" Url="html/T-CodeGenerator.CodeGenerator.htm">
       <HelpTOCNode Title="CodeGenerator Members" Url="html/AllMembers.T-CodeGenerator.CodeGenerator.htm" />
-      <HelpTOCNode Id="832b5cbf-7eef-41a1-bb9c-6c1ad453cd38" Title="CodeGenerator Constructor " Url="html/Overload-CodeGenerator.CodeGenerator.-ctor.htm">
+      <HelpTOCNode Id="7cbef128-55db-4c5f-b7c3-102334b35659" Title="CodeGenerator Constructor " Url="html/Overload-CodeGenerator.CodeGenerator.-ctor.htm">
         <HelpTOCNode Title="CodeGenerator Constructor " Url="html/M-CodeGenerator.CodeGenerator.-ctor.htm" />
         <HelpTOCNode Title="CodeGenerator Constructor (String, String, Dictionary(String, String), String)" Url="html/M-CodeGenerator.CodeGenerator.-ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="67bd2dcd-2509-48e9-840d-ad9ae23ccf51" Title="CodeGenerator Properties" Url="html/Properties.T-CodeGenerator.CodeGenerator.htm">
+      <HelpTOCNode Id="31c672b3-9f7b-4508-9f81-c3b6b31f7bbe" Title="CodeGenerator Methods" Url="html/Methods.T-CodeGenerator.CodeGenerator.htm">
+        <HelpTOCNode Title="AddTemplate Method " Url="html/M-CodeGenerator.CodeGenerator.AddTemplate.htm" />
+        <HelpTOCNode Title="CollectDatatypes Method " Url="html/M-CodeGenerator.CodeGenerator.CollectDatatypes.htm" />
+        <HelpTOCNode Title="GetAnsiCTypeName Method " Url="html/M-CodeGenerator.CodeGenerator.GetAnsiCTypeName.htm" />
+        <HelpTOCNode Title="GetDataTypeList Method (Type, Boolean, Boolean)" Url="html/M-CodeGenerator.CodeGenerator.GetDataTypeList.htm" />
+        <HelpTOCNode Title="GetDescription Method " Url="html/M-CodeGenerator.CodeGenerator.GetDescription.htm" />
+        <HelpTOCNode Title="GetDotNetTypeName Method " Url="html/M-CodeGenerator.CodeGenerator.GetDotNetTypeName.htm" />
+        <HelpTOCNode Title="IsNull Method " Url="html/M-CodeGenerator.CodeGenerator.IsNull.htm" />
+        <HelpTOCNode Title="ToLowerCamelCase Method " Url="html/M-CodeGenerator.CodeGenerator.ToLowerCamelCase.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0097accd-f2d9-4fa0-8e25-066a9f663112" Title="CodeGenerator Properties" Url="html/Properties.T-CodeGenerator.CodeGenerator.htm">
         <HelpTOCNode Title="DictionariesToExport Property " Url="html/P-CodeGenerator.CodeGenerator.DictionariesToExport.htm" />
+        <HelpTOCNode Title="Dictionary Property " Url="html/P-CodeGenerator.CodeGenerator.Dictionary.htm" />
+        <HelpTOCNode Title="DictionaryName Property " Url="html/P-CodeGenerator.CodeGenerator.DictionaryName.htm" />
+        <HelpTOCNode Title="OutputDirectory Property " Url="html/P-CodeGenerator.CodeGenerator.OutputDirectory.htm" />
+        <HelpTOCNode Title="TargetLanguage Property " Url="html/P-CodeGenerator.CodeGenerator.TargetLanguage.htm" />
+        <HelpTOCNode Title="Validator Property " Url="html/P-CodeGenerator.CodeGenerator.Validator.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="00bea8c9-a2c8-42f0-80f4-bee04ba868b4" Title="ComplexType Class" Url="html/T-CodeGenerator.ComplexType.htm">
+    <HelpTOCNode Id="1b761f8b-8f02-4d6b-b7e3-3c9d75ca529b" Title="ComplexType Class" Url="html/T-CodeGenerator.ComplexType.htm">
       <HelpTOCNode Title="ComplexType Members" Url="html/AllMembers.T-CodeGenerator.ComplexType.htm" />
       <HelpTOCNode Title="ComplexType Constructor " Url="html/M-CodeGenerator.ComplexType.-ctor.htm" />
       <HelpTOCNode Title="ComplexType Methods" Url="html/Methods.T-CodeGenerator.ComplexType.htm" />
-      <HelpTOCNode Id="37fc3c26-50cf-48a4-8fd8-6bdef1ced42b" Title="ComplexType Properties" Url="html/Properties.T-CodeGenerator.ComplexType.htm">
+      <HelpTOCNode Id="e28dd81d-34c2-4b74-9d25-517a72ff45f8" Title="ComplexType Properties" Url="html/Properties.T-CodeGenerator.ComplexType.htm">
         <HelpTOCNode Title="BaseType Property " Url="html/P-CodeGenerator.ComplexType.BaseType.htm" />
         <HelpTOCNode Title="BinaryEncodingId Property " Url="html/P-CodeGenerator.ComplexType.BinaryEncodingId.htm" />
         <HelpTOCNode Title="Field Property " Url="html/P-CodeGenerator.ComplexType.Field.htm" />
@@ -29,27 +44,30 @@
         <HelpTOCNode Title="XmlEncodingId Property " Url="html/P-CodeGenerator.ComplexType.XmlEncodingId.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b7c3c6c2-2c5f-48d4-8bb8-e61434cd46ea" Title="Constant Class" Url="html/T-CodeGenerator.Constant.htm">
+    <HelpTOCNode Id="64354a4a-0411-4a57-9b82-30a73dcdc258" Title="Constant Class" Url="html/T-CodeGenerator.Constant.htm">
       <HelpTOCNode Title="Constant Members" Url="html/AllMembers.T-CodeGenerator.Constant.htm" />
       <HelpTOCNode Title="Constant Constructor " Url="html/M-CodeGenerator.Constant.-ctor.htm" />
       <HelpTOCNode Title="Constant Methods" Url="html/Methods.T-CodeGenerator.Constant.htm" />
-      <HelpTOCNode Id="eb591d04-d939-44c8-955b-46a1f3174df1" Title="Constant Properties" Url="html/Properties.T-CodeGenerator.Constant.htm">
+      <HelpTOCNode Id="6ea000e2-d112-444a-a5b9-a01ae243a07d" Title="Constant Properties" Url="html/Properties.T-CodeGenerator.Constant.htm">
         <HelpTOCNode Title="Severity Property " Url="html/P-CodeGenerator.Constant.Severity.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P-CodeGenerator.Constant.Value.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d9139058-a8f9-4bb6-8366-8b75fcc8b228" Title="ConstantsGenerator Class" Url="html/T-CodeGenerator.ConstantsGenerator.htm">
+    <HelpTOCNode Id="7e85d314-b9de-495e-90e5-538310822187" Title="ConstantsGenerator Class" Url="html/T-CodeGenerator.ConstantsGenerator.htm">
       <HelpTOCNode Title="ConstantsGenerator Members" Url="html/AllMembers.T-CodeGenerator.ConstantsGenerator.htm" />
       <HelpTOCNode Title="ConstantsGenerator Constructor " Url="html/M-CodeGenerator.ConstantsGenerator.-ctor.htm" />
-      <HelpTOCNode Id="ad3dbcf5-660a-4fbe-ae37-891e680a3d97" Title="ConstantsGenerator Methods" Url="html/Methods.T-CodeGenerator.ConstantsGenerator.htm">
+      <HelpTOCNode Id="3fe21594-0cfa-408f-bd4c-09a5e7e3be94" Title="ConstantsGenerator Methods" Url="html/Methods.T-CodeGenerator.ConstantsGenerator.htm">
         <HelpTOCNode Title="Generate Method " Url="html/M-CodeGenerator.ConstantsGenerator.Generate.htm" />
+        <HelpTOCNode Id="4dae0430-e8c9-45ee-b565-d98c2fdd4390" Title="GetDataTypeList Method " Url="html/Overload-CodeGenerator.ConstantsGenerator.GetDataTypeList.htm">
+          <HelpTOCNode Title="GetDataTypeList Method " Url="html/M-CodeGenerator.ConstantsGenerator.GetDataTypeList.htm" />
+        </HelpTOCNode>
       </HelpTOCNode>
       <HelpTOCNode Title="ConstantsGenerator Properties" Url="html/Properties.T-CodeGenerator.ConstantsGenerator.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="66fc6801-7d0f-4907-9a50-0e0381909015" Title="Context Class" Url="html/T-CodeGenerator.Context.htm">
+    <HelpTOCNode Id="9e978462-dd63-401c-b01b-c2cd9e4ede50" Title="Context Class" Url="html/T-CodeGenerator.Context.htm">
       <HelpTOCNode Title="Context Members" Url="html/AllMembers.T-CodeGenerator.Context.htm" />
       <HelpTOCNode Title="Context Constructor " Url="html/M-CodeGenerator.Context.-ctor.htm" />
-      <HelpTOCNode Id="3c843903-fa8a-4766-ba40-2ab4f57fd850" Title="Context Properties" Url="html/Properties.T-CodeGenerator.Context.htm">
+      <HelpTOCNode Id="016b41d0-7ced-49f8-ac59-4cc50bde2991" Title="Context Properties" Url="html/Properties.T-CodeGenerator.Context.htm">
         <HelpTOCNode Title="BlankLine Property " Url="html/P-CodeGenerator.Context.BlankLine.htm" />
         <HelpTOCNode Title="Container Property " Url="html/P-CodeGenerator.Context.Container.htm" />
         <HelpTOCNode Title="FirstInList Property " Url="html/P-CodeGenerator.Context.FirstInList.htm" />
@@ -60,13 +78,13 @@
         <HelpTOCNode Title="Token Property " Url="html/P-CodeGenerator.Context.Token.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4efcde1f-b58b-402e-9879-6f93892955f0" Title="DataType Class" Url="html/T-CodeGenerator.DataType.htm">
+    <HelpTOCNode Id="7d6e674c-8661-422c-96d1-6e50a8dc1de7" Title="DataType Class" Url="html/T-CodeGenerator.DataType.htm">
       <HelpTOCNode Title="DataType Members" Url="html/AllMembers.T-CodeGenerator.DataType.htm" />
       <HelpTOCNode Title="DataType Constructor " Url="html/M-CodeGenerator.DataType.-ctor.htm" />
-      <HelpTOCNode Id="36c95957-5e16-41f3-9246-d462e60a5a63" Title="DataType Methods" Url="html/Methods.T-CodeGenerator.DataType.htm">
+      <HelpTOCNode Id="4e0882b8-1eaf-4753-bb31-759acb0f04ef" Title="DataType Methods" Url="html/Methods.T-CodeGenerator.DataType.htm">
         <HelpTOCNode Title="ToString Method " Url="html/M-CodeGenerator.DataType.ToString.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="23e76220-9812-4711-96b1-3c69845b4b54" Title="DataType Properties" Url="html/Properties.T-CodeGenerator.DataType.htm">
+      <HelpTOCNode Id="0788811a-42a6-4923-aac9-d3c6a68621e2" Title="DataType Properties" Url="html/Properties.T-CodeGenerator.DataType.htm">
         <HelpTOCNode Title="AllowArrays Property " Url="html/P-CodeGenerator.DataType.AllowArrays.htm" />
         <HelpTOCNode Title="Category Property " Url="html/P-CodeGenerator.DataType.Category.htm" />
         <HelpTOCNode Title="Documentation Property " Url="html/P-CodeGenerator.DataType.Documentation.htm" />
@@ -81,35 +99,35 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="DataTypePurpose Enumeration" Url="html/T-CodeGenerator.DataTypePurpose.htm" />
-    <HelpTOCNode Id="fea42518-a06a-4f96-8b7d-f5e7a8999e0a" Title="Documentation Class" Url="html/T-CodeGenerator.Documentation.htm">
+    <HelpTOCNode Id="2c3e633a-b1b4-435b-8190-1fbbfdec8cd7" Title="Documentation Class" Url="html/T-CodeGenerator.Documentation.htm">
       <HelpTOCNode Title="Documentation Members" Url="html/AllMembers.T-CodeGenerator.Documentation.htm" />
-      <HelpTOCNode Id="58cbbdbc-fa0c-41df-8a9f-37bd25b28535" Title="Documentation Properties" Url="html/Properties.T-CodeGenerator.Documentation.htm">
+      <HelpTOCNode Id="c93ef9bf-607b-4d1c-9679-42c6fb09630f" Title="Documentation Properties" Url="html/Properties.T-CodeGenerator.Documentation.htm">
         <HelpTOCNode Title="AnyAttr Property " Url="html/P-CodeGenerator.Documentation.AnyAttr.htm" />
         <HelpTOCNode Title="Items Property " Url="html/P-CodeGenerator.Documentation.Items.htm" />
         <HelpTOCNode Title="Text Property " Url="html/P-CodeGenerator.Documentation.Text.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="27adbf7b-6172-44a2-a274-13e0d2fd802a" Title="DotNetGenerator Class" Url="html/T-CodeGenerator.DotNetGenerator.htm">
+    <HelpTOCNode Id="d2687bed-cf0d-4036-bd57-38b5a59f926a" Title="DotNetGenerator Class" Url="html/T-CodeGenerator.DotNetGenerator.htm">
       <HelpTOCNode Title="DotNetGenerator Members" Url="html/AllMembers.T-CodeGenerator.DotNetGenerator.htm" />
       <HelpTOCNode Title="DotNetGenerator Constructor " Url="html/M-CodeGenerator.DotNetGenerator.-ctor.htm" />
-      <HelpTOCNode Id="771b9dc6-c733-46da-99a0-ebb548b9077f" Title="DotNetGenerator Methods" Url="html/Methods.T-CodeGenerator.DotNetGenerator.htm">
+      <HelpTOCNode Id="43b8fd09-3ca7-4ae9-9636-f2e095afe823" Title="DotNetGenerator Methods" Url="html/Methods.T-CodeGenerator.DotNetGenerator.htm">
         <HelpTOCNode Title="Generate Method " Url="html/M-CodeGenerator.DotNetGenerator.Generate.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="DotNetGenerator Properties" Url="html/Properties.T-CodeGenerator.DotNetGenerator.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="57ccf4b3-70f0-437e-8fef-ddfa7540b99a" Title="EnumeratedType Class" Url="html/T-CodeGenerator.EnumeratedType.htm">
+    <HelpTOCNode Id="83b58088-4cf1-4862-9782-30b9a0b4c843" Title="EnumeratedType Class" Url="html/T-CodeGenerator.EnumeratedType.htm">
       <HelpTOCNode Title="EnumeratedType Members" Url="html/AllMembers.T-CodeGenerator.EnumeratedType.htm" />
       <HelpTOCNode Title="EnumeratedType Constructor " Url="html/M-CodeGenerator.EnumeratedType.-ctor.htm" />
       <HelpTOCNode Title="EnumeratedType Methods" Url="html/Methods.T-CodeGenerator.EnumeratedType.htm" />
-      <HelpTOCNode Id="67239180-2f38-464c-b4a2-10df1a40af06" Title="EnumeratedType Properties" Url="html/Properties.T-CodeGenerator.EnumeratedType.htm">
+      <HelpTOCNode Id="2b828d8a-27ab-4718-ab3c-de1d9ce1ac20" Title="EnumeratedType Properties" Url="html/Properties.T-CodeGenerator.EnumeratedType.htm">
         <HelpTOCNode Title="BaseType Property " Url="html/P-CodeGenerator.EnumeratedType.BaseType.htm" />
         <HelpTOCNode Title="IsOptionSet Property " Url="html/P-CodeGenerator.EnumeratedType.IsOptionSet.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P-CodeGenerator.EnumeratedType.Value.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2daa381b-2408-4ec9-a5a2-fb73d96f325c" Title="EnumeratedValue Class" Url="html/T-CodeGenerator.EnumeratedValue.htm">
+    <HelpTOCNode Id="854bf7fd-d14b-4206-ae9d-dc95974f3f1e" Title="EnumeratedValue Class" Url="html/T-CodeGenerator.EnumeratedValue.htm">
       <HelpTOCNode Title="EnumeratedValue Members" Url="html/AllMembers.T-CodeGenerator.EnumeratedValue.htm" />
-      <HelpTOCNode Id="b1f999cf-0a12-4ccb-8c0c-c1ca2f027cde" Title="EnumeratedValue Properties" Url="html/Properties.T-CodeGenerator.EnumeratedValue.htm">
+      <HelpTOCNode Id="17edddf1-71b4-407c-9c5b-4a518a2e6d21" Title="EnumeratedValue Properties" Url="html/Properties.T-CodeGenerator.EnumeratedValue.htm">
         <HelpTOCNode Title="BitMask Property " Url="html/P-CodeGenerator.EnumeratedValue.BitMask.htm" />
         <HelpTOCNode Title="Documentation Property " Url="html/P-CodeGenerator.EnumeratedValue.Documentation.htm" />
         <HelpTOCNode Title="Name Property " Url="html/P-CodeGenerator.EnumeratedValue.Name.htm" />
@@ -117,10 +135,10 @@
         <HelpTOCNode Title="ValueSpecified Property " Url="html/P-CodeGenerator.EnumeratedValue.ValueSpecified.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="22de83b0-69ef-4871-b7e3-c476e6cddc49" Title="FieldType Class" Url="html/T-CodeGenerator.FieldType.htm">
+    <HelpTOCNode Id="043bf0a2-2d97-4577-a1ed-623645a8ae0e" Title="FieldType Class" Url="html/T-CodeGenerator.FieldType.htm">
       <HelpTOCNode Title="FieldType Members" Url="html/AllMembers.T-CodeGenerator.FieldType.htm" />
       <HelpTOCNode Title="FieldType Constructor " Url="html/M-CodeGenerator.FieldType.-ctor.htm" />
-      <HelpTOCNode Id="31afd85e-9e7d-44ef-aacf-c79f3911d705" Title="FieldType Properties" Url="html/Properties.T-CodeGenerator.FieldType.htm">
+      <HelpTOCNode Id="9129dc41-abd2-40cf-8bfd-216da0c59f4e" Title="FieldType Properties" Url="html/Properties.T-CodeGenerator.FieldType.htm">
         <HelpTOCNode Title="AllowSubtypes Property " Url="html/P-CodeGenerator.FieldType.AllowSubtypes.htm" />
         <HelpTOCNode Title="ComplexType Property " Url="html/P-CodeGenerator.FieldType.ComplexType.htm" />
         <HelpTOCNode Title="DataType Property " Url="html/P-CodeGenerator.FieldType.DataType.htm" />
@@ -131,9 +149,9 @@
         <HelpTOCNode Title="ValueRank Property " Url="html/P-CodeGenerator.FieldType.ValueRank.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f760031e-214b-4934-b16c-0aafe880134a" Title="ImportDirective Class" Url="html/T-CodeGenerator.ImportDirective.htm">
+    <HelpTOCNode Id="061233ad-d92a-4a32-b78f-bbcfe606b4a1" Title="ImportDirective Class" Url="html/T-CodeGenerator.ImportDirective.htm">
       <HelpTOCNode Title="ImportDirective Members" Url="html/AllMembers.T-CodeGenerator.ImportDirective.htm" />
-      <HelpTOCNode Id="951e0f00-b2da-4018-95eb-f2f82e1348dc" Title="ImportDirective Properties" Url="html/Properties.T-CodeGenerator.ImportDirective.htm">
+      <HelpTOCNode Id="f06ab30c-cd02-4bee-ac75-9ebd796e57f7" Title="ImportDirective Properties" Url="html/Properties.T-CodeGenerator.ImportDirective.htm">
         <HelpTOCNode Title="Location Property " Url="html/P-CodeGenerator.ImportDirective.Location.htm" />
         <HelpTOCNode Title="Namespace Property " Url="html/P-CodeGenerator.ImportDirective.Namespace.htm" />
       </HelpTOCNode>
@@ -141,9 +159,9 @@
     <HelpTOCNode Title="InterfaceType Enumeration" Url="html/T-CodeGenerator.InterfaceType.htm" />
     <HelpTOCNode Title="Language Enumeration" Url="html/T-CodeGenerator.Language.htm" />
     <HelpTOCNode Title="LoadTemplateEventHandler Delegate" Url="html/T-CodeGenerator.LoadTemplateEventHandler.htm" />
-    <HelpTOCNode Id="087b221f-db59-42ec-ab27-880090c2c75e" Title="Namespaces Class" Url="html/T-CodeGenerator.Namespaces.htm">
+    <HelpTOCNode Id="4282fe2e-7f63-4897-84fe-4a225f6bc5af" Title="Namespaces Class" Url="html/T-CodeGenerator.Namespaces.htm">
       <HelpTOCNode Title="Namespaces Members" Url="html/AllMembers.T-CodeGenerator.Namespaces.htm" />
-      <HelpTOCNode Id="81a32872-a87d-42ce-8cda-c43db4d4bc4f" Title="Namespaces Fields" Url="html/Fields.T-CodeGenerator.Namespaces.htm">
+      <HelpTOCNode Id="805bec62-a18f-411c-b7e0-b7da60389c34" Title="Namespaces Fields" Url="html/Fields.T-CodeGenerator.Namespaces.htm">
         <HelpTOCNode Title="OpcBinarySchema Field" Url="html/F-CodeGenerator.Namespaces.OpcBinarySchema.htm" />
         <HelpTOCNode Title="OpcUa Field" Url="html/F-CodeGenerator.Namespaces.OpcUa.htm" />
         <HelpTOCNode Title="OpcUaBuiltInNodes Field" Url="html/F-CodeGenerator.Namespaces.OpcUaBuiltInNodes.htm" />
@@ -153,24 +171,50 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ReleaseStatus Enumeration" Url="html/T-CodeGenerator.ReleaseStatus.htm" />
-    <HelpTOCNode Title="SchemaGenerator Class" Url="html/T-CodeGenerator.SchemaGenerator.htm" />
-    <HelpTOCNode Id="4816b982-de5f-4b10-9c8b-6470ca585b81" Title="ServiceType Class" Url="html/T-CodeGenerator.ServiceType.htm">
+    <HelpTOCNode Id="9e2b2c82-f16d-47c9-a9da-32ff5602ff1a" Title="SchemaGenerator Class" Url="html/T-CodeGenerator.SchemaGenerator.htm">
+      <HelpTOCNode Title="SchemaGenerator Members" Url="html/AllMembers.T-CodeGenerator.SchemaGenerator.htm" />
+      <HelpTOCNode Title="SchemaGenerator Constructor " Url="html/M-CodeGenerator.SchemaGenerator.-ctor.htm" />
+      <HelpTOCNode Id="8abda1fd-1bd2-4aa2-a113-8d6c99baa7bf" Title="SchemaGenerator Methods" Url="html/Methods.T-CodeGenerator.SchemaGenerator.htm">
+        <HelpTOCNode Title="AddNestedTypes Method " Url="html/M-CodeGenerator.SchemaGenerator.AddNestedTypes.htm" />
+        <HelpTOCNode Title="AddTemplate Method " Url="html/M-CodeGenerator.SchemaGenerator.AddTemplate.htm" />
+        <HelpTOCNode Title="CollectDatatypes Method " Url="html/M-CodeGenerator.SchemaGenerator.CollectDatatypes.htm" />
+        <HelpTOCNode Title="CreateDescription Method " Url="html/M-CodeGenerator.SchemaGenerator.CreateDescription.htm" />
+        <HelpTOCNode Title="GetDescription Method " Url="html/M-CodeGenerator.SchemaGenerator.GetDescription.htm" />
+        <HelpTOCNode Title="GetDisplayName Method " Url="html/M-CodeGenerator.SchemaGenerator.GetDisplayName.htm" />
+        <HelpTOCNode Title="GetFields Method " Url="html/M-CodeGenerator.SchemaGenerator.GetFields.htm" />
+        <HelpTOCNode Id="eb296ae5-0b7f-41fb-a004-2240ddf3466e" Title="GetListOfTypes Method " Url="html/Overload-CodeGenerator.SchemaGenerator.GetListOfTypes.htm">
+          <HelpTOCNode Title="GetListOfTypes Method (Boolean)" Url="html/M-CodeGenerator.SchemaGenerator.GetListOfTypes.htm" />
+          <HelpTOCNode Title="GetListOfTypes Method (Type, Boolean, Boolean)" Url="html/M-CodeGenerator.SchemaGenerator.GetListOfTypes_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetPrefixedName Method " Url="html/M-CodeGenerator.SchemaGenerator.GetPrefixedName.htm" />
+        <HelpTOCNode Title="IsNull Method " Url="html/M-CodeGenerator.SchemaGenerator.IsNull.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c7bb5ba5-a2df-47c1-85e7-792fbf515780" Title="SchemaGenerator Properties" Url="html/Properties.T-CodeGenerator.SchemaGenerator.htm">
+        <HelpTOCNode Title="Dictionary Property " Url="html/P-CodeGenerator.SchemaGenerator.Dictionary.htm" />
+        <HelpTOCNode Title="NamespaceUris Property " Url="html/P-CodeGenerator.SchemaGenerator.NamespaceUris.htm" />
+        <HelpTOCNode Title="OutputDirectory Property " Url="html/P-CodeGenerator.SchemaGenerator.OutputDirectory.htm" />
+        <HelpTOCNode Title="TargetNamespace Property " Url="html/P-CodeGenerator.SchemaGenerator.TargetNamespace.htm" />
+        <HelpTOCNode Title="Validator Property " Url="html/P-CodeGenerator.SchemaGenerator.Validator.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="10566acd-5c74-46a8-a331-170917d424b3" Title="ServiceType Class" Url="html/T-CodeGenerator.ServiceType.htm">
       <HelpTOCNode Title="ServiceType Members" Url="html/AllMembers.T-CodeGenerator.ServiceType.htm" />
       <HelpTOCNode Title="ServiceType Constructor " Url="html/M-CodeGenerator.ServiceType.-ctor.htm" />
       <HelpTOCNode Title="ServiceType Methods" Url="html/Methods.T-CodeGenerator.ServiceType.htm" />
-      <HelpTOCNode Id="2b6cbfe3-7843-42ac-9ba0-05ab2aa8d137" Title="ServiceType Properties" Url="html/Properties.T-CodeGenerator.ServiceType.htm">
+      <HelpTOCNode Id="959c6650-3bc2-4e75-8e38-acd2c4605092" Title="ServiceType Properties" Url="html/Properties.T-CodeGenerator.ServiceType.htm">
         <HelpTOCNode Title="InterfaceType Property " Url="html/P-CodeGenerator.ServiceType.InterfaceType.htm" />
         <HelpTOCNode Title="Request Property " Url="html/P-CodeGenerator.ServiceType.Request.htm" />
         <HelpTOCNode Title="Response Property " Url="html/P-CodeGenerator.ServiceType.Response.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="Severity Enumeration" Url="html/T-CodeGenerator.Severity.htm" />
-    <HelpTOCNode Id="6a142154-54c0-42bb-95fa-9e3eab06174e" Title="Template Class" Url="html/T-CodeGenerator.Template.htm">
+    <HelpTOCNode Id="c69afe0c-3633-4d72-9bd1-e5fe4a1033a5" Title="Template Class" Url="html/T-CodeGenerator.Template.htm">
       <HelpTOCNode Title="Template Members" Url="html/AllMembers.T-CodeGenerator.Template.htm" />
       <HelpTOCNode Title="Template Constructor (TextWriter, String, Assembly)" Url="html/M-CodeGenerator.Template.-ctor.htm" />
-      <HelpTOCNode Id="c2e48bf7-68fc-47f8-b27d-1cfd0bad24ee" Title="Template Methods" Url="html/Methods.T-CodeGenerator.Template.htm">
+      <HelpTOCNode Id="fd1b1246-f6cd-49ee-b6c5-b2027fd672fb" Title="Template Methods" Url="html/Methods.T-CodeGenerator.Template.htm">
         <HelpTOCNode Title="AddReplacement Method " Url="html/M-CodeGenerator.Template.AddReplacement.htm" />
-        <HelpTOCNode Id="b24be35f-ff53-4c20-be41-e84d9b3e98db" Title="Write Method " Url="html/Overload-CodeGenerator.Template.Write.htm">
+        <HelpTOCNode Title="StrCmp Method " Url="html/M-CodeGenerator.Template.StrCmp.htm" />
+        <HelpTOCNode Id="667cd998-b327-45aa-848a-ca069ff5def6" Title="Write Method " Url="html/Overload-CodeGenerator.Template.Write.htm">
           <HelpTOCNode Title="Write Method (Char)" Url="html/M-CodeGenerator.Template.Write.htm" />
           <HelpTOCNode Title="Write Method (String)" Url="html/M-CodeGenerator.Template.Write_1.htm" />
           <HelpTOCNode Title="Write Method (String, Object)" Url="html/M-CodeGenerator.Template.Write_2.htm" />
@@ -178,7 +222,7 @@
           <HelpTOCNode Title="Write Method (String, Object, Object, Object)" Url="html/M-CodeGenerator.Template.Write_4.htm" />
           <HelpTOCNode Title="Write Method (String, Object[])" Url="html/M-CodeGenerator.Template.Write_5.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="9dcb4923-d40a-4cbb-af5b-68ed44f2a2c4" Title="WriteLine Method " Url="html/Overload-CodeGenerator.Template.WriteLine.htm">
+        <HelpTOCNode Id="47688d90-911a-49e8-8f13-7320232396ff" Title="WriteLine Method " Url="html/Overload-CodeGenerator.Template.WriteLine.htm">
           <HelpTOCNode Title="WriteLine Method (String)" Url="html/M-CodeGenerator.Template.WriteLine.htm" />
           <HelpTOCNode Title="WriteLine Method (String, Object)" Url="html/M-CodeGenerator.Template.WriteLine_1.htm" />
           <HelpTOCNode Title="WriteLine Method (String, Object, Object)" Url="html/M-CodeGenerator.Template.WriteLine_2.htm" />
@@ -186,40 +230,48 @@
           <HelpTOCNode Title="WriteLine Method (String, Object[])" Url="html/M-CodeGenerator.Template.WriteLine_4.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="WriteNextLine Method " Url="html/M-CodeGenerator.Template.WriteNextLine.htm" />
-        <HelpTOCNode Title="WriteTemplate Method (Context)" Url="html/M-CodeGenerator.Template.WriteTemplate.htm" />
+        <HelpTOCNode Id="a321885e-dac5-491c-ad93-f6d3b71d202a" Title="WriteTemplate Method " Url="html/Overload-CodeGenerator.Template.WriteTemplate.htm">
+          <HelpTOCNode Title="WriteTemplate Method (Context)" Url="html/M-CodeGenerator.Template.WriteTemplate.htm" />
+          <HelpTOCNode Title="WriteTemplate Method (Object, String, String)" Url="html/M-CodeGenerator.Template.WriteTemplate_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="WriteToken Method " Url="html/M-CodeGenerator.Template.WriteToken.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="6c214782-5f43-46cb-9d23-edd0269e6b8d" Title="Template Properties" Url="html/Properties.T-CodeGenerator.Template.htm">
+      <HelpTOCNode Id="378ef3d5-35ad-4db1-ad01-08d6086bd323" Title="Template Properties" Url="html/Properties.T-CodeGenerator.Template.htm">
         <HelpTOCNode Title="Indent Property " Url="html/P-CodeGenerator.Template.Indent.htm" />
+        <HelpTOCNode Title="IndentCount Property " Url="html/P-CodeGenerator.Template.IndentCount.htm" />
         <HelpTOCNode Title="NewLine Property " Url="html/P-CodeGenerator.Template.NewLine.htm" />
         <HelpTOCNode Title="Replacements Property " Url="html/P-CodeGenerator.Template.Replacements.htm" />
+        <HelpTOCNode Title="TemplateEndAppendNewLineTag Property " Url="html/P-CodeGenerator.Template.TemplateEndAppendNewLineTag.htm" />
+        <HelpTOCNode Title="TemplateEndTag Property " Url="html/P-CodeGenerator.Template.TemplateEndTag.htm" />
         <HelpTOCNode Title="Templates Property " Url="html/P-CodeGenerator.Template.Templates.htm" />
+        <HelpTOCNode Title="TemplateStartTag Property " Url="html/P-CodeGenerator.Template.TemplateStartTag.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fee4101d-b7d9-4ede-80ba-ff90d3c189d9" Title="TemplateDefinition Class" Url="html/T-CodeGenerator.TemplateDefinition.htm">
+    <HelpTOCNode Id="732fbdfe-acaf-4c70-8428-1bd54b02199b" Title="TemplateDefinition Class" Url="html/T-CodeGenerator.TemplateDefinition.htm">
       <HelpTOCNode Title="TemplateDefinition Members" Url="html/AllMembers.T-CodeGenerator.TemplateDefinition.htm" />
-      <HelpTOCNode Id="7cca6f02-cecb-4122-bc92-bbac3a6c33c4" Title="TemplateDefinition Methods" Url="html/Methods.T-CodeGenerator.TemplateDefinition.htm">
+      <HelpTOCNode Id="9c6b89ff-e4f5-4603-8d47-ac3e976e661a" Title="TemplateDefinition Methods" Url="html/Methods.T-CodeGenerator.TemplateDefinition.htm">
         <HelpTOCNode Title="Load Method " Url="html/M-CodeGenerator.TemplateDefinition.Load.htm" />
         <HelpTOCNode Title="Write Method " Url="html/M-CodeGenerator.TemplateDefinition.Write.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c2eb8c0d-b81a-419a-a5e5-6129648ff8d0" Title="TemplateDefinition Properties" Url="html/Properties.T-CodeGenerator.TemplateDefinition.htm">
+      <HelpTOCNode Id="1aef6b4d-26c2-428b-9658-599d18c909d2" Title="TemplateDefinition Properties" Url="html/Properties.T-CodeGenerator.TemplateDefinition.htm">
         <HelpTOCNode Title="Targets Property " Url="html/P-CodeGenerator.TemplateDefinition.Targets.htm" />
         <HelpTOCNode Title="TemplatePath Property " Url="html/P-CodeGenerator.TemplateDefinition.TemplatePath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="0918684e-9d60-48c0-8629-8152cffb91a6" Title="TemplateDefinition Events" Url="html/Events.T-CodeGenerator.TemplateDefinition.htm">
+      <HelpTOCNode Id="4769f9f6-9538-440e-bd54-6454eceb8f88" Title="TemplateDefinition Events" Url="html/Events.T-CodeGenerator.TemplateDefinition.htm">
         <HelpTOCNode Title="LoadTemplate Event" Url="html/E-CodeGenerator.TemplateDefinition.LoadTemplate.htm" />
         <HelpTOCNode Title="WriteTemplate Event" Url="html/E-CodeGenerator.TemplateDefinition.WriteTemplate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="742aacf5-b349-4077-a5bb-9c245396a866" Title="TypeDeclaration Class" Url="html/T-CodeGenerator.TypeDeclaration.htm">
+    <HelpTOCNode Id="696e50cd-abdc-48ad-8f6c-7347076c7987" Title="TypeDeclaration Class" Url="html/T-CodeGenerator.TypeDeclaration.htm">
       <HelpTOCNode Title="TypeDeclaration Members" Url="html/AllMembers.T-CodeGenerator.TypeDeclaration.htm" />
       <HelpTOCNode Title="TypeDeclaration Methods" Url="html/Methods.T-CodeGenerator.TypeDeclaration.htm" />
-      <HelpTOCNode Id="fb958dc8-2d65-4c9b-8f39-13e25837f227" Title="TypeDeclaration Properties" Url="html/Properties.T-CodeGenerator.TypeDeclaration.htm">
+      <HelpTOCNode Id="183990a9-9a2a-485c-8b29-76efda7a5352" Title="TypeDeclaration Properties" Url="html/Properties.T-CodeGenerator.TypeDeclaration.htm">
         <HelpTOCNode Title="SourceType Property " Url="html/P-CodeGenerator.TypeDeclaration.SourceType.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6fdf498e-2c90-494e-b4ac-ce7899d9e702" Title="TypeDictionary Class" Url="html/T-CodeGenerator.TypeDictionary.htm">
+    <HelpTOCNode Id="b7069161-d7ff-423c-8d51-451becd013af" Title="TypeDictionary Class" Url="html/T-CodeGenerator.TypeDictionary.htm">
       <HelpTOCNode Title="TypeDictionary Members" Url="html/AllMembers.T-CodeGenerator.TypeDictionary.htm" />
-      <HelpTOCNode Id="82ea0c5a-c899-45f0-9bae-6cf8e67d619b" Title="TypeDictionary Properties" Url="html/Properties.T-CodeGenerator.TypeDictionary.htm">
+      <HelpTOCNode Id="a2b48705-4294-4c54-a5e5-73f15913cc3f" Title="TypeDictionary Properties" Url="html/Properties.T-CodeGenerator.TypeDictionary.htm">
         <HelpTOCNode Title="Documentation Property " Url="html/P-CodeGenerator.TypeDictionary.Documentation.htm" />
         <HelpTOCNode Title="Import Property " Url="html/P-CodeGenerator.TypeDictionary.Import.htm" />
         <HelpTOCNode Title="Items Property " Url="html/P-CodeGenerator.TypeDictionary.Items.htm" />
@@ -228,41 +280,60 @@
         <HelpTOCNode Title="TargetVersion Property " Url="html/P-CodeGenerator.TypeDictionary.TargetVersion.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="16f625a5-7acf-4f9e-909b-d3dbe7bde8c6" Title="WiresharkGenerator Class" Url="html/T-CodeGenerator.WiresharkGenerator.htm">
+    <HelpTOCNode Id="08087103-727e-4655-8488-2b597f9ff369" Title="TypeDictionaryValidator Class" Url="html/T-CodeGenerator.TypeDictionaryValidator.htm">
+      <HelpTOCNode Title="TypeDictionaryValidator Members" Url="html/AllMembers.T-CodeGenerator.TypeDictionaryValidator.htm" />
+      <HelpTOCNode Id="f4fff29e-3761-4bf1-86af-7ecd34117d7b" Title="TypeDictionaryValidator Constructor " Url="html/Overload-CodeGenerator.TypeDictionaryValidator.-ctor.htm">
+        <HelpTOCNode Title="TypeDictionaryValidator Constructor (String)" Url="html/M-CodeGenerator.TypeDictionaryValidator.-ctor.htm" />
+        <HelpTOCNode Title="TypeDictionaryValidator Constructor (Dictionary(String, String), String)" Url="html/M-CodeGenerator.TypeDictionaryValidator.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d925df4b-1640-4ebf-b76c-0fc00d6c27db" Title="TypeDictionaryValidator Methods" Url="html/Methods.T-CodeGenerator.TypeDictionaryValidator.htm">
+        <HelpTOCNode Title="FindType Method " Url="html/M-CodeGenerator.TypeDictionaryValidator.FindType.htm" />
+        <HelpTOCNode Title="ResolveType Method " Url="html/M-CodeGenerator.TypeDictionaryValidator.ResolveType.htm" />
+        <HelpTOCNode Id="07e43d26-5ce0-4148-a8eb-e64ae34c976b" Title="Validate Method " Url="html/Overload-CodeGenerator.TypeDictionaryValidator.Validate.htm">
+          <HelpTOCNode Title="Validate Method (String)" Url="html/M-CodeGenerator.TypeDictionaryValidator.Validate.htm" />
+          <HelpTOCNode Title="Validate Method (Stream)" Url="html/M-CodeGenerator.TypeDictionaryValidator.Validate_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="32552462-7536-4409-9b6b-a8cd81dd39b6" Title="TypeDictionaryValidator Properties" Url="html/Properties.T-CodeGenerator.TypeDictionaryValidator.htm">
+        <HelpTOCNode Title="Dictionary Property " Url="html/P-CodeGenerator.TypeDictionaryValidator.Dictionary.htm" />
+        <HelpTOCNode Title="EmbeddedResourcePath Property " Url="html/P-CodeGenerator.TypeDictionaryValidator.EmbeddedResourcePath.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f7cd4da7-eb08-4141-8c4a-b4bba6e2b565" Title="WiresharkGenerator Class" Url="html/T-CodeGenerator.WiresharkGenerator.htm">
       <HelpTOCNode Title="WiresharkGenerator Members" Url="html/AllMembers.T-CodeGenerator.WiresharkGenerator.htm" />
       <HelpTOCNode Title="WiresharkGenerator Constructor " Url="html/M-CodeGenerator.WiresharkGenerator.-ctor.htm" />
-      <HelpTOCNode Id="17d20236-d3ce-43ba-abfb-6b466e3b6385" Title="WiresharkGenerator Methods" Url="html/Methods.T-CodeGenerator.WiresharkGenerator.htm">
+      <HelpTOCNode Id="8b11bfc8-7697-4c55-b4ea-b9eea5456a9e" Title="WiresharkGenerator Methods" Url="html/Methods.T-CodeGenerator.WiresharkGenerator.htm">
         <HelpTOCNode Title="Generate Method " Url="html/M-CodeGenerator.WiresharkGenerator.Generate.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="WiresharkGenerator Properties" Url="html/Properties.T-CodeGenerator.WiresharkGenerator.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="WriteTemplateEventHandler Delegate" Url="html/T-CodeGenerator.WriteTemplateEventHandler.htm" />
-    <HelpTOCNode Id="fadd6161-d663-432a-ac7e-4ceb4c9c460e" Title="XmlSchemaGenerator Class" Url="html/T-CodeGenerator.XmlSchemaGenerator.htm">
+    <HelpTOCNode Id="601c6951-29b4-444c-8220-5f9b51ee7ccb" Title="XmlSchemaGenerator Class" Url="html/T-CodeGenerator.XmlSchemaGenerator.htm">
       <HelpTOCNode Title="XmlSchemaGenerator Members" Url="html/AllMembers.T-CodeGenerator.XmlSchemaGenerator.htm" />
       <HelpTOCNode Title="XmlSchemaGenerator Constructor " Url="html/M-CodeGenerator.XmlSchemaGenerator.-ctor.htm" />
-      <HelpTOCNode Id="9ea87fa6-2e03-46a1-8153-2a395f28ebf7" Title="XmlSchemaGenerator Fields" Url="html/Fields.T-CodeGenerator.XmlSchemaGenerator.htm">
+      <HelpTOCNode Id="27c54194-349e-4518-b01a-91ba4b8b4e53" Title="XmlSchemaGenerator Fields" Url="html/Fields.T-CodeGenerator.XmlSchemaGenerator.htm">
         <HelpTOCNode Title="EndpointsNamespace Field" Url="html/F-CodeGenerator.XmlSchemaGenerator.EndpointsNamespace.htm" />
         <HelpTOCNode Title="ServicesNamespace Field" Url="html/F-CodeGenerator.XmlSchemaGenerator.ServicesNamespace.htm" />
         <HelpTOCNode Title="TypesNamespace Field" Url="html/F-CodeGenerator.XmlSchemaGenerator.TypesNamespace.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="18d3595f-55f7-43ec-877d-3ef586edfd10" Title="XmlSchemaGenerator Methods" Url="html/Methods.T-CodeGenerator.XmlSchemaGenerator.htm">
+      <HelpTOCNode Id="ba18efeb-8fb1-4890-9eda-ab51012b13e5" Title="XmlSchemaGenerator Methods" Url="html/Methods.T-CodeGenerator.XmlSchemaGenerator.htm">
         <HelpTOCNode Title="Generate Method " Url="html/M-CodeGenerator.XmlSchemaGenerator.Generate.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="XmlSchemaGenerator Properties" Url="html/Properties.T-CodeGenerator.XmlSchemaGenerator.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="caefbf63-2519-4a48-8c36-89762f0c92f0" Title="global Namespace" Url="html/N-global.htm">
+  <HelpTOCNode Id="6fa5cda3-2d08-4515-a9b2-d234c646ed3e" Title="global Namespace" Url="html/N-global.htm">
     <HelpTOCNode Title="_NAME_.Names Class" Url="html/T-global._NAME_.Names.htm" />
     <HelpTOCNode Title="_NAME_Request Class" Url="html/T-global._NAME_Request.htm" />
     <HelpTOCNode Title="_NAME_Response Class" Url="html/T-global._NAME_Response.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="68e859ba-830a-4e19-8728-5ab5ad5d50f1" Title="ModelCompiler Namespace" Url="html/N-ModelCompiler.htm">
+  <HelpTOCNode Id="f2682a65-c3e9-4317-9800-38747fd04e57" Title="ModelCompiler Namespace" Url="html/N-ModelCompiler.htm">
     <HelpTOCNode Title="AccessLevel Enumeration" Url="html/T-ModelCompiler.AccessLevel.htm" />
     <HelpTOCNode Title="BasicDataType Enumeration" Url="html/T-ModelCompiler.BasicDataType.htm" />
-    <HelpTOCNode Id="6c497ef1-7be2-4b65-a335-f86395b094e5" Title="DataTypeDesign Class" Url="html/T-ModelCompiler.DataTypeDesign.htm">
+    <HelpTOCNode Id="48b219aa-3c09-4932-b04c-f70b86d8451d" Title="DataTypeDesign Class" Url="html/T-ModelCompiler.DataTypeDesign.htm">
       <HelpTOCNode Title="DataTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.DataTypeDesign.htm" />
       <HelpTOCNode Title="DataTypeDesign Constructor " Url="html/M-ModelCompiler.DataTypeDesign.-ctor.htm" />
-      <HelpTOCNode Id="18dfb404-3dff-4cb2-aec9-026cf202ceec" Title="DataTypeDesign Fields" Url="html/Fields.T-ModelCompiler.DataTypeDesign.htm">
+      <HelpTOCNode Id="200b0e3c-47f1-4f0d-b73b-8af939592be9" Title="DataTypeDesign Fields" Url="html/Fields.T-ModelCompiler.DataTypeDesign.htm">
         <HelpTOCNode Title="BasicDataType Field" Url="html/F-ModelCompiler.DataTypeDesign.BasicDataType.htm" />
         <HelpTOCNode Title="HasEncodings Field" Url="html/F-ModelCompiler.DataTypeDesign.HasEncodings.htm" />
         <HelpTOCNode Title="HasFields Field" Url="html/F-ModelCompiler.DataTypeDesign.HasFields.htm" />
@@ -270,7 +341,7 @@
         <HelpTOCNode Title="IsStructure Field" Url="html/F-ModelCompiler.DataTypeDesign.IsStructure.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="DataTypeDesign Methods" Url="html/Methods.T-ModelCompiler.DataTypeDesign.htm" />
-      <HelpTOCNode Id="7e57831d-cff6-4c21-b02b-edf5844ca9c7" Title="DataTypeDesign Properties" Url="html/Properties.T-ModelCompiler.DataTypeDesign.htm">
+      <HelpTOCNode Id="b1cd61e4-110d-4975-9f85-d91f5b58c224" Title="DataTypeDesign Properties" Url="html/Properties.T-ModelCompiler.DataTypeDesign.htm">
         <HelpTOCNode Title="Encodings Property " Url="html/P-ModelCompiler.DataTypeDesign.Encodings.htm" />
         <HelpTOCNode Title="Fields Property " Url="html/P-ModelCompiler.DataTypeDesign.Fields.htm" />
         <HelpTOCNode Title="ForceEnumValues Property " Url="html/P-ModelCompiler.DataTypeDesign.ForceEnumValues.htm" />
@@ -280,31 +351,31 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="DataTypePurpose Enumeration" Url="html/T-ModelCompiler.DataTypePurpose.htm" />
-    <HelpTOCNode Id="19fc6e8b-064f-4527-a8a5-1810908191d8" Title="DictionaryDesign Class" Url="html/T-ModelCompiler.DictionaryDesign.htm">
+    <HelpTOCNode Id="f178618d-7c53-4776-85b2-0e8303122e38" Title="DictionaryDesign Class" Url="html/T-ModelCompiler.DictionaryDesign.htm">
       <HelpTOCNode Title="DictionaryDesign Members" Url="html/AllMembers.T-ModelCompiler.DictionaryDesign.htm" />
       <HelpTOCNode Title="DictionaryDesign Fields" Url="html/Fields.T-ModelCompiler.DictionaryDesign.htm" />
       <HelpTOCNode Title="DictionaryDesign Methods" Url="html/Methods.T-ModelCompiler.DictionaryDesign.htm" />
-      <HelpTOCNode Id="b8494c03-f9ac-4f5d-a483-5c9ffcbdecda" Title="DictionaryDesign Properties" Url="html/Properties.T-ModelCompiler.DictionaryDesign.htm">
+      <HelpTOCNode Id="6d74cc4b-db8b-44b6-a3e5-65812fb74edb" Title="DictionaryDesign Properties" Url="html/Properties.T-ModelCompiler.DictionaryDesign.htm">
         <HelpTOCNode Title="EncodingName Property " Url="html/P-ModelCompiler.DictionaryDesign.EncodingName.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="3b171a30-949b-4055-8786-731222d85c0c" Title="EncodingDesign Class" Url="html/T-ModelCompiler.EncodingDesign.htm">
+    <HelpTOCNode Id="2cd42b4c-93b0-476a-aac7-b541a4f486ff" Title="EncodingDesign Class" Url="html/T-ModelCompiler.EncodingDesign.htm">
       <HelpTOCNode Title="EncodingDesign Fields" Url="html/Fields.T-ModelCompiler.EncodingDesign.htm" />
       <HelpTOCNode Title="EncodingDesign Methods" Url="html/Methods.T-ModelCompiler.EncodingDesign.htm" />
       <HelpTOCNode Title="EncodingDesign Properties" Url="html/Properties.T-ModelCompiler.EncodingDesign.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="4a245bfa-8940-45f1-ba61-64017c46a0de" Title="Hierarchy Class" Url="html/T-ModelCompiler.Hierarchy.htm">
+    <HelpTOCNode Id="c9ed8e74-665b-46b3-ac34-431fe08e31ea" Title="Hierarchy Class" Url="html/T-ModelCompiler.Hierarchy.htm">
       <HelpTOCNode Title="Hierarchy Members" Url="html/AllMembers.T-ModelCompiler.Hierarchy.htm" />
-      <HelpTOCNode Id="c9002462-8935-4a10-a20c-27ec9bf2b91e" Title="Hierarchy Fields" Url="html/Fields.T-ModelCompiler.Hierarchy.htm">
+      <HelpTOCNode Id="2e8b3828-4f8a-426b-a2cd-d4a585d5adcb" Title="Hierarchy Fields" Url="html/Fields.T-ModelCompiler.Hierarchy.htm">
         <HelpTOCNode Title="NodeList Field" Url="html/F-ModelCompiler.Hierarchy.NodeList.htm" />
         <HelpTOCNode Title="Nodes Field" Url="html/F-ModelCompiler.Hierarchy.Nodes.htm" />
         <HelpTOCNode Title="References Field" Url="html/F-ModelCompiler.Hierarchy.References.htm" />
         <HelpTOCNode Title="Type Field" Url="html/F-ModelCompiler.Hierarchy.Type.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ff749729-1086-4a3c-bf50-ab17ce84992d" Title="HierarchyNode Class" Url="html/T-ModelCompiler.HierarchyNode.htm">
+    <HelpTOCNode Id="ad5acb05-27dc-43fb-8166-278a7a14c5d7" Title="HierarchyNode Class" Url="html/T-ModelCompiler.HierarchyNode.htm">
       <HelpTOCNode Title="HierarchyNode Members" Url="html/AllMembers.T-ModelCompiler.HierarchyNode.htm" />
-      <HelpTOCNode Id="ff5b8fe0-292a-490c-9cfb-e8107b234614" Title="HierarchyNode Fields" Url="html/Fields.T-ModelCompiler.HierarchyNode.htm">
+      <HelpTOCNode Id="8b6c76fa-15eb-400f-a9ed-f66ae826bd27" Title="HierarchyNode Fields" Url="html/Fields.T-ModelCompiler.HierarchyNode.htm">
         <HelpTOCNode Title="AdHocInstance Field" Url="html/F-ModelCompiler.HierarchyNode.AdHocInstance.htm" />
         <HelpTOCNode Title="ExplicitlyDefined Field" Url="html/F-ModelCompiler.HierarchyNode.ExplicitlyDefined.htm" />
         <HelpTOCNode Title="Identifier Field" Url="html/F-ModelCompiler.HierarchyNode.Identifier.htm" />
@@ -313,16 +384,16 @@
         <HelpTOCNode Title="OverriddenNodes Field" Url="html/F-ModelCompiler.HierarchyNode.OverriddenNodes.htm" />
         <HelpTOCNode Title="RelativePath Field" Url="html/F-ModelCompiler.HierarchyNode.RelativePath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="80f7638a-9974-44b2-b47d-41d51b6737be" Title="HierarchyNode Methods" Url="html/Methods.T-ModelCompiler.HierarchyNode.htm">
-        <HelpTOCNode Id="711db7b6-7511-472e-b039-1046707f7236" Title="ToString Method " Url="html/Overload-ModelCompiler.HierarchyNode.ToString.htm">
+      <HelpTOCNode Id="0483bebf-8da1-4251-bbca-8a9bcc43315b" Title="HierarchyNode Methods" Url="html/Methods.T-ModelCompiler.HierarchyNode.htm">
+        <HelpTOCNode Id="d553691e-8ee9-47a5-894a-87811acc7b8b" Title="ToString Method " Url="html/Overload-ModelCompiler.HierarchyNode.ToString.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M-ModelCompiler.HierarchyNode.ToString.htm" />
           <HelpTOCNode Title="ToString Method (String, IFormatProvider)" Url="html/M-ModelCompiler.HierarchyNode.ToString_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="43f50f6d-28c4-4b2a-8ca2-3c53374d00e5" Title="HierarchyReference Class" Url="html/T-ModelCompiler.HierarchyReference.htm">
+    <HelpTOCNode Id="d669204d-99d9-4bf7-b285-c2c44db6c081" Title="HierarchyReference Class" Url="html/T-ModelCompiler.HierarchyReference.htm">
       <HelpTOCNode Title="HierarchyReference Members" Url="html/AllMembers.T-ModelCompiler.HierarchyReference.htm" />
-      <HelpTOCNode Id="305e209c-a693-42d5-ae8e-ffe3d98e7b44" Title="HierarchyReference Fields" Url="html/Fields.T-ModelCompiler.HierarchyReference.htm">
+      <HelpTOCNode Id="34e6efed-398b-4091-b28d-ce60ce713a86" Title="HierarchyReference Fields" Url="html/Fields.T-ModelCompiler.HierarchyReference.htm">
         <HelpTOCNode Title="DefinedOnType Field" Url="html/F-ModelCompiler.HierarchyReference.DefinedOnType.htm" />
         <HelpTOCNode Title="IsInverse Field" Url="html/F-ModelCompiler.HierarchyReference.IsInverse.htm" />
         <HelpTOCNode Title="ReferenceType Field" Url="html/F-ModelCompiler.HierarchyReference.ReferenceType.htm" />
@@ -330,26 +401,26 @@
         <HelpTOCNode Title="TargetId Field" Url="html/F-ModelCompiler.HierarchyReference.TargetId.htm" />
         <HelpTOCNode Title="TargetPath Field" Url="html/F-ModelCompiler.HierarchyReference.TargetPath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c775c75c-6b27-489a-a796-88fcc6b0eec4" Title="HierarchyReference Methods" Url="html/Methods.T-ModelCompiler.HierarchyReference.htm">
-        <HelpTOCNode Id="36b4b692-74af-49c8-ba3a-d6960d403582" Title="ToString Method " Url="html/Overload-ModelCompiler.HierarchyReference.ToString.htm">
+      <HelpTOCNode Id="82fe29aa-bcde-491b-a604-4c0f22c5e51c" Title="HierarchyReference Methods" Url="html/Methods.T-ModelCompiler.HierarchyReference.htm">
+        <HelpTOCNode Id="352eb860-282a-4eb5-a909-6a1f16c16fc7" Title="ToString Method " Url="html/Overload-ModelCompiler.HierarchyReference.ToString.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M-ModelCompiler.HierarchyReference.ToString.htm" />
           <HelpTOCNode Title="ToString Method (String, IFormatProvider)" Url="html/M-ModelCompiler.HierarchyReference.ToString_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="45e6e594-6bf7-49c0-a9de-629f16124573" Title="InstanceDesign Class" Url="html/T-ModelCompiler.InstanceDesign.htm">
+    <HelpTOCNode Id="31a4b6fa-ca13-4bdb-832f-9a68fd05dbfe" Title="InstanceDesign Class" Url="html/T-ModelCompiler.InstanceDesign.htm">
       <HelpTOCNode Title="InstanceDesign Members" Url="html/AllMembers.T-ModelCompiler.InstanceDesign.htm" />
       <HelpTOCNode Title="InstanceDesign Constructor " Url="html/M-ModelCompiler.InstanceDesign.-ctor.htm" />
-      <HelpTOCNode Id="82246c26-f0e7-4b83-9038-e9e83b51c131" Title="InstanceDesign Fields" Url="html/Fields.T-ModelCompiler.InstanceDesign.htm">
+      <HelpTOCNode Id="b06e8f5e-8d51-4c52-ae6b-18d66f45e42b" Title="InstanceDesign Fields" Url="html/Fields.T-ModelCompiler.InstanceDesign.htm">
         <HelpTOCNode Title="IdentifierRequired Field" Url="html/F-ModelCompiler.InstanceDesign.IdentifierRequired.htm" />
         <HelpTOCNode Title="InstanceDeclarationNode Field" Url="html/F-ModelCompiler.InstanceDesign.InstanceDeclarationNode.htm" />
         <HelpTOCNode Title="OveriddenNode Field" Url="html/F-ModelCompiler.InstanceDesign.OveriddenNode.htm" />
         <HelpTOCNode Title="TypeDefinitionNode Field" Url="html/F-ModelCompiler.InstanceDesign.TypeDefinitionNode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b6a7806c-5791-49d1-b9ca-b517838dde04" Title="InstanceDesign Methods" Url="html/Methods.T-ModelCompiler.InstanceDesign.htm">
+      <HelpTOCNode Id="3b5e51fb-da85-4a37-bc1e-6a8b1a6febda" Title="InstanceDesign Methods" Url="html/Methods.T-ModelCompiler.InstanceDesign.htm">
         <HelpTOCNode Title="Copy Method " Url="html/M-ModelCompiler.InstanceDesign.Copy.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="86bb4f11-85ae-4649-82a7-fb20d8f69729" Title="InstanceDesign Properties" Url="html/Properties.T-ModelCompiler.InstanceDesign.htm">
+      <HelpTOCNode Id="d574c087-b0b9-4351-ae19-79abc9e0e646" Title="InstanceDesign Properties" Url="html/Properties.T-ModelCompiler.InstanceDesign.htm">
         <HelpTOCNode Title="Declaration Property " Url="html/P-ModelCompiler.InstanceDesign.Declaration.htm" />
         <HelpTOCNode Title="MaxCardinality Property " Url="html/P-ModelCompiler.InstanceDesign.MaxCardinality.htm" />
         <HelpTOCNode Title="MinCardinality Property " Url="html/P-ModelCompiler.InstanceDesign.MinCardinality.htm" />
@@ -360,47 +431,47 @@
         <HelpTOCNode Title="TypeDefinition Property " Url="html/P-ModelCompiler.InstanceDesign.TypeDefinition.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="29a41be4-5f70-4e7c-817e-9285e53137c9" Title="ListOfChildren Class" Url="html/T-ModelCompiler.ListOfChildren.htm">
+    <HelpTOCNode Id="11cc4f2b-269b-48fd-9fa9-bba01702a4b3" Title="ListOfChildren Class" Url="html/T-ModelCompiler.ListOfChildren.htm">
       <HelpTOCNode Title="ListOfChildren Members" Url="html/AllMembers.T-ModelCompiler.ListOfChildren.htm" />
-      <HelpTOCNode Id="25120b60-9197-4f43-97fd-3db27324eecf" Title="ListOfChildren Properties" Url="html/Properties.T-ModelCompiler.ListOfChildren.htm">
+      <HelpTOCNode Id="4b068db2-fbd2-45ab-b81d-ae74cc639b6a" Title="ListOfChildren Properties" Url="html/Properties.T-ModelCompiler.ListOfChildren.htm">
         <HelpTOCNode Title="Items Property " Url="html/P-ModelCompiler.ListOfChildren.Items.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="886578c1-8904-4ee9-a563-0e4fb26b2088" Title="LocalizedText Class" Url="html/T-ModelCompiler.LocalizedText.htm">
+    <HelpTOCNode Id="e343c252-fbe1-4dc9-b9f6-d7fb90e7da05" Title="LocalizedText Class" Url="html/T-ModelCompiler.LocalizedText.htm">
       <HelpTOCNode Title="LocalizedText Members" Url="html/AllMembers.T-ModelCompiler.LocalizedText.htm" />
       <HelpTOCNode Title="LocalizedText Constructor " Url="html/M-ModelCompiler.LocalizedText.-ctor.htm" />
-      <HelpTOCNode Id="b45fe471-0add-47ee-87f0-accd96d0501d" Title="LocalizedText Fields" Url="html/Fields.T-ModelCompiler.LocalizedText.htm">
+      <HelpTOCNode Id="9aef636c-e2ff-428c-9002-74468c181f9c" Title="LocalizedText Fields" Url="html/Fields.T-ModelCompiler.LocalizedText.htm">
         <HelpTOCNode Title="IsAutogenerated Field" Url="html/F-ModelCompiler.LocalizedText.IsAutogenerated.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a001ebe8-1346-4cae-acf3-1f732a7e1ef0" Title="LocalizedText Properties" Url="html/Properties.T-ModelCompiler.LocalizedText.htm">
+      <HelpTOCNode Id="9c06e1a3-eccd-4096-8b3a-54d9f8701bd8" Title="LocalizedText Properties" Url="html/Properties.T-ModelCompiler.LocalizedText.htm">
         <HelpTOCNode Title="Key Property " Url="html/P-ModelCompiler.LocalizedText.Key.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P-ModelCompiler.LocalizedText.Value.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="44e739ef-60de-4eeb-9007-db2a6042697c" Title="MethodDesign Class" Url="html/T-ModelCompiler.MethodDesign.htm">
+    <HelpTOCNode Id="f8188eef-f82e-44e9-9154-1fd64f14edd2" Title="MethodDesign Class" Url="html/T-ModelCompiler.MethodDesign.htm">
       <HelpTOCNode Title="MethodDesign Members" Url="html/AllMembers.T-ModelCompiler.MethodDesign.htm" />
-      <HelpTOCNode Id="4ec36457-4184-4b9d-941e-fd81a09ce13b" Title="MethodDesign Fields" Url="html/Fields.T-ModelCompiler.MethodDesign.htm">
+      <HelpTOCNode Id="30bc6219-00b2-47ac-9b46-e9a87eb445b3" Title="MethodDesign Fields" Url="html/Fields.T-ModelCompiler.MethodDesign.htm">
         <HelpTOCNode Title="HasArguments Field" Url="html/F-ModelCompiler.MethodDesign.HasArguments.htm" />
         <HelpTOCNode Title="MethodDeclarationNode Field" Url="html/F-ModelCompiler.MethodDesign.MethodDeclarationNode.htm" />
         <HelpTOCNode Title="MethodType Field" Url="html/F-ModelCompiler.MethodDesign.MethodType.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="MethodDesign Methods" Url="html/Methods.T-ModelCompiler.MethodDesign.htm" />
-      <HelpTOCNode Id="4e20672d-f00c-4667-bc0b-d6888c2a80c1" Title="MethodDesign Properties" Url="html/Properties.T-ModelCompiler.MethodDesign.htm">
+      <HelpTOCNode Id="172f1e60-a07b-4a6e-915f-2d095bb77c71" Title="MethodDesign Properties" Url="html/Properties.T-ModelCompiler.MethodDesign.htm">
         <HelpTOCNode Title="InputArguments Property " Url="html/P-ModelCompiler.MethodDesign.InputArguments.htm" />
         <HelpTOCNode Title="NonExecutable Property " Url="html/P-ModelCompiler.MethodDesign.NonExecutable.htm" />
         <HelpTOCNode Title="NonExecutableSpecified Property " Url="html/P-ModelCompiler.MethodDesign.NonExecutableSpecified.htm" />
         <HelpTOCNode Title="OutputArguments Property " Url="html/P-ModelCompiler.MethodDesign.OutputArguments.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="135fdaaa-b53e-44b8-a258-a7aa60ba015f" Title="ModelDesign Class" Url="html/T-ModelCompiler.ModelDesign.htm">
+    <HelpTOCNode Id="3d4abf1c-a332-47b7-91a4-e3e8792773a2" Title="ModelDesign Class" Url="html/T-ModelCompiler.ModelDesign.htm">
       <HelpTOCNode Title="ModelDesign Members" Url="html/AllMembers.T-ModelCompiler.ModelDesign.htm" />
       <HelpTOCNode Title="ModelDesign Constructor " Url="html/M-ModelCompiler.ModelDesign.-ctor.htm" />
-      <HelpTOCNode Id="4c75e506-2a6c-4443-aed4-80b3596f8b65" Title="ModelDesign Fields" Url="html/Fields.T-ModelCompiler.ModelDesign.htm">
+      <HelpTOCNode Id="ee0d4def-55b3-4861-a7f6-965e6165cce6" Title="ModelDesign Fields" Url="html/Fields.T-ModelCompiler.ModelDesign.htm">
         <HelpTOCNode Title="Dependencies Field" Url="html/F-ModelCompiler.ModelDesign.Dependencies.htm" />
         <HelpTOCNode Title="NamespaceUris Field" Url="html/F-ModelCompiler.ModelDesign.NamespaceUris.htm" />
         <HelpTOCNode Title="TargetNamespaceInfo Field" Url="html/F-ModelCompiler.ModelDesign.TargetNamespaceInfo.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="054c975d-24fc-4db0-bedf-9514c194ef5a" Title="ModelDesign Properties" Url="html/Properties.T-ModelCompiler.ModelDesign.htm">
+      <HelpTOCNode Id="8633fc0a-cab8-47ed-91f9-154d33f876e4" Title="ModelDesign Properties" Url="html/Properties.T-ModelCompiler.ModelDesign.htm">
         <HelpTOCNode Title="AnyAttr Property " Url="html/P-ModelCompiler.ModelDesign.AnyAttr.htm" />
         <HelpTOCNode Title="DefaultLocale Property " Url="html/P-ModelCompiler.ModelDesign.DefaultLocale.htm" />
         <HelpTOCNode Title="Items Property " Url="html/P-ModelCompiler.ModelDesign.Items.htm" />
@@ -413,9 +484,9 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ModellingRule Enumeration" Url="html/T-ModelCompiler.ModellingRule.htm" />
-    <HelpTOCNode Id="532f7158-8c0e-4f33-bf8f-fcb43725c3b0" Title="Namespace Class" Url="html/T-ModelCompiler.Namespace.htm">
+    <HelpTOCNode Id="fa9e69a9-c906-4a97-8640-da9b0fd0c801" Title="Namespace Class" Url="html/T-ModelCompiler.Namespace.htm">
       <HelpTOCNode Title="Namespace Members" Url="html/AllMembers.T-ModelCompiler.Namespace.htm" />
-      <HelpTOCNode Id="2a54d8c1-4a22-45a1-aea9-74312339945c" Title="Namespace Properties" Url="html/Properties.T-ModelCompiler.Namespace.htm">
+      <HelpTOCNode Id="83869c99-7d0b-4e2d-a0bc-56810a4bdb3c" Title="Namespace Properties" Url="html/Properties.T-ModelCompiler.Namespace.htm">
         <HelpTOCNode Title="FilePath Property " Url="html/P-ModelCompiler.Namespace.FilePath.htm" />
         <HelpTOCNode Title="InternalPrefix Property " Url="html/P-ModelCompiler.Namespace.InternalPrefix.htm" />
         <HelpTOCNode Title="Name Property " Url="html/P-ModelCompiler.Namespace.Name.htm" />
@@ -427,10 +498,10 @@
         <HelpTOCNode Title="XmlPrefix Property " Url="html/P-ModelCompiler.Namespace.XmlPrefix.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1976c8ab-e1b6-47c1-82e4-534cc2cabfe7" Title="NodeDesign Class" Url="html/T-ModelCompiler.NodeDesign.htm">
+    <HelpTOCNode Id="43aa8a8a-2852-4e65-81b1-1d02c4ec13fb" Title="NodeDesign Class" Url="html/T-ModelCompiler.NodeDesign.htm">
       <HelpTOCNode Title="NodeDesign Members" Url="html/AllMembers.T-ModelCompiler.NodeDesign.htm" />
       <HelpTOCNode Title="NodeDesign Constructor " Url="html/M-ModelCompiler.NodeDesign.-ctor.htm" />
-      <HelpTOCNode Id="12b81c77-0d01-4f94-9c2c-f5f4cc7214f7" Title="NodeDesign Fields" Url="html/Fields.T-ModelCompiler.NodeDesign.htm">
+      <HelpTOCNode Id="ec787a2d-ec1d-47fd-9a37-a331a6d85541" Title="NodeDesign Fields" Url="html/Fields.T-ModelCompiler.NodeDesign.htm">
         <HelpTOCNode Title="Handle Field" Url="html/F-ModelCompiler.NodeDesign.Handle.htm" />
         <HelpTOCNode Title="HasChildren Field" Url="html/F-ModelCompiler.NodeDesign.HasChildren.htm" />
         <HelpTOCNode Title="HasReferences Field" Url="html/F-ModelCompiler.NodeDesign.HasReferences.htm" />
@@ -440,17 +511,17 @@
         <HelpTOCNode Title="PathChar Field" Url="html/F-ModelCompiler.NodeDesign.PathChar.htm" />
         <HelpTOCNode Title="State Field" Url="html/F-ModelCompiler.NodeDesign.State.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="93b3faa7-26a4-4a38-bc29-96522e268261" Title="NodeDesign Methods" Url="html/Methods.T-ModelCompiler.NodeDesign.htm">
-        <HelpTOCNode Id="ff81b348-a288-4e77-8164-bda5c396e595" Title="CreateSymbolicId Method " Url="html/Overload-ModelCompiler.NodeDesign.CreateSymbolicId.htm">
+      <HelpTOCNode Id="08d4f9a7-6d4f-407c-8770-3a5f4726a7b7" Title="NodeDesign Methods" Url="html/Methods.T-ModelCompiler.NodeDesign.htm">
+        <HelpTOCNode Id="d2ed758e-d95f-40ee-8b20-d9c15e29d0bd" Title="CreateSymbolicId Method " Url="html/Overload-ModelCompiler.NodeDesign.CreateSymbolicId.htm">
           <HelpTOCNode Title="CreateSymbolicId Method (XmlQualifiedName, String)" Url="html/M-ModelCompiler.NodeDesign.CreateSymbolicId.htm" />
           <HelpTOCNode Title="CreateSymbolicId Method (String, String)" Url="html/M-ModelCompiler.NodeDesign.CreateSymbolicId_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="b18c8ead-2023-4734-8021-788199e97f28" Title="ToString Method " Url="html/Overload-ModelCompiler.NodeDesign.ToString.htm">
+        <HelpTOCNode Id="c984f96c-5bb5-47f2-aa0e-a5e776dce033" Title="ToString Method " Url="html/Overload-ModelCompiler.NodeDesign.ToString.htm">
           <HelpTOCNode Title="ToString Method " Url="html/M-ModelCompiler.NodeDesign.ToString.htm" />
           <HelpTOCNode Title="ToString Method (String, IFormatProvider)" Url="html/M-ModelCompiler.NodeDesign.ToString_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="ce4d8fee-712b-4fec-81be-aa72d6a19e71" Title="NodeDesign Properties" Url="html/Properties.T-ModelCompiler.NodeDesign.htm">
+      <HelpTOCNode Id="78711dcb-2b74-4fcd-afe4-bcee5178ce47" Title="NodeDesign Properties" Url="html/Properties.T-ModelCompiler.NodeDesign.htm">
         <HelpTOCNode Title="BrowseName Property " Url="html/P-ModelCompiler.NodeDesign.BrowseName.htm" />
         <HelpTOCNode Title="Category Property " Url="html/P-ModelCompiler.NodeDesign.Category.htm" />
         <HelpTOCNode Title="Children Property " Url="html/P-ModelCompiler.NodeDesign.Children.htm" />
@@ -471,34 +542,34 @@
         <HelpTOCNode Title="WriteAccess Property " Url="html/P-ModelCompiler.NodeDesign.WriteAccess.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="06ddfaba-e292-4819-a979-dce3c69e6cfb" Title="ObjectDesign Class" Url="html/T-ModelCompiler.ObjectDesign.htm">
+    <HelpTOCNode Id="4a052156-d303-4732-9daf-22142fc1454f" Title="ObjectDesign Class" Url="html/T-ModelCompiler.ObjectDesign.htm">
       <HelpTOCNode Title="ObjectDesign Members" Url="html/AllMembers.T-ModelCompiler.ObjectDesign.htm" />
       <HelpTOCNode Title="ObjectDesign Fields" Url="html/Fields.T-ModelCompiler.ObjectDesign.htm" />
       <HelpTOCNode Title="ObjectDesign Methods" Url="html/Methods.T-ModelCompiler.ObjectDesign.htm" />
-      <HelpTOCNode Id="d8b860a8-c6d2-40e7-804c-861c4c10a700" Title="ObjectDesign Properties" Url="html/Properties.T-ModelCompiler.ObjectDesign.htm">
+      <HelpTOCNode Id="d4675723-346d-46e9-a8e6-1794877d7618" Title="ObjectDesign Properties" Url="html/Properties.T-ModelCompiler.ObjectDesign.htm">
         <HelpTOCNode Title="SupportsEvents Property " Url="html/P-ModelCompiler.ObjectDesign.SupportsEvents.htm" />
         <HelpTOCNode Title="SupportsEventsSpecified Property " Url="html/P-ModelCompiler.ObjectDesign.SupportsEventsSpecified.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5262402b-a68a-41e7-ae57-24ece00763f5" Title="ObjectTypeDesign Class" Url="html/T-ModelCompiler.ObjectTypeDesign.htm">
+    <HelpTOCNode Id="059630a8-5a5a-4888-972c-7b02a077d2f2" Title="ObjectTypeDesign Class" Url="html/T-ModelCompiler.ObjectTypeDesign.htm">
       <HelpTOCNode Title="ObjectTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.ObjectTypeDesign.htm" />
       <HelpTOCNode Title="ObjectTypeDesign Fields" Url="html/Fields.T-ModelCompiler.ObjectTypeDesign.htm" />
       <HelpTOCNode Title="ObjectTypeDesign Methods" Url="html/Methods.T-ModelCompiler.ObjectTypeDesign.htm" />
-      <HelpTOCNode Id="7f57f6ab-751e-4d55-a7c8-8fc807733664" Title="ObjectTypeDesign Properties" Url="html/Properties.T-ModelCompiler.ObjectTypeDesign.htm">
+      <HelpTOCNode Id="f9581d4a-e85d-437b-acc8-dbe3f5b8f57e" Title="ObjectTypeDesign Properties" Url="html/Properties.T-ModelCompiler.ObjectTypeDesign.htm">
         <HelpTOCNode Title="SupportsEvents Property " Url="html/P-ModelCompiler.ObjectTypeDesign.SupportsEvents.htm" />
         <HelpTOCNode Title="SupportsEventsSpecified Property " Url="html/P-ModelCompiler.ObjectTypeDesign.SupportsEventsSpecified.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c2a6b843-44aa-4e6b-9c69-0b2207d4cad5" Title="Parameter Class" Url="html/T-ModelCompiler.Parameter.htm">
+    <HelpTOCNode Id="2dac34da-0ae7-4454-bf8f-ccd0cf88f78d" Title="Parameter Class" Url="html/T-ModelCompiler.Parameter.htm">
       <HelpTOCNode Title="Parameter Members" Url="html/AllMembers.T-ModelCompiler.Parameter.htm" />
       <HelpTOCNode Title="Parameter Constructor " Url="html/M-ModelCompiler.Parameter.-ctor.htm" />
-      <HelpTOCNode Id="4f931d6b-7112-4a77-b12a-4ae8b91bc223" Title="Parameter Fields" Url="html/Fields.T-ModelCompiler.Parameter.htm">
+      <HelpTOCNode Id="32ecfb32-3630-463a-8631-f766be970a42" Title="Parameter Fields" Url="html/Fields.T-ModelCompiler.Parameter.htm">
         <HelpTOCNode Title="DataTypeNode Field" Url="html/F-ModelCompiler.Parameter.DataTypeNode.htm" />
         <HelpTOCNode Title="IdentifierInName Field" Url="html/F-ModelCompiler.Parameter.IdentifierInName.htm" />
         <HelpTOCNode Title="IsInherited Field" Url="html/F-ModelCompiler.Parameter.IsInherited.htm" />
         <HelpTOCNode Title="Parent Field" Url="html/F-ModelCompiler.Parameter.Parent.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="29febab8-546f-45f1-9895-d41670f61738" Title="Parameter Properties" Url="html/Properties.T-ModelCompiler.Parameter.htm">
+      <HelpTOCNode Id="bb9da061-e80a-4c20-b37d-6be56e8822da" Title="Parameter Properties" Url="html/Properties.T-ModelCompiler.Parameter.htm">
         <HelpTOCNode Title="AllowSubtypes Property " Url="html/P-ModelCompiler.Parameter.AllowSubtypes.htm" />
         <HelpTOCNode Title="ArrayDimensions Property " Url="html/P-ModelCompiler.Parameter.ArrayDimensions.htm" />
         <HelpTOCNode Title="BitMask Property " Url="html/P-ModelCompiler.Parameter.BitMask.htm" />
@@ -512,48 +583,48 @@
         <HelpTOCNode Title="ValueRank Property " Url="html/P-ModelCompiler.Parameter.ValueRank.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b4b79d82-4397-4da4-87e1-35653958fa9e" Title="PropertyDesign Class" Url="html/T-ModelCompiler.PropertyDesign.htm">
+    <HelpTOCNode Id="ee7fcd7e-dc54-428b-b1b6-9f74cbed4a07" Title="PropertyDesign Class" Url="html/T-ModelCompiler.PropertyDesign.htm">
       <HelpTOCNode Title="PropertyDesign Fields" Url="html/Fields.T-ModelCompiler.PropertyDesign.htm" />
       <HelpTOCNode Title="PropertyDesign Methods" Url="html/Methods.T-ModelCompiler.PropertyDesign.htm" />
       <HelpTOCNode Title="PropertyDesign Properties" Url="html/Properties.T-ModelCompiler.PropertyDesign.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="597bc773-5520-4ef6-910c-403ee8c9f03c" Title="Reference Class" Url="html/T-ModelCompiler.Reference.htm">
+    <HelpTOCNode Id="b176e6de-a806-42b3-958d-ab2dcdd064e1" Title="Reference Class" Url="html/T-ModelCompiler.Reference.htm">
       <HelpTOCNode Title="Reference Members" Url="html/AllMembers.T-ModelCompiler.Reference.htm" />
       <HelpTOCNode Title="Reference Constructor " Url="html/M-ModelCompiler.Reference.-ctor.htm" />
-      <HelpTOCNode Id="a0bbfc05-985c-415d-8597-599cecd9e0cb" Title="Reference Fields" Url="html/Fields.T-ModelCompiler.Reference.htm">
+      <HelpTOCNode Id="ff16a935-8f8f-48a4-9e85-2a2082683768" Title="Reference Fields" Url="html/Fields.T-ModelCompiler.Reference.htm">
         <HelpTOCNode Title="SourceNode Field" Url="html/F-ModelCompiler.Reference.SourceNode.htm" />
         <HelpTOCNode Title="SourceRelativePath Field" Url="html/F-ModelCompiler.Reference.SourceRelativePath.htm" />
         <HelpTOCNode Title="TargetNode Field" Url="html/F-ModelCompiler.Reference.TargetNode.htm" />
         <HelpTOCNode Title="TargetRelativePath Field" Url="html/F-ModelCompiler.Reference.TargetRelativePath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="15f481dc-9056-41da-9487-00971a8e2086" Title="Reference Properties" Url="html/Properties.T-ModelCompiler.Reference.htm">
+      <HelpTOCNode Id="c52c58ee-5b8b-4e79-bad2-7c9a97c96a44" Title="Reference Properties" Url="html/Properties.T-ModelCompiler.Reference.htm">
         <HelpTOCNode Title="IsInverse Property " Url="html/P-ModelCompiler.Reference.IsInverse.htm" />
         <HelpTOCNode Title="IsOneWay Property " Url="html/P-ModelCompiler.Reference.IsOneWay.htm" />
         <HelpTOCNode Title="ReferenceType Property " Url="html/P-ModelCompiler.Reference.ReferenceType.htm" />
         <HelpTOCNode Title="TargetId Property " Url="html/P-ModelCompiler.Reference.TargetId.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d4f09b43-dc40-4693-9c9a-3456f8d50643" Title="ReferenceTypeDesign Class" Url="html/T-ModelCompiler.ReferenceTypeDesign.htm">
+    <HelpTOCNode Id="7131e5c2-c279-456c-b125-37516562b47b" Title="ReferenceTypeDesign Class" Url="html/T-ModelCompiler.ReferenceTypeDesign.htm">
       <HelpTOCNode Title="ReferenceTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.ReferenceTypeDesign.htm" />
       <HelpTOCNode Title="ReferenceTypeDesign Fields" Url="html/Fields.T-ModelCompiler.ReferenceTypeDesign.htm" />
       <HelpTOCNode Title="ReferenceTypeDesign Methods" Url="html/Methods.T-ModelCompiler.ReferenceTypeDesign.htm" />
-      <HelpTOCNode Id="c3b9db0c-93bc-4f28-a135-c3b897320219" Title="ReferenceTypeDesign Properties" Url="html/Properties.T-ModelCompiler.ReferenceTypeDesign.htm">
+      <HelpTOCNode Id="415adddd-747f-4967-8f86-42b657563605" Title="ReferenceTypeDesign Properties" Url="html/Properties.T-ModelCompiler.ReferenceTypeDesign.htm">
         <HelpTOCNode Title="InverseName Property " Url="html/P-ModelCompiler.ReferenceTypeDesign.InverseName.htm" />
         <HelpTOCNode Title="Symmetric Property " Url="html/P-ModelCompiler.ReferenceTypeDesign.Symmetric.htm" />
         <HelpTOCNode Title="SymmetricSpecified Property " Url="html/P-ModelCompiler.ReferenceTypeDesign.SymmetricSpecified.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ReleaseStatus Enumeration" Url="html/T-ModelCompiler.ReleaseStatus.htm" />
-    <HelpTOCNode Id="b1237040-f1a6-4969-9bc0-5eb415108d09" Title="TypeDesign Class" Url="html/T-ModelCompiler.TypeDesign.htm">
+    <HelpTOCNode Id="ba22ffd0-c661-45d8-9ab2-0a2dc361dd6b" Title="TypeDesign Class" Url="html/T-ModelCompiler.TypeDesign.htm">
       <HelpTOCNode Title="TypeDesign Members" Url="html/AllMembers.T-ModelCompiler.TypeDesign.htm" />
       <HelpTOCNode Title="TypeDesign Constructor " Url="html/M-ModelCompiler.TypeDesign.-ctor.htm" />
-      <HelpTOCNode Id="b27544b3-b335-43e0-9e2e-e35f22c966af" Title="TypeDesign Fields" Url="html/Fields.T-ModelCompiler.TypeDesign.htm">
+      <HelpTOCNode Id="c575e4e0-75d7-4deb-bf0d-73c3e9bba33b" Title="TypeDesign Fields" Url="html/Fields.T-ModelCompiler.TypeDesign.htm">
         <HelpTOCNode Title="BaseTypeNode Field" Url="html/F-ModelCompiler.TypeDesign.BaseTypeNode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="413aaf8c-93bf-4e1f-b259-09b5e8f5acee" Title="TypeDesign Methods" Url="html/Methods.T-ModelCompiler.TypeDesign.htm">
+      <HelpTOCNode Id="178bef86-e2f9-4ad9-8876-038c8c67c374" Title="TypeDesign Methods" Url="html/Methods.T-ModelCompiler.TypeDesign.htm">
         <HelpTOCNode Title="Copy Method " Url="html/M-ModelCompiler.TypeDesign.Copy.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8b992e02-b6b5-4032-bf6b-eb861ecac604" Title="TypeDesign Properties" Url="html/Properties.T-ModelCompiler.TypeDesign.htm">
+      <HelpTOCNode Id="f34069b3-803c-40d5-883d-8569afb38748" Title="TypeDesign Properties" Url="html/Properties.T-ModelCompiler.TypeDesign.htm">
         <HelpTOCNode Title="BaseType Property " Url="html/P-ModelCompiler.TypeDesign.BaseType.htm" />
         <HelpTOCNode Title="ClassName Property " Url="html/P-ModelCompiler.TypeDesign.ClassName.htm" />
         <HelpTOCNode Title="IsAbstract Property " Url="html/P-ModelCompiler.TypeDesign.IsAbstract.htm" />
@@ -561,14 +632,14 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ValueRank Enumeration" Url="html/T-ModelCompiler.ValueRank.htm" />
-    <HelpTOCNode Id="5ecfbbda-1fc6-4704-8f57-139b04d4ede7" Title="VariableDesign Class" Url="html/T-ModelCompiler.VariableDesign.htm">
+    <HelpTOCNode Id="fd50372e-b3e3-4f80-8f88-a35b449aa07d" Title="VariableDesign Class" Url="html/T-ModelCompiler.VariableDesign.htm">
       <HelpTOCNode Title="VariableDesign Members" Url="html/AllMembers.T-ModelCompiler.VariableDesign.htm" />
-      <HelpTOCNode Id="70156974-209f-485f-8a6a-b12b128f5096" Title="VariableDesign Fields" Url="html/Fields.T-ModelCompiler.VariableDesign.htm">
+      <HelpTOCNode Id="908c8ad6-c583-4867-a3cd-7caa78fc6610" Title="VariableDesign Fields" Url="html/Fields.T-ModelCompiler.VariableDesign.htm">
         <HelpTOCNode Title="DataTypeNode Field" Url="html/F-ModelCompiler.VariableDesign.DataTypeNode.htm" />
         <HelpTOCNode Title="DecodedValue Field" Url="html/F-ModelCompiler.VariableDesign.DecodedValue.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="VariableDesign Methods" Url="html/Methods.T-ModelCompiler.VariableDesign.htm" />
-      <HelpTOCNode Id="c55d64ce-aa27-4e5f-928d-1ab06fd7109b" Title="VariableDesign Properties" Url="html/Properties.T-ModelCompiler.VariableDesign.htm">
+      <HelpTOCNode Id="5d32eb3e-b7e1-4177-a634-c5eae105b83e" Title="VariableDesign Properties" Url="html/Properties.T-ModelCompiler.VariableDesign.htm">
         <HelpTOCNode Title="AccessLevel Property " Url="html/P-ModelCompiler.VariableDesign.AccessLevel.htm" />
         <HelpTOCNode Title="AccessLevelSpecified Property " Url="html/P-ModelCompiler.VariableDesign.AccessLevelSpecified.htm" />
         <HelpTOCNode Title="ArrayDimensions Property " Url="html/P-ModelCompiler.VariableDesign.ArrayDimensions.htm" />
@@ -582,15 +653,15 @@
         <HelpTOCNode Title="ValueRankSpecified Property " Url="html/P-ModelCompiler.VariableDesign.ValueRankSpecified.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d810f20b-e53e-4b1c-9cf6-35f8478c4510" Title="VariableTypeDesign Class" Url="html/T-ModelCompiler.VariableTypeDesign.htm">
+    <HelpTOCNode Id="aba5cadf-7300-43e8-9ec5-74edcc47b637" Title="VariableTypeDesign Class" Url="html/T-ModelCompiler.VariableTypeDesign.htm">
       <HelpTOCNode Title="VariableTypeDesign Members" Url="html/AllMembers.T-ModelCompiler.VariableTypeDesign.htm" />
       <HelpTOCNode Title="VariableTypeDesign Constructor " Url="html/M-ModelCompiler.VariableTypeDesign.-ctor.htm" />
-      <HelpTOCNode Id="b600a17f-e6ec-4db9-b374-2bc09cf4520b" Title="VariableTypeDesign Fields" Url="html/Fields.T-ModelCompiler.VariableTypeDesign.htm">
+      <HelpTOCNode Id="8889fa77-fc1b-4586-97b1-d832f2c5f96a" Title="VariableTypeDesign Fields" Url="html/Fields.T-ModelCompiler.VariableTypeDesign.htm">
         <HelpTOCNode Title="DataTypeNode Field" Url="html/F-ModelCompiler.VariableTypeDesign.DataTypeNode.htm" />
         <HelpTOCNode Title="DecodedValue Field" Url="html/F-ModelCompiler.VariableTypeDesign.DecodedValue.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="VariableTypeDesign Methods" Url="html/Methods.T-ModelCompiler.VariableTypeDesign.htm" />
-      <HelpTOCNode Id="18c98fd4-1a62-42d5-872f-dbbc3da5f67b" Title="VariableTypeDesign Properties" Url="html/Properties.T-ModelCompiler.VariableTypeDesign.htm">
+      <HelpTOCNode Id="657bde5d-b2bb-41b5-8c4c-070d38c00a6f" Title="VariableTypeDesign Properties" Url="html/Properties.T-ModelCompiler.VariableTypeDesign.htm">
         <HelpTOCNode Title="AccessLevel Property " Url="html/P-ModelCompiler.VariableTypeDesign.AccessLevel.htm" />
         <HelpTOCNode Title="AccessLevelSpecified Property " Url="html/P-ModelCompiler.VariableTypeDesign.AccessLevelSpecified.htm" />
         <HelpTOCNode Title="ArrayDimensions Property " Url="html/P-ModelCompiler.VariableTypeDesign.ArrayDimensions.htm" />
@@ -605,84 +676,66 @@
         <HelpTOCNode Title="ValueRankSpecified Property " Url="html/P-ModelCompiler.VariableTypeDesign.ValueRankSpecified.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="68c23ee6-a13e-4bb3-9ef8-d0eeaa318cc1" Title="ViewDesign Class" Url="html/T-ModelCompiler.ViewDesign.htm">
+    <HelpTOCNode Id="5288d077-55c0-4fae-84fd-2038b4821570" Title="ViewDesign Class" Url="html/T-ModelCompiler.ViewDesign.htm">
       <HelpTOCNode Title="ViewDesign Members" Url="html/AllMembers.T-ModelCompiler.ViewDesign.htm" />
       <HelpTOCNode Title="ViewDesign Constructor " Url="html/M-ModelCompiler.ViewDesign.-ctor.htm" />
       <HelpTOCNode Title="ViewDesign Fields" Url="html/Fields.T-ModelCompiler.ViewDesign.htm" />
       <HelpTOCNode Title="ViewDesign Methods" Url="html/Methods.T-ModelCompiler.ViewDesign.htm" />
-      <HelpTOCNode Id="bb81460a-d5c2-4203-a3ca-532729495f24" Title="ViewDesign Properties" Url="html/Properties.T-ModelCompiler.ViewDesign.htm">
+      <HelpTOCNode Id="3bded354-d43c-4442-8c2c-cd0dd80c0c43" Title="ViewDesign Properties" Url="html/Properties.T-ModelCompiler.ViewDesign.htm">
         <HelpTOCNode Title="ContainsNoLoops Property " Url="html/P-ModelCompiler.ViewDesign.ContainsNoLoops.htm" />
         <HelpTOCNode Title="SupportsEvents Property " Url="html/P-ModelCompiler.ViewDesign.SupportsEvents.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="c667acd9-42ab-4680-915c-c2c401362bb0" Title="OOI.ModelCompiler Namespace" Url="html/N-OOI.ModelCompiler.htm">
-    <HelpTOCNode Id="8e5951f2-5041-4704-979a-d9b1d3be8925" Title="IModelGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorGenerate.htm">
+  <HelpTOCNode Id="39282395-027c-4111-9469-fbc6f426421d" Title="OOI.ModelCompiler Namespace" Url="html/N-OOI.ModelCompiler.htm">
+    <HelpTOCNode Id="aaff27ba-944c-4002-aeef-8c6c14657420" Title="IModelGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorGenerate.htm">
       <HelpTOCNode Title="IModelGeneratorGenerate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm" />
-      <HelpTOCNode Id="6b106606-5864-410d-8c5c-b7f44a850083" Title="IModelGeneratorGenerate Properties" Url="html/Properties.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm">
+      <HelpTOCNode Id="f9a87a3a-211a-402c-89ab-e1cb058a8fab" Title="IModelGeneratorGenerate Properties" Url="html/Properties.T-OOI.ModelCompiler.IModelGeneratorGenerate.htm">
         <HelpTOCNode Title="ExcludeCategories Property " Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.ExcludeCategories.htm" />
         <HelpTOCNode Title="GenerateMultiFile Property " Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.GenerateMultiFile.htm" />
         <HelpTOCNode Title="IncludeDisplayNames Property " Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.IncludeDisplayNames.htm" />
         <HelpTOCNode Title="UseXmlInitializers Property " Url="html/P-OOI.ModelCompiler.IModelGeneratorGenerate.UseXmlInitializers.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d09f06f9-e34c-4f66-9274-4014ba805182" Title="IModelGeneratorValidate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorValidate.htm">
+    <HelpTOCNode Id="f3e23690-2fc6-45d6-b0cd-5286dc0b2b1d" Title="IModelGeneratorValidate Interface" Url="html/T-OOI.ModelCompiler.IModelGeneratorValidate.htm">
       <HelpTOCNode Title="IModelGeneratorValidate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IModelGeneratorValidate.htm" />
-      <HelpTOCNode Id="51d195d3-dedd-49b3-945d-b7ad9ae48417" Title="IModelGeneratorValidate Properties" Url="html/Properties.T-OOI.ModelCompiler.IModelGeneratorValidate.htm">
+      <HelpTOCNode Id="0fb72917-7e35-49e3-a9bd-b7f3cc1dcbc1" Title="IModelGeneratorValidate Properties" Url="html/Properties.T-OOI.ModelCompiler.IModelGeneratorValidate.htm">
         <HelpTOCNode Title="StartId Property " Url="html/P-OOI.ModelCompiler.IModelGeneratorValidate.StartId.htm" />
         <HelpTOCNode Title="UseAllowSubtypes Property " Url="html/P-OOI.ModelCompiler.IModelGeneratorValidate.UseAllowSubtypes.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4935a93e-5074-4329-ae04-0f8ff5daf800" Title="IStackGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IStackGeneratorGenerate.htm">
+    <HelpTOCNode Id="5c6f9e10-e42a-4498-a96d-d712cb1ca106" Title="IStackGeneratorGenerate Interface" Url="html/T-OOI.ModelCompiler.IStackGeneratorGenerate.htm">
       <HelpTOCNode Title="IStackGeneratorGenerate Members" Url="html/AllMembers.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm" />
-      <HelpTOCNode Id="034d28cd-5e9b-4533-b5e0-81476ffe6c77" Title="IStackGeneratorGenerate Properties" Url="html/Properties.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm">
+      <HelpTOCNode Id="d414d477-dd64-4b94-aedf-a85d15d051fe" Title="IStackGeneratorGenerate Properties" Url="html/Properties.T-OOI.ModelCompiler.IStackGeneratorGenerate.htm">
         <HelpTOCNode Title="DesignFiles Property " Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.DesignFiles.htm" />
         <HelpTOCNode Title="IdentifierFile Property " Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.IdentifierFile.htm" />
         <HelpTOCNode Title="SpecificationVersion Property " Url="html/P-OOI.ModelCompiler.IStackGeneratorGenerate.SpecificationVersion.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="28611405-bc58-4f08-bc5a-c575fbed1c5b" Title="ModelCompiler Class" Url="html/T-OOI.ModelCompiler.ModelCompiler.htm">
+    <HelpTOCNode Id="7b238ef6-9e95-479c-aa08-698b39059f46" Title="ModelCompiler Class" Url="html/T-OOI.ModelCompiler.ModelCompiler.htm">
       <HelpTOCNode Title="ModelCompiler Members" Url="html/AllMembers.T-OOI.ModelCompiler.ModelCompiler.htm" />
-      <HelpTOCNode Id="d926d4fe-255d-4917-a62c-e93def56f499" Title="ModelCompiler Methods" Url="html/Methods.T-OOI.ModelCompiler.ModelCompiler.htm">
+      <HelpTOCNode Id="f3bb34b6-4628-4317-b419-e1ec8c52adce" Title="ModelCompiler Methods" Url="html/Methods.T-OOI.ModelCompiler.ModelCompiler.htm">
         <HelpTOCNode Title="BuildModel Method " Url="html/M-OOI.ModelCompiler.ModelCompiler.BuildModel.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="f5c88cd5-c1be-42d7-8d08-6016053d31f4" Title="Opc.Ua.Schema.Xml Namespace" Url="html/N-Opc.Ua.Schema.Xml.htm">
-    <HelpTOCNode Id="d52f2696-9ea4-4250-956e-1aa49866314c" Title="XmlSchemaValidator Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm">
+  <HelpTOCNode Id="105836c1-e2e1-4fd0-a61f-fa4e11bb3e01" Title="Opc.Ua.Schema.Xml Namespace" Url="html/N-Opc.Ua.Schema.Xml.htm">
+    <HelpTOCNode Id="f99eebdd-5e20-46e2-b81f-5589d5ba1af9" Title="XmlSchemaValidator Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm">
       <HelpTOCNode Title="XmlSchemaValidator Members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm" />
-      <HelpTOCNode Id="eda6d81f-b342-422d-a96f-2258416269b1" Title="XmlSchemaValidator Constructor " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.-ctor.htm">
+      <HelpTOCNode Id="667bceb3-d8ce-4b4d-b166-45dc570643db" Title="XmlSchemaValidator Constructor " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.-ctor.htm">
         <HelpTOCNode Title="XmlSchemaValidator Constructor " Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.-ctor.htm" />
         <HelpTOCNode Title="XmlSchemaValidator Constructor (Dictionary(String, String))" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.-ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e07b23d9-393d-444c-a865-1e6cb837b006" Title="XmlSchemaValidator Methods" Url="html/Methods.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm">
+      <HelpTOCNode Id="6c0c1b17-c188-460a-bef1-df9926af18be" Title="XmlSchemaValidator Methods" Url="html/Methods.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm">
         <HelpTOCNode Title="GetSchema Method " Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.GetSchema.htm" />
-        <HelpTOCNode Id="487c7309-ff7f-4713-8d13-0efb6f1b0f1a" Title="Validate Method " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.Validate.htm">
+        <HelpTOCNode Id="cddf648f-0c5d-4b02-ae6a-3039fccaaeb7" Title="Validate Method " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator.Validate.htm">
           <HelpTOCNode Title="Validate Method (String)" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.Validate.htm" />
           <HelpTOCNode Title="Validate Method (Stream)" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator.Validate_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
-      <HelpTOCNode Id="cf5fb6fe-7e88-4f88-a5c6-d8b8e1f2d69c" Title="XmlSchemaValidator Properties" Url="html/Properties.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm">
+      <HelpTOCNode Id="188f6660-1d9c-48ee-8d77-b1d43aaae8fb" Title="XmlSchemaValidator Properties" Url="html/Properties.T-Opc.Ua.Schema.Xml.XmlSchemaValidator.htm">
         <HelpTOCNode Title="SchemaSet Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator.SchemaSet.htm" />
         <HelpTOCNode Title="TargetSchema Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator.TargetSchema.htm" />
-      </HelpTOCNode>
-    </HelpTOCNode>
-    <HelpTOCNode Id="78927864-df1e-4168-a390-558e4ea63c84" Title="XmlSchemaValidator2 Class" Url="html/T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm">
-      <HelpTOCNode Title="XmlSchemaValidator2 Members" Url="html/AllMembers.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" />
-      <HelpTOCNode Id="9775f0fb-0db3-4f4b-ba23-a949bbe93ba2" Title="XmlSchemaValidator2 Constructor " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator2.-ctor.htm">
-        <HelpTOCNode Title="XmlSchemaValidator2 Constructor " Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.-ctor.htm" />
-        <HelpTOCNode Title="XmlSchemaValidator2 Constructor (Dictionary(String, String))" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.-ctor_1.htm" />
-      </HelpTOCNode>
-      <HelpTOCNode Id="43dd62d1-d7c1-4498-a164-f2fbc6597033" Title="XmlSchemaValidator2 Methods" Url="html/Methods.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm">
-        <HelpTOCNode Title="GetSchema Method " Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.GetSchema.htm" />
-        <HelpTOCNode Id="bd17ad2f-1acf-4b91-a65d-3fd4074dd36a" Title="Validate Method " Url="html/Overload-Opc.Ua.Schema.Xml.XmlSchemaValidator2.Validate.htm">
-          <HelpTOCNode Title="Validate Method (String)" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.Validate.htm" />
-          <HelpTOCNode Title="Validate Method (Stream)" Url="html/M-Opc.Ua.Schema.Xml.XmlSchemaValidator2.Validate_1.htm" />
-        </HelpTOCNode>
-      </HelpTOCNode>
-      <HelpTOCNode Id="f1f5ad31-5552-4b40-871f-a588f40452dc" Title="XmlSchemaValidator2 Properties" Url="html/Properties.T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm">
-        <HelpTOCNode Title="SchemaSet Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator2.SchemaSet.htm" />
-        <HelpTOCNode Title="TargetSchema Property " Url="html/P-Opc.Ua.Schema.Xml.XmlSchemaValidator2.TargetSchema.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>

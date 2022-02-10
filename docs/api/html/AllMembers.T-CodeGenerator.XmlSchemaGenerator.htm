@@ -173,8 +173,10 @@
 <div class="TreeItem">
 <img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="T-CodeGenerator.ReleaseStatus.htm" target="_self">ReleaseStatus Enumeration</a>
 </div>
-<div class="TreeItem">
-<img src="../Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="T-CodeGenerator.SchemaGenerator.htm" target="_self">SchemaGenerator Class</a>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-CodeGenerator.SchemaGenerator.htm" target="_self">SchemaGenerator Class</a>
+<div class="Hidden">
+</div>
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-CodeGenerator.ServiceType.htm" target="_self">ServiceType Class</a>
@@ -201,6 +203,11 @@
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-CodeGenerator.TypeDictionary.htm" target="_self">TypeDictionary Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-CodeGenerator.TypeDictionaryValidator.htm" target="_self">TypeDictionaryValidator Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -423,11 +430,6 @@
 <div class="Hidden">
 </div>
 </div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-Opc.Ua.Schema.Xml.XmlSchemaValidator2.htm" target="_self">XmlSchemaValidator2 Class</a>
-<div class="Hidden">
-</div>
-</div>
 </div>
 </div>
 
@@ -438,7 +440,18 @@
         <div id="TOCSizer" class="TOCSizer" onmousedown="OnMouseDown(event)" onselectstart="javascript: return false;"></div>
         
         <div id ="TopicContent" name="TopicContent" class="TopicContent" style="float: none; margin-left: 312px;height: -webkit-fill-available;display:block;overflow: auto;">
-          
+          <div class="header" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <table class="headerBar cl_lightweight_topnav_slice" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td class="leftSection cl_lightweight_header_leftSection_wave leftSectionImageClusterOverride" />
+            <td class="rightSection cl_lightweight_header_rightSection_wave rightSectionImageClusterOverride">
+              <div class="tabContainer">OOI UA-ModelCompiler</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
           <!-- Content Starts Here -->
           <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
       <div class="content">
@@ -506,36 +519,48 @@
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">AddNestedTypes</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.AddNestedTypes.htm">AddNestedTypes</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Adds any nested complex types.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">AddTemplate</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.AddTemplate.htm">AddTemplate</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Initializes a template to use for substitution.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">CollectDatatypes</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.CollectDatatypes.htm">CollectDatatypes</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Returns the datatypes in the dictionary.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">CreateDescription</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.CreateDescription.htm">CreateDescription</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Creates a description from the documentation element.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="public;declared;notNetfw;">
                       <td>
@@ -555,63 +580,84 @@
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">GetDescription</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.GetDescription.htm">GetDescription</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Creates a description from a documentation element.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">GetDisplayName</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.GetDisplayName.htm">GetDisplayName</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Returns the display name for a browse name.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">GetFields</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.GetFields.htm">GetFields</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Fetches all of the fields for a complex type by following the base type.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">GetListOfTypes(Boolean)</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.GetListOfTypes.htm">GetListOfTypes(Boolean)</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Returns the datatypes in the dictionary.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">GetListOfTypes(Type, Boolean, Boolean)</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.GetListOfTypes_1.htm">GetListOfTypes(Type, Boolean, Boolean)</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Returns the datatypes in the dictionary.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">GetPrefixedName</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.GetPrefixedName.htm">GetPrefixedName</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Returns a name qualified with a namespace prefix.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
                       </td>
                       <td>
-                        <span class="nolink">IsNull</span>
+                        <a href="M-CodeGenerator.SchemaGenerator.IsNull.htm">IsNull</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   Checks for a null qualified name.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                   </table>
                 </div>
@@ -685,45 +731,60 @@
                         <img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" />
                       </td>
                       <td>
-                        <span class="nolink">Dictionary</span>
+                        <a href="P-CodeGenerator.SchemaGenerator.Dictionary.htm">Dictionary</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   The dictionary being processed.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" />
                       </td>
                       <td>
-                        <span class="nolink">NamespaceUris</span>
+                        <a href="P-CodeGenerator.SchemaGenerator.NamespaceUris.htm">NamespaceUris</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   The namespace uris referenced by types in the dictionary.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" />
                       </td>
                       <td>
-                        <span class="nolink">OutputDirectory</span>
+                        <a href="P-CodeGenerator.SchemaGenerator.OutputDirectory.htm">OutputDirectory</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   The directory used to place any output files.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" />
                       </td>
                       <td>
-                        <span class="nolink">TargetNamespace</span>
+                        <a href="P-CodeGenerator.SchemaGenerator.TargetNamespace.htm">TargetNamespace</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   The current target namespace.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                     <tr data="protected;inherited;notNetfw;">
                       <td>
                         <img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" />
                       </td>
                       <td>
-                        <span class="nolink">Validator</span>
+                        <a href="P-CodeGenerator.SchemaGenerator.Validator.htm">Validator</a>
                       </td>
-                      <td> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
+                      <td>
+                        <div class="summary">
+   The validator used to verify the type dictionary.
+   </div> (Inherited from <a href="T-CodeGenerator.SchemaGenerator.htm">SchemaGenerator</a>.)</td>
                     </tr>
                   </table>
                 </div>
@@ -753,7 +814,7 @@
         <div id="footer" class="footerContainer">
           <div class="footerLogoContainer">
             <div style="margin-top:5px">
-              <span class="customCopyrightFooter" />
+              <span class="customCopyrightFooter">Rel. 2.1.</span>
             </div>
             <div style="margin-top:5px" class="copyrightFooter">Help File generated with GhostDoc</div>
             <div> </div>
