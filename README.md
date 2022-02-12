@@ -37,23 +37,13 @@ Developers should never need to build the standard outputs themselves.
 
 > NOTE: In this repository, the default branch has been changed to `main`.  The `master` branch is preserved for synchronization with the origin only. Further versioning will be implemented using new `tags` instead of branches. New branches are created only for development purposes.
 
-This repository contains *sub-modules* for the Nodeset files, which are independently tracked. Please clone this repository as shown:
 
-```txt
-git clone https://github.com/OPCFoundation/UA-ModelCompiler --recursive
-```
+This repository is updated directly. 
 
-This repository is not updated directly. All changes are first made in a member-only version that can be found [here](https://github.com/OPCF-Members/UA-ModelCompiler).
-
-The version in the member-only repository includes content that is only available to OPC Foundation members such as draft versions of the specifications. When a new version of the OPC UA specification is released, the member-only content is removed and copied to the public reposotory.
-
-In many cases, updates to the UA-ModelCompiler will require updates to [UA-.NETStandard](https://github.com/OPCFoundation/UA-.NETStandard) codebase. This means a complete release of the UA-ModelCompiler will need to wait for a update to UA-.NETStandard NuGet packages. The member only version links to a member only fork of [UA-.NETStandard](https://github.com/OPCF-Members/UA-.NETStandard-Prototypes) allows the changes to be viewed before they are merged with the public baseline.
-
-The public repository is updated as frequently as the OPC UA Specification (once every 3-5 months). When a release starts, all issues reported on the public repository will be reviewed and, if appropricate, incorporated into the member-only codebase. This includes any pull requests.
 
 ## License Model
 
-The ModelCompiler code is [MIT license](https://github.com/OPCFoundation/UA-ModelCompiler/blob/master/license.md), however, it links to the UA-.NETStandard NuGet packages which is covered under the [OPC Foundation Redistributables licence](https://opcfoundation.org/license/redistributables/1.3/index.html). If a user chooses the version that links directly to the  UA-.NETStandard submodule then the license the UA-.NETStandard [dual license](https://github.com/OPCFoundation/UA-.NETStandard/blob/master/LICENSE.txt) applies.
+The ModelCompiler code is [MIT license](https://github.com/mpostol/UA-ModelCompiler/blob/main/license.md), however, it links to the UA-.NETStandard NuGet packages which is covered under the [OPC Foundation Redistributables licence](https://opcfoundation.org/license/redistributables/1.3/index.html). If a user chooses the version that links directly to the  UA-.NETStandard submodule then the license the UA-.NETStandard [dual license](https://github.com/OPCFoundation/UA-.NETStandard/blob/master/LICENSE.txt) applies.
   
 ## Docker Build
 
@@ -64,8 +54,8 @@ If you like to build your own container, just use the provided Dockerfile in thi
 
 We assume you have your `myModel.xml` and `myModel.csv` on your host system in `$HOME/myModel`. If not change the path in the next command.
 
-The Docker container uses the `Model Compiler` executable as entry point.
-This means that any parameter you pass to the `docker run` command will be directly passed to the `Model Compiler` executable.
+The Docker container uses the model compiler executable as entry point.
+This means that any parameter you pass to the `docker run` command will be directly passed to the model compiler executable.
 
 This is an examplary call to docker run:
 
@@ -91,7 +81,7 @@ Trying file: ./Design/OpcUaDiModel.csv
 
 Note, there's no final success message.
 
-To use the `PublishModel.sh` script you can also override the entrypoint. The PublishModel script is a wrapper around the `Model Compiler` executable and is handling directory creation and copying the original model files.
+To use the `PublishModel.sh` script you can also override the entrypoint. The PublishModel script is a wrapper around the model compiler executable and is handling directory creation and copying the original model files.
 
 ```bash
 docker run \

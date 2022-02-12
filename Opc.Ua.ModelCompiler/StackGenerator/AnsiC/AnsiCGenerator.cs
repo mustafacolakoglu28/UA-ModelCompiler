@@ -48,9 +48,10 @@ namespace CodeGenerator
             string                    inputPath,
             string                    outputDirectory,
             Dictionary<string,string> knownFiles,
-            string resourcePath)
+            string resourcePath,
+            IList<string> exclusions)
         :
-            base(inputPath, outputDirectory, knownFiles, resourcePath)
+            base(inputPath, outputDirectory, knownFiles, resourcePath, exclusions)
         {
             TargetLanguage = Language.AnsiC;
         }
@@ -1052,7 +1053,14 @@ namespace CodeGenerator
 
             if (enumeratedType != null)
             {
-                List<EnumeratedValue> values = new List<EnumeratedValue>(enumeratedType.Value);
+                List<EnumeratedValue> values = new List<EnumeratedValue>();
+                foreach (var value in enumeratedType.Value)
+                {
+                    if (!TypeDictionaryValidator.IsExcluded(Exclusions, value))
+                    {
+                        values.Add(value);
+                    }
+                }
 
                 if (enumeratedType.IsOptionSet)
                 {
@@ -1316,6 +1324,10 @@ namespace CodeGenerator
 
                 foreach (EnumeratedValue value in enumeratedType.Value)
                 {
+                    if (TypeDictionaryValidator.IsExcluded(Exclusions, value))
+                    {
+                        continue;
+                    }
                     string name = String.Format("{0}_{1}", typeName, value.Name);
 
                     if (length < name.Length)
@@ -1364,7 +1376,7 @@ namespace CodeGenerator
         {
             EnumeratedValue value = context.Target as EnumeratedValue;
 
-            if (value == null)
+            if (value == null || TypeDictionaryValidator.IsExcluded(Exclusions, value))
             {
                 return false;
             }
@@ -1454,11 +1466,23 @@ namespace CodeGenerator
 
                 if (baseType.Field != null)
                 {
-                    fields.AddRange(baseType.Field);
+                    foreach (var field in baseType.Field)
+                    {
+                        if (!TypeDictionaryValidator.IsExcluded(Exclusions, field))
+                        {
+                            fields.Add(field);
+                        }
+                    }
                 }
             }
 
-            fields.AddRange(complexType.Field);
+            foreach (var field in complexType.Field)
+            {
+                if (!TypeDictionaryValidator.IsExcluded(Exclusions, field))
+                {
+                    fields.Add(field);
+                }
+            }
         }
 
         /// <summary>

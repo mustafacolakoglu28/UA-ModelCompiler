@@ -28,14 +28,11 @@
  * ======================================================================*/
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 using System.IO;
 using System.Reflection;
-//using System.Management.Instrumentation;
+using System.Text;
+using System.Xml;
 
 namespace CodeGenerator
 {
@@ -45,27 +42,33 @@ namespace CodeGenerator
     public class ConstantsGenerator : CodeGenerator
     {
         #region Constructors
+
         /// <summary>
         /// Generates the code from the contents of the address space.
         /// </summary>
         public ConstantsGenerator(
-            Language                  targetLanguage,
-            string                    inputPath,
-            string                    outputDirectory,
-            Dictionary<string,string> knownFiles,
-            string                    resourcePath)
+            Language targetLanguage,
+            string inputPath,
+            string outputDirectory,
+            Dictionary<string, string> knownFiles,
+            string resourcePath,
+            IList<string> exclusions)
         :
-            base(inputPath, outputDirectory, knownFiles, resourcePath)
+            base(inputPath, outputDirectory, knownFiles, resourcePath, exclusions)
         {
             TargetLanguage = targetLanguage;
         }
-        #endregion
+
+        #endregion Constructors
 
         #region Public Properties
-        const string TemplatePath = "OOI.ModelCompiler.StackGenerator.DataTypes.Templates.";
-        #endregion
+
+        private const string TemplatePath = "OOI.ModelCompiler.StackGenerator.DataTypes.Templates.";
+
+        #endregion Public Properties
 
         #region Public Methods
+
         /// <summary>
         /// Generates the datatype files.
         /// </summary>
@@ -85,9 +88,11 @@ namespace CodeGenerator
 
             WriteTemplate_Constants(namespacePrefix, className, datatypes);
         }
-        #endregion
+
+        #endregion Public Methods
 
         #region WriteTemplate Methods
+
         /// <summary>
         /// Writes the address space declaration file.
         /// </summary>
@@ -158,26 +163,26 @@ namespace CodeGenerator
             switch (TargetLanguage)
             {
                 case Language.DotNet:
-                {
-                    fileName = String.Format(@"{0}\{1}.{2}.cs", OutputDirectory, namespacePrefix, className);
-                    m_templateSuffix = ".cs";
-                    break;
-                }
+                    {
+                        fileName = String.Format(@"{0}\{1}.{2}.cs", OutputDirectory, namespacePrefix, className);
+                        m_templateSuffix = ".cs";
+                        break;
+                    }
 
                 case Language.AnsiC:
-                {
-                    fileName = String.Format(@"{0}\{1}_{2}.h", OutputDirectory, namespacePrefix, className);
-                    fileName = fileName.ToLower();
-                    m_templateSuffix = ".h";
-                    break;
-                }
+                    {
+                        fileName = String.Format(@"{0}\{1}_{2}.h", OutputDirectory, namespacePrefix, className);
+                        fileName = fileName.ToLower();
+                        m_templateSuffix = ".h";
+                        break;
+                    }
 
                 case Language.CSV:
-                {
-                    fileName = String.Format(@"{0}\{1}.{2}.csv", OutputDirectory, namespacePrefix, className);
-                    m_templateSuffix = ".csv";
-                    break;
-                }
+                    {
+                        fileName = String.Format(@"{0}\{1}.{2}.csv", OutputDirectory, namespacePrefix, className);
+                        m_templateSuffix = ".csv";
+                        break;
+                    }
             }
 
             StreamWriter writer = new StreamWriter(fileName, false);
@@ -271,7 +276,6 @@ namespace CodeGenerator
                     template.AddReplacement("_Identifier_", String.Format("\"{0}\"", constant.Value));
                     template.AddReplacement("_ClassName_", "_" + m_className);
                 }
-
                 else
                 {
                     if (constant.Severity != Severity.None)
@@ -312,7 +316,7 @@ namespace CodeGenerator
 
                     if (index != -1)
                     {
-                        name = name.Substring(index+1);
+                        name = name.Substring(index + 1);
                     }
 
                     symbolicId = String.Format("{0}{1}", constant.Severity, name);
@@ -358,6 +362,10 @@ namespace CodeGenerator
             // include identifiers from the target dictionary.
             foreach (DataType datatype in Dictionary.Items)
             {
+                if (TypeDictionaryValidator.IsExcluded(Exclusions, datatype))
+                {
+                    continue;
+                }
                 ServiceType serviceType = datatype as ServiceType;
 
                 if (serviceType == null)
@@ -397,7 +405,7 @@ namespace CodeGenerator
         /// </summary>
         private void LoadIdentifiersFromFile(string filePath, List<DataType> datatypes)
         {
-            Dictionary<string,int> identifiers = new Dictionary<string,int>();
+            Dictionary<string, int> identifiers = new Dictionary<string, int>();
             SortedDictionary<int, string> assignedIdentifiers = new SortedDictionary<int, string>();
 
             int maxId = 1;
@@ -434,13 +442,13 @@ namespace CodeGenerator
 
                         try
                         {
-                            string name = line.Substring(0,index).Trim();
+                            string name = line.Substring(0, index).Trim();
 
-                            int uid = Convert.ToInt32(line.Substring(index+1).Trim());
+                            int uid = Convert.ToInt32(line.Substring(index + 1).Trim());
 
                             if (maxId <= uid)
                             {
-                                maxId = uid+1;
+                                maxId = uid + 1;
                             }
 
                             identifiers[name] = uid;
@@ -458,14 +466,14 @@ namespace CodeGenerator
                 }
             }
 
-            SortedDictionary<int,string> uniqueIdentifiers = new SortedDictionary<int,string>();
-            Dictionary<string,int> duplicateIdentifiers = new Dictionary<string,int>();
+            SortedDictionary<int, string> uniqueIdentifiers = new SortedDictionary<int, string>();
+            Dictionary<string, int> duplicateIdentifiers = new Dictionary<string, int>();
 
             foreach (DataType datatype in datatypes)
             {
                 // using existing id or assign a new one.
                 if (!identifiers.ContainsKey(datatype.Name))
-                { 
+                {
                     int nextId = 200;
                     while (assignedIdentifiers.ContainsKey(nextId)) nextId++;
                     datatype.Identifier = nextId;
@@ -544,7 +552,7 @@ namespace CodeGenerator
 
                 buffer.Append("Duplicate identifiers for these datatypes:\r\n");
 
-                foreach (KeyValuePair<string,int> current in duplicateIdentifiers)
+                foreach (KeyValuePair<string, int> current in duplicateIdentifiers)
                 {
                     buffer.AppendFormat("{0},0x{1:X8}\r\n", current.Key, current.Value);
                 }
@@ -574,11 +582,14 @@ namespace CodeGenerator
                 writer.Close();
             }
         }
-        #endregion
+
+        #endregion WriteTemplate Methods
 
         #region Private Fields
+
         private string m_className;
         private string m_templateSuffix;
-        #endregion
+
+        #endregion Private Fields
     }
 }

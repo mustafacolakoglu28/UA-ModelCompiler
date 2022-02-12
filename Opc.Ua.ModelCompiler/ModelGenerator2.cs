@@ -62,7 +62,7 @@ namespace OOI.ModelCompiler
         private ModelDesign m_model;
         private bool m_useXmlInitializers;
         private bool m_includeDisplayNames;
-        private string[] m_excludedCategories;
+        private IList<string> m_exclusions;
         #endregion
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace OOI.ModelCompiler
         /// </summary>
         public virtual void ValidateAndUpdateIds(IModelGeneratorValidate model)
         {
-            m_validator = new ModelCompilerValidator(model.StartId);
+            m_validator = new ModelCompilerValidator(model.StartId, m_exclusions);
 
             if (!String.IsNullOrEmpty(model.SpecificationVersion))
             {
@@ -103,6 +103,8 @@ namespace OOI.ModelCompiler
             }
 
             m_validator.UseAllowSubtypes = model.UseAllowSubtypes;
+            m_validator.ModelVersion = model.SpecificationVersion;
+            m_validator.ModelPublicationDate = model.PublicationDate;
             m_validator.Validate2(model.DesignFiles, model.IdentifierFile, false);
             m_model = m_validator.Dictionary;
         }
@@ -121,12 +123,16 @@ namespace OOI.ModelCompiler
         private void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters, string outputDir)
         {
             m_useXmlInitializers = generatorParameters.UseXmlInitializers;
-            m_excludedCategories = generatorParameters.ExcludeCategories;
+            m_exclusions = generatorParameters.ExcludeCategories;
             m_includeDisplayNames = generatorParameters.IncludeDisplayNames;
 
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
 
+            if (nodes.Count == 0)
+            {
+                return;
+            }
             WriteTemplate_InternalSingleFile(outputDir, nodes);
             WriteTemplate_XmlExport(outputDir);
             WriteTemplate_XmlSchema(outputDir, nodes);
@@ -139,11 +145,16 @@ namespace OOI.ModelCompiler
         private void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters, string outputDir)
         {
             m_useXmlInitializers = generatorParameters.UseXmlInitializers;
-            m_excludedCategories = generatorParameters.ExcludeCategories;
+            m_exclusions = generatorParameters.ExcludeCategories;
             m_includeDisplayNames = generatorParameters.IncludeDisplayNames;
 
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
+
+            if (nodes.Count == 0)
+            {
+                return;
+            }
 
             WriteTemplate_ConstantsSingleFile(outputDir, nodes);
             WriteTemplate_DataTypesSingleFile(outputDir, nodes);
@@ -156,11 +167,16 @@ namespace OOI.ModelCompiler
         /// <summary>
         /// Generates the ANSI C identifiers.
         /// </summary>
-        public virtual void GenerateIdentifiersAndNamesForAnsiC(string filePath, string[] excludedCategories)
+        public virtual void GenerateIdentifiersAndNamesForAnsiC(string filePath, IList<string> excludedCategories)
         {
-            m_excludedCategories = excludedCategories;
+            m_exclusions = excludedCategories;
 
             List<NodeDesign> nodes = GetNodeList();
+
+            if (nodes.Count == 0)
+            {
+                return;
+            }
 
             WriteTemplate_IdentifiersAnsiC(filePath, nodes);
             WriteTemplate_NamesAnsiC(filePath, nodes);
@@ -317,25 +333,31 @@ namespace OOI.ModelCompiler
                 }
             }
 
-            // save the subsets.
-            foreach (KeyValuePair<uint,NodeStateCollection> entry in subsets)
-            {
-                string file = Path.Combine(filePath, String.Format(@"{0}.NodeSet2.Part{1}.xml", m_model.TargetNamespaceInfo.Prefix, entry.Key));
+            var documentationFile = m_model.TargetNamespaceInfo.Prefix + ".NodeSet2.documentation.csv";
 
-                using (Stream ostrm = File.Open(file, FileMode.Create))
+            if (File.Exists(documentationFile))
+            {
+                Dictionary<NodeId, NodeState> index = new Dictionary<NodeId, NodeState>();
+
+                ushort namespaceIndex = 0;
+
+                foreach (var ii in collectionWithServices)
                 {
-                    entry.Value.SaveAsNodeSet2(
-                        context, 
-                        ostrm, 
-                        new Export.ModelTableEntry() 
-                        { 
-                            ModelUri = Opc.Ua.Namespaces.OpcUa,
-                            Version = m_model.TargetVersion,
-                            PublicationDate = m_model.TargetPublicationDate,
-                            PublicationDateSpecified = m_model.TargetPublicationDateSpecified
-                        },
-                        (m_model.TargetPublicationDate != DateTime.UtcNow)? m_model.TargetPublicationDate:DateTime.MinValue,
-                        true);
+                    index[ii.NodeId] = ii;
+                    namespaceIndex = ii.NodeId.NamespaceIndex;
+                }
+
+                var rows = NodeDocumentationReader.Load(documentationFile);
+
+                foreach (var row in rows)
+                {
+                    var nodeId = new NodeId(row.Id, namespaceIndex);
+
+                    if (index.TryGetValue(nodeId, out NodeState target))
+                    {
+                        target.NodeSetDocumentation = row.Link;
+                        target.Categories = row.ConformanceUnits;
+                    }
                 }
             }
 
@@ -385,17 +407,17 @@ namespace OOI.ModelCompiler
             {
                 try
                 {
-                    NodeStateCollection exisitingCollection = null;
+                    NodeStateCollection existingCollection = null;
 
                     using (Stream istrm = File.Open(originalFile, FileMode.Open))
                     {
                         Opc.Ua.Export.UANodeSet nodeSet = Opc.Ua.Export.UANodeSet.Read(istrm);
-                        exisitingCollection = new NodeStateCollection();
-                        nodeSet.Import(context, exisitingCollection);
+                        existingCollection = new NodeStateCollection();
+                        nodeSet.Import(context, existingCollection);
                     }
 
                     Dictionary<NodeId, NodeState> map = new Dictionary<NodeId, NodeState>();
-                    IndexDocumentation(context, exisitingCollection, map);
+                    IndexDocumentation(context, existingCollection, map);
 
                     UpdateDocumentation(context, map, collection);
 
@@ -432,6 +454,7 @@ namespace OOI.ModelCompiler
                 var model = new Export.ModelTableEntry() 
                 { 
                     ModelUri = m_model.TargetNamespace,
+                    XmlSchemaUri = m_model.TargetXmlNamespace,
                     Version = m_model.TargetVersion,
                     PublicationDate = m_model.TargetPublicationDate,
                     PublicationDateSpecified = m_model.TargetPublicationDateSpecified,
@@ -515,7 +538,7 @@ namespace OOI.ModelCompiler
 
                 Template template = new Template(writer, TemplatePath + templateName, Assembly.GetExecutingAssembly());
 
-                SortedDictionary<string,List<NodeDesign>> identifiers = GetIdentifiers(nodes);
+                SortedDictionary<string,List<NodeDesign>> identifiers = GetIdentifiers();
 
                 template.AddReplacement("_Date_", DateTime.Now.ToShortDateString());
                 template.AddReplacement("_FileName_", String.Format("{0}_Identifiers", prefix));
@@ -1148,7 +1171,7 @@ namespace OOI.ModelCompiler
                              return GetXmlDataType((DataTypeDesign)dataType.BaseTypeNode, valueRank);
                         }
 
-                        return String.Format("ua:Int32");
+                        return String.Format("xs:int");
                     }
 
                     string prefix = "tns";
@@ -1164,7 +1187,7 @@ namespace OOI.ModelCompiler
                                     return GetXmlDataType((DataTypeDesign)dataType.BaseTypeNode, valueRank);
                                 }
 
-                                return String.Format("ua:Int32");
+                                return String.Format("xs:int");
                             }
 
                             prefix = "ua";
@@ -1492,6 +1515,9 @@ namespace OOI.ModelCompiler
                     case DataTypes.StructureType:
                     case DataTypes.EnumDefinition:
                     case DataTypes.EnumField:
+                    case DataTypes.DataTypeDefinition:
+                    case DataTypes.Enumeration:
+                    case DataTypes.Union:
                     {
                         break;
                     }
@@ -1558,7 +1584,7 @@ namespace OOI.ModelCompiler
             List<Parameter> fields = new List<Parameter>();
             Stack<DataTypeDesign> parents = new Stack<DataTypeDesign>();
 
-            for (DataTypeDesign parent = dataType as DataTypeDesign; parent != null; parent = parent.BaseTypeNode as DataTypeDesign)
+            for (var parent = dataType; parent != null; parent = parent.BaseTypeNode as DataTypeDesign)
             {
                 if (parent.Fields != null)
                 {
@@ -1572,6 +1598,10 @@ namespace OOI.ModelCompiler
 
                 foreach (Parameter field in parent.Fields)
                 {
+                    if (IsExcluded(field))
+                    {
+                        continue;
+                    }
                     if (Object.ReferenceEquals(dataType, parent))
                     {
                         fields.Add(field);
@@ -1851,7 +1881,7 @@ namespace OOI.ModelCompiler
                     new LoadTemplateEventHandler(LoadTemplate_BrowseNames),
                     new WriteTemplateEventHandler(WriteTemplate_BrowseNames));
 
-                SortedDictionary<string, List<NodeDesign>> identifiers = GetIdentifiers(nodes);
+                SortedDictionary<string, List<NodeDesign>> identifiers = GetIdentifiers();
 
                 AddTemplate(
                     template,
@@ -1939,7 +1969,7 @@ namespace OOI.ModelCompiler
                     new LoadTemplateEventHandler(LoadTemplate_BrowseNames),
                     new WriteTemplateEventHandler(WriteTemplate_BrowseNames));
 
-                SortedDictionary<string, List<NodeDesign>> identifiers = GetIdentifiers(nodes);
+                SortedDictionary<string, List<NodeDesign>> identifiers = GetIdentifiers();
 
                 AddTemplate(
                     template,
@@ -2177,10 +2207,42 @@ namespace OOI.ModelCompiler
             return template.WriteTemplate(context);
         }
 
+        private bool IsParentExcluded(NodeDesign root, KeyValuePair<string, HierarchyNode> child)
+        {
+            var parentId = child.Key;
+            var parent = child.Value;
+
+            while (parentId != null)
+            {
+                int index = parentId.LastIndexOf("_");
+
+                if (index > 0)
+                {
+                    parentId = parentId.Substring(0, index);
+                }
+                                
+                if (!root.Hierarchy.Nodes.TryGetValue(parentId, out parent))
+                {
+                    return false;
+                }
+
+                if (IsExcluded(parent.Instance))
+                {
+                    return true;
+                }
+
+                if (index <= 0)
+                {
+                    break;
+                }
+            }
+
+            return false;
+        }
         /// <summary>
         /// Returns the identifiers for the nodes defined.
         /// </summary>
-        private SortedDictionary<string, List<NodeDesign>> GetIdentifiers(IList<NodeDesign> nodes)
+        private SortedDictionary<string, List<NodeDesign>> GetIdentifiers()
         {
             SortedDictionary<string, List<NodeDesign>> identifiers = new SortedDictionary<string, List<NodeDesign>>();
 
@@ -2193,6 +2255,14 @@ namespace OOI.ModelCompiler
                     continue;
                 }
 
+                InstanceDesign instance = node as InstanceDesign;
+                if (instance != null && instance.TypeDefinitionNode != null)
+                {
+                    if (IsExcluded(instance.TypeDefinitionNode))
+                    {
+                        continue;
+                    }
+                }     
                 if (IsMethodTypeNode(node))
                 {
                     continue;
@@ -2205,9 +2275,7 @@ namespace OOI.ModelCompiler
                     nodeClass = "ObjectType";
                 }
 
-                List<NodeDesign> nodesWithinClass = null;
-
-                if (!identifiers.TryGetValue(nodeClass, out nodesWithinClass))
+                if (!identifiers.TryGetValue(nodeClass, out List<NodeDesign> nodesWithinClass))
                 {
                     identifiers[nodeClass] = nodesWithinClass = new List<NodeDesign>();
                 }
@@ -2232,6 +2300,21 @@ namespace OOI.ModelCompiler
                     if (IsExcluded(current.Value.Instance))
                     {
                         continue;
+                    }
+
+                    if (IsParentExcluded(node, current))
+                    {
+                        continue;
+                    }
+
+                    var method = current.Value.Instance as MethodDesign;
+
+                    if (method?.MethodDeclarationNode != null)
+                    {
+                        if (IsExcluded(method?.MethodDeclarationNode))
+                        {
+                            continue;
+                        }
                     }
 
                     if (node is TypeDesign)
@@ -2352,6 +2435,10 @@ namespace OOI.ModelCompiler
 
             foreach (NodeDesign node in nodes)
             {
+                if (IsExcluded(node))
+                {
+                    continue;
+                }
                 if (IsMethodTypeNode(node))
                 {
                     continue;
@@ -2369,6 +2456,10 @@ namespace OOI.ModelCompiler
 
                 foreach (NodeDesign child in node.Children.Items)
                 {
+                    if (IsExcluded(child))
+                    {
+                        continue;
+                    }
                     if (child.SymbolicName.Namespace == m_model.TargetNamespace)
                     {
                         string browseName = null;
@@ -3342,7 +3433,7 @@ namespace OOI.ModelCompiler
 
                 case BasicDataType.UserDefined:
                 {
-                    if (field.AllowSubtypes)
+                    if (field.AllowSubTypes)
                     {
                         if (field.ValueRank == ValueRank.Array)
                         { 
@@ -3451,7 +3542,7 @@ namespace OOI.ModelCompiler
 
                 case BasicDataType.UserDefined:
                 {
-                    if (field.AllowSubtypes)
+                    if (field.AllowSubTypes)
                     {
                         template.Write($"{valueName} = ");
                         elementName = GetSystemTypeName(field.DataTypeNode, ValueRank.Scalar);
@@ -3759,8 +3850,9 @@ namespace OOI.ModelCompiler
                 return null;
             }
 
+            var value = GetDefaultValue(field.DataTypeNode, field.ValueRank, field.DefaultValue, null, true);
             template.WriteNextLine(context.Prefix);
-            template.Write("{0} = {1};", GetChildFieldName(field), GetDefaultValue(field.DataTypeNode, field.ValueRank, null, null, true));
+            template.Write("{0} = {1};", GetChildFieldName(field), value);
 
             return context.TemplatePath;
         }
@@ -3826,7 +3918,7 @@ namespace OOI.ModelCompiler
                     {
                         if (field.DataTypeNode.BasicDataType == BasicDataType.UserDefined || field.ValueRank == ValueRank.Array)
                         {
-                            if (field.AllowSubtypes && (field.ValueRank != ValueRank.Array && field.ValueRank != ValueRank.Scalar))
+                            if (field.AllowSubTypes || (field.ValueRank != ValueRank.Array && field.ValueRank != ValueRank.Scalar))
                             {
                                 return TemplatePath + "Version2.DataTypes.Property.cs";
                             }
@@ -4264,7 +4356,10 @@ namespace OOI.ModelCompiler
 
                 foreach (Parameter child in dataType.Fields)
                 {
+                    if (!IsExcluded(child))
+                    {
                     fields.Add(child);
+                    }
                 }
 
                 return fields.ToArray();
@@ -4823,6 +4918,18 @@ namespace OOI.ModelCompiler
                 return "null";
             }
 
+            Opc.Ua.TypeInfo decodedValueType = null;
+
+            if (decodedValue == null)
+            {
+                if (defaultValue != null)
+                {
+                    using (XmlDecoder decoder = new XmlDecoder(defaultValue, ServiceMessageContext.GlobalContext))
+                    {
+                        decodedValue = decoder.ReadVariantContents(out decodedValueType);
+                    }
+                }
+            }
             switch (dataType.BasicDataType)
             {
                 case BasicDataType.Boolean:
@@ -4832,6 +4939,12 @@ namespace OOI.ModelCompiler
                     if (value == null)
                     {
                         value = false;
+                    }
+
+                    if (defaultValue != null && decodedValueType == Opc.Ua.TypeInfo.Scalars.Boolean)
+                    {
+                        var x = (value.Value) ? "true" : "false";
+                        return x;
                     }
 
                     // this is technically a bug but the potential for side effects is
@@ -5404,9 +5517,9 @@ namespace OOI.ModelCompiler
 
         private bool IsExcluded(NodeState node)
         {
-            if (m_excludedCategories != null)
+            if (m_exclusions != null)
             {
-                foreach (var jj in m_excludedCategories)
+                foreach (var jj in m_exclusions)
                 {
                     if (jj == node.ReleaseStatus.ToString())
                     {
@@ -5436,9 +5549,14 @@ namespace OOI.ModelCompiler
 
         private bool IsExcluded(NodeDesign node)
         {
-            if (m_excludedCategories != null)
+            if (node == null)
             {
-                foreach (var jj in m_excludedCategories)
+                return false;
+            }
+
+            if (m_exclusions != null)
+            {
+                foreach (var jj in m_exclusions)
                 {
                     if (jj == node.ReleaseStatus.ToString())
                     {
@@ -5463,6 +5581,26 @@ namespace OOI.ModelCompiler
             return false;
         }
 
+        private bool IsExcluded(Parameter parameter)
+        {
+            if (parameter == null)
+            {
+                return false;
+            }
+
+            if (m_exclusions != null)
+            {
+                foreach (var jj in m_exclusions)
+                {
+                    if (jj == parameter.ReleaseStatus.ToString())
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
         /// <summary>
         /// Returns a list of nodes to process.
         /// </summary>

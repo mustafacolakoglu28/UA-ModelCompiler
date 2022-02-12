@@ -5,13 +5,15 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
+using System.Collections.Generic;
+
 namespace OOI.ModelCompiler
 {
-  public interface IModelGeneratorGenerate
-  {
-    string[] ExcludeCategories { get; }
-    bool GenerateMultiFile { get; }
-    bool IncludeDisplayNames { get; }
-    bool UseXmlInitializers { get; }
-  }
+    public interface IModelGeneratorGenerate
+    {
+        IList<string> ExcludeCategories { get; }
+        bool GenerateMultiFile { get; }
+        bool IncludeDisplayNames { get; }
+        bool UseXmlInitializers { get; }
+    }
 }

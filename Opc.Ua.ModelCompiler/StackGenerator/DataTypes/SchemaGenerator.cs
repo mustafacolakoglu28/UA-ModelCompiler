@@ -32,9 +32,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
-using System.Xml.Serialization;
-using System.IO;
-using System.Reflection;
 
 namespace CodeGenerator
 {
@@ -44,14 +41,21 @@ namespace CodeGenerator
     public class SchemaGenerator
     {
         #region Constructors
+
         /// <summary>
         /// Loads and validates the type dictionary.
         /// </summary>
-        protected SchemaGenerator(string inputPath, string outputDirectory, Dictionary<string,string> knownFiles, string resourcePath)
+        protected SchemaGenerator(
+            string inputPath,
+            string outputDirectory,
+            Dictionary<string, string> knownFiles,
+            string resourcePath,
+            IList<string> exclusions)
         {
             // load and validate type dictionary.
             m_validator = new TypeDictionaryValidator(knownFiles, resourcePath);
-            m_validator.Validate(inputPath);
+            m_validator.Validate(inputPath, exclusions);
+            Exclusions = exclusions;
 
             // save output directory.
             m_outputDirectory = outputDirectory;
@@ -59,9 +63,16 @@ namespace CodeGenerator
             // index namespace uris.
             IndexNamespaceUris();
         }
-        #endregion
+
+        #endregion Constructors
 
         #region Protected Properties
+
+        /// <summary>
+        ///
+        /// </summary>
+        protected IList<string> Exclusions { get; set; }
+
         /// <summary>
         /// The validator used to verify the type dictionary.
         /// </summary>
@@ -125,9 +136,11 @@ namespace CodeGenerator
                 }
             }
         }
-        #endregion
+
+        #endregion Protected Properties
 
         #region Protected Methods
+
         /// <summary>
         /// Returns the datatypes in the dictionary.
         /// </summary>
@@ -162,7 +175,7 @@ namespace CodeGenerator
         /// <summary>
         /// Returns the datatypes in the dictionary.
         /// </summary>
-        protected void CollectDatatypes(TypeDictionary dictionary, Type type,  bool exportApi, List<DataType> datatypes)
+        protected void CollectDatatypes(TypeDictionary dictionary, Type type, bool exportApi, List<DataType> datatypes)
         {
             foreach (DataType datatype in dictionary.Items)
             {
@@ -185,7 +198,7 @@ namespace CodeGenerator
                         }
                     }
 
-                    AddNestedTypes(type, serviceType.Request,  datatypes);
+                    AddNestedTypes(type, serviceType.Request, datatypes);
                     AddNestedTypes(type, serviceType.Response, datatypes);
                 }
 
@@ -238,7 +251,7 @@ namespace CodeGenerator
 
             if (index > 0)
             {
-                return String.Format("s{0}:{1}", index-1, qname.Name);
+                return String.Format("s{0}:{1}", index - 1, qname.Name);
             }
 
             return qname.Name;
@@ -266,11 +279,11 @@ namespace CodeGenerator
         /// Initializes a template to use for substitution.
         /// </summary>
         protected void AddTemplate(
-            Template                  template,
-            string                    replacement,
-            string                    templatePath,
-            IEnumerable               targets,
-            LoadTemplateEventHandler  onLoad,
+            Template template,
+            string replacement,
+            string templatePath,
+            IEnumerable targets,
+            LoadTemplateEventHandler onLoad,
             WriteTemplateEventHandler onWrite)
         {
             template.Replacements.Add(replacement, null);
@@ -289,7 +302,7 @@ namespace CodeGenerator
             TemplateDefinition definition = new TemplateDefinition();
 
             definition.TemplatePath = templatePath;
-            definition.Targets      = targetList;
+            definition.Targets = targetList;
 
             if (onLoad != null)
             {
@@ -316,7 +329,7 @@ namespace CodeGenerator
 
             StringBuilder buffer = new StringBuilder();
 
-            for (int ii = 0; ii < browseName.Name.Length-1; ii++)
+            for (int ii = 0; ii < browseName.Name.Length - 1; ii++)
             {
                 buffer.Append(browseName.Name[ii]);
 
@@ -326,7 +339,7 @@ namespace CodeGenerator
                 }
             }
 
-            buffer.Append(browseName.Name[browseName.Name.Length-1]);
+            buffer.Append(browseName.Name[browseName.Name.Length - 1]);
 
             return buffer.ToString();
         }
@@ -399,12 +412,20 @@ namespace CodeGenerator
 
             if (complexType.Field != null)
             {
-                fields.AddRange(complexType.Field);
+                foreach (var field in complexType.Field)
+                {
+                    if (!TypeDictionaryValidator.IsExcluded(Exclusions, field))
+                    {
+                        fields.Add(field);
+                    }
+                }
             }
         }
-        #endregion
+
+        #endregion Protected Methods
 
         #region Private Methods
+
         /// <summary>
         /// Saves a namespace uri.
         /// </summary>
@@ -471,12 +492,15 @@ namespace CodeGenerator
                 }
             }
         }
-        #endregion
+
+        #endregion Private Methods
 
         #region Private Fields
+
         private string m_outputDirectory;
         private TypeDictionaryValidator m_validator;
         private List<string> m_namespaceUris;
-        #endregion
+
+        #endregion Private Fields
     }
 }
