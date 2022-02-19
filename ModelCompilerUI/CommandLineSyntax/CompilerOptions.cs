@@ -30,7 +30,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
     [Option('e', "exclude", HelpText = excludeHeelp, Required = false)]
     public IList<string> Exclusions { get; set; }
-    //TODO Integrate with the UA-ModelCompiler #648
+    //TODO CLI Syntax #67
     public string Version;
     public bool UseAllowSubtypes;
     public string ModelVersion;

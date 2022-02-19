@@ -30,7 +30,7 @@ namespace OOI.ModelCompilerUI
       };
       string args = string.Join(",", commandLine.ToArray<string>());
       Assert.IsNotNull(args);
-      //TODO Integrate with the UA-ModelCompiler #648
+      //TODO CLI Syntax #67
     }
   }
 }
