@@ -22,7 +22,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     [Option('g', "cg", SetName = "csv", HelpText = cgHelp, MetaValue = "CSVfileGenrate", Required = false)]
     public bool CreateIdentifierFile { get; set; }
 
-    [Option('o', "o2", HelpText = oHelp, MetaValue = "output", Required = true)]
+    [Option('o', "o2", HelpText = oHelp, MetaValue = "output", Required = false)]
     public string OutputPath { get; set; }
 
     [Option('i', "id", HelpText = idHelp, Required = false, Default = (uint)0)]
@@ -30,8 +30,8 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
     [Option('e', "exclude", HelpText = excludeHeelp, Required = false)]
     public IList<string> Exclusions { get; set; }
-    //TODO CLI Syntax #67
-    public string Version;
+    [Option('v', "version", HelpText = versionHelp , Required = false, Default = "v104")]
+    public string Version { get; set; }
     public bool UseAllowSubtypes;
     public string ModelVersion;
     public string ModelPublicationDate;
@@ -50,6 +50,8 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     private const string oHelp = "The output directory for the generated files.";
     private const string idHelp = "The first identifier to use when assigning new ids to nodes.";
     private const string excludeHeelp = "Comma seperated list of ReleaseStatus values to exclude from output.";
+    private const string versionHelp = "Selects the source for the input files. v103 | v104 | v105 are supported.";
+
   }
 
   [Verb("DotNetStack", false, HelpText = "")]
@@ -69,8 +71,6 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
 //-console The output goes to the standard error output (console) instead of error window
 
-//-version Selects the source for the input files. v103 | v104 | v105 are supported.
-//-version Selects the source for the input files. v103 | v104 | v105 are supported.", SingleValue
 //-useAllowSubtypes When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.
 //-useAllowSubtypes When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.", NoValue
 //-mv The version of the model to produce., SingleValue

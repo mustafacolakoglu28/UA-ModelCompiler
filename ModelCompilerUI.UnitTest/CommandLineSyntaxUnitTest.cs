@@ -5,7 +5,9 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
+using CommandLine;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OOI.ModelCompilerUI.CommandLineSyntax;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,17 +22,24 @@ namespace OOI.ModelCompilerUI
       List<string> commandLine = new List<string>()
       {
         "exeName",
-        "-d2", @".\Opc.Ua.ModelCompiler\Design.v104\StandardTypes.xml",
-        "-version",  "v104",
-        "-d2",  @".\Opc.Ua.ModelCompiler\Design.v104\UA Core Services.xml",
+        "compile",
+        "--d2", @".\Opc.Ua.ModelCompiler\Design.v104\StandardTypes.xml", @".\Opc.Ua.ModelCompiler\Design.v104\UA Core Services.xml",
+        "--version",  "v104",
+//        "-d2",  @".\Opc.Ua.ModelCompiler\Design.v104\UA Core Services.xml",
         "-c", @".\Opc.Ua.ModelCompiler\CSVs\StandardTypes.csv",
-        "-o2",  @".\Bin\nodesets\master\Schema\",
-        "-stack",  @".\Bin\nodesets\master\DotNet\",
-        "-ansic", @".\Bin\nodesets\master\AnsiC\"
+        "--o2",  @".\Bin\nodesets\master\Schema\",
+//        "-stack",  @".\Bin\nodesets\master\DotNet\",
+//        "-ansic", @".\Bin\nodesets\master\AnsiC\"
       };
       string args = string.Join(",", commandLine.ToArray<string>());
       Assert.IsNotNull(args);
-      //TODO CLI Syntax #67
+      ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions>(commandLine);
+      CompilerOptions compilerOptions = null;
+      IEnumerable<Error> error = null;
+      result.WithParsed<CompilerOptions>(options => compilerOptions = options).WithNotParsed(errors => error = errors);
+      Assert.IsNotNull(compilerOptions);
+      Assert.IsNull(error);
+      //CLI Syntax #67
     }
   }
 }
