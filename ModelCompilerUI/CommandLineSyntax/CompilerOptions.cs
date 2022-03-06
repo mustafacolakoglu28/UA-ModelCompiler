@@ -30,11 +30,19 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
     [Option('e', "exclude", HelpText = excludeHeelp, Required = false)]
     public IList<string> Exclusions { get; set; }
-    [Option('v', "version", HelpText = versionHelp , Required = false, Default = "v104")]
+
+    [Option('v', "version", HelpText = versionHelp, Required = false, Default = "v104")]
     public string Version { get; set; }
-    public bool UseAllowSubtypes;
-    public string ModelVersion;
-    public string ModelPublicationDate;
+
+    [Option('s', "useAllowSubtypes", HelpText = useAllowSubtypesHelp, Required = false)]
+    public bool UseAllowSubtypes { get; set; }
+
+    [Option('m', "mv", HelpText = mvHelp, Required = false)]
+    public string ModelVersion { get; set; }
+
+    [Option('m', "mv", HelpText = pdHelp, Required = false)]
+    public string ModelPublicationDate { get; set; }
+
     public string InputPath;
     public string FilePattern;
     public LicenseType LicenseType;
@@ -51,19 +59,43 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     private const string idHelp = "The first identifier to use when assigning new ids to nodes.";
     private const string excludeHeelp = "Comma seperated list of ReleaseStatus values to exclude from output.";
     private const string versionHelp = "Selects the source for the input files. v103 | v104 | v105 are supported.";
-
+    private const string useAllowSubtypesHelp = " When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.";
+    private const string mvHelp = "The version of the model to produce.";
+    private const string pdHelp = "The publication date of the model to produce.";
   }
 
-  [Verb("DotNetStack", false, HelpText = "")]
+  [Verb("DotNetStack", false, HelpText = "Generates code for the core model (not used for vendor defined models)")]
   public class DotNetStackOptions
   {
-    //-stack Generates the .NET stack code for the core model (not used for vendor defined models).
-    //-stack The path to use when generating .NET stack code., SingleValue
-    public string DotNetStackPath;
+    [Option('n', "stack", HelpText = stackHelp, Group = "StackType", Required = true)]
+    public string DotNetStackPath { get; set; }
 
-    //-ansic Generates the ANSI C stack code for the core model (not used for vendor defined models).
-    //-ansic The path to use when generating ANSI C stack code., SingleValue
-    public string AnsiCStackPath;
+    [Option('a', "ansic", HelpText = ansicHelp, Group = "StackType", Required = true)]
+    public string AnsiCStackPath { get; set; }
+
+    private const string ansicHelp = "Generates the ANSI C stack code for the core model (not used for vendor defined models). The path to use when generating ANSI C stack code.";
+    private const string stackHelp = "Generates the .NET stack code for the core model (not used for vendor defined models). The path to use when generating .NET stack code.";
+  }
+
+  [Verb("units", false, HelpText = "Generates the OPC UA Engineering Units CSV from the official UNECE table of units.")]
+  public class UnitsOptions
+  {
+    [Option("annex1", HelpText = annex1Help, Required = false)]
+    public string Annex1Path { get; set; }
+
+    [Option("annex2", HelpText = annex2Help, Required = false)]
+    public string Annex2Path { get; set; }
+
+    [Option("output", HelpText = outputHelp, Required = false)]
+    public string OutputPath { get; set; }
+
+    private const string annex1Help = "The path to the UNECE Annex 1 CSV file.";
+    private const string annex2Help = "The path to the UNECE Annex 2/3 CSV file.";
+    private const string outputHelp = "The units output directory.";
+  }
+
+  public class UpdateHeadersOptions
+  {
   }
 }
 
@@ -71,15 +103,9 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
 //-console The output goes to the standard error output (console) instead of error window
 
-//-useAllowSubtypes When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.
-//-useAllowSubtypes When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.", NoValue
-//-mv The version of the model to produce., SingleValue
-//-pd The publication date of the model to produce., SingleValue
-
+// OptionsNames:
+//
 //InputPath = "input";
 //FilePattern = "pattern";
 //LicenseType = "license";
 //Silent = "silent";
-//Annex1Path = "annex1";
-//Annex2Path = "annex2";
-//UnitsOutputPath = "output";

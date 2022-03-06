@@ -39,7 +39,7 @@ namespace OOI.ModelCompilerUI
       result.WithParsed<CompilerOptions>(options => compilerOptions = options).WithNotParsed(errors => error = errors);
       Assert.IsNotNull(compilerOptions);
       Assert.IsNull(error);
-      //CLI Syntax #67
+      //TODO CLI Syntax #67
     }
   }
 }
