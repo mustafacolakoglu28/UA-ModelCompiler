@@ -19,8 +19,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("54581e77-a130-407c-b775-7008dcf93888")]
-[assembly: AssemblyVersion("2.1.0")]
-[assembly: AssemblyFileVersion("2.1.0.0")]
+[assembly: AssemblyVersion("2.1.1")]
+[assembly: AssemblyFileVersion("2.1.1.0")]
 [assembly: InternalsVisibleTo(
   "OOI.ModelCompilerUI.UnitTest, PublicKey=" +
     "00240000048000009400000006020000002400005253413100040000010001005b97a0972ff6b13a" +
