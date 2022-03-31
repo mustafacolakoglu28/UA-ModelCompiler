@@ -20,6 +20,10 @@ namespace OOI.ModelCompilerUI
     [STAThread]
     private static void Main(string[] args)
     {
+      AssemblyName myAssembly = Assembly.GetExecutingAssembly().GetName();
+      string AssemblyHeader = $"UA-Compiler Version {myAssembly.Version}";
+      Console.WriteLine($"{1637887218}, {AssemblyHeader}");
+
       string commandLine = Environment.CommandLine;
       bool noGui = commandLine.Contains(consoleOutputCommandLineArgument);
       if (!noGui)

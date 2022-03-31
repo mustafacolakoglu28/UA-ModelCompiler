@@ -5,9 +5,9 @@
     <Description>ModelCompiler converts ModelDesign XML files into UANodeSet XML, C# and ANSI C, files</Description>
     <Company>OPC Foundation</Company>
     <Product>Object-Oriented Internet</Product>
-    <Copyright>Copyright (C) 2021 Mariusz Postol LODZ POLAND</Copyright>
+    <Copyright>Copyright (C) 2022 Mariusz Postol LODZ POLAND</Copyright>
     <RepositoryType>GitHub</RepositoryType>
-    <Version>2.1.0-Alpha</Version>
+    <Version>2.1.1-Bravo</Version>
     <ApplicationIcon>Logo.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>OOI.ModelCompiler</PackageId>
