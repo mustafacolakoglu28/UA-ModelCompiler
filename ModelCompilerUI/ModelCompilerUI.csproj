@@ -100,7 +100,6 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,15 +116,8 @@
   <ItemGroup>
     <Compile Include="CommandLineSyntax\CompilerOptions.cs" />
     <Compile Include="Diagnostic\AssemblyTraceSource.cs" />
-    <Compile Include="Diagnostic\Class1.cs" />
     <Compile Include="Diagnostic\IBuildErrorsHandling.cs" />
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="ExceptionDlg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExceptionDlg.Designer.cs">
-      <DependentUpon>ExceptionDlg.cs</DependentUpon>
-    </Compile>
     <Compile Include="HeaderUpdateTool.cs" />
     <Compile Include="MeasurementUnits.cs" />
     <Compile Include="ModelCompilerAPI.cs" />
@@ -133,19 +125,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schemas\XmlSchemaValidator.cs" />
     <Compile Include="StackGenerator.cs" />
-    <Compile Include="ToForms\GUIHandling.cs" />
-    <Compile Include="ToForms\IGUIHandling.cs" />
-    <Compile Include="ToForms\ToFormsConverters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="OOIModelDesign.snk" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExceptionDlg.resx">
-      <DependentUpon>ExceptionDlg.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="HelpFile.txt" />

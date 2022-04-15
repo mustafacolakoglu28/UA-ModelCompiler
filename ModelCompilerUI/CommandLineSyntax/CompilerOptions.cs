@@ -57,7 +57,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     private const string cgHelp = "Creates the identifier file if it does not exist (used instead of the -c option).";
     private const string oHelp = "The output directory for the generated files.";
     private const string idHelp = "The first identifier to use when assigning new ids to nodes.";
-    private const string excludeHeelp = "Comma seperated list of ReleaseStatus values to exclude from output.";
+    private const string excludeHeelp = "Comma separated list of ReleaseStatus values to exclude from output.";
     private const string versionHelp = "Selects the source for the input files. v103 | v104 | v105 are supported.";
     private const string useAllowSubtypesHelp = " When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.";
     private const string mvHelp = "The version of the model to produce.";
@@ -100,8 +100,6 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 }
 
 //Opc.Ua.ModelCompiler.exe - d2 < filepath > -c[g] < filepath > -o2 < directorypath >
-
-//-console The output goes to the standard error output (console) instead of error window
 
 // OptionsNames:
 //
