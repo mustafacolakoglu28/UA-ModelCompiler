@@ -1,96 +1,103 @@
 ﻿//__________________________________________________________________________________________________
 //
-//  Copyright (C) 2021, Mariusz Postol LODZ POLAND.
+//  Copyright (C) 2022, Mariusz Postol LODZ POLAND.
 //
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
-using OOI.ModelCompilerUI.ToForms;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
-using System.Windows.Forms;
+using UAOOI.SemanticData.BuildingErrorsHandling;
+using static OOI.ModelCompilerUI.Diagnostic.AssemblyTraceSource;
 
 namespace OOI.ModelCompilerUI
 {
   internal class EntryPoint
   {
+    private const string Copyright = "Copyright(c) 2022 Mariusz Postol";
+
     [STAThread]
     private static void Main(string[] args)
     {
       AssemblyName myAssembly = Assembly.GetExecutingAssembly().GetName();
       string AssemblyHeader = $"Starting UA-Compiler Version {myAssembly.Version}";
-      Console.WriteLine($"{1637887218} - {AssemblyHeader}");
+      TraceMessage message = TraceMessage.BuildErrorTraceMessage(BuildError.DiagnosticInformation, AssemblyHeader);
+      Log.WriteTraceMessage(message, 716624168);
+      Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage(Copyright), 716624169);
 
       string commandLine = Environment.CommandLine;
-      bool noGui = commandLine.Contains(consoleOutputCommandLineArgument);
-      if (!noGui)
-      {
-        Application.EnableVisualStyles();
-        Application.SetCompatibleTextRenderingDefault(false);
-      }
+      //bool noGui = commandLine.Contains(consoleOutputCommandLineArgument);
+      //if (!noGui)
+      //{
+      //  Application.EnableVisualStyles();
+      //  Application.SetCompatibleTextRenderingDefault(false);
+      //}
       //IList<string> args = Environment.GetCommandLineArgs();
       int exitCode = 0;
-      if (MeasurementUnits.ProcessCommandLine(args))
-        exitCode = 0;
-      else
-        exitCode = Main(noGui, commandLine, new GUIHandling());
+      //if (MeasurementUnits.ProcessCommandLine(args))
+      //  exitCode = 0;
+      //else
+      exitCode = Main(commandLine);
       Environment.Exit(exitCode);
     }
 
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
-    private static int Main(bool noGui, string commandLine, IGUIHandling guiHandling)
+    private static int Main(string commandLine)
     {
       try
       {
         //ServiceMessageContext context = ServiceMessageContext.GlobalContext;
-        if (!ProcessCommandLine(commandLine, noGui, guiHandling))
-        {
-          StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
-          if (noGui)
-            Console.Error.WriteLine(reader.ReadToEnd());
-          else
-            guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
-          reader.Close();
-          return 2;
-        }
+        ProcessCommandLine(commandLine);
+        //if (!ProcessCommandLine(commandLine))
+        //{
+        //  StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
+        //  if (noGui)
+        //    Console.Error.WriteLine(reader.ReadToEnd());
+        //  else
+        //    guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
+        //  reader.Close();
+        //  return 2;
+        //}
       }
       catch (Exception e)
       {
-        if (noGui)
-        {
-          Console.Error.WriteLine(e.Message);
-          Console.Error.WriteLine(e.StackTrace);
-          return 3;
-        }
-        else
-          guiHandling.ShowDialog(e);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, e.Message), 823547120);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, $"Stack Trace: {Environment.NewLine}{e.StackTrace}"), 823547121);
+        //if (noGui)
+        //{
+        //  Console.Error.WriteLine(e.Message);
+        //  Console.Error.WriteLine(e.StackTrace);
+        //  return 3;
+        //}
+        //else
+        //  guiHandling.ShowDialog(e);
       }
       return 0;
     }
 
-    private const string consoleOutputCommandLineArgument = "-console";
+    //private const string consoleOutputCommandLineArgument = "-console";
 
     /// <summary>
     /// Processes the command line arguments.
     /// </summary>
-    private static bool ProcessCommandLine(string commandLine, bool noGui, IGUIHandling guiHandling)
+    private static void ProcessCommandLine(string commandLine)
     {
-      if (commandLine.IndexOf("-?") != -1)
-      {
-        StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
-        guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
-        reader.Close();
-        return true;
-      }
+      //if (commandLine.IndexOf("-?") != -1)
+      //{
+      //  StreamReader reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("OOI.ModelCompilerUI.HelpFile.txt"));
+      //  guiHandling.Show(reader.ReadToEnd(), "ModelCompiler");
+      //  reader.Close();
+      //  return true;
+      //}
       List<string> tokens = GetTokens(commandLine);
       // launch gui if no arguments provided.
-      if (tokens.Count == 1)
-        return false;
+      //if (tokens.Count == 1)
+      //  return false;
       try
       {
         ModelCompilerAPIInternal mc = new ModelCompilerAPIInternal();
@@ -99,16 +106,18 @@ namespace OOI.ModelCompilerUI
       }
       catch (Exception e)
       {
-        if (!noGui)
-        {
-          Console.Error.WriteLine(e.Message);
-          Console.Error.WriteLine(e.StackTrace);
-          Environment.Exit(4);
-        }
-        else
-          guiHandling.ShowDialog(e);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, e.Message), 823547120);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, $"Stack Trace: {Environment.NewLine}{e.StackTrace}"), 823547121);
+        //  if (!noGui)
+        //  {
+        //    Console.Error.WriteLine(e.Message);
+        //    Console.Error.WriteLine(e.StackTrace);
+        //    Environment.Exit(4);
+        //  }
+        //  else
+        //    guiHandling.ShowDialog(e);
       }
-      return true;
+      //return true;
     }
 
     /// <summary>

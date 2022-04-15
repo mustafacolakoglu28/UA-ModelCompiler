@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace OOI.ModelCompilerUI.ToForms
 {
+  [Obsolete()]
   internal class GUIHandling : IGUIHandling
   {
     public void Show(string message)
