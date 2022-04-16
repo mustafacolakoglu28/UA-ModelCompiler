@@ -7,11 +7,10 @@
 
 using CommandLine;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OOI.ModelCompilerUI.CommandLineSyntax;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OOI.ModelCompilerUI
+namespace OOI.ModelCompilerUI.CommandLineSyntax
 {
   [TestClass]
   public class CompilerOptionsParserUnitTest
@@ -59,7 +58,7 @@ namespace OOI.ModelCompilerUI
       Assert.IsTrue(string.IsNullOrEmpty(compilerOptions.ModelPublicationDate));
       Assert.AreEqual<string>("v104", compilerOptions.Version);
     }
-    //TODO CLI Syntax #67
 
+    //TODO CLI Syntax #67
   }
 }
