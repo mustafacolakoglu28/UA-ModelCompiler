@@ -7,7 +7,7 @@
     <Product>Object-Oriented Internet</Product>
     <Copyright>Copyright (C) 2022 Mariusz Postol LODZ POLAND</Copyright>
     <RepositoryType>GitHub</RepositoryType>
-    <Version>2.1.1-Bravo</Version>
+    <Version>2.1.2</Version>
     <ApplicationIcon>Logo.ico</ApplicationIcon>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>OOI.ModelCompiler</PackageId>

@@ -90,10 +90,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandLineSyntax\CompilerOptionsParserUnitTest.cs" />
+    <Compile Include="CommandLineSyntax\DotNetStackOptionsParserUnitTest.cs" />
+    <Compile Include="CommandLineSyntax\UnitsOptionsParserUnitTest.cs" />
+    <Compile Include="CommandLineSyntax\UpdateHeadersOptionsParserUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModelCompilerAPIInternalUnitTest.cs" />
     <Compile Include="IntegrationUnitTest.cs" />
-    <Compile Include="CommandLineSyntaxUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

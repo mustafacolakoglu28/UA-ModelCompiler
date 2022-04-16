@@ -1,6 +1,6 @@
 //__________________________________________________________________________________________________
 //
-//  Copyright (C) 2021, Mariusz Postol LODZ POLAND.
+//  Copyright (C) 2022, Mariusz Postol LODZ POLAND.
 //
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
@@ -8,15 +8,15 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("UnitTestProject1")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ModelCompiler Unit Tests")]
+[assembly: AssemblyDescription("ModelDesign Domain Specific Language Compiler Library Unit Tests")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("UnitTestProject1")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("MPostol")]
+[assembly: AssemblyProduct("OOI")]
+[assembly: AssemblyCopyright("Copyright (C) 2022 Mariusz Postol LODZ POLAND")]
+[assembly: AssemblyTrademark("OOI")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("82857734-65e7-4d3c-be6e-2ee06df1834d")]
-[assembly: AssemblyVersion("2.1.0")]
-[assembly: AssemblyFileVersion("2.1.0.0")]
+[assembly: AssemblyVersion("2.1.2.*")]
+[assembly: AssemblyFileVersion("2.1.2.0")] 

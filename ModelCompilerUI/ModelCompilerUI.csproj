@@ -7,7 +7,7 @@
     <ProjectGuid>{54581E77-A130-407C-B775-7008DCF93888}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>OOI.ModelCompilerUI</RootNamespace>
-    <AssemblyName>OOI.ModelCompilerUI</AssemblyName>
+    <AssemblyName>mdc</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -115,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandLineSyntax\CompilerOptions.cs" />
+    <Compile Include="CommandLineSyntax\DotNetStackOptions.cs" />
+    <Compile Include="CommandLineSyntax\UnitsOptions.cs" />
+    <Compile Include="CommandLineSyntax\UpdateHeadersOptions.cs" />
     <Compile Include="Diagnostic\AssemblyTraceSource.cs" />
     <Compile Include="Diagnostic\IBuildErrorsHandling.cs" />
     <Compile Include="EntryPoint.cs" />
