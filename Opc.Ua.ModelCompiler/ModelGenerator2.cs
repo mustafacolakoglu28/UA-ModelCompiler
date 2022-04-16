@@ -103,6 +103,7 @@ namespace OOI.ModelCompiler
             }
 
             m_validator.UseAllowSubtypes = model.UseAllowSubtypes;
+            m_validator.ReleaseCandidate = model.ReleaseCandidate;
             m_validator.ModelVersion = model.SpecificationVersion;
             m_validator.ModelPublicationDate = model.PublicationDate;
             m_validator.Validate2(model.DesignFiles, model.IdentifierFile, false);
@@ -133,6 +134,7 @@ namespace OOI.ModelCompiler
             {
                 return;
             }
+
             WriteTemplate_InternalSingleFile(outputDir, nodes);
             WriteTemplate_XmlExport(outputDir);
             WriteTemplate_XmlSchema(outputDir, nodes);
@@ -1270,7 +1272,14 @@ namespace OOI.ModelCompiler
 
             if (field.ValueRank != ValueRank.Scalar)
             {
-                template.Write("<xs:element name=\"{0}\" type=\"{1}\" minOccurs=\"0\" nillable=\"true\" />", field.Name, GetXmlDataType(field.DataTypeNode, field.ValueRank));
+                var fieldDataType = GetXmlDataType(field.DataTypeNode, field.ValueRank);
+
+                if (basicType == BasicDataType.UserDefined && field.AllowSubTypes)
+                {
+                    fieldDataType = "ua:ListOfExtensionObject";
+                }
+
+                template.Write("<xs:element name=\"{0}\" type=\"{1}\" minOccurs=\"0\" nillable=\"true\" />", field.Name, fieldDataType);
             }
             else
             {
@@ -1299,7 +1308,14 @@ namespace OOI.ModelCompiler
 
                     case BasicDataType.UserDefined:
                     {
-                        template.Write("<xs:element name=\"{0}\" type=\"{1}\" minOccurs=\"0\" nillable=\"true\" />", field.Name, GetXmlDataType(field.DataTypeNode, field.ValueRank));
+                        var fieldDataType = GetXmlDataType(field.DataTypeNode, field.ValueRank);
+
+                        if (field.AllowSubTypes)
+                        {
+                            fieldDataType = "ua:ExtensionObject";
+                        }
+                        
+                        template.Write("<xs:element name=\"{0}\" type=\"{1}\" minOccurs=\"0\" nillable=\"true\" />", field.Name, fieldDataType);
                         break;
                     }
 
@@ -1431,7 +1447,7 @@ namespace OOI.ModelCompiler
                     nodes,
                     new LoadTemplateEventHandler(LoadTemplate_BinaryType),
                     new WriteTemplateEventHandler(WriteTemplate_BinaryType));
-
+                 
                 template.WriteTemplate(null);
             }
             finally
@@ -1602,6 +1618,7 @@ namespace OOI.ModelCompiler
                     {
                         continue;
                     }
+
                     if (Object.ReferenceEquals(dataType, parent))
                     {
                         fields.Add(field);
@@ -1619,7 +1636,13 @@ namespace OOI.ModelCompiler
                         IsInherited = true,
                         Name = field.Name,
                         Parent = field.Parent,
-                        ValueRank = field.ValueRank
+                        ValueRank = field.ValueRank,
+                        ArrayDimensions = field.ArrayDimensions,
+                        AllowSubTypes = field.AllowSubTypes,
+                        IsOptional = field.IsOptional,
+                        BitMask = field.BitMask,
+                        DefaultValue = field.DefaultValue,
+                        ReleaseStatus = field.ReleaseStatus
                     });
                 }
             }
@@ -1775,6 +1798,13 @@ namespace OOI.ModelCompiler
 
             BasicDataType basicType = dataType.BasicDataType;
 
+            var fieldDataType = GetBinaryDataType(field.DataTypeNode);
+
+            if (field.AllowSubTypes)
+            {
+                fieldDataType = "ua:ExtensionObject";
+            }
+
             if (basicType == BasicDataType.Enumeration)
             {
                 template.WriteNextLine(context.Prefix);
@@ -1787,7 +1817,7 @@ namespace OOI.ModelCompiler
                 template.WriteNextLine(context.Prefix);
                 template.Write("<opc:Field Name=\"NoOf{0}\" TypeName=\"opc:Int32\" />", field.Name);
                 template.WriteNextLine(context.Prefix);
-                template.Write("<opc:Field Name=\"{0}\" TypeName=\"{1}\" LengthField=\"NoOf{0}\" />", field.Name, GetBinaryDataType(field.DataTypeNode));
+                template.Write("<opc:Field Name=\"{0}\" TypeName=\"{1}\" LengthField=\"NoOf{0}\" />", field.Name, fieldDataType);
                 return null;
             }
 
@@ -1795,12 +1825,13 @@ namespace OOI.ModelCompiler
 
             if (field.IsInherited)
             {
-                template.Write("<opc:Field Name=\"{0}\" TypeName=\"{1}\" SourceType=\"{2}\" />", field.Name, GetBinaryDataType(field.DataTypeNode), GetBinaryDataType(field.Parent as DataTypeDesign));
+                template.Write("<opc:Field Name=\"{0}\" TypeName=\"{1}\" SourceType=\"{2}\" />", field.Name, fieldDataType, GetBinaryDataType(field.Parent as DataTypeDesign));
             }
             else
             {
-                template.Write("<opc:Field Name=\"{0}\" TypeName=\"{1}\" />", field.Name, GetBinaryDataType(field.DataTypeNode));
+                template.Write("<opc:Field Name=\"{0}\" TypeName=\"{1}\" />", field.Name, fieldDataType);
             }
+
             return null;
         }
         #endregion
@@ -2239,6 +2270,7 @@ namespace OOI.ModelCompiler
 
             return false;
         }
+
         /// <summary>
         /// Returns the identifiers for the nodes defined.
         /// </summary>
@@ -2249,13 +2281,14 @@ namespace OOI.ModelCompiler
             for (int ii = 0; ii < m_model.Items.Length; ii++)
             {
                 NodeDesign node = m_model.Items[ii];
-
+                
                 if (IsExcluded(node))
                 {
                     continue;
                 }
 
                 InstanceDesign instance = node as InstanceDesign;
+                
                 if (instance != null && instance.TypeDefinitionNode != null)
                 {
                     if (IsExcluded(instance.TypeDefinitionNode))
@@ -2263,6 +2296,7 @@ namespace OOI.ModelCompiler
                         continue;
                     }
                 }     
+                
                 if (IsMethodTypeNode(node))
                 {
                     continue;
@@ -2439,6 +2473,7 @@ namespace OOI.ModelCompiler
                 {
                     continue;
                 }
+
                 if (IsMethodTypeNode(node))
                 {
                     continue;
@@ -2460,6 +2495,7 @@ namespace OOI.ModelCompiler
                     {
                         continue;
                     }
+
                     if (child.SymbolicName.Namespace == m_model.TargetNamespace)
                     {
                         string browseName = null;
@@ -3851,6 +3887,7 @@ namespace OOI.ModelCompiler
             }
 
             var value = GetDefaultValue(field.DataTypeNode, field.ValueRank, field.DefaultValue, null, true);
+
             template.WriteNextLine(context.Prefix);
             template.Write("{0} = {1};", GetChildFieldName(field), value);
 
@@ -4358,7 +4395,7 @@ namespace OOI.ModelCompiler
                 {
                     if (!IsExcluded(child))
                     {
-                    fields.Add(child);
+                        fields.Add(child);
                     }
                 }
 
@@ -4930,6 +4967,7 @@ namespace OOI.ModelCompiler
                     }
                 }
             }
+
             switch (dataType.BasicDataType)
             {
                 case BasicDataType.Boolean:
@@ -5610,7 +5648,6 @@ namespace OOI.ModelCompiler
 
             foreach (NodeDesign node in m_model.Items)
             {
-
                 if (!IsExcluded(node) && !node.IsDeclaration)
                 {
                     nodes.Add(node);

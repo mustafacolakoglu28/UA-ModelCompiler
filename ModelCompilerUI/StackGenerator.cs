@@ -157,10 +157,10 @@ namespace OOI.ModelCompiler
         }
 
         private static void GenerateDotNet(
-            Files files,
-            string modelDir,
-            string csvDir,
-            string outputDir,
+            Files files, 
+            string modelDir, 
+            string csvDir, 
+            string outputDir, 
             string specificationVersion,
             IList<string> exclusions)
         {
@@ -169,8 +169,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Attributes.xml",
                 outputDir,
                 files.NodeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator7.Generate(
                 "Opc.Ua",
@@ -183,8 +183,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Status Codes.xml",
                 outputDir,
                 files.NodeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator8.Generate(
                 "Opc.Ua",
@@ -197,8 +197,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Status Codes.xml",
                 outputDir,
                 files.NodeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator9.Generate(
                 "Opc.Ua",
@@ -210,8 +210,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Core Services.xml",
                 outputDir,
                 files.TypeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator10.Generate("Opc.Ua", "Core", true);
         }
@@ -254,7 +254,7 @@ namespace OOI.ModelCompiler
                 rootDir,
                 files,
                 parameters.SpecificationVersion,
-                      exclusions);
+                exclusions);
 
             GenerateAnsiC(files, modelDir, csvDir, rootDir, parameters.SpecificationVersion, exclusions);
         }
