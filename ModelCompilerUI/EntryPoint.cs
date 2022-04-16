@@ -20,7 +20,7 @@ namespace OOI.ModelCompilerUI
     private static void Main(string[] args)
     {
       AssemblyName myAssembly = Assembly.GetExecutingAssembly().GetName();
-      string AssemblyHeader = $"Starting UA-Compiler Version {myAssembly.Version}";
+      string AssemblyHeader = $"Starting ModelDesign Compiler (mdc.exe) Version {myAssembly.Version}";
       TraceMessage message = TraceMessage.BuildErrorTraceMessage(BuildError.DiagnosticInformation, AssemblyHeader);
       Log.WriteTraceMessage(message, 716624168);
       Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage(Copyright), 716624169);
