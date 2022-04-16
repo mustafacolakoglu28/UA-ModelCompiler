@@ -111,7 +111,7 @@ namespace OOI.ModelCompilerUI
         Execute(this, this);
       }
 
-      public StackBuildModelCompilerAPI()
+      internal StackBuildModelCompilerAPI()
       {
         DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
         ansicRootDir = Path.Combine(stack.FullName, "AnsiC");

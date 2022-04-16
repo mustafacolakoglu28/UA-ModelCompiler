@@ -115,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandLineSyntax\CompilerOptions.cs" />
+    <Compile Include="CommandLineSyntax\DotNetStackOptions.cs" />
+    <Compile Include="CommandLineSyntax\UnitsOptions.cs" />
+    <Compile Include="CommandLineSyntax\UpdateHeadersOptions.cs" />
     <Compile Include="Diagnostic\AssemblyTraceSource.cs" />
     <Compile Include="Diagnostic\IBuildErrorsHandling.cs" />
     <Compile Include="EntryPoint.cs" />
