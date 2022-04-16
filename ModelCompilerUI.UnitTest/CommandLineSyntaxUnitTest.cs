@@ -33,7 +33,7 @@ namespace OOI.ModelCompilerUI
       };
       string args = string.Join(",", commandLine.ToArray<string>());
       Assert.IsNotNull(args);
-      ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions>(commandLine);
+      ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions, UnitsOptions, UpdateHeadersOptions>(commandLine);
       CompilerOptions compilerOptions = null;
       IEnumerable<Error> error = null;
       result.WithParsed<CompilerOptions>(options => compilerOptions = options).WithNotParsed(errors => error = errors);

@@ -1,13 +1,4 @@
-REM @ECHO off
-REM ****************************************************************************************************************
-REM ** --
-REM ** This script demonstrates how to use the model compiler to generate source code from a variety
-REM ** of XML files that adhere to the 'Nodeset2.xml' format. Please refer to the UA Specifications Part 6
-REM ** for more information.
-REM ** --
-REM ****************************************************************************************************************
-REM BuildStandardTypes.bat must not refer to the OPC UA .NET Standard #11
-
+@ECHO off
 SETLOCAL
 
 set MODELCOMPILER=.\Bin\Release\OOI.ModelCompilerUI.exe

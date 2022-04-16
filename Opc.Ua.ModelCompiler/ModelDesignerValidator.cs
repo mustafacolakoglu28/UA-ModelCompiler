@@ -107,6 +107,8 @@ namespace OOI.ModelCompiler
         /// </summary>
         public bool UseAllowSubtypes { get; set; }
 
+        public bool ReleaseCandidate { get; set; }
+
         /// <summary>
         /// ModelVersion
         /// </summary>
@@ -343,6 +345,7 @@ namespace OOI.ModelCompiler
 
             // import types from target dictionary.
             List<NodeDesign> nodes = new List<NodeDesign>();
+
             foreach (NodeDesign node in dictionary.Items)
             {
                 if (Import(node, null))
@@ -528,7 +531,7 @@ namespace OOI.ModelCompiler
 
         private ModelDesign ImportTypeDictionary(Stream stream, string resourcePath)
         {
-            Dictionary<string,string> knownFiles = new Dictionary<string, string>();
+            Dictionary<string, string> knownFiles = new Dictionary<string, string>();
             CodeGenerator.TypeDictionaryValidator validator = new CodeGenerator.TypeDictionaryValidator(knownFiles, resourcePath);
             validator.Validate(stream, null);
 
@@ -802,6 +805,14 @@ namespace OOI.ModelCompiler
                     }
                 }
             }
+
+            foreach (var node in m_nodes.Values)
+            {
+                if (ReleaseCandidate && node.ReleaseStatus == ReleaseStatus.RC)
+                {
+                    node.ReleaseStatus = ReleaseStatus.Released;
+                }
+            }
         }
 
         private void UpdateNamespaceObject(ModelDesign dictionary)
@@ -832,6 +843,7 @@ namespace OOI.ModelCompiler
             {
                 return;
             }
+
 
             List<string> ranges = new List<string>();
 
@@ -986,6 +998,80 @@ namespace OOI.ModelCompiler
             //}
         }
 
+        private ModelDesign LoadDesignFile(ModelDesign dictionary, string designFilePath)
+        {
+            Log("Loading DesignFile: {0}", designFilePath);
+
+            ModelDesign component = null;
+
+            try
+            {
+                if (NodeSetToModelDesign.IsNodeSet(designFilePath))
+                {
+                    var reader = new NodeSetToModelDesign(
+                        new NodeSetReaderSettings()
+                        {
+                            NodesByQName = m_nodes,
+                            DesignFilePaths = m_designLocations
+                        },
+                        designFilePath
+                     );
+
+                    component = reader.Import();
+                }
+                else
+                {
+                    component = (ModelDesign)LoadInput(typeof(ModelDesign), designFilePath);
+
+                    if (component.Items == null)
+                    {
+                        component.Items = new NodeDesign[0];
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    component = ImportTypeDictionary(designFilePath, EmbeddedModelDesignPath);
+                }
+                catch (Exception e2)
+                {
+                    throw new AggregateException("Error parsing file " + designFilePath, e, e2);
+                }
+            }
+
+            if (dictionary != null)
+            {
+                List<NodeDesign> nodes2 = new List<NodeDesign>();
+
+                // namespaces in primary dictionary replace all namespaces in secondary dictionaries.
+                nodes2.AddRange(dictionary.Items);
+                nodes2.AddRange(component.Items);
+
+                dictionary.Items = nodes2.ToArray();
+                component = dictionary;
+            }
+
+            if (component.Dependencies == null && m_dictionary != null)
+            {
+                component.Dependencies = new Dictionary<string, Export.ModelTableEntry>();
+
+                var modelInfo = new Export.ModelTableEntry()
+                {
+                    ModelUri = m_dictionary.TargetNamespace,
+                    XmlSchemaUri = GetXmlNamespace(m_dictionary.TargetNamespace),
+                    Version = m_dictionary.TargetVersion,
+                    PublicationDate = m_dictionary.TargetPublicationDate,
+                    PublicationDateSpecified = m_dictionary.TargetPublicationDateSpecified
+                };
+
+                component.Dependencies[m_dictionary.TargetNamespace] = modelInfo;
+            }
+
+            return component;
+        }
+
         /// <summary>
         /// Validates the design in the specified file.
         /// </summary>
@@ -1029,6 +1115,7 @@ namespace OOI.ModelCompiler
             {
                 Log("Loading StandardTypes...");
                 dictionary = (ModelDesign)LoadResource(typeof(ModelDesign), $"{EmbeddedModelDesignPath}.BuiltInTypes.xml", Assembly.GetExecutingAssembly());
+
                 if (dictionary.Items == null)
                 {
                     dictionary.Items = new NodeDesign[0];
@@ -1037,69 +1124,19 @@ namespace OOI.ModelCompiler
 
             for (int ii = 0; ii < designFilePaths.Count; ii++)
             {
-                Log("Loading DesignFile: {0}", designFilePaths[ii]);
-
-                ModelDesign component = null;
-
-                try
-                {
-                    component = (ModelDesign)LoadInput(typeof(ModelDesign), designFilePaths[ii]);
-                    if (component.Items == null)
-                    {
-                        component.Items = new NodeDesign[0];
-                    }
-                }
-                catch (Exception e)
-                {
-                    try
-                    {
-                        component = ImportTypeDictionary(designFilePaths[ii], EmbeddedModelDesignPath);
-                    }
-                    catch (Exception e2)
-                    {
-                        throw new AggregateException("Error parsing file " + designFilePaths[ii], e, e2);
-                    }
-                }
-
-                if (dictionary != null)
-                {
-                    List<NodeDesign> nodes2 = new List<NodeDesign>();
-
-                    // namespaces in primary dictionary replace all namespaces in secondary dictionaries.
-                    nodes2.AddRange(dictionary.Items);
-                    nodes2.AddRange(component.Items);
-
-                    dictionary.Items = nodes2.ToArray();
-                    component = dictionary;
-                }
-
-                if (component.Dependencies == null && m_dictionary != null)
-                {
-                    component.Dependencies = new Dictionary<string, Export.ModelTableEntry>();
-
-                    var modelInfo = new Export.ModelTableEntry()
-                    {
-                        ModelUri = m_dictionary.TargetNamespace,
-                        XmlSchemaUri = GetXmlNamespace(m_dictionary.TargetNamespace),
-                        Version = m_dictionary.TargetVersion,
-                        PublicationDate = m_dictionary.TargetPublicationDate,
-                        PublicationDateSpecified = m_dictionary.TargetPublicationDateSpecified
-                    };
-
-                    component.Dependencies[m_dictionary.TargetNamespace] = modelInfo;
-                }
-
-                dictionary = component;
+                dictionary = LoadDesignFile(dictionary, designFilePaths[ii]);
             }
 
             // set a default xml namespace.
             if (String.IsNullOrEmpty(dictionary.TargetXmlNamespace))
             {
                 dictionary.TargetXmlNamespace = dictionary.TargetNamespace;
+                
                 if (!String.IsNullOrEmpty(ModelVersion))
                 {
                     dictionary.TargetVersion = ModelVersion;
                 }
+
                 if (!String.IsNullOrEmpty(ModelPublicationDate))
                 {
                     var dt = DateTime.Parse(ModelPublicationDate, null, DateTimeStyles.AssumeUniversal);
@@ -1168,6 +1205,7 @@ namespace OOI.ModelCompiler
 
             // import types from target dictionary.
             List<NodeDesign> nodes = new List<NodeDesign>();
+
             foreach (NodeDesign node in m_dictionary.Items)
             {
                 if (Import(node, null))
@@ -1177,11 +1215,13 @@ namespace OOI.ModelCompiler
             }
 
             m_dictionary.Items = nodes.ToArray();
+
             if (m_dictionary.Items == null || m_dictionary.Items.Length == 0)
             {
                 Console.WriteLine("Nothing to do because design file has no entries.");
                 return;
             }
+
             // do additional fix up after import.
             ValidateDictionary(m_dictionary);
 
@@ -1220,6 +1260,7 @@ namespace OOI.ModelCompiler
             {
                 return ns;
             }
+
             return null;
         }
 
@@ -1256,7 +1297,7 @@ namespace OOI.ModelCompiler
                         argument.ArrayDimensions = new UInt32Collection();
                         var range = NumericRange.Parse(parameter.ArrayDimensions);
                         for (int jj = 0; jj < range.Dimensions; jj++)
-                    {
+                        {
                             argument.ArrayDimensions.Add((uint)range.SubRanges[jj].Begin);
                         }
                     }
@@ -1294,8 +1335,6 @@ namespace OOI.ModelCompiler
                     argument.ValueRank = ConstructValueRank(parameter.ValueRank, parameter.ArrayDimensions);
                     argument.ArrayDimensions = ConstructArrayDimensionsRW(parameter.ValueRank, parameter.ArrayDimensions);
                     argument.Description = null;
-
-
 
                     if (parameter.Description != null && !parameter.Description.IsAutogenerated)
                     {
@@ -1375,19 +1414,20 @@ namespace OOI.ModelCompiler
             {
                 int index = 0;
                 bool sequentenial = false;
+
                 if (!dataType.ForceEnumValues)
                 {
                     sequentenial = true;
 
-                foreach (Parameter parameter in dataType.Fields)
-                {
-                    if (parameter.Identifier != index)
+                    foreach (Parameter parameter in dataType.Fields)
                     {
-                        sequentenial = false;
-                        break;
-                    }
+                        if (parameter.Identifier != index)
+                        {
+                            sequentenial = false;
+                            break;
+                        }
 
-                    index++;
+                        index++;
                     }
                 }
 
@@ -1559,6 +1599,7 @@ namespace OOI.ModelCompiler
                 {
                     dictionary.ReleaseStatus = ReleaseStatus.Deprecated;
                 }
+
                 if (ns.Value == DefaultNamespace)
                 {
                     dictionary.PartNo = 5;
@@ -1754,6 +1795,7 @@ namespace OOI.ModelCompiler
                 {
                     description.ReleaseStatus = ReleaseStatus.Deprecated;
                 }
+
                 if (!dataType.NotInAddressSpace)
                 {
                     descriptions.Add(description);
@@ -2342,6 +2384,7 @@ namespace OOI.ModelCompiler
                     {
                         continue;
                     }
+
                     // filter any children with unhandled modelling rules.
                     if (child.ModellingRuleSpecified)
                     {
@@ -2373,7 +2416,7 @@ namespace OOI.ModelCompiler
 
                     if (Import(child, node))
                     {
-                    children.Add(child);
+                        children.Add(child);
                     }
                 }
 
@@ -2390,6 +2433,7 @@ namespace OOI.ModelCompiler
                     ImportReference(node, reference);
                 }
             }
+
             return true;
         }
 
@@ -2707,9 +2751,11 @@ namespace OOI.ModelCompiler
                 dataType.IsStructure = (dataType.BaseType == new XmlQualifiedName("Structure", DefaultNamespace));
                 dataType.IsEnumeration = (dataType.BaseType == new XmlQualifiedName("Enumeration", DefaultNamespace) || dataType.IsOptionSet);
                 dataType.IsUnion = (dataType.BaseType == new XmlQualifiedName("Union", DefaultNamespace) || dataType.IsUnion);
+
                 Parameter[] parameters = dataType.Fields;
                 dataType.HasFields = ImportParameters(dataType, ref parameters, "Field");
                 dataType.Fields = parameters;
+
                 dataType.HasEncodings = ImportEncodings(dataType);
             }
 
@@ -2994,7 +3040,9 @@ namespace OOI.ModelCompiler
                 {
                     continue;
                 }
+
                 filteredParameters.Add(parameter);
+
                 parameter.Parent = node;
 
                 // check name.
@@ -3070,10 +3118,12 @@ namespace OOI.ModelCompiler
             }
 
             parameters = filteredParameters.ToArray();
+
             if (parameters == null || parameters.Length == 0)
             {
                 return false;
             }
+
             return true;
         }
 
@@ -3136,6 +3186,7 @@ namespace OOI.ModelCompiler
                         OutputError($"Ignoring InvalidReference {node.SymbolicId.Name} => {reference.TargetId.Name}. [{e.Message}]");
                     }
                 }
+
                 node.References = references.ToArray();
             }
         }
@@ -4120,13 +4171,19 @@ namespace OOI.ModelCompiler
 
             return dimensions;
         }
+
+        /// <summary>
+        /// Maps the array dimensions onto a constant declaration..
+        /// </summary>
         private ReadOnlyList<uint> ConstructArrayDimensions(ValueRank valueRank, string arrayDimensions)
         {
             var dimensions = ConstructArrayDimensionsRW(valueRank, arrayDimensions);
+
             if (dimensions != null)
             {
-            return new ReadOnlyList<uint>(dimensions);
+                return new ReadOnlyList<uint>(dimensions);
             }
+
             return null;
         }
 
@@ -5232,6 +5289,17 @@ namespace OOI.ModelCompiler
             }
         }
 
+        private Export.ReleaseStatus ToReleaseStatus(ReleaseStatus input)
+        {
+            switch (input)
+            {
+                default:
+                case ReleaseStatus.Released: { return Export.ReleaseStatus.Released; }
+                case ReleaseStatus.Deprecated: { return Export.ReleaseStatus.Deprecated; }
+                case ReleaseStatus.RC:
+                case ReleaseStatus.Draft: { return Export.ReleaseStatus.Draft; }
+            }
+        }
         private void CreateNodeState(NodeDesign root, NamespaceTable namespaceUris)
         {
             if (root is InstanceDesign)
@@ -5259,7 +5327,7 @@ namespace OOI.ModelCompiler
                     namespaceUris);
 
                 root.State.Categories = null;
-                root.State.ReleaseStatus = (Export.ReleaseStatus)(int)root.ReleaseStatus;
+                root.State.ReleaseStatus = ToReleaseStatus(root.ReleaseStatus);
 
                 if (!String.IsNullOrEmpty(root.Category))
                 {
@@ -5303,7 +5371,7 @@ namespace OOI.ModelCompiler
                     if (root.InstanceState.ReleaseStatus == Export.ReleaseStatus.Released || root.InstanceState.Categories != null)
                     {
                         root.InstanceState.Categories = null;
-                        root.InstanceState.ReleaseStatus = (Export.ReleaseStatus)(int)hierarchyNode.Instance.ReleaseStatus;
+                        root.InstanceState.ReleaseStatus = ToReleaseStatus(hierarchyNode.Instance.ReleaseStatus);
 
                         if (!String.IsNullOrEmpty(root.Category))
                         {
@@ -5776,6 +5844,7 @@ namespace OOI.ModelCompiler
                 {
                     root.Fields = new Parameter[0];
                 }
+
                 DataTypeDefinition definition = null;
 
                 if (root.BasicDataType == BasicDataType.UserDefined && root.IsStructure)
@@ -5947,7 +6016,7 @@ namespace OOI.ModelCompiler
             state.ModellingRuleId = ConstructModellingRule(root.ModellingRule);
             state.EventNotifier = ConstructEventNotifier(root.SupportsEvents);
             state.Categories = null;
-            state.ReleaseStatus = (Export.ReleaseStatus)(int)root.ReleaseStatus;
+            state.ReleaseStatus = ToReleaseStatus(root.ReleaseStatus);
 
             if (!String.IsNullOrEmpty(root.Category))
             {
@@ -5974,7 +6043,7 @@ namespace OOI.ModelCompiler
             state.EventNotifier = ConstructEventNotifier(root.SupportsEvents);
             state.ContainsNoLoops = root.ContainsNoLoops;
             state.Categories = null;
-            state.ReleaseStatus = (Export.ReleaseStatus)(int)root.ReleaseStatus;
+            state.ReleaseStatus = ToReleaseStatus(root.ReleaseStatus);
 
             if (!String.IsNullOrEmpty(root.Category))
             {
@@ -5998,7 +6067,7 @@ namespace OOI.ModelCompiler
             state.ModellingRuleId = ConstructModellingRule(root.ModellingRule);
             state.Executable = state.UserExecutable = !root.NonExecutable;
             state.Categories = null;
-            state.ReleaseStatus = (Export.ReleaseStatus)(int)root.ReleaseStatus;
+            state.ReleaseStatus = ToReleaseStatus(root.ReleaseStatus);
             state.MethodDeclarationId = ConstructNodeId(root.MethodDeclarationNode, namespaceUris);
 
             if (!String.IsNullOrEmpty(root.Category))
@@ -6106,7 +6175,7 @@ namespace OOI.ModelCompiler
             state.ReferenceTypeId = ConstructNodeId(root.ReferenceType, namespaceUris);
             state.ModellingRuleId = ConstructModellingRule(root.ModellingRule);
             state.Categories = null;
-            state.ReleaseStatus = (Export.ReleaseStatus)(int)root.ReleaseStatus;
+            state.ReleaseStatus = ToReleaseStatus(root.ReleaseStatus);
 
             if (!String.IsNullOrEmpty(root.Category))
             {
