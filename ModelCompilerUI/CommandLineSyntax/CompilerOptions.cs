@@ -15,7 +15,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
   [Verb("compile", false, HelpText = compileHelp)]
   internal class CompilerOptions : OptionsBase, ICompilerOptions
   {
-    #region options
+    #region ICompilerOptions
 
     [Option('g', OptionsNames.GenerateIdentifierFile, SetName = "csv", HelpText = cgHelp, MetaValue = "CSVfileGenrate", Required = false)]
     public bool CreateIdentifierFile { get; set; }
@@ -35,7 +35,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     [Option(OptionsNames.ReleaseCandidate, HelpText = rcHelp, Required = false)]
     public bool ReleaseCandidate { get; set; }
 
-    #endregion options
+    #endregion ICompilerOptions
 
     internal void ValidateOptionsConsistency()
 
@@ -66,7 +66,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     private const string compileHelp = "Takes an OPC UA ModelDesign file and generates a NodeSet and code for the .NETStandard stack.";
     private const string cgHelp = "Creates the identifier file if it does not exist (used instead of the -c option).";
     private const string idHelp = "The first identifier to use when assigning new ids to nodes.";
-    private const string useAllowSubtypesHelp = " When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.";
+    private const string useAllowSubtypesHelp = "When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.";
     private const string mvHelp = "The version of the model to produce.";
     private const string pdHelp = "The publication date of the model to produce.";
     private const string rcHelp = "Indicates that a release candidate nodeset is being generated.";
