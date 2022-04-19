@@ -29,12 +29,3 @@ Generates classes that implement a UA information model.
 -mv The version of the model to produce., SingleValue
 -pd The publication date of the model to produce., SingleValue
 
-
--o No longer supported.
-InputPath = "input";
-FilePattern = "pattern";
-LicenseType = "license";
-Silent = "silent";
-Annex1Path = "annex1";
-Annex2Path = "annex2";
-UnitsOutputPath = "output";

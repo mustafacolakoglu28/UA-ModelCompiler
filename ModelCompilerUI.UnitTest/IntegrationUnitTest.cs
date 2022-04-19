@@ -6,7 +6,7 @@
 //__________________________________________________________________________________________________
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OOI.ModelCompiler;
+using OOI.ModelCompilerUI.CommandLineSyntax;
 using System.Collections.Generic;
 using System.IO;
 
@@ -32,8 +32,8 @@ namespace OOI.ModelCompilerUI
     [TestMethod]
     public void StackBuild()
     {
-      StackBuildModelCompilerAPI stackBuild = new StackBuildModelCompilerAPI();
-      stackBuild.Build();
+      DotNetStackOptions options = StacksOptions();
+      EntryPoint.GenerateStackDebugCall(options);
       Assert.IsTrue(File.Exists(@"nodesetsMaster\DotNet\Opc.Ua.Attributes.cs"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\DotNet\Opc.Ua.Channels.cs"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\DotNet\Opc.Ua.Client.cs"));
@@ -52,19 +52,6 @@ namespace OOI.ModelCompilerUI
       Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeIds.csv"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeIds.Services.csv"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part10.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part11.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part12.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part13.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part14.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part17.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part19.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part22.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part3.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part4.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part5.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part8.xml"));
-      //Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Part9.xml"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.Services.xml"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.NodeSet2.xml"));
       Assert.IsTrue(File.Exists(@"nodesetsMaster\Schema\Opc.Ua.PredefinedNodes.uanodes"));
@@ -76,61 +63,28 @@ namespace OOI.ModelCompilerUI
 
     private const string DesignPath = @".\TestingData\Design.v104\";
 
-    private class StackBuildModelCompilerAPI : ModelCompilerAPI, IModelGeneratorGenerate, IModelGeneratorValidate
+    private static DotNetStackOptions StacksOptions()
     {
-      #region IModelGeneratorGenerate
-
-      public bool GenerateMultiFile { get; protected set; } = false;
-      public bool UseXmlInitializers { get; protected set; } = false;
-      public IList<string> ExcludeCategories { get; protected set; } = null;
-      public bool IncludeDisplayNames { get; protected set; } = false;
-
-      #endregion IModelGeneratorGenerate
-
-      #region IStackGeneratorGenerate
-
-      public List<string> DesignFiles { get; protected set; } = new List<string>();
-      public string IdentifierFile { get; protected set; } = null;
-      public string SpecificationVersion { get; protected set; } = string.Empty;
-
-      #endregion IStackGeneratorGenerate
-
-      #region IModelGeneratorValidate
-
-      public uint StartId { get; protected set; } = 1;
-      public bool UseAllowSubtypes { get; protected set; } = false;
-
-      public string PublicationDate { get; protected set; } = string.Empty;
-
-      public bool ReleaseCandidate => false;
-
-      #endregion IModelGeneratorValidate
-
-      internal void Build()
+      DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
+      string ansicRootDir = Path.Combine(stack.FullName, "AnsiC");
+      Directory.CreateDirectory(ansicRootDir);
+      List<string> inputFiles = new List<string>();
+      inputFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
+      inputFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
+      string OutputDir = Path.Combine(stack.FullName, "Schema");
+      Directory.CreateDirectory(OutputDir);
+      string stackRootDir = Path.Combine(stack.FullName, "DotNet");
+      Directory.CreateDirectory(stackRootDir);
+      return new DotNetStackOptions()
       {
-        Execute(this, this);
-      }
-
-      internal StackBuildModelCompilerAPI()
-      {
-        DirectoryInfo stack = Directory.CreateDirectory("nodesetsMaster");
-        ansicRootDir = Path.Combine(stack.FullName, "AnsiC");
-        Directory.CreateDirectory(ansicRootDir);
-        DesignFiles.Add(Path.Combine(DesignPath, "StandardTypes.xml"));
-        DesignFiles.Add(Path.Combine(DesignPath, "UA Core Services.xml"));
-        ExcludeCategories = null;
-        GenerateMultiFile = true;
-        IdentifierFile = Path.Combine(DesignPath, "StandardTypes.csv");
-        IncludeDisplayNames = false;
-        OutputDir = Path.Combine(stack.FullName, "Schema");
-        Directory.CreateDirectory(OutputDir);
-        SpecificationVersion = "v104";
-        stackRootDir = Path.Combine(stack.FullName, "DotNet");
-        Directory.CreateDirectory(stackRootDir);
-        StartId = 1;
-        UseAllowSubtypes = false;
-        UseXmlInitializers = false;
-      }
+        AnsiCStackPath = ansicRootDir,
+        Exclusions = null,
+        DesignFiles = inputFiles,
+        IdentifierFile = Path.Combine(DesignPath, "StandardTypes.csv"),
+        DotNetStackPath = stackRootDir,
+        Version = "v104",
+        OutputPath = OutputDir
+      };
     }
   }
 }

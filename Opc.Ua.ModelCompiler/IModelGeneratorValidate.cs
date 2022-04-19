@@ -9,18 +9,21 @@ using System.Collections.Generic;
 
 namespace OOI.ModelCompiler
 {
-  public interface IStackGeneratorGenerate
+  /// <summary>
+  /// Interface ICompilerOptions
+  /// </summary>
+  //TODO CLI Syntax #67 - add documentation
+  public interface ICompilerOptions
   {
-    List<string> DesignFiles { get; }
+    string OutputPath { get; }
+    IList<string> DesignFiles { get; }
     string IdentifierFile { get; }
-    string SpecificationVersion { get; }
-  }
-
-  public interface IModelGeneratorValidate : IStackGeneratorGenerate
-  {
+    string Version { get; }
     uint StartId { get; }
     bool UseAllowSubtypes { get; }
-    string PublicationDate { get; }
+    IList<string> Exclusions { get; }
+    string ModelPublicationDate { get; }
     bool ReleaseCandidate { get; }
+    string ModelVersion { get; }
   }
 }

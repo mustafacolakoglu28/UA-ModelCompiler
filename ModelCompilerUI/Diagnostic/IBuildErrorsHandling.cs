@@ -9,6 +9,9 @@ using UAOOI.SemanticData.BuildingErrorsHandling;
 
 namespace OOI.ModelCompilerUI.Diagnostic
 {
+  /// <summary>
+  /// Interface IBuildErrorsHandling - a contract of the main errors handling 
+  /// </summary>
   internal interface IBuildErrorsHandling
   {
     /// <summary>
