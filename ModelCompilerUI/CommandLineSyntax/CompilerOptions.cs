@@ -61,6 +61,11 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
       }
     }
 
+    public override string ToString()
+    {
+      return Parser.Default.FormatCommandLine<CompilerOptions>(this);
+    }
+
     #region private
 
     private const string compileHelp = "Takes an OPC UA ModelDesign file and generates a NodeSet and code for the .NETStandard stack.";

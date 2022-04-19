@@ -21,6 +21,13 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     [Option(OptionsNames.UnitsOutputPath, HelpText = outputHelp, Required = true)]
     public string OutputPath { get; set; }
 
+    public override string ToString()
+    {
+      return Parser.Default.FormatCommandLine<UnitsOptions>(this);
+    }
+
+    #region private
+
     private const string annex1Help = "The path to the UNECE Annex 1 CSV file.";
     private const string annex2Help = "The path to the UNECE Annex 2/3 CSV file.";
     private const string outputHelp = "The units output directory.";
@@ -31,5 +38,8 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
       public const string Annex2Path = "annex2";
       public const string UnitsOutputPath = "output";
     }
+
+    #endregion private
+
   }
 }

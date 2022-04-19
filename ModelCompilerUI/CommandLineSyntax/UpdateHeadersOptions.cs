@@ -24,6 +24,13 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     [Option(OptionsNames.Silent, HelpText = silentHelp, Required = false)]
     public bool Silent { get; set; }
 
+    public override string ToString()
+    {
+      return Parser.Default.FormatCommandLine<UpdateHeadersOptions>(this);
+    }
+
+    #region private
+
     private const string inputPathHelp = "The path folders to search for files to update.";
     private const string filePatternHelp = "The file pattern to use when selecting files.";
     private const string licenseTypeHelp = "The type of license (MIT | MITXML | NONE).";
@@ -36,5 +43,8 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
       public const string LicenseType = "license";
       public const string Silent = "silent";
     }
+
+    #endregion private
+
   }
 }
