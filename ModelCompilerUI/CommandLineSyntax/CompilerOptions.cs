@@ -41,22 +41,22 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
     {
       if (string.IsNullOrEmpty(OutputPath))
-        throw new ArgumentOutOfRangeException("OutputDir", "Parameters cannot be null or empty");
+        throw new ArgumentOutOfRangeException(nameof(OutputPath), "Parameters cannot be null or empty");
       if ((DesignFiles == null) || (DesignFiles.Count == 0))
         throw new ArgumentException("No design file specified.");
       foreach (string path in DesignFiles)
       {
         if (String.IsNullOrEmpty(path))
-          throw new ArgumentException("No design file specified.");
-        if (File.Exists(path))
-          throw new ArgumentException($"The design file does not exist: {path}");
+          throw new ArgumentOutOfRangeException(nameof(DesignFiles), "The design file path is null or empty.");
+        if (!File.Exists(path))
+          throw new ArgumentOutOfRangeException(nameof(DesignFiles), $"The design file does not exist: {path}");
       }
       if (String.IsNullOrEmpty(IdentifierFile))
-        throw new ArgumentException("No identifier file specified.");
+        throw new ArgumentOutOfRangeException(nameof(IdentifierFile), "The identifier file path is null or empty.");
       if (!File.Exists(IdentifierFile))
       {
         if (!CreateIdentifierFile)
-          throw new ArgumentException($"The identifier file does not exist: {IdentifierFile}");
+          throw new ArgumentOutOfRangeException(nameof(IdentifierFile), $"The required identifier file does not exist: {IdentifierFile}");
         File.Create(IdentifierFile).Close();
       }
     }
