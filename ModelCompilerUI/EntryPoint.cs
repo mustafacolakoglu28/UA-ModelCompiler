@@ -47,44 +47,44 @@ namespace OOI.ModelCompilerUI
     private void MainExecute(string[] args)
     {
       Task heartbeatTask = Heartbeat();
-      Run(args).Wait();
+      ProcessingTask(args).Wait();
       Running = false;
       heartbeatTask.Wait();
     }
 
-    internal async Task Run(string[] args)
+    internal async Task ProcessingTask(string[] args)
     {
-      try
-      {
-        await Task.Run(() => Processing(args));
-      }
-      catch (Exception ex)
-      {
-        string errorMessage = $"Processing stopped by the exception {ex.GetType().Name}: {ex.Message}";
-        Console.WriteLine(errorMessage);
-        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, errorMessage), 552021345);
-      }
+      await Task.Run(() => Processing(args));
     }
 
     private void Processing(string[] args)
     {
-      ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions, UnitsOptions, UpdateHeadersOptions>(args);
-      CompilerOptions compilerOptions = null;
-      DotNetStackOptions dotNetStackOptions = null;
-      UnitsOptions unitsOptions = null;
-      UpdateHeadersOptions updateHeadersOptions = null;
-      IEnumerable<Error> error = null;
-      result.WithParsed<CompilerOptions>(options => compilerOptions = options).
-             WithParsed<DotNetStackOptions>(options => dotNetStackOptions = options).
-             WithParsed<UnitsOptions>(options => unitsOptions = options).
-             WithParsed<UpdateHeadersOptions>(options => updateHeadersOptions = options).
-             WithNotParsed(errors => error = errors);
-      Compile(compilerOptions);
-      GenerateStack(dotNetStackOptions);
-      Units(unitsOptions);
-      UpdateHeaders(updateHeadersOptions);
-      if (error != null)
-        throw new InvalidOperationException(error.ToString());
+      try
+      {
+        ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions, UnitsOptions, UpdateHeadersOptions>(args);
+        CompilerOptions compilerOptions = null;
+        DotNetStackOptions dotNetStackOptions = null;
+        UnitsOptions unitsOptions = null;
+        UpdateHeadersOptions updateHeadersOptions = null;
+        IEnumerable<Error> error = null;
+        result.WithParsed<CompilerOptions>(options => compilerOptions = options).
+               WithParsed<DotNetStackOptions>(options => dotNetStackOptions = options).
+               WithParsed<UnitsOptions>(options => unitsOptions = options).
+               WithParsed<UpdateHeadersOptions>(options => updateHeadersOptions = options).
+               WithNotParsed(errors => error = errors);
+        Compile(compilerOptions);
+        GenerateStack(dotNetStackOptions);
+        Units(unitsOptions);
+        UpdateHeaders(updateHeadersOptions);
+        if (error != null)
+          throw new InvalidOperationException(error.ToString());
+      }
+      catch (Exception ex)
+      {
+        string errorMessage = $"Processing stopped by the exception {ex.GetType().Name}: {ex.Message} {Environment.NewLine}{ex.StackTrace}";
+        Console.WriteLine(errorMessage);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, errorMessage), 552021345);
+      }
     }
 
     private void Compile(CompilerOptions options)
@@ -92,8 +92,17 @@ namespace OOI.ModelCompilerUI
       if (options == null)
         return;
       Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage($"Started {nameof(Compile)} with parameters {options}"), 499457465);
-      options.ValidateOptionsConsistency();
-      ModelDesignCompiler.BuildModel(options);
+      try
+      {
+        options.ValidateOptionsConsistency();
+        ModelDesignCompiler.BuildModel(options);
+      }
+      catch (Exception ex)
+      {
+        string errorMessage = $"Compilation ended with error {ex.GetType().Name}: {ex.Message} {Environment.NewLine}{ex.StackTrace}";
+        Console.WriteLine(errorMessage);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, errorMessage), 552021345);
+      }
     }
 
     private static void GenerateStack(DotNetStackOptions options)
