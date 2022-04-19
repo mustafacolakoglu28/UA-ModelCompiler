@@ -1054,6 +1054,7 @@ namespace CodeGenerator
             if (enumeratedType != null)
             {
                 List<EnumeratedValue> values = new List<EnumeratedValue>();
+
                 foreach (var value in enumeratedType.Value)
                 {
                     if (!TypeDictionaryValidator.IsExcluded(Exclusions, value))
@@ -1328,6 +1329,7 @@ namespace CodeGenerator
                     {
                         continue;
                     }
+
                     string name = String.Format("{0}_{1}", typeName, value.Name);
 
                     if (length < name.Length)
@@ -1483,7 +1485,7 @@ namespace CodeGenerator
                     fields.Add(field);
                 }
             }
-        }
+         }
 
         /// <summary>
         /// Collects the parameters to write.

@@ -5,19 +5,24 @@
 //  To be in touch join the community at GitHub: https://github.com/mpostol/OPC-UA-OOI/discussions
 //__________________________________________________________________________________________________
 
-using System;
-
 namespace OOI.ModelCompiler
 {
-  public static class ModelCompiler
+  public static class ModelDesignCompiler
   {
-    public static void BuildModel(string outputDir, IModelGeneratorGenerate generateParameters, IModelGeneratorValidate validateParameters)
+    public static void BuildModel(ICompilerOptions options)
     {
-      if (string.IsNullOrEmpty(outputDir))
-        throw new ArgumentOutOfRangeException("OutputDir", "Parameters cannot be null or empty");
       ModelGenerator2 Generator = new ModelGenerator2();
-      Generator.ValidateAndUpdateIds(validateParameters);
-      Generator.Generate(generateParameters, outputDir);
+      Generator.ValidateAndUpdateIds(
+                    options.DesignFiles,
+                    options.IdentifierFile,
+                    options.StartId,
+                    options.Version,
+                    options.UseAllowSubtypes,
+                    options.Exclusions,
+                    options.ModelVersion,
+                    options.ModelPublicationDate,
+                    options.ReleaseCandidate);
+      Generator.GenerateMultipleFiles(options.OutputPath, false, options.Exclusions, false);
     }
   }
 }

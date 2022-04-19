@@ -55,10 +55,10 @@ namespace OOI.ModelCompiler
         }
 
         private static void ProcessDictionary(
-            string name,
-            string input,
-            string output,
-            Files files,
+            string name, 
+            string input, 
+            string output, 
+            Files files, 
             string specificationVersion,
             IList<string> exclusions)
         {
@@ -76,9 +76,9 @@ namespace OOI.ModelCompiler
             string fileName = String.Format("Opc.Ua{0}", name);
 
             XmlSchemaGenerator generator1 = new XmlSchemaGenerator(
-                input,
-                output,
-                files.TypeDictionaries,
+                input, 
+                output, 
+                files.TypeDictionaries, 
                 resourcePath,
                 exclusions);
 
@@ -95,12 +95,14 @@ namespace OOI.ModelCompiler
             System.IO.File.Delete(filePath);
 
             fileName = "Opc.Ua.Types";
+            
             BinarySchemaGenerator generator2 = new BinarySchemaGenerator(
-                input,
-                output,
-                files.TypeDictionaries,
+                input, 
+                output, 
+                files.TypeDictionaries, 
                 resourcePath,
                 exclusions);
+
             generator2.Generate(fileName, true, "http://opcfoundation.org/UA/");
             filePath = String.Format(@"{0}\{1}.bsd", output, fileName);
 
@@ -111,10 +113,10 @@ namespace OOI.ModelCompiler
         }
 
         private static void GenerateAnsiC(
-            Files files,
-            string modelDir,
-            string csvDir,
-            string outputDir,
+            Files files, 
+            string modelDir, 
+            string csvDir, 
+            string outputDir, 
             string specificationVersion,
             IList<string> exclusions)
         {
@@ -123,8 +125,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Attributes.xml",
                 outputDir,
                 files.NodeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator3.Generate(
                 "OpcUa",
@@ -137,8 +139,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Status Codes.xml",
                 outputDir,
                 files.NodeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator4.Generate(
                 "OpcUa",
@@ -150,8 +152,8 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Core Services.xml",
                 outputDir,
                 files.TypeDictionaries,
-                      null,
-                      exclusions);
+                null,
+                exclusions);
 
             generator7.Generate("OpcUa", "Core", true);
         }
@@ -216,14 +218,15 @@ namespace OOI.ModelCompiler
             generator10.Generate("Opc.Ua", "Core", true);
         }
 
-        public static void GenerateDotNet(
-            IStackGeneratorGenerate parameters,
+        internal static void GenerateDotNet(
+            IList<string> designFilePaths,
+            string identifierFilePath,
             string rootDir,
-            IList<string> exclusions
-            )
+            string specificationVersion,
+            IList<string> exclusions)
         {
-            string modelDir = Path.GetDirectoryName(parameters.DesignFiles[0]) + "\\";
-            string csvDir = Path.GetDirectoryName(parameters.IdentifierFile) + "\\";
+            string modelDir = Path.GetDirectoryName(designFilePaths[0]) + "\\";
+            string csvDir = Path.GetDirectoryName(identifierFilePath) + "\\";
 
             Files files = new Files();
 
@@ -232,19 +235,21 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Core Services.xml",
                 rootDir,
                 files,
-                parameters.SpecificationVersion,
+                specificationVersion,
                 exclusions);
 
-            GenerateDotNet(files, modelDir, csvDir, rootDir, parameters.SpecificationVersion, exclusions);
+            GenerateDotNet(files, modelDir, csvDir, rootDir, specificationVersion, exclusions);
         }
 
-        public static void GenerateAnsiC(
-        IStackGeneratorGenerate parameters,
-                string rootDir,
-                IList<string> exclusions)
+        internal static void GenerateAnsiC(
+            IList<string> designFilePaths,
+            string identifierFilePath, 
+            string rootDir, 
+            string specificationVersion,
+            IList<string> exclusions)
         {
-            string modelDir = Path.GetDirectoryName(parameters.DesignFiles[0]) + "\\";
-            string csvDir = Path.GetDirectoryName(parameters.IdentifierFile) + "\\";
+            string modelDir = Path.GetDirectoryName(designFilePaths[0]) + "\\";
+            string csvDir = Path.GetDirectoryName(identifierFilePath) + "\\";
 
             Files files = new Files();
 
@@ -253,10 +258,10 @@ namespace OOI.ModelCompiler
                 $"{modelDir}UA Core Services.xml",
                 rootDir,
                 files,
-                parameters.SpecificationVersion,
+                specificationVersion,
                 exclusions);
 
-            GenerateAnsiC(files, modelDir, csvDir, rootDir, parameters.SpecificationVersion, exclusions);
+            GenerateAnsiC(files, modelDir, csvDir, rootDir, specificationVersion, exclusions);
         }
     }
 }

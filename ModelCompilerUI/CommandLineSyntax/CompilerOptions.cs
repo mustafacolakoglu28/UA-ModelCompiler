@@ -6,33 +6,23 @@
 //__________________________________________________________________________________________________
 
 using CommandLine;
-using System.Collections.Generic;
+using OOI.ModelCompiler;
+using System;
+using System.IO;
 
 namespace OOI.ModelCompilerUI.CommandLineSyntax
 {
-  [Verb("compile", true, HelpText = "Generates classes that implement a UA information model")]
-  internal class CompilerOptions
+  [Verb("compile", false, HelpText = "Generates classes that implement a UA information model")]
+  internal class CompilerOptions : OptionsBase, ICompilerOptions
   {
-    [Option('d', OptionsNames.DesignFiles, HelpText = d2Help, MetaValue = "ModelDesign", Required = true)]
-    public IList<string> DesignFiles { get; set; }
-
-    [Option(OptionsNames.IdentifierFile, SetName = "csv", HelpText = cHelp, MetaValue = "CSVfile", Required = false)]
-    public string IdentifierFile { get; set; }
+    #region options
 
     [Option('g', OptionsNames.GenerateIdentifierFile, SetName = "csv", HelpText = cgHelp, MetaValue = "CSVfileGenrate", Required = false)]
     public bool CreateIdentifierFile { get; set; }
 
-    [Option('o', OptionsNames.OutputPath, HelpText = oHelp, MetaValue = "output", Required = false)]
-    public string OutputPath { get; set; }
 
     [Option('i', OptionsNames.StartId, HelpText = idHelp, Required = false, Default = (uint)0)]
     public uint StartId { get; set; }
-
-    [Option('e', OptionsNames.Exclusions, HelpText = excludeHeelp, Required = false)]
-    public IList<string> Exclusions { get; set; }
-
-    [Option('v', OptionsNames.Version, HelpText = versionHelp, Required = false, Default = "v104")]
-    public string Version { get; set; }
 
     [Option('s', OptionsNames.UseAllowSubtypes, HelpText = useAllowSubtypesHelp, Required = false)]
     public bool UseAllowSubtypes { get; set; }
@@ -46,15 +36,36 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     [Option(OptionsNames.ReleaseCandidate, HelpText = rcHelp, Required = false)]
     public bool ReleaseCandidate { get; set; }
 
-    private const string d2Help =
-      "The path to the ModelDesign files which contain the UA information model. The new version of the code generator is used (option -stack forces to use -d2 switch)";
+    #endregion options
 
-    private const string cHelp = "The path to the CSV file which contains the unique identifiers for the types defined in the UA information model.";
+    internal void ValidateOptionsConsistency()
+
+    {
+      if (string.IsNullOrEmpty(OutputPath))
+        throw new ArgumentOutOfRangeException("OutputDir", "Parameters cannot be null or empty");
+      if ((DesignFiles == null) || (DesignFiles.Count == 0))
+        throw new ArgumentException("No design file specified.");
+      foreach (string path in DesignFiles)
+      {
+        if (String.IsNullOrEmpty(path))
+          throw new ArgumentException("No design file specified.");
+        if (File.Exists(path))
+          throw new ArgumentException($"The design file does not exist: {path}");
+      }
+      if (String.IsNullOrEmpty(IdentifierFile))
+        throw new ArgumentException("No identifier file specified.");
+      if (!File.Exists(IdentifierFile))
+      {
+        if (!CreateIdentifierFile)
+          throw new ArgumentException($"The identifier file does not exist: {IdentifierFile}");
+        File.Create(IdentifierFile).Close();
+      }
+    }
+
+    #region private
+
     private const string cgHelp = "Creates the identifier file if it does not exist (used instead of the -c option).";
-    private const string oHelp = "The output directory for the generated files.";
     private const string idHelp = "The first identifier to use when assigning new ids to nodes.";
-    private const string excludeHeelp = "Comma separated list of ReleaseStatus values to exclude from output.";
-    private const string versionHelp = "Selects the source for the input files. v103 | v104 | v105 are supported.";
     private const string useAllowSubtypesHelp = " When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.";
     private const string mvHelp = "The version of the model to produce.";
     private const string pdHelp = "The publication date of the model to produce.";
@@ -62,17 +73,14 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
     private static class OptionsNames
     {
-      public const string DesignFiles = "d2";
-      public const char IdentifierFile = 'c';
       public const string GenerateIdentifierFile = "cg";
-      public const string OutputPath = "o2";
-      public const string Version = "version";
       public const string UseAllowSubtypes = "useAllowSubtypes";
       public const string StartId = "id";
-      public const string Exclusions = "exclude";
       public const string ModelVersion = "mv";
       public const string ModelPublicationDate = "pd";
       public const string ReleaseCandidate = "rc";
     }
+
+    #endregion private
   }
 }

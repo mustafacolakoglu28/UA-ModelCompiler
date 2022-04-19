@@ -84,15 +84,24 @@ namespace OOI.ModelCompiler
         /// <summary>
         /// Generates the source code files.
         /// </summary>
-        public virtual void ValidateAndUpdateIds(IModelGeneratorValidate model)
+        internal virtual void ValidateAndUpdateIds(
+            IList<string> designFilePaths, 
+            string identifierFilePath, 
+            uint startId, 
+            string specificationVersion,
+            bool useAllowSubtypes,
+            IList<string> exclusions,
+            string modelVersion,
+            string modelPublicationDate,
+            bool releaseCandidate)
         {
-            m_validator = new ModelCompilerValidator(model.StartId, m_exclusions);
+            m_validator = new ModelCompilerValidator(startId, exclusions);
 
-            if (!String.IsNullOrEmpty(model.SpecificationVersion))
+            if (!String.IsNullOrEmpty(specificationVersion))
             {
-                m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.{model.SpecificationVersion}";
+                m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.{specificationVersion}";
 
-                if (model.SpecificationVersion == "v103")
+                if (specificationVersion == "v103")
                 {
                     m_validator.EmbeddedCsvPath = m_validator.EmbeddedModelDesignPath;
                 }
@@ -102,30 +111,22 @@ namespace OOI.ModelCompiler
                 m_validator.EmbeddedModelDesignPath = $"{m_validator.EmbeddedModelDesignPath}.v104";
             }
 
-            m_validator.UseAllowSubtypes = model.UseAllowSubtypes;
-            m_validator.ReleaseCandidate = model.ReleaseCandidate;
-            m_validator.ModelVersion = model.SpecificationVersion;
-            m_validator.ModelPublicationDate = model.PublicationDate;
-            m_validator.Validate2(model.DesignFiles, model.IdentifierFile, false);
+            m_validator.UseAllowSubtypes = useAllowSubtypes;
+            m_validator.ReleaseCandidate = releaseCandidate;
+            m_validator.ModelVersion = modelVersion;
+            m_validator.ModelPublicationDate = modelPublicationDate;
+            m_validator.Validate2(designFilePaths, identifierFilePath, false);
             m_model = m_validator.Dictionary;
         }
-        internal virtual void Generate(IModelGeneratorGenerate generatorParameters, string outputDir)
-        {
-         if (string.IsNullOrEmpty(outputDir))
-           throw new ArgumentException("The output directory must not be empty", nameof(outputDir));
-         if (generatorParameters.GenerateMultiFile)
-            GenerateMultipleFiles(generatorParameters, outputDir);
-          else
-           GenerateInternalSingleFile(generatorParameters, outputDir);
-        }
+
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        private void GenerateInternalSingleFile(IModelGeneratorGenerate generatorParameters, string outputDir)
+        internal virtual void GenerateInternalSingleFile(string filePath, bool useXmlInitializers, string[] excludedCategories, bool includeDisplayNames)
         {
-            m_useXmlInitializers = generatorParameters.UseXmlInitializers;
-            m_exclusions = generatorParameters.ExcludeCategories;
-            m_includeDisplayNames = generatorParameters.IncludeDisplayNames;
+            m_useXmlInitializers = useXmlInitializers;
+            m_exclusions = excludedCategories;
+            m_includeDisplayNames = includeDisplayNames;
 
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
@@ -135,20 +136,20 @@ namespace OOI.ModelCompiler
                 return;
             }
 
-            WriteTemplate_InternalSingleFile(outputDir, nodes);
-            WriteTemplate_XmlExport(outputDir);
-            WriteTemplate_XmlSchema(outputDir, nodes);
-            WriteTemplate_BinarySchema(outputDir, nodes);
+            WriteTemplate_InternalSingleFile(filePath, nodes);
+            WriteTemplate_XmlExport(filePath);
+            WriteTemplate_XmlSchema(filePath, nodes);
+            WriteTemplate_BinarySchema(filePath, nodes);
         }
 
         /// <summary>
         /// Generates a single file containing all of the classes.
         /// </summary>
-        private void GenerateMultipleFiles(IModelGeneratorGenerate generatorParameters, string outputDir)
+        internal virtual void GenerateMultipleFiles(string filePath, bool useXmlInitializers, IList<string> excludedCategories, bool includeDisplayNames)
         {
-            m_useXmlInitializers = generatorParameters.UseXmlInitializers;
-            m_exclusions = generatorParameters.ExcludeCategories;
-            m_includeDisplayNames = generatorParameters.IncludeDisplayNames;
+            m_useXmlInitializers = useXmlInitializers;
+            m_exclusions = excludedCategories;
+            m_includeDisplayNames = includeDisplayNames;
 
             // write type and object definitions.
             List<NodeDesign> nodes = GetNodeList();
@@ -158,18 +159,18 @@ namespace OOI.ModelCompiler
                 return;
             }
 
-            WriteTemplate_ConstantsSingleFile(outputDir, nodes);
-            WriteTemplate_DataTypesSingleFile(outputDir, nodes);
-            WriteTemplate_NonDataTypesSingleFile(outputDir, nodes);
-            WriteTemplate_XmlSchema(outputDir, nodes);
-            WriteTemplate_BinarySchema(outputDir, nodes);
-            WriteTemplate_XmlExport(outputDir);
+            WriteTemplate_ConstantsSingleFile(filePath, nodes);
+            WriteTemplate_DataTypesSingleFile(filePath, nodes);
+            WriteTemplate_NonDataTypesSingleFile(filePath, nodes);
+            WriteTemplate_XmlSchema(filePath, nodes);
+            WriteTemplate_BinarySchema(filePath, nodes);
+            WriteTemplate_XmlExport(filePath);
         }
 
         /// <summary>
         /// Generates the ANSI C identifiers.
         /// </summary>
-        public virtual void GenerateIdentifiersAndNamesForAnsiC(string filePath, IList<string> excludedCategories)
+        internal virtual void GenerateIdentifiersAndNamesForAnsiC(string filePath, IList<string> excludedCategories)
         {
             m_exclusions = excludedCategories;
 

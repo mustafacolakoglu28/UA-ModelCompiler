@@ -18,14 +18,6 @@ namespace OOI.ModelCompiler
     [ClassInitialize()]
     public static void DeploymentTest(TestContext testContext)
     {
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "StandardTypes.xml")));
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "StandardTypes.csv")));
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Core Services.xml")));
-      //Hard coded files names that must be in the DesignPath folder to pass
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Attributes.xml")));
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Attributes.csv")));
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Status Codes.xml")));
-      //Assert.IsTrue(File.Exists(Path.Combine(DesignPath, "UA Status Codes.csv")));
       Assert.IsTrue(File.Exists(Path.Combine(SourcePath, "DemoModel.xml")));
       Assert.IsTrue(File.Exists(Path.Combine(SourcePath, "DemoModel.csv")));
     }
@@ -33,8 +25,8 @@ namespace OOI.ModelCompiler
     [TestMethod]
     public void BuildingModelDemoTest()
     {
-      BuildingModelDemoAPI stackBuild = new BuildingModelDemoAPI();
-      stackBuild.Build();
+      CompilerOptionsFixture options = new CompilerOptionsFixture();
+      ModelDesignCompiler.BuildModel(options);
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Classes.cs")));
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Constants.cs")));
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.DataTypes.cs")));
@@ -45,7 +37,6 @@ namespace OOI.ModelCompiler
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.PredefinedNodes.xml")));
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Types.bsd")));
       Assert.IsTrue(File.Exists(Path.Combine(DemoModelDir, "DemoModel.Types.xsd")));
-      //Assert.Fail();  //Uncomment to preserve the generated code
     }
 
     #region private stuff
@@ -53,56 +44,35 @@ namespace OOI.ModelCompiler
     private const string SourcePath = @".\TestingData\ModelDesign\";
     private const string DemoModelDir = "outputDir";
 
-    private class BuildingModelDemoAPI : IModelGeneratorGenerate, IModelGeneratorValidate
+    private class CompilerOptionsFixture : ICompilerOptions
     {
-      #region IModelGeneratorGenerate
+      public CompilerOptionsFixture()
+      {
+        DesignFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
+        IdentifierFile = Path.Combine(SourcePath, "DemoModel.csv");
+        OutputPath = DemoModelDir;
+        Directory.CreateDirectory(OutputPath);
+      }
 
-      public bool GenerateMultiFile { get; protected set; } = false;
-      public bool UseXmlInitializers { get; protected set; } = false;
-      public IList<string> ExcludeCategories { get; protected set; } = null;
-      public bool IncludeDisplayNames { get; protected set; } = false;
+      public string OutputPath { get; }
 
-      #endregion IModelGeneratorGenerate
+      public IList<string> DesignFiles { get; } = new List<string>();
 
-      #region IStackGeneratorGenerate
+      public string IdentifierFile { get; }
 
-      public List<string> DesignFiles { get; protected set; } = new List<string>();
-      public string IdentifierFile { get; protected set; } = null;
-      public string SpecificationVersion { get; protected set; } = string.Empty;
+      public string Version => "v104";
 
-      #endregion IStackGeneratorGenerate
+      public uint StartId => 1;
 
-      #region IModelGeneratorValidate
+      public bool UseAllowSubtypes => false;
 
-      public uint StartId { get; protected set; } = 1;
-      public bool UseAllowSubtypes { get; protected set; } = false;
-      public string PublicationDate { get; protected set; } = string.Empty;
+      public IList<string> Exclusions => null;
+
+      public string ModelPublicationDate => null;
 
       public bool ReleaseCandidate => false;
 
-      #endregion IModelGeneratorValidate
-
-      internal void Build()
-      {
-        ModelCompiler.BuildModel(OutputDir, this, this);
-      }
-
-      public BuildingModelDemoAPI()
-      {
-        DesignFiles.Add(Path.Combine(SourcePath, "DemoModel.xml"));
-        ExcludeCategories = null;
-        GenerateMultiFile = true;
-        IdentifierFile = Path.Combine(SourcePath, "DemoModel.csv");
-        IncludeDisplayNames = false;
-        OutputDir = DemoModelDir;
-        Directory.CreateDirectory(OutputDir);
-        SpecificationVersion = "v104";
-        StartId = 1;
-        UseAllowSubtypes = false;
-        UseXmlInitializers = false;
-      }
-
-      private readonly string OutputDir = null;
+      public string ModelVersion => null;
     }
 
     #endregion private stuff

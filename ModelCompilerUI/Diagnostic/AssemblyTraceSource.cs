@@ -12,9 +12,9 @@ using UAOOI.SemanticData.BuildingErrorsHandling;
 namespace OOI.ModelCompilerUI.Diagnostic
 {
   /// <summary>
-  /// Class AssemblyTraceSource. Implements the <see cref="ITraceSource" />
+  /// Class AssemblyTraceSource - an entry point to the compiler errors handling. Implements the <see cref="IBuildErrorsHandling" />
   /// </summary>
-  /// <seealso cref="ITraceSource" />
+  /// <seealso cref="IBuildErrorsHandling" />
   internal class AssemblyTraceSource : IBuildErrorsHandling
   {
     #region constructors
