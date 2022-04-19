@@ -12,69 +12,30 @@ using System.Text;
 
 namespace OOI.ModelCompilerUI
 {
+  /// <summary>
+  /// Class MeasurementUnits - generates the OPC UA Engineering Units CSV from the official UNECE table of units.
+  /// </summary>
   internal class MeasurementUnits
   {
-    //Process undocumented switch -units
-    //Not relevant for model design - can be moved to UI
-    internal static bool ProcessCommandLine(IList<string> args)
+    /// <summary>
+    /// Generates the OPC UA Engineering Units CSV from the official UNECE table of units.
+    /// </summary>
+    /// <param name="annex1">The path to the UNECE Annex 1 CSV file.</param>
+    /// <param name="annex2">The path to the UNECE Annex 2/3 CSV file.</param>
+    /// <param name="output">The units output directory.</param>
+    internal static void Process(string annex1, string annex2, string output)
     {
-      if (args == null || !args.Contains("-units"))
-      {
-        return false;
-      }
-
-      int ii = 0;
       List<Unit> units = new List<Unit>();
-      string outputFile = null;
+      if (String.IsNullOrEmpty(annex1))
+        Read(annex1, false, units);
+      if (String.IsNullOrEmpty(annex2))
+        Read(annex2, false, units);
 
-      while (ii < args.Count)
-      {
-        if (args[ii] == "-annex1")
-        {
-          ii++;
-
-          if (ii < args.Count)
-          {
-            Read(args[ii++], false, units);
-          }
-
-          continue;
-        }
-
-        if (args[ii] == "-annex2")
-        {
-          ii++;
-
-          if (ii < args.Count)
-          {
-            Read(args[ii++], true, units);
-          }
-
-          continue;
-        }
-
-        if (args[ii] == "-output")
-        {
-          ii++;
-
-          if (ii < args.Count)
-          {
-            outputFile = args[ii++];
-          }
-
-          continue;
-        }
-
-        ii++;
-      }
-
-      if (outputFile != null)
-      {
-        Write(outputFile, units);
-      }
-
-      return true;
+      if (output != null)
+        Write(output, units);
     }
+
+    #region private
 
     private static void Read(string filePath, bool isAnnex2, List<Unit> units)
     {
@@ -284,8 +245,6 @@ namespace OOI.ModelCompilerUI
         return Name + " [" + Symbol + "]";
       }
 
-      #region private
-
       private void ParseAnnex1(IList<string> columns)
       {
         Status = columns[5];
@@ -305,8 +264,8 @@ namespace OOI.ModelCompilerUI
         Symbol = columns[5];
         Conversion = columns[6];
       }
-
-      #endregion private
     }
+
+    #endregion private
   }
 }

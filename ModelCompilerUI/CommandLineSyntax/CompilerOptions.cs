@@ -12,14 +12,13 @@ using System.IO;
 
 namespace OOI.ModelCompilerUI.CommandLineSyntax
 {
-  [Verb("compile", false, HelpText = "Generates classes that implement a UA information model")]
+  [Verb("compile", false, HelpText = compileHelp)]
   internal class CompilerOptions : OptionsBase, ICompilerOptions
   {
     #region options
 
     [Option('g', OptionsNames.GenerateIdentifierFile, SetName = "csv", HelpText = cgHelp, MetaValue = "CSVfileGenrate", Required = false)]
     public bool CreateIdentifierFile { get; set; }
-
 
     [Option('i', OptionsNames.StartId, HelpText = idHelp, Required = false, Default = (uint)0)]
     public uint StartId { get; set; }
@@ -64,6 +63,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
 
     #region private
 
+    private const string compileHelp = "Takes an OPC UA ModelDesign file and generates a NodeSet and code for the .NETStandard stack.";
     private const string cgHelp = "Creates the identifier file if it does not exist (used instead of the -c option).";
     private const string idHelp = "The first identifier to use when assigning new ids to nodes.";
     private const string useAllowSubtypesHelp = " When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed.";

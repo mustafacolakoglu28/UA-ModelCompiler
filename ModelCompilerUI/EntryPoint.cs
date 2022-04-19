@@ -25,11 +25,11 @@ namespace OOI.ModelCompilerUI
     {
       try
       {
-        EntryPoint program = new EntryPoint();
         AssemblyName myAssembly = Assembly.GetExecutingAssembly().GetName();
         string AssemblyHeader = $"ModelDesign Compiler (mdc.exe) Version: {myAssembly.Version}";
         Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage(AssemblyHeader), 716624168);
         Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage(Copyright), 716624169);
+        EntryPoint program = new EntryPoint();
         program.MainExecute(args);
       }
       catch (Exception ex)
@@ -43,6 +43,14 @@ namespace OOI.ModelCompilerUI
 
     private const string Copyright = "Copyright(c) 2022 Mariusz Postol";
     private bool Running = true;
+
+    private void MainExecute(string[] args)
+    {
+      Task heartbeatTask = Heartbeat();
+      Run(args).Wait();
+      Running = false;
+      heartbeatTask.Wait();
+    }
 
     internal async Task Run(string[] args)
     {
@@ -59,7 +67,6 @@ namespace OOI.ModelCompilerUI
 
     private void ProcessModelDesign(string[] args)
     {
-      //args.Parse<Options>(Do, HandleErrors);
       ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions, UnitsOptions, UpdateHeadersOptions>(args);
       CompilerOptions compilerOptions = null;
       DotNetStackOptions dotNetStackOptions = null;
@@ -135,29 +142,19 @@ namespace OOI.ModelCompilerUI
       GenerateStack(options);
     }
 
-    private void Units(UnitsOptions unitsOptions)
+    private void Units(UnitsOptions options)
 
     {
-      if (unitsOptions == null)
+      if (options == null)
         return;
-      //TODO CLI Syntax #67 
-      throw new NotImplementedException("Units verb must be implemented");
+      MeasurementUnits.Process(options.Annex1Path, options.Annex2Path, options.OutputPath);
     }
 
-    private void UpdateHeaders(UpdateHeadersOptions updateHeadersOptions)
+    private void UpdateHeaders(UpdateHeadersOptions options)
     {
-      if (updateHeadersOptions == null)
+      if (options == null)
         return;
-      //TODO CLI Syntax #67 
-      throw new NotImplementedException("update-headers verb must be implemented");
-    }
-
-    private void MainExecute(string[] args)
-    {
-      Task heartbeatTask = Heartbeat();
-      Run(args).Wait();
-      Running = false;
-      heartbeatTask.Wait();
+      HeaderUpdateTool.ProcessDirectory(options.InputPath, options.FilePattern, options.LicenseType, options.Silent);
     }
 
     private async Task Heartbeat()
