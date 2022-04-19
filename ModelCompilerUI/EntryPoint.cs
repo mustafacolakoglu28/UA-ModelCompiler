@@ -25,18 +25,18 @@ namespace OOI.ModelCompilerUI
     {
       try
       {
-        EntryPoint program = new EntryPoint();
         AssemblyName myAssembly = Assembly.GetExecutingAssembly().GetName();
         string AssemblyHeader = $"ModelDesign Compiler (mdc.exe) Version: {myAssembly.Version}";
         Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage(AssemblyHeader), 716624168);
         Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage(Copyright), 716624169);
+        EntryPoint program = new EntryPoint();
         program.MainExecute(args);
       }
       catch (Exception ex)
       {
         string errorMessage = $"Program stopped by the exception: {ex.Message}";
         Console.WriteLine(errorMessage);
-        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, errorMessage), 828896092); ;
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, errorMessage), 828896092);
         Environment.Exit(1);
       }
     }
@@ -44,22 +44,30 @@ namespace OOI.ModelCompilerUI
     private const string Copyright = "Copyright(c) 2022 Mariusz Postol";
     private bool Running = true;
 
+    private void MainExecute(string[] args)
+    {
+      Task heartbeatTask = Heartbeat();
+      Run(args).Wait();
+      Running = false;
+      heartbeatTask.Wait();
+    }
+
     internal async Task Run(string[] args)
     {
       try
       {
-        await Task.Run(() => ProcessModelDesign(args));
+        await Task.Run(() => Processing(args));
       }
       catch (Exception ex)
       {
-        Console.WriteLine(string.Format("Program stopped by the exception: {0}", ex.Message));
-        throw;
+        string errorMessage = $"Processing stopped by the exception {ex.GetType().Name}: {ex.Message}";
+        Console.WriteLine(errorMessage);
+        Log.WriteTraceMessage(TraceMessage.BuildErrorTraceMessage(BuildError.NonCategorized, errorMessage), 552021345);
       }
     }
 
-    private void ProcessModelDesign(string[] args)
+    private void Processing(string[] args)
     {
-      //args.Parse<Options>(Do, HandleErrors);
       ParserResult<object> result = Parser.Default.ParseArguments<CompilerOptions, DotNetStackOptions, UnitsOptions, UpdateHeadersOptions>(args);
       CompilerOptions compilerOptions = null;
       DotNetStackOptions dotNetStackOptions = null;
@@ -83,6 +91,7 @@ namespace OOI.ModelCompilerUI
     {
       if (options == null)
         return;
+      Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage($"Started {nameof(Compile)} with parameters {options}"), 499457465);
       options.ValidateOptionsConsistency();
       ModelDesignCompiler.BuildModel(options);
     }
@@ -91,6 +100,7 @@ namespace OOI.ModelCompilerUI
     {
       if (options == null)
         return;
+      Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage($"Started {nameof(GenerateStack)} with parameters {options}"), 311903328);
       ModelGenerator2 generator = new ModelGenerator2();
       generator.ValidateAndUpdateIds(
         options.DesignFiles,
@@ -129,35 +139,21 @@ namespace OOI.ModelCompilerUI
       }
     }
 
-    [System.Diagnostics.Conditional("DEBUG")]
-    internal static void GenerateStackDebugCall(DotNetStackOptions options)
-    {
-      GenerateStack(options);
-    }
-
-    private void Units(UnitsOptions unitsOptions)
+    private void Units(UnitsOptions options)
 
     {
-      if (unitsOptions == null)
+      if (options == null)
         return;
-      //TODO CLI Syntax #67 
-      throw new NotImplementedException("Units verb must be implemented");
+      Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage($"Started {nameof(Units)} with parameters {options}"), 1166773910);
+      MeasurementUnits.Process(options.Annex1Path, options.Annex2Path, options.OutputPath);
     }
 
-    private void UpdateHeaders(UpdateHeadersOptions updateHeadersOptions)
+    private void UpdateHeaders(UpdateHeadersOptions options)
     {
-      if (updateHeadersOptions == null)
+      if (options == null)
         return;
-      //TODO CLI Syntax #67 
-      throw new NotImplementedException("update-headers verb must be implemented");
-    }
-
-    private void MainExecute(string[] args)
-    {
-      Task heartbeatTask = Heartbeat();
-      Run(args).Wait();
-      Running = false;
-      heartbeatTask.Wait();
+      Log.WriteTraceMessage(TraceMessage.DiagnosticTraceMessage($"Started {nameof(UpdateHeaders)} with parameters {options}"), 1251663675);
+      HeaderUpdateTool.ProcessDirectory(options.InputPath, options.FilePattern, options.LicenseType, options.Silent);
     }
 
     private async Task Heartbeat()
@@ -180,5 +176,15 @@ namespace OOI.ModelCompilerUI
         Console.WriteLine($"Execution time = {counter}s");
       });
     }
+
+    #region DEBUG
+
+    [System.Diagnostics.Conditional("DEBUG")]
+    internal static void GenerateStackDebugCall(DotNetStackOptions options)
+    {
+      GenerateStack(options);
+    }
+
+    #endregion DEBUG
   }
 }

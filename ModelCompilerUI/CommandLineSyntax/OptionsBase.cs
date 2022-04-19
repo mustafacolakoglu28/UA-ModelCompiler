@@ -34,7 +34,7 @@ namespace OOI.ModelCompilerUI.CommandLineSyntax
     #region private
 
     private const string oHelp = "The output directory for the generated files.";
-    private const string d2Help = "The path to the ModelDesign files which contain the UA information model. The new version of the code generator is used (option -stack forces to use -d2 switch)";
+    private const string d2Help = "The path to the ModelDesign files which contain the UA information model.";
     private const string cHelp = "The path to the CSV file which contains the unique identifiers for the types defined in the UA information model.";
     private const string excludeHeelp = "Comma separated list of ReleaseStatus values to exclude from output.";
     private const string versionHelp = "Selects the specification version the source text is compliant with. The values v103 | v104 | v105 are supported.";

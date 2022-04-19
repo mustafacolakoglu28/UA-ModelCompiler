@@ -7,9 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		.gitmodules = .gitmodules
-		Bin\Debug\asp.log = Bin\Debug\asp.log
 		BuildEngineeringUnits.bat = BuildEngineeringUnits.bat
 		BuildStandardTypes.bat = BuildStandardTypes.bat
+		Bin\Debug\mdc.log = Bin\Debug\mdc.log
+		Bin\Debug\mdc.warnings.log = Bin\Debug\mdc.warnings.log
 		PublishModel.bat = PublishModel.bat
 		README.md = README.md
 	EndProjectSection

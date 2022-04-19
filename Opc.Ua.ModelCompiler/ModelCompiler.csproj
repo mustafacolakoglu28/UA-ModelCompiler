@@ -106,8 +106,6 @@
     <None Remove="Design.v104\StandardTypes.xml" />
     <None Remove="Design.v104\UA Core Services.xml" />
     <None Remove="HelpFile.txt" />
-    <None Remove="License\UA_MIT.txt" />
-    <None Remove="License\UA_MIT_XML.txt" />
     <None Remove="StackGenerator\AnsiC\Templates\ClientApi\File.c" />
     <None Remove="StackGenerator\AnsiC\Templates\ClientApi\File.h" />
     <None Remove="StackGenerator\AnsiC\Templates\ClientApi\Service.c" />
@@ -192,8 +190,6 @@
     <EmbeddedResource Include="Design.v104\BuiltInTypes.xml" />
     <EmbeddedResource Include="Design.v104\StandardTypes.xml" />
     <EmbeddedResource Include="Design.v104\UA Core Services.xml" />
-    <EmbeddedResource Include="License\UA_MIT.txt" />
-    <EmbeddedResource Include="License\UA_MIT_XML.txt" />
     <EmbeddedResource Include="StackGenerator\AnsiC\Templates\ClientApi\File.c" />
     <EmbeddedResource Include="StackGenerator\AnsiC\Templates\ClientApi\File.h" />
     <EmbeddedResource Include="StackGenerator\AnsiC\Templates\ClientApi\Service.c" />
