@@ -9,8 +9,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ModelCompilerUI Unit Tests")]
-[assembly: AssemblyDescription("Model Compiler User Interface Unit Tests")]
+[assembly: AssemblyTitle("ModelCompilerUI")]
+[assembly: AssemblyDescription("Model Compiler User Interface")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MPostol")]
 [assembly: AssemblyProduct("OOI")]
@@ -19,8 +19,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("54581e77-a130-407c-b775-7008dcf93888")]
-[assembly: AssemblyVersion("2.1.2.*")]
-[assembly: AssemblyFileVersion("2.1.2.0")]
+[assembly: AssemblyVersion("3.0.0.*")]
+[assembly: AssemblyFileVersion("3.0.0.0")]
 [assembly: InternalsVisibleTo(
   "OOI.ModelCompilerUI.UnitTest, PublicKey=" +
     "00240000048000009400000006020000002400005253413100040000010001005b97a0972ff6b13a" +
