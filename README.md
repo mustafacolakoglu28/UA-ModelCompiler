@@ -162,6 +162,70 @@ When contributing to this repository, please first discuss the change you wish t
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
+## CLI Syntax of the ModelCompilerUI 3.0.0.16457
+
+| Command        | Description                                                                                  |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| compile        | Takes an OPC UA ModelDesign file and generates a NodeSet andcode for the .NETStandard stack. |
+| stack          | Generates code for the core model (not used for vendordefined models)                        |
+| units          | Generates the OPC UA Engineering Units CSV from the official UNECE table of units.           |
+| update-headers | Updates all files in the output directory with the OPC Foundation MIT license header.        |
+| help           | Display more information on a specific command.                                              |
+| version        | Display version information.                                                                 |
+
+### compile
+
+Takes an OPC UA ModelDesign file and generates a NodeSet andcode for the .NETStandard stack.
+
+| Short Name        | Long Name           | Description                                                                                                                                                       |
+| ----------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -g CSVfileGenrate | --cg=CSVfileGenrate | Creates the identifier file if it does not exist (used instead of the -c option).                                                                                 |
+| -i                | --id                | (Default: 0) The first identifier to use when assigning new ids to nodes.                                                                                         |
+| -s                | --useAllowSubtypes  | When subtypes are allowed for a field, C# code with the class name from the model is created instead of ExtensionObject. No effect when subtypes are not allowed. |
+| -m                | --mv                | The version of the model to produce.                                                                                                                              |
+|                   | --pd                | The publication date of the model to produce.                                                                                                                     |
+|                   | --rc                | Indicates that a release candidate nodeset is being generated.                                                                                                    |
+| -d ModelDesign    | --d2=ModelDesign    | Required. The path to the ModelDesign files which contain the UA information model.                                                                               |
+| -c CSVfile        |                     | The path to the CSV file which contains the unique identifiers for the types defined in the UA information model.                                                 |
+| -o output         | --o2=output         | The output directory for the generated files.                                                                                                                     |
+| -e                | --exclude           | Comma separated list of ReleaseStatus values to exclude from output.                                                                                              |
+| -v                | --spec              | (Default: v104) Selects the specification version the source text is compliant with. The values: `v103`, `v104`, or `v105` are supported.                         |
+
+### Stack
+
+Generates code for the core model (not used for vendordefined models)
+
+| Short Name     | Long Name        | Description                                                                                                                                 |
+| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| -n             | --dotnet         | Generates the .NET stack code for the core model (not used for vendor defined models). The path to use when generating .NET stack code.     |
+| -a             | --ansic          | Generates the ANSI C stack code for the core model (not used for vendor defined models). The path to use when generating ANSI C stack code. |
+| -d ModelDesign | --d2=ModelDesign | Required. The path to the ModelDesign files which contain the UA information model.                                                         |
+| -c CSVfile     |                  | The path to the CSV file which contains the unique identifiers for the types defined in the UA information model.                           |
+| -o output      | --o2=output      | The output directory for the generated files.                                                                                               |
+| -e             | --exclude        | Comma separated list of ReleaseStatus values to exclude from output.                                                                        |
+| -v             | --spec           | Selects the specification version the source text is compliant with. The values `v103`, `v104`, or `v105` are supported. (Default: v104)    |
+  
+### Units
+
+Generates the OPC UA Engineering Units CSV from the official UNECE table of units.
+
+| Short Name | Long Name | Description                                         |
+| ---------- | --------- | --------------------------------------------------- |
+|            | --annex1  | Required. The path to the UNECE Annex 1 CSV file.   |
+|            | --annex2  | Required. The path to the UNECE Annex 2/3 CSV file. |
+|            | --output  | Required. The units output directory.               |
+
+### update-headers
+
+Updates all files in the output directory with the OPC Foundation MIT license header.
+
+| Short Name | Long Name | Description                                                          |
+| ---------- | --------- | -------------------------------------------------------------------- |
+|            | --input   | Required. The path folders to search for files to update.            |
+|            | --pattern | Required. The file pattern to use when selecting files.              |
+|            | --license | Required. The types of license supported `MIT`, `MITXML`, or `NONE`. |
+|            | --silent  | Suppresses any exceptions.                                           |
+
 ## See Also
 
 - [OPC UA Information Models Compliance Testing][ASMDComplianceTesting]
