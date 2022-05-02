@@ -134,9 +134,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HelpFile.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Opc.Ua.ModelCompiler\ModelCompiler.csproj">
       <Project>{688f8d7b-a51c-4e64-aba9-680ef25ede90}</Project>
       <Name>ModelCompiler</Name>

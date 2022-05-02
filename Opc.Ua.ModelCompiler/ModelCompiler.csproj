@@ -108,7 +108,6 @@
     <None Remove="Design.v104\BuiltInTypes.xml" />
     <None Remove="Design.v104\StandardTypes.xml" />
     <None Remove="Design.v104\UA Core Services.xml" />
-    <None Remove="HelpFile.txt" />
     <None Remove="StackGenerator\AnsiC\Templates\ClientApi\File.c" />
     <None Remove="StackGenerator\AnsiC\Templates\ClientApi\File.h" />
     <None Remove="StackGenerator\AnsiC\Templates\ClientApi\Service.c" />
