@@ -1,7 +1,11 @@
-@ECHO off
+::@ECHO off
 SETLOCAL
 
-set MODELCOMPILER=%1\mdc
+IF "%~1" == "" ( set MODELCOMPILER="..\..\Bin\Debug\mdc.exe"
+) ELSE ( 
+    set MODELCOMPILER="%~1\mdc.exe" )
+
+::set MODELCOMPILER=%cf%"\mdc"
 set MODEL=DemoModel
 set VERSION=v104
 set EXCLUDE=Draft
