@@ -1,4 +1,20 @@
-# Model Compiler
+# OPC UA Information Model Compiler <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+
+- [Executive Summary](#executive-summary)
+- [About this Repository](#about-this-repository)
+- [License Model](#license-model)
+- [Docker Build](#docker-build)
+- [How to compile an Example](#how-to-compile-an-example)
+- [Other Repositories](#other-repositories)
+- [Partnership program](#partnership-program)
+- [CLI Syntax of the ModelCompilerUI 3.0.0.16457](#cli-syntax-of-the-modelcompilerui-30016457)
+  - [compile](#compile)
+  - [Stack](#stack)
+  - [Units](#units)
+  - [update-headers](#update-headers)
+- [See Also](#see-also)
 
 ## Executive Summary
 
@@ -104,49 +120,21 @@ Copying Model files to /model/Published/my_model
 
 ```
 
-## Example Generation
+## How to compile an Example
 
-The following process will demonstrate how to generate code using the supplied nodeset files:
+An example model is located in the directory `Tests\DemoModel`. The following process will demonstrate how to generate code using the supplied ModelDesign file:
 
- 1. Clone the repository and then build the source in Visual Studio 2015, in Release mode.
- 2. Open a Command prompt and then launch the BuildStandardTypes.bat
- 3. After the script completes, navigate to the .\Published folder to view the output.
- 4. Optionally, modify the BAT file and specify the location of your UA Stack(s) to automatically copy the generated files.
+1. Clone the repository to the selected location.
+2. Build the source in Visual Studio 2022, in Debug mode.
+3. Open a Command prompt in the mentioned above directory.
+4. Launch the `BuildModel.bat` without parameters.
+5. After the script completes, navigate to the `Tests\DemoModel\generated` directory where the output of the compiler is located
 
-### XML Files
-
-#### Model Design example
-
-An excerpt of the Model Design file is shown here:
-
-```txt
-?xml version="1.0" encoding="utf-8" ?>
-<opc:ModelDesign
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
-  xmlns:ua="http://opcfoundation.org/UA/"
-  xmlns="http://opcfoundation.org/UA/"
-  xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
-  TargetNamespace="http://opcfoundation.org/UA/"
-  TargetNamespaceVersion="1.02"
->
-  <opc:Namespaces>
-    <opc:Namespace Name="OpcUa" Prefix="Opc.Ua" InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd">http://opcfoundation.org/UA/</opc:Namespace>
-  </opc:Namespaces>
-
-  <opc:Property SymbolicName="NodeVersion" DataType="ua:String" PartNo="3">
-    <opc:Description>The version number of the node (used to indicate changes to references of the owning node).</opc:Description>
-  </opc:Property>
-
-  <opc:Property SymbolicName="ViewVersion" DataType="ua:UInt32" PartNo="3">
-    <opc:Description>The version number of the view.</opc:Description>
-  </opc:Property>
-```
+Optionally, instead of using the binaries created by Visual Studio, you may provide a path to existing binaries as the first parameter of the `BuildModel.bat`. The compiler binaries may be downloaded from the recent release.
 
 ## Other Repositories
 
-This `ModelCompiler` is used to generate the content of the [Nodeset GitHub repository](https://github.com/OPCFoundation/UA-Nodeset).
+This `ModelCompiler` is used to generate the content of the [UA-Nodeset GitHub repository](https://github.com/OPCFoundation/UA-Nodeset).
 
 ## Partnership program
 
