@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelCompiler", "Opc.Ua.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCompilerUnitTest", "ModelCompilerUnitTest\ModelCompilerUnitTest.csproj", "{E105F463-03AD-4318-9B85-3043D44A7B8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDNETUserInterface", "ASPDNETUserInterface\ASPDNETUserInterface.csproj", "{7A4C1413-C7C6-42E5-923B-4896F225C481}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,18 @@ Global
 		{E105F463-03AD-4318-9B85-3043D44A7B8C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E105F463-03AD-4318-9B85-3043D44A7B8C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{E105F463-03AD-4318-9B85-3043D44A7B8C}.Release|Win32.Build.0 = Release|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Debug|Win32.Build.0 = Debug|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Release|Win32.ActiveCfg = Release|Any CPU
+		{7A4C1413-C7C6-42E5-923B-4896F225C481}.Release|Win32.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
