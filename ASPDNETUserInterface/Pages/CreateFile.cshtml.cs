@@ -19,16 +19,22 @@ namespace OOI.ModelCompiler.ASPDNETUserInterface.Pages
         {
             
 
-            string path = Path.Combine(this.Environment.WebRootPath, "Temp/InputFiles");
-            if (!Directory.Exists(path))
+            string InputPath = Path.Combine(this.Environment.WebRootPath, "Temp/InputFiles");
+            if (!Directory.Exists(InputPath))
             {
-                Directory.CreateDirectory(path);
+                Directory.CreateDirectory(InputPath);
+            }
+
+            string OutputPath = Path.Combine(this.Environment.WebRootPath, "Temp/OutputFiles");
+            if (!Directory.Exists(OutputPath))
+            {
+                Directory.CreateDirectory(OutputPath);
             }
 
             foreach (IFormFile postedFile in postedFiles)
             {
                 string fileName = Path.GetFileName(postedFile.FileName);
-                using (FileStream stream = new FileStream(Path.Combine(path, fileName), FileMode.Create))
+                using (FileStream stream = new FileStream(Path.Combine(InputPath, fileName), FileMode.Create))
                 {
                     postedFile.CopyTo(stream);
                 }
